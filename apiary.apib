@@ -73,7 +73,7 @@ Returns all Distributors.
                 "success": "Data successfully retrieved"
             }
         ]
-    }  
+    }
     ```
 
 ### Retrieve all Distributors [GET]
@@ -155,3 +155,141 @@ Retrieves all Studios.
 + Response 200
 
     [List Studios][]
+
+# Group Business - Country
+Represents actions against Country object
+
+## Country [/country/{id}]
+Represents a country
+
++ Parameters
+    + id (string, `1`) ... The id of the Country.
+
++ Model (application/json)
+
+        {
+            "data": {
+                "id": 1,
+                "parentId": 0,
+                "title": "United States",
+                "type": "Country"
+            },
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve a Country [GET]
+Returns a specific Country.
+
++ Response 200
+
+    [Country][]
+
+## List Countries [/country/list]
+A List of all countries.
+
++ Model (application/json)
+
+        {
+            "data": [
+                {
+                    "id": 1,
+                    "parentId": 0,
+                    "title": "United States",
+                    "type": "Country"
+                },
+                {
+                    "id": 2,
+                    "parentId": 0,
+                    "title": "México",
+                    "type": "Country"
+                }
+            ],
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve all Countries [GET]
+Retrieves all Countries.
+
++ Response 200
+
+    [List Countries][]
+
+# Group Business - Genre
+Represents actions against Genre object
+
+## Genre [/genre/{id}]
+Represents a genre
+
++ Parameters
+    + id (string, `1`) ... The id of the Genre.
+
++ Model (application/json)
+
+    ```js
+        {
+            "data": {
+                "id": 3,
+                "parentId": 0,
+                "title": "Action",
+                "type": "Genre"
+            },
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve a Genres [GET]
+Returns a specific Genres.
+
++ Response 200
+
+    [Genre][]
+
+## List Genres [/genre/list]
+Retrieve a List of all published Genres.
+
++ Model (application/json)
+
+    ```js
+        {
+            "data": [
+                {
+                    "id": 3,
+                    "parentId": 0,
+                    "title": "Action",
+                    "type": "Genre"
+                },
+                {
+                    "id": 4,
+                    "parentId": 0,
+                    "title": "Spanish",
+                    "type": "Genre"
+                }
+            ],
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve all Genres [GET]
+Retrieves all Genres.
+
++ Response 200
+
+    [List Genres][]
