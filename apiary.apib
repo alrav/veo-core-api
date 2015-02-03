@@ -1,11 +1,110 @@
 FORMAT: 1A
 
 # Veo Core API
-More information coming soon...
+The Veo Core API powers the CMS, Website, and Device integrations within the Veo Architecture
 
 Please be sure to validate your response examples with [JSONLint][1].
 
 [1]:  http://jsonlint.com/
+
+# Group System - Users
+Represents actions against CMS User objects
+
+## User [/system/user/{id}]
+Represents a user
+
++ Parameters
+    + id (string, `1`) ... The id of the User.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "type": "User",
+            "status": "published",
+            "firstName": "John",
+            "lastName": "Doe",
+            "username": "johndoe@mymail.com",
+            "role": "admin"
+        }
+    }
+    ```
+
+### Retrieves a User [GET]
+Returns a specific User.
+
++ Response 200
+
+    [User][]
+
+### Updates a User [PUT]
+Updates a specific User.
+
++ Request
+
+    [User][]
+
++ Response 200
+
+    [User][]
+
+
+### Deletes a User [DELETE]
+Deletes a specific User.
+
++ Response 204
+
+## List Users [/system/users]
+Returns all Users.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "User",
+                "status": "published",
+                "firstName": "John",
+                "lastName": "Doe",
+                "username": "johndoe@mymail.com",
+                "role": "admin"
+            },
+            {
+                "id": 2,
+                "type": "User",
+                "status": "published",
+                "firstName": "Jane",
+                "lastName": "Doe",
+                "username": "janedoe@mymail.com",
+                "role": "basic"
+            },
+
+        ]
+    }
+    ```
+
+### Retrieve all Users [GET]
+Retrieves all users.
+
++ Response 200
+
+    [List Users][]
+
+### Creates a User [POST]
+Creates a new User in the CMS.
+
++ Request
+
+    [User][]
+
++ Response 201
+
+    [User][]
+
 
 # Group Business - Distributors
 Represents actions against Distributor objects
