@@ -1,0 +1,75 @@
+FORMAT: 1A
+
+# Veo Core API
+More information coming soon...
+
+Please be sure to validate your response examples with [JSONLint][1].
+
+[1]:  http://jsonlint.com/
+
+# Group Business - Distributors
+Represents actions against Distributor objects
+
+## Distributor [/v2/distributor/{id}]
+Represents a distributor
+
++ Parameters
+    + id (string, `1`) ... The id of the Distributor.
+
++ Model (application/json)
+    
+    ```js
+    {
+        "data": {
+            "id": 10,
+            "type": "Distributor",
+            "status": "published",
+            "name": "televisa.networks.mx",
+            "code": "televisa.networks.mx",
+            "contact": "Juan Perez"
+        }
+    }
+    ```
+
+### Retrieve a Distributor [GET]
+Returns a specific Distributor.
+
++ Response 200
+    
+    [Distributor][]
+
+## List Distributors [/v2/distributor/list]
+A Collection of posts.
+
++ Model (application/json)
+    
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "Distributor",
+                "status": "published",
+                "name": "televisa.networks.mx",
+                "code": "televisa.networks.mx",
+                "contact": "Juan Perez"
+            },
+            {
+                "id": 2,
+                "type": "Distributor",
+                "status": "published",
+                "name": "televisa.networks.mx",
+                "code": "televisa.networks.mx",
+                "contact": "Pedro Perez"
+            }
+        ]
+    }  
+    ```
+
+### Retrieve all Distributors [GET]
+Retrieves all distributors. 
+
++ Response 200
+    
+    [List Distributors][]
+
