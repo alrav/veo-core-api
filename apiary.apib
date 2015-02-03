@@ -10,14 +10,14 @@ Please be sure to validate your response examples with [JSONLint][1].
 # Group Business - Distributors
 Represents actions against Distributor objects
 
-## Distributor [/v2/distributor/{id}]
+## Distributor [/distributor/{id}]
 Represents a distributor
 
 + Parameters
     + id (string, `1`) ... The id of the Distributor.
 
 + Model (application/json)
-    
+
     ```js
     {
         "data": {
@@ -35,14 +35,14 @@ Represents a distributor
 Returns a specific Distributor.
 
 + Response 200
-    
+
     [Distributor][]
 
-## List Distributors [/v2/distributor/list]
-A Collection of posts.
+## List Distributors [/distributor/list]
+Returns all Distributors.
 
 + Model (application/json)
-    
+
     ```js
     {
         "data": [
@@ -67,9 +67,8 @@ A Collection of posts.
     ```
 
 ### Retrieve all Distributors [GET]
-Retrieves all distributors. 
+Retrieves all distributors.
 
 + Response 200
-    
-    [List Distributors][]
 
+    [List Distributors][]
