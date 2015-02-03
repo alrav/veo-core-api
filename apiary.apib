@@ -531,3 +531,107 @@ Retrieves all Parental Rating.
 + Response 200
 
     [List Parental Rating][]
+
+# Group Business - Person
+Represents actions against Person objects
+
+## Person [/person/{id}]
+Represents a Person
+
++ Parameters
+    + id (string, `14`) ... The id of the Person.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 14,
+            "type": "Person",
+            "status": "published",
+            "communicationName": "Helena Bonham Carter",
+            "firstName": "Helena Bonham",
+            "familyName": "Carter",
+            "characterName": "Elpidio Valdez",
+            "characterImage": {
+                "id": 1,
+                "alt": "Test alt value",
+                "contentType": "image/png",
+                "height": 126,
+                "width": 224,
+                "size": 30827,
+                "url": "https://scablevision-a.akamaihd.net/prod/Picture/C_1_Picture_6046_profile152Image.png"
+            },
+            "role": "Actor",
+            "asset": 3
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve a Person [GET]
+Returns a specific Person.
+
++ Response 200
+
+    [Person][]
+
+## List People [/people]
+Returns all People.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 14,
+                "type": "Person",
+                "status": "published",
+                "communicationName": "Helena Bonham Carter",
+                "firstName": "Helena Bonham",
+                "familyName": "Carter",
+                "characterName": "Elpidio Valdez",
+                "characterImage": {
+                    "id": 1,
+                    "alt": "Test alt value",
+                    "contentType": "image/png",
+                    "height": 126,
+                    "width": 224,
+                    "size": 30827,
+                    "url": "https://scablevision-a.akamaihd.net/prod/Picture/C_1_Picture_6046_profile152Image.png"
+                },
+                "role": "Actor",
+                "asset": 3
+            },
+            {
+                "id": 15,
+                "type": "Person",
+                "status": "published",
+                "communicationName": "Edward Norton",
+                "firstName": "Edward",
+                "familyName": "Norton",
+                "characterName": "Eutelia",
+                "characterImage": null,
+                "role": "Actor",
+                "asset": 3
+            }
+        ],
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }  
+    ```
+
+### Retrieve all People [GET]
+Retrieves all People.
+
++ Response 200
+
+    [List People][]
