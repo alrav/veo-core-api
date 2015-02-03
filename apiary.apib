@@ -63,7 +63,7 @@ Returns all Distributors.
                 "contact": "Pedro Perez"
             }
         ]
-    }  
+    }
     ```
 
 ### Retrieve all Distributors [GET]
@@ -72,3 +72,66 @@ Retrieves all distributors.
 + Response 200
 
     [List Distributors][]
+
+
+# Group Business - Country
+Represents actions against Country object
+
+## Country [/country/{id}]
+Represents a country
+
++ Parameters
+    + id (string, `1`) ... The id of the Country.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "parentId": 0,
+            "title": "United States",
+            "type": "Country",
+        },
+        "messages": 200
+    }
+    ```
+
+### Retrieve a Country [GET]
+Returns a specific Country.
+
++ Response 200
+
+    [Country][]
+
+## List Countries [/country/list]
+A List of all countries.
+
++ Model (application/json)
+
+    ```js
+    {
+    "data": [
+        {
+            "id": 1,
+            "parentId": 0,
+            "title": "United States",
+            "type": "Country",
+        },
+        {
+            "id": 2,
+            "parentId": 0,
+            "title": "México",
+            "type": "Country",
+        }
+    ],
+    "messages": 200
+}
+    ```
+
+### Retrieve all Countries [GET]
+Retrieves all Countries.
+
++ Response 200
+
+    [List Countries][]
