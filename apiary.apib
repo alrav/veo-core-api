@@ -294,3 +294,141 @@ Retrieves all Genres.
 
     [List Genres][]
 
+# Group Business - Geoblocking
+Represents actions against Geoblocking object
+
+## Geoblocking [/geoblocking/{id}]
+Represents a Geoblocking
+
++ Parameters
+    + id (string, `1`) ... The id of the Geoblocking.
+
++ Model (application/json)
+
+    ```js
+        {
+            "data": {
+                "id": 1,
+                "title": "Guatemala",
+                "type": "Geoblocking"
+            },
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve a Geoblocking [GET]
+Returns a specific Geoblocking.
+
++ Response 200
+
+    [Geoblocking][]
+
+## List Geoblocking [/geoblocking/list]
+Retrieve a List of all published Geoblocking.
+
++ Model (application/json)
+
+    ```js
+        {
+            "data": [
+                {
+                    "id": 1,
+                    "title": "Guatemala",
+                    "type": "Geoblocking"
+                },
+                {
+                    "id": 2,
+                    "title": "Italy",
+                    "type": "Geoblocking"
+                }
+            ],
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve all Geoblocking [GET]
+Retrieves all Geoblocking.
+
++ Response 200
+
+    [List Geoblocking][]
+
+# Group Business - Parental Rating
+Represents actions against Parental Rating object
+
+## Parental Rating [/parentalrating/{id}]
+Represents a Parental Rating
+
++ Parameters
+    + id (string, `1`) ... The id of the Parental Rating.
+
++ Model (application/json)
+
+    ```js
+        {
+            "data": {
+              "id": 1,
+              "title": "G",
+              "code": 0,
+              "type": "ParentalRating"
+            },
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve a Parental Rating [GET]
+Returns a specific Parental Rating.
+
++ Response 200
+
+    [Parental Rating][]
+
+## List Parental Rating [/parentalrating/list]
+Retrieve a List of all published ParentalRating.
+
++ Model (application/json)
+
+    ```js
+        {
+            "data": [
+                {
+                    "id": 1,
+                    "title": "G",
+                    "code": "G",
+                    "level": 0,
+                    "type": "ParentalRating"
+                },
+                {
+                  "id": 2,
+                  "title": "PG",
+                  "code": "PG",
+                  "level": 1,
+                  "type": "ParentalRating"
+                }
+            ],
+            "messages": [
+                {
+                    "success": "Data successfully retrieved"
+                }
+            ]
+        }
+    ```
+
+### Retrieve all Parental Rating [GET]
+Retrieves all Parental Rating.
+
++ Response 200
+
+    [List Parental Rating][]
