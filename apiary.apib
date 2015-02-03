@@ -21,13 +21,18 @@ Represents a distributor
     ```js
     {
         "data": {
-            "id": 10,
+            "id": 1,
             "type": "Distributor",
             "status": "published",
             "name": "televisa.networks.mx",
             "code": "televisa.networks.mx",
             "contact": "Juan Perez"
-        }
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
     }
     ```
 
@@ -47,7 +52,7 @@ Returns all Distributors.
     {
         "data": [
             {
-                "id": 1,
+                "id": 2,
                 "type": "Distributor",
                 "status": "published",
                 "name": "televisa.networks.mx",
@@ -61,6 +66,11 @@ Returns all Distributors.
                 "name": "televisa.networks.mx",
                 "code": "televisa.networks.mx",
                 "contact": "Pedro Perez"
+            }
+        ],
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
             }
         ]
     }  
