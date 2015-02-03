@@ -82,3 +82,76 @@ Retrieves all distributors.
 + Response 200
 
     [List Distributors][]
+
+# Group Business - Studio
+Represents actions against Studio objects
+
+## Studio [/studio/{id}]
+Represents a studio
+
++ Parameters
+    + id (string, `1`) ... The id of the Studio.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "type": "Studio",
+            "status": "published",
+            "name": "FOX",
+            "code": "FOX"
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve a Studio [GET]
+Returns a specific Studio.
+
++ Response 200
+
+    [Studio][]
+
+## List Studios [/studio/list]
+Returns all Studios.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "Studio",
+                "status": "published",
+                "name": "FOX",
+                "code": "FOX"
+            },
+            {
+                "id": 2,
+                "type": "Studio",
+                "status": "published",
+                "name": "SONY",
+                "code": "SON"
+            }
+        ],
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }  
+    ```
+
+### Retrieve all Studios [GET]
+Retrieves all Studios.
+
++ Response 200
+
+    [List Studios][]
