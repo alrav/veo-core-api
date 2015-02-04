@@ -7,6 +7,68 @@ Please be sure to validate your response examples with [JSONLint][1].
 
 [1]:  http://jsonlint.com/
 
+# Group System - Navigation
+Represents actions against CMS Navigation objects
+
+## Navigation [/system/navigation]
+Returns the Navigation of the CMS.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "Navigation",
+                "title": "Entities",
+                "items": [
+                  {
+                    "id": 10,
+                    "type": "Navigation",
+                    "title": "Asset",
+                    "link": "/browse/asset"
+                  },
+                  {
+                    "id": 11,
+                    "type": "Navigation",
+                    "title": "Picture",
+                    "link": "/browse/picture"
+                  }
+                ]
+            },
+            {
+                "id": 2,
+                "type": "Navigation",
+                "title": "Taxonomies",
+                "items": [
+                  {
+                    "id": 20,
+                    "type": "Navigation",
+                    "title": "Genre",
+                    "link": "/browse/genre"
+                  },
+                  {
+                    "id": 21,
+                    "type": "Navigation",
+                    "title": "Rating",
+                    "link": "/browse/rating"
+                  }
+                ]
+            }
+        ]
+    }
+    ```
+
+### Retrieve the Navigation menu [GET]
+Retrieves navigation menu for the CMS. This is simply an enumeration of the Entities in the system
+
++ Response 200
+
+    [Navigation][]
+
+
+
 # Group System - Users
 Represents actions against CMS User objects
 
@@ -23,7 +85,6 @@ Represents a user
         "data": {
             "id": 1,
             "type": "User",
-            "status": "published",
             "firstName": "John",
             "lastName": "Doe",
             "username": "johndoe@mymail.com",
@@ -67,7 +128,6 @@ Returns all Users.
             {
                 "id": 1,
                 "type": "User",
-                "status": "published",
                 "firstName": "John",
                 "lastName": "Doe",
                 "username": "johndoe@mymail.com",
@@ -76,7 +136,6 @@ Returns all Users.
             {
                 "id": 2,
                 "type": "User",
-                "status": "published",
                 "firstName": "Jane",
                 "lastName": "Doe",
                 "username": "janedoe@mymail.com",
@@ -245,7 +304,7 @@ Returns all Studios.
                 "success": "Data successfully retrieved"
             }
         ]
-    }  
+    }
     ```
 
 ### Retrieve all Studios [GET]
@@ -626,7 +685,7 @@ Returns all People.
                 "success": "Data successfully retrieved"
             }
         ]
-    }  
+    }
     ```
 
 ### Retrieve all People [GET]
