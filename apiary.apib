@@ -192,3 +192,154 @@ Retrieves all Parental Rating.
 + Response 200
 
     [List Parental Rating][]
+
+# Group PlayContext
+Actions required for playing and tracking video streaming
+
+## Initialize asset streaming [/play/asset/{assetId}/video/{videoId}]
+Create the Asset PlayContext required before streaming.
+
++ Parameters
+    + assetId (string, `4962`) ... The id of the Asset.
+    + videoId (string, `6538`) ... The id of the VideoAsset.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "playContext": {
+                "locationUri": "http://www.veo.tv/player/user/1811/asset/4962/video/6538/stream/b7648850-1f21-4031-9cb3-e3a19eb800fb",
+                "playerState": null,
+                "userStream": {
+                    "videoId": 6538,
+                    "assetId": 4962,
+                    "userId": 1181,
+                    "streamId": "b7648850-1f21-4031-9cb3-e3a19eb800fb",
+                    "expirationDate": null,
+                    "interval": -1,
+                    "updateDate": 1418330651212,
+                    "creationDate": 1418330651212,
+                    "state": "CREATED"
+                }
+            }
+        }
+    }
+    ```
+
+### Create Asset PlayContext [POST]
+
++ Response 200
+
+    [Initialize asset streaming][]
+
+## Initialize channel streaming [/watch/channel/{channelName}]
+Create the Channel PlayContext required before streaming.
+
++ Parameters
+    + channelName (string, `GALA TV HD`) ... The name of the Channel.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "playContext": {
+                "locationUri": "http://www.veo.tv:80/player/user/991580/channel/909/stream/a902f568-04b5-46a6-ae53-9cebde7b54a6",
+                "playerState": null,
+                "userStream": {
+                    "channelNumber": 909,
+                    "userId": 991580,
+                    "streamId": "a902f568-04b5-46a6-ae53-9cebde7b54a6",
+                    "expirationDate": null,
+                    "interval": -1,
+                    "updateDate": 1420737389235,
+                    "creationDate": 1420737389235,
+                    "state": "CREATED"
+                }
+            }
+        }
+    }
+    ```
+
+### Create Channel PlayContext [POST]
+
++ Response 200
+
+    [Initialize channel streaming][]
+
+## Update Asset PlayContext [/player/user/{userId}/asset/{assetId}/video/{videoId}/stream/{streamId}]
+Update the Asset PlayContext while streaming.
+
++ Parameters
+    + userId (string, `1181`) ... The id of the User.
+    + assetId (string, `4962`) ... The id of the Asset.
+    + videoId (string, `6538`) ... The id of the VideoAsset.
+    + streamId (string, `b7648850-1f21-4031-9cb3-e3a19eb800fb`) ... The id of the stream generated with the initial post.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "playContext": {
+                "locationUri": null,
+                "playerState": "CONTINUE",
+                "userStream": {
+                    "videoId": 6538,
+                    "assetId": 4962,
+                    "userId": 1181,
+                    "streamId": "b7648850-1f21-4031-9cb3-e3a19eb800fb",
+                    "expirationDate": null,
+                    "interval": 60,
+                    "updateDate": 1418332300438,
+                    "creationDate": 1418331996427,
+                    "state": "RETAINED"
+                }
+            }
+        }
+    }
+    ```
+
+### Update Asset PlayContext [POST]
+
++ Response 200
+
+    [Update Asset PlayContext][]
+
+## Update Channel PlayContext [/player/user/{accountId}/channel/{channelNumber}/stream/{streamId}]
+Update the Channel PlayContext while streaming.
+
++ Parameters
+    + accountId (string, `1181`) ... The accountId of the User.
+    + channelNumber (string, `909`) ... The number of the Channel.
+    + streamId (string, `a902f568-04b5-46a6-ae53-9cebde7b54a6`) ... The id of the stream generated with the initial post.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "playContext": {
+                "locationUri": null,
+                "playerState": "START",
+                "userStream": {
+                    "channelNumber": 909,
+                    "userId": "501000000129-01",
+                    "expirationDate": null,
+                    "streamId": "a902f568-04b5-46a6-ae53-9cebde7b54a6",
+                    "interval": 60,
+                    "updateDate": 1420494077906,
+                    "creationDate": 1420494077752,
+                    "state": "ACQUIRED"
+                }
+            }
+        }
+    }
+    ```
+
+### Update Channel PlayContext [POST]
+
++ Response 200
+
+    [Update Channel PlayContext][]
