@@ -473,6 +473,176 @@ Retrieves all Geoblocking.
 
     [List Geoblocking][]
 
+# Group Navigation
+Represents actions against SB Navigation objects
+
+## Navigation [/navigation]
+Returns all menus for clients (WEB, IOS, Android, ...).
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 1,
+                "type": "Navigation",
+                "title": "Main menu",
+                "key": "main-menu",
+                "items": [
+                    {
+                        "id": 10,
+                        "type": "Navigation",
+                        "title": "Tele para llevar",
+                        "key": "main-menu-tele-para-llevar",
+                        "link": "/tv/epg",
+                        "icon": null
+                    },
+                    {
+                        "id": 11,
+                        "type": "Navigation",
+                        "title": "Play",
+                        "key": "main-menu-play",
+                        "link": "/clubondemand",
+                        "icon": null
+                    },
+                    {
+                        "id": 12,
+                        "type": "Navigation",
+                        "title": "Rentas",
+                        "key": "main-menu-rentas",
+                        "link": "/tienda",
+                        "icon": null
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "type": "Navigation",
+                "title": "Clubondemand",
+                "key": "clubondemand",
+                "items": [
+                    {
+                        "id": 20,
+                        "type": "Navigation",
+                        "title": "Inicio",
+                        "key": "clubondemand-inicio",
+                        "link": "/clubondemand",
+                        "icon": null
+                    },
+                    {
+                        "id": 21,
+                        "type": "Navigation",
+                        "title": "Películas",
+                        "key": "clubondemand-peliculas",
+                        "link": "/clubondemand/peliculas",
+                        "icon": null
+                    },
+                    {
+                        "id": 22,
+                        "type": "Navigation",
+                        "title": "Series de TV",
+                        "key": "clubondemand-series-de-tv",
+                        "link": "/clubondemand/series",
+                        "icon": null
+                    },
+                    {
+                        "id": 23,
+                        "type": "Navigation",
+                        "title": "Telenovelas",
+                        "key": "clubondemand-telenovelas",
+                        "link": "/clubondemand/telenovelas",
+                        "icon": null
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "type": "Navigation",
+                "title": "Tienda",
+                "key": "tienda",
+                "items": [
+                    {
+                        "id": 24,
+                        "type": "Navigation",
+                        "title": "Inicio",
+                        "key": "tienda-inicio",
+                        "link": "/tienda",
+                        "icon": null
+                    },
+                    {
+                        "id": 25,
+                        "type": "Navigation",
+                        "title": "Catálogo Completo",
+                        "key": "tienda-catalogo-completo",
+                        "link": "/tienda/peliculas",
+                        "icon": null
+                    }
+                ]
+            }
+        ]
+    }
+    ```
+
+### Retrieve all menus [GET]
+Retrieves all navigation menus for clients.
+
++ Response 200
+
+    [Navigation][]
+
+## Navigation item [/navigation/{key}]
+Returns a navigation item.
+
++ Parameters
+    + key (string, `main-menu`) ... The key of the navigation.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 1,
+            "type": "Navigation",
+            "title": "Main menu",
+            "key": "main-menu",
+            "items": [
+                {
+                    "id": 10,
+                    "type": "Navigation",
+                    "title": "Tele para llevar",
+                    "key": "main-menu-tele-para-llevar",
+                    "link": "/tv/epg",
+                    "icon": null
+                },
+                {
+                    "id": 11,
+                    "type": "Navigation",
+                    "title": "Play",
+                    "key": "main-menu-play",
+                    "link": "/clubondemand",
+                    "icon": null
+                },
+                {
+                    "id": 12,
+                    "type": "Navigation",
+                    "title": "Rentas",
+                    "key": "main-menu-rentas",
+                    "link": "/tienda",
+                    "icon": null
+                }
+            ]
+        }
+    }
+    ```
+
+### Retrieve menu [GET]
+Retrieves one navigation menu by key.
+
++ Response 200
+
+    [Navigation item][]
+
 # Group Parental Rating
 Represents actions against Parental Rating object
 
@@ -665,11 +835,60 @@ Update the Channel PlayContext while streaming.
 
     [Update Channel PlayContext][]
 
-# Group Navigation
-Represents actions against SB Navigation objects
 
-## Navigation [/navigation]
-Returns all menus for clients (WEB, IOS, Android, ...).
+# Group Program
+Represents actions against Program objects
+
+## Program [/program/{id}]
+Represents a Program
+
++ Parameters
+    + id (string, `1`) ... The id of the Program.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "type": "Program",
+            "programType": "LinearEpisodeProgram",
+            "id": 3,
+            "status": "published",
+            "modifiedAt": "2014-03-28 00:25:46",
+            "duration": 2,
+            "isHd": false,
+            "isLive": false,
+            "keywords": null,
+            "areRightsBlocked": false,
+            "mainGenre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "packageCode": null,
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "synopsisShort": "Karen cuida de Zach",
+            "synopsisLong": "Karen cuida de Zach",
+            "showType": "Series",
+            "title": "Co-Ed Confidential 4",
+            "year": 2010
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Program [GET]
+Returns a specific Program.
+
++ Response 200
+
+    [Program][]
+
+
+## List Programs [/programs]
+Returns all Programs.
 
 + Model (application/json)
 
@@ -677,160 +896,37 @@ Returns all menus for clients (WEB, IOS, Android, ...).
     {
         "data": [
             {
-                "id": 1,
-                "type": "Navigation",
-                "title": "Main menu",
-                "key": "main-menu",
-                "items": [
-                    {
-                        "id": 10,
-                        "type": "Navigation",
-                        "title": "Tele para llevar",
-                        "key": "main-menu-tele-para-llevar",
-                        "link": "/tv/epg",
-                        "icon": null
-                    },
-                    {
-                        "id": 11,
-                        "type": "Navigation",
-                        "title": "Play",
-                        "key": "main-menu-play",
-                        "link": "/clubondemand",
-                        "icon": null
-                    },
-                    {
-                        "id": 12,
-                        "type": "Navigation",
-                        "title": "Rentas",
-                        "key": "main-menu-rentas",
-                        "link": "/tienda",
-                        "icon": null
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "type": "Navigation",
-                "title": "Clubondemand",
-                "key": "clubondemand",
-                "items": [
-                    {
-                        "id": 20,
-                        "type": "Navigation",
-                        "title": "Inicio",
-                        "key": "clubondemand-inicio",
-                        "link": "/clubondemand",
-                        "icon": null
-                    },
-                    {
-                        "id": 21,
-                        "type": "Navigation",
-                        "title": "Películas",
-                        "key": "clubondemand-peliculas",
-                        "link": "/clubondemand/peliculas",
-                        "icon": null
-                    },
-                    {
-                        "id": 22,
-                        "type": "Navigation",
-                        "title": "Series de TV",
-                        "key": "clubondemand-series-de-tv",
-                        "link": "/clubondemand/series",
-                        "icon": null
-                    },
-                    {
-                        "id": 23,
-                        "type": "Navigation",
-                        "title": "Telenovelas",
-                        "key": "clubondemand-telenovelas",
-                        "link": "/clubondemand/telenovelas",
-                        "icon": null
-                    }
-                ]
-            },
-            {
+                "type": "Program",
+                "programType": "LinearEpisodeProgram",
                 "id": 3,
-                "type": "Navigation",
-                "title": "Tienda",
-                "key": "tienda",
-                "items": [
-                    {
-                        "id": 24,
-                        "type": "Navigation",
-                        "title": "Inicio",
-                        "key": "tienda-inicio",
-                        "link": "/tienda",
-                        "icon": null
-                    },
-                    {
-                        "id": 25,
-                        "type": "Navigation",
-                        "title": "Catálogo Completo",
-                        "key": "tienda-catalogo-completo",
-                        "link": "/tienda/peliculas",
-                        "icon": null
-                    }
-                ]
+                "modifiedAt": "2014-03-28 00:25:46",
+                "duration": 2,
+                "isHd": false,
+                "isLive": false,
+                "areRightsBlocked": false,
+                "mainGenre": {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                },
+                "parentalRating": {
+                    "id": 9,
+                    "title": "R"
+                },
+                "synopsisShort": "Karen cuida de Zach",
+                "showType": "Series",
+                "title": "Co-Ed Confidential 4",
+                "year": 2010
             }
-        ]
+        ],
+        "messages": []
     }
     ```
 
-### Retrieve all menus [GET]
-Retrieves all navigation menus for clients.
+### Retrieve all Programs [GET]
+Retrieves all Programs.
 
 + Response 200
 
-    [Navigation][]
+    [List Programs][]
 
-## Navigation item [/navigation/{key}]
-Returns a navigation item.
 
-+ Parameters
-    + key (string, `main-menu`) ... The key of the navigation.
-
-+ Model (application/json)
-
-    ```js
-    {
-        "data": {
-            "id": 1,
-            "type": "Navigation",
-            "title": "Main menu",
-            "key": "main-menu",
-            "items": [
-                {
-                    "id": 10,
-                    "type": "Navigation",
-                    "title": "Tele para llevar",
-                    "key": "main-menu-tele-para-llevar",
-                    "link": "/tv/epg",
-                    "icon": null
-                },
-                {
-                    "id": 11,
-                    "type": "Navigation",
-                    "title": "Play",
-                    "key": "main-menu-play",
-                    "link": "/clubondemand",
-                    "icon": null
-                },
-                {
-                    "id": 12,
-                    "type": "Navigation",
-                    "title": "Rentas",
-                    "key": "main-menu-rentas",
-                    "link": "/tienda",
-                    "icon": null
-                }
-            ]
-        }
-    }
-    ```
-
-### Retrieve menu [GET]
-Retrieves one navigation menu by key.
-
-+ Response 200
-
-    [Navigation item][]
