@@ -928,5 +928,343 @@ Retrieves all Programs.
 + Response 200
 
     [List Programs][]
+    
+# Group Search
+Represents the search engine
 
+## Search Assets [/search{?query}{?view}{?sort}{?filter}{?pageNumber}{?videoFormat%5B%5D*}]
+Search result for assets search
 
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "total": 1,
+            "summary": [
+                {
+                    "total": 25,
+                    "showType": "Movies"
+                },
+                {
+                    "total": 7,
+                    "showType": "Telenovelas"
+                },
+                {
+                    "total": 2,
+                    "showType": "TV_Series"
+                },
+                {
+                    "total": 0,
+                    "showType": "News"
+                },
+                {
+                    "total": 0,
+                    "showType": "Shows"
+                },
+                {
+                    "total": 0,
+                    "showType": "Sports"
+                },
+                {
+                    "total": 16,
+                    "showType": "Rental"
+                }
+            ],
+            "results": [
+                {
+                    "type": "Asset",
+                    "assetType": "Movie",
+                    "id": 4754,
+                    "status": "published",
+                    "title": "Operación Dragón",
+                    "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                    "duration": "01:42",
+                    "startYear": 1973,
+                    "parentalRating": {
+                        "id": 9,
+                        "title": "R"
+                    },
+                    "mainGenre": {
+                        "id": 111,
+                        "title": "Acción y Aventura"
+                    },
+                    "pictures": [
+                        {
+                            "type": "Picture",
+                            "id": 2853,
+                            "status": "published",
+                            "modifiedAt": "2014-03-28 00:25:46",
+                            "credits": "Tom Smith",
+                            "orientation": "portrait",
+                            "pictureType": "Poster",
+                            "title": "",
+                            "versions": [
+                                {
+                                    "profile": "webLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "webLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "224",
+                                    "height": "126"
+                                },
+                                {
+                                    "profile": "webLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "384",
+                                    "height": "216"
+                                },
+                                {
+                                    "profile": "mobileLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "96",
+                                    "height": "54"
+                                },
+                                {
+                                    "profile": "mobileLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "160",
+                                    "height": "90"
+                                },
+                                {
+                                    "profile": "mobileLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "640",
+                                    "height": "360"
+                                }
+                            ]
+                        }
+                    ],
+                    "publicationEvent": {
+                        "type": "PublicationEvent",
+                        "id": 18563,
+                        "status": "published",
+                        "startDate": "2014-04-09 06:00:00",
+                        "endDate": "2015-03-31 05:59:00",
+                        "billingType": "rental",
+                        "price": "25.00"
+                    }
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+
+### Search Assets [GET]
++ Parameters
+    + query (required, string, `amor%20mio`) ... The search term
+    + view = `title` (optional, string, `title`) ... Filter for Asset type and Programs
+        + Values
+            + `title` ... For Assets types 'Movie' and 'Series'
+            + `video` ... For Assets types 'Movie' and 'Episode'
+            + `tv`    ... For Programs
+    + sort = `2` (optional, number, `2`) ... Results sorting
+        + Values
+            + `1` ... Most popular. Sorts by view_count.
+            + `2` ... Most recent. Sorts by year.
+            + `3` ... Best rated. Sorts by average_rating.
+            + `4` ... Title. Sorts by sort_title.
+            + `5` ... Sorts by relevance.
+    + filter (optional, string, `movies`) ... Filter by Asset showType and billingType.
+        + Values
+            + `movies`      ... For 'Movies' showType.
+            + `tv_series`   ... For 'TV_series' showType.
+            + `telenovelas` ... For 'Telenovelas' showType.
+            + `rental`      ... For 'renta' billingType.
+    + pageNumber = `1` (optional, number, `2`) ... Page number for pagination.
+    + videoFormat (optional, string, `SS`) ... Filter by video formats.
+        + Values
+            + `SS`
+            + `HLS`
+            + `HDS`
+
++ Response 200
+
+    [Search Assets][]
+
+# Group Browse
+Returns filtered Asset
+
+## Browse Assets [/browse/{billingType}/{showType}{?sort}{?parental}{?genre%5B%5D*}{?atoz%5B%5D*}{?decade%5B%5D*}{?collection%5B%5D*}{?pageNumber}{?videoFormat%5B%5D*}]
+Results for asset browsing
+
++ Parameters
+    + billingType (required, string, `subscription`) ... Asset's billing type.
+        + Values
+            + `subscription`
+            + `rental`
+    + showType (required, string, `movies`) ... Asset's showType.
+        + Values
+            + `movies`
+            + `tv_series`
+            + `telenovelas`
+            
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "total": 1,
+            "results": [
+                {
+                    "type": "Asset",
+                    "assetType": "Movie",
+                    "id": 4754,
+                    "status": "published",
+                    "title": "Operación Dragón",
+                    "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                    "duration": "01:42",
+                    "startYear": 1973,
+                    "parentalRating": {
+                        "id": 9,
+                        "title": "R"
+                    },
+                    "mainGenre": {
+                        "id": 111,
+                        "title": "Acción y Aventura"
+                    },
+                    "pictures": [
+                        {
+                            "type": "Picture",
+                            "id": 2853,
+                            "status": "published",
+                            "modifiedAt": "2014-03-28 00:25:46",
+                            "credits": "Tom Smith",
+                            "orientation": "portrait",
+                            "pictureType": "Poster",
+                            "title": "",
+                            "versions": [
+                                {
+                                    "profile": "webLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "webLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "224",
+                                    "height": "126"
+                                },
+                                {
+                                    "profile": "webLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "384",
+                                    "height": "216"
+                                },
+                                {
+                                    "profile": "mobileLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "96",
+                                    "height": "54"
+                                },
+                                {
+                                    "profile": "mobileLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "160",
+                                    "height": "90"
+                                },
+                                {
+                                    "profile": "mobileLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "320",
+                                    "height": "180"
+                                },
+                                {
+                                    "profile": "mobileRetinaLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "640",
+                                    "height": "360"
+                                }
+                            ]
+                        }
+                    ],
+                    "publicationEvent": {
+                        "type": "PublicationEvent",
+                        "id": 18563,
+                        "status": "published",
+                        "startDate": "2014-04-09 06:00:00",
+                        "endDate": "2015-03-31 05:59:00",
+                        "billingType": "rental",
+                        "price": "25.00"
+                    }
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+
+### Browse Assets [GET]
++ Parameters
+    + sort = `2` (optional, number, `2`) ... Results sorting
+        + Values
+            + `1` ... Most popular. Sorts by view_count.
+            + `2` ... Most recent. Sorts by year.
+            + `3` ... Best rated. Sorts by average_rating.
+            + `4` ... Title. Sorts by sort_title.
+            + `5` ... Sorts by relevance.
+    + parental (optional, string, `PG-13`) ... Filter by Asset rating (Parental Rating).
+        + Values
+            + `A`
+            + `AA`
+            + `B`
+            + `B15`
+            + `C`
+            + `D`
+            + `G`
+            + `NC-17`
+            + `NR`
+            + `PG`
+            + `PG-13`
+            + `R`
+            + `UR`
+    + genre (optional, string, `Drama`) ... Filter Asset by genre.
+    + atoz (optional, number, `1`) ... Filter Asset by title first letter.
+    + decade (optional, number, `1`) ... Filter Asset by year range.
+    + collection (optional, number, `1`) ... Filter Asset by collection.
+    + pageNumber = `1` (optional, number, `2`) ... Page number for pagination.
+    + videoFormat (optional, string, `SS`) ... Filter by video formats.
+        + Values
+            + `SS`
+            + `HLS`
+            + `HDS`
+
++ Response 200
+
+    [Search Assets][]
