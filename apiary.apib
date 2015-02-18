@@ -390,13 +390,6 @@ Represents a Channel
 ### Retrieve a Channel [GET]
 Returns a specific Channel.
 
-+ Request
-
-    + Headers
-            
-            X-Auth-Token: qwerty12345
-
-
 + Response 200
 
     [Channel][]
@@ -456,13 +449,6 @@ Returns all Channels.
 
 ### Retrieve all Channels [GET]
 Retrieves all Channels.
-
-+ Request
-
-    + Headers
-            
-            X-Auth-Token: qwerty12345
-
 
 + Response 200
 
@@ -1070,6 +1056,138 @@ Retrieves all Programs.
 + Response 200
 
     [List Programs][]
+
+# Group Schedule
+Represents actions against a Schedule object
+
+## Schedule [/schedule/start/{start}/end/{end}]
+Represents actions against the Schedule
+
++ Parameters
+    + start (int, `1423720800`) ... The start Unix timestamp of the Schedule.
+    + end (int, `1424204313`) ... The end Unix timestamp of the Schedule.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "id": 123,
+            "type": "Schedule",
+            "scheduleType": "LinearSchedule",
+            "modifiedAt": "2013-03-28 13:21:35",
+            "affiliate": "Cablevision",
+            "externalChannelId": 60295,
+            "externalScheduleId": 20130401,
+            "scheduleDate": "2013-04-01 00:00:00",
+            "channels": [
+                {
+                    "type": "Channel",
+                    "channelType": "LinearChannel",
+                    "id": 16,
+                    "title": "Unicable",
+                    "number": 203,
+                    "images": [
+                        {
+                            "type": "epgTimeline",
+                            "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                            "width": 31,
+                            "height": 47
+                        }
+                    ],
+                    "programs": [
+                        {
+                            "type": "Program",
+                            "programType": "LinearEpisodeProgram",
+                            "id": 3,
+                            "duration": 2,
+                            "showType": "Series",
+                            "title": "Co-Ed Confidential 4",
+                            "userId": "3"
+                        },
+                        {
+                            "type": "Program",
+                            "programType": "LinearMovieProgram",
+                            "id": 7,
+                            "duration": 2,
+                            "showType": "Movie",
+                            "title": "Furia De Mujer",
+                            "userId": "3"
+                        }
+                    ]
+                }
+            ]
+        },
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve a Schedule [GET]
+Returns a specific EPG Schedule given relevant start and end times
+
++ Response 200
+
+    [Schedule][]
+
+## Channel Schedule [/schedule/start/{start}/end/{end}/channel/{channelId}]
+Represents actions against the Schedule, filtered by Channel
+
++ Parameters
+    + start (int, `1423720800`) ... The start Unix timestamp of the Schedule.
+    + end (int, `1424204313`) ... The end Unix timestamp of the Schedule.
+    + channelId (int, `16`) ... The id of the schedule channel 
+
+### Retrieve a Schedule [GET]
+Returns a specific EPG Schedule given relevant start and end times, filtered by a Channel
+
++ Response 200
+
+    [Schedule][]
+
+
+## List Schedules [/schedules]
+Returns all Schedules.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "id": 123,
+                "type": "Schedule",
+                "scheduleType": "LinearSchedule",
+                "modifiedAt": "2013-03-28 13:21:35",
+                "scheduleDate": "2013-04-01 00:00:00"
+            },
+            {
+                "id": 124,
+                "type": "Schedule",
+                "scheduleType": "LinearSchedule",
+                "modifiedAt": "2013-03-28 13:21:35",
+                "scheduleDate": "2013-04-07 00:00:00"
+            }
+        ],
+        "messages": [
+            {
+                "success": "Data successfully retrieved"
+            }
+        ]
+    }
+    ```
+
+### Retrieve all Schedules [GET]
+Retrieves all Schedules.
+
++ Response 200
+
+    [List Schedules][]
+
+
     
 # Group Search
 Represents the search engine
@@ -1410,3 +1528,4 @@ Results for asset browsing
 + Response 200
 
     [Browse Assets][]
+
