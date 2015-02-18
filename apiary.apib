@@ -326,6 +326,148 @@ Retrieves all assets.
 
     [List Assets][]
 
+# Group Channel
+Represents actions against Channel objects
+
+## Channel [/channel/{id}]
+Represents a Channel
+
++ Parameters
+    + id (string, `1`) ... The id of the Channel.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "type": "Channel",
+            "channelType": "LinearChannel",
+            "id": 16,
+            "modifiedAt": "2014-03-28 00:25:46",
+            "title": "Unicable",
+            "affiliate": "Cablevision",
+            "callSign": "UNIC",
+            "number": 203,
+            "packageCodes": [
+                "mini-basico",
+                "basico",
+                "familiar",
+                "premium-hbo",
+                "premium-moviecity",
+                "LIVETV",
+                "MIN-B",
+                "MODULAR",
+                "BASICO",
+                "TOTAL HD",
+                "packTV",
+                "packHD",
+                "packHDMax",
+                "2",
+                "3",
+                "5"
+            ],
+            "restricted": false,
+            "streamName": "CV_Unicable",
+            "previewUrl": "http://pmorigin.veo.tv/Content/SS/Live/Channel(CV_Unicable).isml",
+            "hlsStreamName": null,
+            "hlsLiveAkamaiId": 206354,
+            "hasSearchResultOverlay": true,
+            "hasASpotOverlay": true,
+            "epgDescription": "Unicable",
+            "images": [
+                {
+                    "type": "epgTimeline",
+                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                    "width": 31,
+                    "height": 47
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Channel [GET]
+Returns a specific Channel.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Channel][]
+
+
+## List Channels [/cms/business/channels]
+Returns all Channels.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "type": "Channel",
+                "channelType": "LinearChannel",
+                "id": 16,
+                "modifiedAt": "2014-03-28 00:25:46",
+                "title": "Unicable",
+                "callSign": "UNIC",
+                "number": 203,
+                "packageCodes": [
+                    "mini-basico",
+                    "basico",
+                    "familiar",
+                    "premium-hbo",
+                    "premium-moviecity",
+                    "LIVETV",
+                    "MIN-B",
+                    "MODULAR",
+                    "BASICO",
+                    "TOTAL HD",
+                    "packTV",
+                    "packHD",
+                    "packHDMax",
+                    "2",
+                    "3",
+                    "5"
+                ],
+                "restricted": false,
+                "hasSearchResultOverlay": true,
+                "hasASpotOverlay": true,
+                "epgDescription": "Unicable",
+                "images": [
+                    {
+                        "type": "epgTimeline",
+                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                        "width": 31,
+                        "height": 47
+                    }
+                ]
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+### Retrieve all Channels [GET]
+Retrieves all Channels.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [List Channels][]
+
 
 # Group Country
 Represents actions against Country object
