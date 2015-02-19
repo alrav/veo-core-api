@@ -494,6 +494,92 @@ Retrieves all Countries.
 
     [List Countries][]
 
+# Group Device Configuration
+Represents actions against Device Configuration
+
+## Device Configuration [/device-config]
+Represents the Configuration of a Device (e.g., iOS, Android)
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": {
+            "type": "DeviceConfiguration",
+            "id": 1,
+            "modifiedAt": "2014-08-07 02:50:31",
+            "properties": {
+               "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
+               "labelLinks": {
+                    "phone": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/phone",
+                    "tablet": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/tablet"
+               },
+               "rentalsEnabled": true,
+               "minimunSecondsBufferVideo": 1,
+               "maximunSecondsBufferVideo": 5
+            }
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve Device Configuration [GET]
+Returns a specific Device Configuration.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+    
+    [Device Configuration][]
+
+
+## Labels [/device-config/labels/{key}]
+Represents the Labels for a Device's Configuration
+
++ Parameters
+    + key (string, `tablet`) ... The key for the labels configuration.
+
++ Model (application/json)
+
+    ```js
+    {
+        "data": [
+            {
+                "login": {
+                    "accountOnHoldMessageSky": "Su cuenta está inactivo. Para tener acceso al contenido de BlueToGo revisa su perfil BlueToGo.",
+                    "learnMoreNoDot": "Más información",
+                    "manageProfile": "Administrar Perfil",
+                    "genres": {
+                        "action": "Acción",
+                        "comedy": "Comedia"
+                    }
+                }
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+### Retrieve Labels [GET]
+Returns the Labels for a Device's Configuration
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
+
++ Response 200
+
+    [Labels][]
+
+
 # Group EPG
 Represents actions against the Veo EPG
 
