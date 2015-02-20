@@ -1324,7 +1324,16 @@ Represents a Page
             "id": 1,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Tienda",
-            "description": "Tienda",
+            "meta": [
+                {
+                    "content": "SEO description",
+                    "name": "description"
+                },
+                {
+                    "content": "ver peliculas, peliculas online, ver TV, TV online",
+                    "name": "keywords"
+                }
+            ],
             "widgets": [
                 {
                     "id": 1,
@@ -1737,7 +1746,261 @@ Returns a specific Page.
 
     [Page][]
 
++ Response 200
 
+    ```js
+    {
+        "data": {
+            "type": "Page",
+            "pageType": "Contact",
+            "id": 2,
+            "modifiedAt": "2014-08-07 02:50:31",
+            "title": "Contáctanos",
+            "meta": [
+                {
+                    "content": "SEO description",
+                    "name": "description"
+                },
+                {
+                    "content": "ver peliculas, peliculas online, ver TV, TV online",
+                    "name": "keywords"
+                }
+            ],
+            "widgets": [
+                {
+                    "id": 2,
+                    "type":  "staticContent",
+                    "title": "Contáctanos",
+                    "sections": [
+                        {
+                            "title": "Contáctanos",
+                            "content": "Tu satisfacción es lo más importante para nosotros. Si tienes alguna pregunta, comentario o sugerencia contáctanos a través de nuestro Centro de Atención a Clientes: 01 800 044 0 VEO (836)",
+                            "sections": null
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+    ```
+    
++ Response 200
+    
+    ```js
+    {
+        "data": {
+            "type": "Page",
+            "pageType": "Privacy",
+            "id": 3,
+            "modifiedAt": "2014-08-07 02:50:31",
+            "title": "Aviso de Privacidad en sitio web para Usuarios de VEO",
+            "meta": [
+                {
+                    "content": "SEO description",
+                    "name": "description"
+                },
+                {
+                    "content": "ver peliculas, peliculas online, ver TV, TV online",
+                    "name": "keywords"
+                }
+            ],
+            "widgets": [
+                {
+                    "id": 3,
+                    "type":  "staticContent",
+                    "title": "Aviso de Privacidad en sitio web para Usuarios de VEO",
+                    "sections": [
+                        {
+                            "title": null,
+                            "content": "Bienvenido al servicio VEO localizado en el sitio de internet http://www.veo.tv (el “Sitio”).\nVEO no recopila información personal de los usuarios (“Datos Personales”) excepto cuando ...",
+                            "sections": [
+                                {
+                                    "title": "Datos del Responsable y domicilio",
+                                    "content": "OTT Pacífico, S.A. (“VEO”) es una sociedad constituida de conformidad con las leyes de la República de Panamá (“Panamá”) con domicilio en International Business Park, Edificio 3835, Piso 4, Local 403, Ciudad de Panamá, Panamá.",
+                                    "sections": null
+                                },
+                                {
+                                    "title": "Encargado",
+                                    "content": "Socialand Media Solutions, S.A. de C.V. es el encargado para generar bases de datos que se utilizarán con fines de publicidad y promoción de las actividades de VEO (en adelante el “Encargado”).\nEl Encargado ...",
+                                    "sections": null
+                                },
+                                {
+                                    "title": "Consentimiento y Datos Personales",
+                                    "content": "El ingreso y/o registro a través del Sitio implica el consentimiento pleno y sin reservas de los usuarios para el tratamiento de sus Datos Personales ...",
+                                    "sections": [
+                                        {
+                                            "title": null,
+                                            "content": "Nombre y apellido completo",
+                                            "sections": null
+                                        },
+                                        {
+                                            "title": null,
+                                            "content": "Correo electrónico",
+                                            "sections": null
+                                        },
+                                        {
+                                            "title": null,
+                                            "content": "Código Postal",
+                                            "sections": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+    ```
+    
++ Response 200
+    
+    ```js
+    {
+        "data": {
+            "type": "Page",
+            "pageType": "Terms",
+            "id": 4,
+            "modifiedAt": "2014-08-07 02:50:31",
+            "title": "BIENVENIDO A VEO",
+            "meta": [
+                {
+                    "content": "SEO description",
+                    "name": "description"
+                },
+                {
+                    "content": "ver peliculas, peliculas online, ver TV, TV online",
+                    "name": "keywords"
+                }
+            ],
+            "widgets": [
+                {
+                    "id": 3,
+                    "type":  "staticContent",
+                    "title": "Contrato de prestación de servicios para el usuario final",
+                    "sections": [
+                        {
+                            "title": null,
+                            "content": "AL DAR CLICK EN EL BOTÓN “ACEPTAR”, USTED (“USTED”) ACEPTA INCONDICIONALMENTE QUE QUEDA OBLIGADO Y SE CONVIERTE EN UNA DE LAS PARTES DE ESTE CONTRATO DE PRESTACIÓN DE SERVICIOS Y LICENCIA (“CONTRATO”) CON OTT PACÍFICO, S.A. (EL “PRESTADOR”). EL USO CONTINUO DE LOS SERVICIOS QUE USTED ESTÁ POR USAR TAMBIÉN CONSTITUYE SU ACEPTACIÓN DE LOS TÉRMINOS DE ESTE CONTRATO. SI USTED NO ESTÁ DE ACUERDO DE MANERA INCONDICIONAL CON TODOS LOS TÉRMINOS DE ESTE CONTRATO, HAGA CLICK EN EL BOTÓN “CANCELAR” Y EL PROCESO DE CONTRATACIÓN NO CONTINUARÁ.",
+                            "sections": [
+                                {
+                                    "title": "Definiciones",
+                                    "content": "Para efectos del presente Contrato, los términos que se definen a continuación tendrán los significados que se les atribuyen a los mismos:",
+                                    "sections": [
+                                        {
+                                            "title": "\"El Prestador\"",
+                                            "content": "OTT Pacífico, S.A. con domicilio en International Business Park, Edificio 3835, Piso 4, Local 403, Ciudad de Panamá, República de Panamá, quien es el único responsable y obligado a la prestación del servicio materia del presente Contrato.",
+                                            "sections": null
+                                        },
+                                        {
+                                            "title": "\"Comisionistas\"",
+                                            "content": "las empresas locales que en virtud del Servicio contratado con el Prestador, podrán realizar diversas actividades, incluyendo la promoción del ...",
+                                            "sections": null
+                                        }
+                                    ]
+                                },
+                            {
+                                "title": "Descripción general del Servicio",
+                                "content": "VEO es una marca licenciada al Prestador que identifica al Servicio...",
+                                "sections": null
+                            }
+                        ]
+                    }
+                ]
+                }
+            ]
+        }
+    }
+    ```
+    
++ Response 200
+    
+    ```js
+    {
+        "data": {
+            "type": "Page",
+            "pageType": "About",
+            "id": 5,
+            "modifiedAt": "2014-08-07 02:50:31",
+            "title": "¿QUÉ ES VEO?",
+            "meta": [
+                {
+                    "content": "SEO description",
+                    "name": "description"
+                },
+                {
+                    "content": "ver peliculas, peliculas online, ver TV, TV online",
+                    "name": "keywords"
+                }
+            ],
+            "widgets": [
+                {
+                    "id": 4,
+                    "type":  "staticContent",
+                    "title": "¿QUÉ ES VEO?",
+                    "sections": [
+                        {
+                            "title": null,
+                            "content": "VEO es un servicio de transmisión de contenidos online (video streaming) a partir del cual podrás tener acceso a miles de títulos de diversa índole. Ya sea por suscripción y/o renta, tendrás un amplio catálogo de producciones originales, programas exclusivos, películas, series, telenovelas y documentales tanto nacionales como extranjeras.\nAdemás, VEO es el único que cuenta con el \"catch-up\" ...",
+                            "sections": null
+                        }
+                    ]
+                }
+            ]
+       }
+   }
+   ````
+   
++ Response 200
+    
+    ```js
+    {
+        "data": {
+            "type": "Page",
+            "pageType": "Help",
+            "id": 6,
+            "modifiedAt": "2014-08-07 02:50:31",
+            "title": "Ayuda",
+            "meta": [
+                {
+                    "content": "SEO description",
+                    "name": "description"
+                },
+                {
+                    "content": "ver peliculas, peliculas online, ver TV, TV online",
+                    "name": "keywords"
+                }
+            ],
+            "widgets": [
+                {
+                    "id": 5,
+                    "type":  "staticContent",
+                    "title": "Temas de Ayuda",
+                    "sections": [
+                        {
+                            "title": "Generales",
+                            "content": null,
+                            "sections": [
+                                {
+                                    "title": "¿QUÉ ES VEO?",
+                                    "content": "VEO es un servicio de transmisión de contenidos...",
+                                    "sections": [
+                                        {
+                                            "title": "VEO tiene exclusivos productos para que tú elijas lo que quieras ver:",
+                                            "content": "VEO Play. Disfruta películas...\nVEO Tele para llevar. Aquí podrás...",
+                                            "sections": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+       }
+   }
+   ````
 
 ## List Pages [/pages]
 Returns all Pages.
