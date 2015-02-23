@@ -7,6 +7,557 @@ Please be sure to validate your response examples with [JSONLint][1].
 
 [1]:  http://jsonlint.com/
 
+# Group Account - Authentication
+Represents authentication actions against an user account.
+
+## Login [/account/login]
+Attempts to authenticate the user credentials.
+
+### Login to the site [POST]
+
++ Request (application/json)
+
+    ```js
+    {
+        "email": "user@gmail.com",
+        "password": "password1",
+        "remember_me": true
+    }
+    ```
+
++ Response 200
+
+    [Account][]
+
++ Response 400
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_credentials" }
+        ]
+    }
+    ```
+
+## Logout [/account/logout]
+Attempts to logout the user.
+
+### Logout of the site [POST]
+
++ Response 200
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "info": "account_unauthenticated" }
+        ]
+    }
+    ```
+
+## Recover Password [/account/recover]
+Attempts to recover the user account's password. The response will always return `200` in order to prevent account sniffing.
+
+### Recover account password [POST]
+
++ Request (application/json)
+
+    ```js
+    {
+        "email": "user@gmail.com"
+    }
+    ```
+
++ Response 200
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "info": "account_recovery_email_sent" }
+        ]
+    }
+    ```
+
+## Authenticate Device [/account/device/login]
+Attempts to authenticate a user device.
+
+### Authenticate account device [POST]
+
++ Request (application/json)
+
+    ```js
+    {
+        "uid": "1234567890",
+        "mso": "1",
+        "device": "0"
+    }
+    ```
+
++ Response 200
+
+    [Account][]
+
++ Response 400
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_credentials" }
+        ]
+    }
+    ```
+
+## Validate Device [/account/device/{uid}]
+Attempts to validate a user device.
+
++ Parameters
+    + uid (string, `1`) ... The id of the Device.
+
+### Validate account device [GET]
+
++ Request
+    + Headers
+
+        X-Auth-Token: dead-beef-dead-beef-dead-beef
+
++ Response 200
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "info": "account_device_valid" }
+        ]
+    }
+    ```
+
++ Response 400
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_token" },
+            { "error": "account_device_invalid" }
+        ]
+    }
+    ```
+
+## Link Device [/account/device/{uid}/link]
+Attempts to link a user device.
+
++ Parameters
+    + uid (string, `1`) ... The id of the Device.
+
+### Link device to account [POST]
+
++ Request
+    + Headers
+
+        X-Auth-Token: dead-beef-dead-beef-dead-beef
+
++ Response 200
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "info": "account_device_linked" }
+        ]
+    }
+    ```
+
++ Response 400
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_token" },
+            { "error": "account_device_invalid" },
+            { "error": "account_device_existing" }
+        ]
+    }
+    ```
+
+## Unlink Device [/account/device/{uid}/unlink]
+Attempts to unlink a user device.
+
++ Parameters
+    + uid (string, `1`) ... The id of the Device.
+
+### Unlink device from account [POST]
+
++ Request
+    + Headers
+
+        X-Auth-Token: dead-beef-dead-beef-dead-beef
+
++ Response 200
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "info": "account_device_unlinked" }
+        ]
+    }
+    ```
+
++ Response 400
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_token" },
+            { "error": "account_device_invalid" }
+        ]
+    }
+    ```
+
+## Federate Device [/account/device/federate]
+Attempts to authenticate and link a user device.
+
+### Login and link device to account [POST]
+
++ Request (application/json)
+
+    ```js
+    {
+        "email": "user@gmail.com",
+        "password": "password1",
+        "uid": "1234567890",
+        "mso": "1",
+        "device": "0"
+    }
+    ```
+
++ Response 200
+
+    [Account][]
+
++ Response 400
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_credentials" },
+            { "error": "account_device_invalid" },
+            { "error": "account_device_existing" }
+        ]
+    }
+    ```
+
+# Group Account - Details
+Represents actions against an user account.
+
+## Account [/account/details]
+Represents an user account.
+
++ Model
+
+    ```js
+    {
+        "data": {
+            "id": 123456,
+            "facebookId": null,
+            "accessToken": "dead-beef-dead-beef-dead-beef",
+            "contract": "123456",
+            "mso": [2],
+            "status": "active",
+            "email": "user@gmail.com",
+            "name": "John",
+            "surname": "Doe",
+            "nickname": "JD",
+            "address1": "123 Rainbow St",
+            "address2": "Apt 666",
+            "city": "Doral",
+            "state": "FL",
+            "zip": "33178",
+            "country": "United States of America",
+            "preferences": {
+                "affiliate": "televisa",
+                "pinSet": false,
+                "pinRequired": false,
+                "permittedRatings": [
+                    "G",
+                    "PG",
+                    "PG-13"
+                ],
+                "language": "en",
+                "timezone": "America/New_York",
+                "timezoneOffset": "-0500",
+                "lastUpdated": 1425739017952
+            },
+            "permissions": {
+                "isTrial": false,
+                "canRent": true,
+                "canPlayVideo": true
+            },
+            "entitlements": [
+                {
+                    "packageCode": "TVOD",
+                    "affiliate": "televisa"
+                },
+                {
+                    "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
+                    "id": 152,
+                    "name": "Sumas y Restas",
+                    "status": "active",
+                    "purchaseDate": 1423147017000,
+                    "purchaseDuration": 720,
+                    "expiration": 1425739017000,
+                    "hoursToExpiry": 406,
+                    "viewDate": null,
+                    "viewDuration": 24,
+                    "price": 25,
+                    "assetId": "6283",
+                    "episodeId": null,
+                    "showType": null,
+                    "assetName": "Sumas y Restas",
+                    "episodeName": null,
+                    "episodeNumber": null,
+                    "seasonNumber": null,
+                    "affiliate": "televisa"
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve the user account [GET]
+
++ Request
+    + Headers
+
+        X-Auth-Token: dead-beef-dead-beef-dead-beef
+
++ Response 200
+
+    [Account][]
+
++ Response 400
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_token" }
+        ]
+    }
+    ```
+
+## Update Account [/account/details]
+Attempts to update the user account.
+
+### Update the user account [PUT]
+
++ Request (application/json)
+
+    ```js
+    {
+        "email": "user@gmail.com",
+        "name": "John",
+        "surname": "Doe",
+        "nickname": "JD",
+        "address1": "123 Rainbow St",
+        "address2": "Apt 666",
+        "city": "Doral",
+        "state": "FL",
+        "zip": "33178",
+        "country": "United States of America"
+    }
+    ```
+
++ Response 200
+
+    [Account][]
+
++ Response 400
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "error": "account_register_invalid_email" },
+            { "error": "account_register_invalid_email_existing" },
+            { "error": "account_register_invalid_city" },
+            { "error": "account_register_invalid_password" },
+            { "error": "account_register_invalid_name" },
+            { "error": "account_register_invalid_surname" }
+        ]
+    }
+    ```
+
+# Group Account - Registration
+Represents actions against account registration.
+
+## Register Account [/account/signup]
+Attempts to register a new user account.
+
+### Register new user account [POST]
+
++ Request (application/json)
+
+    ```js
+    {
+        "email": "user@gmail.com",
+        "password": "secretPassword",
+        "mso": "1",
+        "svod": "1",
+        "contract": "",
+        "name": "John",
+        "surname": "Doe",
+        "city": "",
+        "campaign": ""
+    }
+    ```
+
++ Response 200
+
+    [Account][]
+
++ Response 400
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "error": "account_register_invalid_email" },
+            { "error": "account_register_invalid_email_existing" },
+            { "error": "account_register_invalid_mso" },
+            { "error": "account_register_invalid_contract" },
+            { "error": "account_register_invalid_city" },
+            { "error": "account_register_invalid_password" },
+            { "error": "account_register_invalid_name" },
+            { "error": "account_register_invalid_surname" },
+            { "error": "account_register_service_active" },
+            { "error": "account_register_svod_contract_active" },
+            { "error": "account_register_missing_live_tv" },
+            { "error": "account_register_missing_rgu_video" },
+            { "error": "account_register_contract_inactive" },
+            { "error": "account_register_contract_closed" },
+            { "error": "account_register_contract_under_validation" },
+            { "error": "account_register_contract_inactive_address_change" },
+            { "error": "account_register_open_order" }
+        ]
+    }
+    ```
+
++ Response 402
+
+    ```js
+    {
+        "data": {
+            "accountId": "123456",
+            "initPoint": "https://www.mercadopago.com/mlm/debits/new?preapproval_id=605eb5548f9640d5be334ac5181e8e5c"
+        },
+        "messages": [
+            { "error": "account_register_payment_required" }
+        ]
+    }
+    ```
+
++ Response 412
+
+    ```js
+    {
+        "data": {
+            "accountId": "123456",
+            "fieldLabel": "Teléfono",
+            "fieldMasked": "553989****"
+        },
+        "messages": [
+            { "error": "account_register_verification_required" }
+        ]
+    }
+    ```
+
+## Verify Account [/account/verify]
+Attempts to verify a new user account.
+
+### Verify new user account [POST]
+
++ Request (application/json)
+
+    ```js
+    {
+        "accountId": "123456",
+        "fieldLabel": "Teléfono",
+        "fieldUnmasked": "5539894100"
+    }
+    ```
+
++ Response 200
+
+    [Account][]
+
++ Response 400
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "error": "account_verification_failed" },
+            { "error": "account_verification_account_invalid" },
+            { "error": "account_verification_account_locked" }
+        ]
+    }
+    ```
+
+## Cancel Account [/account/cancel]
+Attempts to cancel an existing user account.
+
+### Cancel an existing user account [POST]
+
++ Response 200
+
+    ```js
+    {
+        "data": {},
+        "messages": [
+            { "info": "account_cancelled" }
+        ]
+    }
+    ```
+
+# Group Account - SVOD
+Represents actions against SVOD registration.
+
+## Activate SVOD [/account/svod/activate]
+Attempts to activate the SVOD package in the user account.
+
+### Activate SVOD package [POST]
+
++ Request
+    + Headers
+
+        X-Auth-Token: dead-beef-dead-beef-dead-beef
+
++ Response 200
+
+    [Account][]
+
+## Remove SVOD [/account/svod/remove]
+Attempts to remove the SVOD package from the user account
+
+### Remove SVOD package [POST]
+
++ Request
+    + Headers
+
+        X-Auth-Token: dead-beef-dead-beef-dead-beef
+
++ Response 200
+
+    [Account][]
+
 # Group Asset
 Represents actions against Asset objects
 
