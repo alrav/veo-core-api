@@ -3264,7 +3264,7 @@ Retrieves all Programs.
 # Group Search
 Represents the search engine
 
-## Search Assets [/search{?q}{?sort}{?dir}{?offset}{?limit}]
+## Search Assets [/search{?q}{?sort}{?sortdir}{?offset}{?limit}]
 Search result for assets search
 
 + Model (application/json)
@@ -3276,32 +3276,32 @@ Search result for assets search
             "summary": [
                 {
                     "total": 1,
-                    "field": "subType",
+                    "field": "showType",
                     "value": "Movies"
                 },
                 {
                     "total": 0,
-                    "field": "subType",
+                    "field": "showType",
                     "value": "Telenovelas"
                 },
                 {
                     "total": 0,
-                    "field": "subType",
+                    "field": "showType",
                     "value": "TV_Series"
                 },
                 {
                     "total": 0,
-                    "field": "subType",
+                    "field": "showType",
                     "value": "News"
                 },
                 {
                     "total": 0,
-                    "field": "subType",
+                    "field": "showType",
                     "value": "Shows"
                 },
                 {
                     "total": 0,
-                    "field": "subType",
+                    "field": "showType",
                     "value": "Sports"
                 },
                 {
@@ -3315,7 +3315,7 @@ Search result for assets search
                 {
                     "entity": "Asset",
                     "type": "Movie",
-                    "subType": "Movie",
+                    "showType": "Movie",
                     "id": 4754,
                     "title": "Operación Dragón",
                     "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
@@ -3412,7 +3412,7 @@ Search result for assets search
 
 ### Search Assets [GET]
 + Parameters
-    + q (required, string, `Galilea%20Montijo+AND+type:Movie+OR+type:Series`) ... The search query and filters
+    + q (required, string, `Galilea%20Montijo+AND+type:(Movie+OR+Series)`) ... The search query and filters
         + Values
             + `Galilea%20Montijo`                                ... Full text search for `Galilea Montijo`
             + `genre:Drama+OR+genre:Suspenso`                    ... Filter Assets by Genre
@@ -3420,7 +3420,7 @@ Search result for assets search
             + `entity:asset`                                     ... For Assets
             + `entity:program`                                   ... For Programs
             + `parentalRating:PG`                                ... Filter Assets by Parental Rating
-            + `Galilea%20Montijo+AND+type:Movie+OR+type:Series` ... Full search query example
+            + `Galilea%20Montijo+AND+type:(Movie+OR+Series)`     ... Full search query example
     + sort = `relevance` (optional, string, `relevance`)         ... Results sorting
         + Values
             + `popularity` ... Sorts by view_count.
@@ -3428,7 +3428,7 @@ Search result for assets search
             + `rating`     ... Sorts by average_rating.
             + `title`      ... Sorts by sort_title.
             + `relevance`  ... Sorts by relevance.
-    + dir = `asc` (optional, string, `asc`) ... Sort direction.
+    + sortdir = `asc` (optional, string, `asc`) ... Sort direction.
         + Values
             + `asc`      ... Ascending order.
             + `desc`   ... Descending order.
