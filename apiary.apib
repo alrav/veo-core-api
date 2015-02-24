@@ -27,7 +27,7 @@ Attempts to authenticate the user credentials.
     }
     ```
 
-+ Response 200 (application/json)
++ Response 200
 
     [Account][]
 
@@ -94,7 +94,7 @@ Attempts to authenticate a user Device.
     }
     ```
 
-+ Response 200 (application/json)
++ Response 200
 
     [Account][]
 
@@ -129,7 +129,7 @@ Attempts to authenticate and link an account Device.
     }
     ```
 
-+ Response 200 (application/json)
++ Response 200
 
     [Account][]
 
@@ -168,7 +168,7 @@ Represents an account Device.
 ### Validates a Device [GET]
 Attempts to validate an account Device.
 
-+ Response 200 (application/json)
++ Response 200
 
     [Device][]
 
@@ -216,17 +216,7 @@ Attempts to link an account Device.
 ### Unlinks a Device [DELETE]
 Attempts to unlink an account Device.
 
-+ Response 204 (application/json)
-
-    ```js
-    {
-        "headers": {},
-        "data": {},
-        "messages": [
-            { "info": "account_device_unlinked" }
-        ]
-    }
-    ```
++ Response 204
 
 + Response 400 (application/json)
 
@@ -322,7 +312,7 @@ Represents an user Account.
 ### Retrieve the Account [GET]
 Attempts to retrieve the user account.
 
-+ Response 200 (application/json)
++ Response 200
 
     [Account][]
 
@@ -360,7 +350,7 @@ Attempts to update the user account.
     }
     ```
 
-+ Response 200 (application/json)
++ Response 200
 
     [Account][]
 
@@ -407,7 +397,7 @@ Attempts to register a new user account.
     }
     ```
 
-+ Response 200 (application/json)
++ Response 200
 
     [Account][]
 
@@ -487,7 +477,7 @@ Attempts to verify a new user account.
     }
     ```
 
-+ Response 200 (application/json)
++ Response 200
 
     [Account][]
 
@@ -530,7 +520,7 @@ Attempts to activate the SVOD package in the user account.
 
 ### Activate SVOD package [POST]
 
-+ Response 200 (application/json)
++ Response 200
 
     [Account][]
 
@@ -539,7 +529,7 @@ Attempts to remove the SVOD package from the user account
 
 ### Remove SVOD package [POST]
 
-+ Response 200 (application/json)
++ Response 200
 
     [Account][]
 
