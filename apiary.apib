@@ -558,7 +558,7 @@ Represents an Asset
     {
         "data": {
             "type": "Asset",
-            "assetType": "Movie",
+            "subType": "Movie",
             "id": 4754,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Operación Dragón",
@@ -746,7 +746,7 @@ Returns a specific Asset.
     {
         "data": {
             "type": "Asset",
-            "assetType": "Series",
+            "subType": "Series",
             "id": 11173,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "La Viuda Negra",
@@ -890,7 +890,7 @@ Returns a specific Asset.
                     "episodes": [
                         {
                             "type": "Asset",
-                            "assetType": "Episode",
+                            "subType": "Episode",
                             "id": 11392,
                             "number": 40,
                             "title": "Fuera de todo plan",
@@ -907,7 +907,7 @@ Returns a specific Asset.
                         },
                         {
                             "type": "Asset",
-                            "assetType": "Episode",
+                            "subType": "Episode",
                             "id": 11569,
                             "number": 39,
                             "title": "Griselda se confiesa",
@@ -935,7 +935,7 @@ Returns a specific Asset.
                     "episodes": [
                         {
                             "type": "Asset",
-                            "assetType": "Episode",
+                            "subType": "Episode",
                             "id": 12780,
                             "number": 81,
                             "title": "El Legado",
@@ -952,7 +952,7 @@ Returns a specific Asset.
                         },
                         {
                             "type": "Asset",
-                            "assetType": "Episode",
+                            "subType": "Episode",
                             "id": 12781,
                             "number": 80,
                             "title": "Lucha de astucias",
@@ -996,7 +996,7 @@ Returns all Assets.
         "data": [
         {
             "type": "Asset",
-            "assetType": "Movie",
+            "subType": "Movie",
             "id": 4754,
             "title": "Operación Dragón",
             "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
@@ -1123,7 +1123,7 @@ Results for asset browsing
             "results": [
                 {
                     "type": "Asset",
-                    "assetType": "Movie",
+                    "subType": "Movie",
                     "id": 4754,
                     "title": "Operación Dragón",
                     "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
@@ -1277,7 +1277,7 @@ Represents a Channel
     {
         "data": {
             "type": "Channel",
-            "channelType": "LinearChannel",
+            "subType": "LinearChannel",
             "id": 16,
             "modifiedAt": "2014-03-28 00:25:46",
             "title": "Unicable",
@@ -1341,7 +1341,7 @@ Returns all Channels.
         "data": [
             {
                 "type": "Channel",
-                "channelType": "LinearChannel",
+                "subType": "LinearChannel",
                 "id": 16,
                 "modifiedAt": "2014-03-28 00:25:46",
                 "title": "Unicable",
@@ -1516,7 +1516,7 @@ Represents actions against the EPG
         "data": [
             {
                 "type": "Channel",
-                "channelType": "LinearChannel",
+                "subType": "LinearChannel",
                 "id": 16,
                 "modifiedAt": "2013-03-28 13:21:35",
                 "title": "Unicable",
@@ -1533,7 +1533,7 @@ Represents actions against the EPG
                     {
                         "id": 123,
                         "type": "Schedule",
-                        "scheduleType": "LinearSchedule",
+                        "subType": "LinearSchedule",
                         "scheduleDate": "2013-04-01 00:00:00",
                         "items": [
                             {
@@ -1542,7 +1542,7 @@ Represents actions against the EPG
                                 "endTime": "01:30:00",
                                 "program": {
                                     "type": "Program",
-                                    "programType": "LinearEpisodeProgram",
+                                    "subType": "LinearEpisodeProgram",
                                     "id": 3,
                                     "duration": 2,
                                     "showType": "Series",
@@ -1556,7 +1556,7 @@ Represents actions against the EPG
                                 "endTime": "03:00:00",
                                 "program": {
                                     "type": "Program",
-                                    "programType": "LinearMovieProgram",
+                                    "subType": "LinearMovieProgram",
                                     "id": 7,
                                     "duration": 2,
                                     "showType": "Movie",
@@ -1908,7 +1908,7 @@ Represents a Page
     {
         "data": {
             "type": "Page",
-            "pageType": "Rental",
+            "subType": "Rental",
             "id": 1,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Tienda",
@@ -1930,7 +1930,7 @@ Represents a Page
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "createdAt": "2013-08-23 19:07:49",
                             "modifiedAt": "2014-08-07 02:50:31",
@@ -2026,14 +2026,14 @@ Represents a Page
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "recentlyAdded",
+                    "subType": "recentlyAdded",
                     "id": 3,
                     "title": "AÑADIDAS RECIENTEMENTE",
                     "limit": 4,
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "createdAt": "2013-08-23 19:07:49",
                             "modifiedAt": "2014-08-07 02:50:31",
@@ -2122,7 +2122,7 @@ Represents a Page
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "collection",
+                    "subType": "collection",
                     "id": 4,
                     "title": "ACCION Y AVENTURA",
                     "limit": 4,
@@ -2130,7 +2130,7 @@ Represents a Page
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "createdAt": "2013-08-23 19:07:49",
                             "modifiedAt": "2014-08-07 02:50:31",
@@ -2219,14 +2219,14 @@ Represents a Page
                 },
                 {
                     "type": "carousel",
-                    "widgetType": "recommendations",
+                    "subType": "recommendations",
                     "id": 5,
                     "title": "ANIMADAS",
                     "limit": 6,
                     "items": [
                         {
                             "type": "asset",
-                            "assetType": "movie",
+                            "subType": "movie",
                             "id": 4754,
                             "createdAt": "2013-08-23 19:07:49",
                             "modifiedAt": "2014-08-07 02:50:31",
@@ -2332,7 +2332,7 @@ Returns a specific Page.
     {
         "data": {
             "type": "Page",
-            "pageType": "Contact",
+            "subType": "Contact",
             "id": 2,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Contáctanos",
@@ -2370,7 +2370,7 @@ Returns a specific Page.
     {
         "data": {
             "type": "Page",
-            "pageType": "Privacy",
+            "subType": "Privacy",
             "id": 3,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Aviso de Privacidad en sitio web para Usuarios de VEO",
@@ -2440,7 +2440,7 @@ Returns a specific Page.
     {
         "data": {
             "type": "Page",
-            "pageType": "Terms",
+            "subType": "Terms",
             "id": 4,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "BIENVENIDO A VEO",
@@ -2500,7 +2500,7 @@ Returns a specific Page.
     {
         "data": {
             "type": "Page",
-            "pageType": "About",
+            "subType": "About",
             "id": 5,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "¿QUÉ ES VEO?",
@@ -2538,7 +2538,7 @@ Returns a specific Page.
     {
         "data": {
             "type": "Page",
-            "pageType": "Help",
+            "subType": "Help",
             "id": 6,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Ayuda",
@@ -2591,7 +2591,7 @@ Returns all Pages.
     {
         "data": [
             {
-                "pageType": "Rental",
+                "subType": "Rental",
                 "modifiedAt": "2014-08-07 02:50:31",
                 "userId": 3,
                 "title": "Tienda"
@@ -2817,7 +2817,7 @@ Represents a Program
     {
         "data": {
             "type": "Program",
-            "programType": "LinearEpisodeProgram",
+            "subType": "LinearEpisodeProgram",
             "id": 3,
             "modifiedAt": "2014-03-28 00:25:46",
             "duration": 2,
@@ -2862,7 +2862,7 @@ Returns all Programs.
         "data": [
             {
                 "type": "Program",
-                "programType": "LinearEpisodeProgram",
+                "subType": "LinearEpisodeProgram",
                 "id": 3,
                 "modifiedAt": "2014-03-28 00:25:46",
                 "duration": 2,
@@ -2941,7 +2941,7 @@ Search result for assets search
             "results": [
                 {
                     "type": "Asset",
-                    "assetType": "Movie",
+                    "subType": "Movie",
                     "id": 4754,
                     "title": "Operación Dragón",
                     "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
@@ -3095,7 +3095,7 @@ Represents a season
             "episodes": [
                 {
                     "type": "Asset",
-                    "assetType": "Episode",
+                    "subType": "Episode",
                     "id": 11392,
                     "number": 40,
                     "title": "Fuera de todo plan",
@@ -3112,7 +3112,7 @@ Represents a season
                 },
                 {
                     "type": "Asset",
-                    "assetType": "Episode",
+                    "subType": "Episode",
                     "id": 11569,
                     "number": 39,
                     "title": "Griselda se confiesa",
