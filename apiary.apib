@@ -533,6 +533,156 @@ Attempts to remove the SVOD package from the user account
 
     [Account][]
 
+# Group Account - Pin
+Represents actions against the account Pin.
+
+## Pin [/account/pin]
+Represents the account Pin.
+
+### Validate the Pin [GET]
+Attempts to validate the account Pin.
+
++ Request (application/json)
+
+    ```js
+    {
+        "data": {
+            "currentPin": "1234"
+        }
+    }
+    ```
+
++ Response 204
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_pin" }
+        ]
+    }
+    ```
+
+### Update the Pin [PUT]
+Attempts to update the account Pin.
+
++ Request (application/json)
+
+    ```js
+    {
+        "data": {
+            "currentPin": "1234",
+            "newPin": "1234"
+        }
+    }
+    ```
+
++ Response 204
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_pin" }
+        ]
+    }
+    ```
+
+### Clear the Pin [DELETE]
+Attempts to clear the account Pin.
+
++ Request (application/json)
+
+    ```js
+    {
+        "data": {
+            "currentPin": "1234"
+        }
+    }
+    ```
+
++ Response 204
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_pin" }
+        ]
+    }
+    ```
+
+# Group Account - Preferences
+Represents actions against the account preferences.
+
+## Preferences [/account/preferences]
+Represents the account Preferences.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "id": 123456,
+            "affiliate": "televisa",
+            "language": "en",
+            "pinSet": true,
+            "pinRequired": true,
+            "permittedRatings": [
+                "G",
+                "PG",
+                "PG-13"
+            ],
+            "timezone": "America/New_York",
+            "timezoneOffset": "-0500",
+            "lastUpdated": 1425739017952
+        },
+        "messages": []
+    }
+
+### Retrieve the Preferences [GET]
+Attempts to retrieve the user Preferences.
+
++ Response 200
+
+    [Preferences][]
+
+
+### Update the Preferences [PUT]
+Attempts to update the user Preferences.
+
++ Response 200
+
+    [Preferences][]
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            { "error": "account_invalid_user_preference" }
+        ]
+    }
+    ```
+
+# Group Account - Ratings
+Represents actions against asset ratings.
+
+# Group Account - Rental
+Represents actions against asset rental.
+
 # Group Asset
 Represents actions against Asset objects
 
