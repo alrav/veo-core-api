@@ -328,7 +328,7 @@ Attempts to retrieve the user account.
     }
     ```
 
-### Update the Account [PUT]
+### Update the Account [PATCH]
 Attempts to update the user account.
 
 + Request (application/json)
@@ -536,11 +536,11 @@ Attempts to remove the SVOD package from the user account
 # Group Account - Pin
 Represents actions against the account Pin.
 
-## Pin [/account/pin]
-Represents the account Pin.
+## User Pin [/account/pin]
+Represents the User Pin.
 
-### Validate the Pin [GET]
-Attempts to validate the account Pin.
+### Validate User Pin [GET]
+Attempts to validate the User Pin.
 
 + Request (application/json)
 
@@ -566,8 +566,8 @@ Attempts to validate the account Pin.
     }
     ```
 
-### Update the Pin [PUT]
-Attempts to update the account Pin.
+### Update User Pin [PATCH]
+Attempts to update the User Pin.
 
 + Request (application/json)
 
@@ -594,8 +594,8 @@ Attempts to update the account Pin.
     }
     ```
 
-### Clear the Pin [DELETE]
-Attempts to clear the account Pin.
+### Clear User Pin [DELETE]
+Attempts to clear the User Pin.
 
 + Request (application/json)
 
@@ -624,8 +624,8 @@ Attempts to clear the account Pin.
 # Group Account - Preferences
 Represents actions against the account preferences.
 
-## Preferences [/account/preferences]
-Represents the account Preferences.
+## User Preferences [/account/preferences]
+Represents the User Preferences.
 
 + Model (application/json)
 
@@ -649,17 +649,18 @@ Represents the account Preferences.
         },
         "messages": []
     }
+    ```
 
-### Retrieve the Preferences [GET]
-Attempts to retrieve the user Preferences.
+### Retrieve User Preferences [GET]
+Attempts to retrieve the User Preferences.
 
 + Response 200
 
-    [Preferences][]
+    [User Preferences][]
 
 
-### Update the Preferences [PUT]
-Attempts to update the user Preferences.
+### Update User Preferences [PATCH]
+Attempts to update the User Preferences.
 
 + Request (application/json)
 
@@ -679,7 +680,7 @@ Attempts to update the user Preferences.
 
 + Response 200
 
-    [Preferences][]
+    [User Preferences][]
 
 + Response 400 (application/json)
 
@@ -694,10 +695,250 @@ Attempts to update the user Preferences.
     ```
 
 # Group Account - Ratings
-Represents actions against asset ratings.
+Represents actions against user ratings.
+
+## User Rating [/account/ratings/{assetId}]
+Represents the User Rating.
+
++ Parameters
+    + assetId (string, `1`) ... The id of the Asset.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "id": 123456,
+            "affiliate": "televisa",
+            "rating": 5,
+            "dateRated": "2015-02-23T10:00:25Z",
+            "include": true
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve User Rating [GET]
+Attempts to retrieve a User Rating.
+
++ Response 200
+
+    [User Rating][]
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            { "error": "account_rating_invalid_asset" }
+        ]
+    }
+    ```
+
+### Create User Rating [POST]
+Attempts to create a User Rating.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "rating": 5
+        }
+    }
+    ```
+
++ Response 201
+
+    [User Rating][]
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            { "error": "account_rating_invalid_asset" }
+        ]
+    }
+    ```
+
+### Update User Rating [PATCH]
+Attempts to update a User Rating.
+
++ Request
+
+    ```js
+    {
+        "data": {
+            "rating": 5
+        }
+    }
+    ```
+
++ Response 200
+
+    [User Rating][]
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            { "error": "account_rating_invalid_asset" }
+        ]
+    }
+    ```
 
 # Group Account - Rental
-Represents actions against asset rental.
+Represents actions against account rentals.
+
+## Movie Rental [/account/rental/asset/{assetId}]
+
+### Retrieve a Movie Rental [GET]
+Attempts to retrieve a Movie.
+
++ Request (application/json)
+
++ Response 200
+
+    [Rental][]
+
+### Create a Movie Rental [POST]
+Attempts to rent a Movie.
+
++ Request (application/json)
+
++ Response 201
+
+    [Rental][]
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            { "error": "account_rental_invalid_asset" },
+            { "error": "account_rental_missing_payment_method" },
+            { "error": "account_rental_payment_declined" }
+        ]
+    }
+    ```
+
+## Rental [/account/rental/{rentalId}]
+Represents a rental entitlement.
+
++ Parameters
+    + rentalId (string, `1`) ... The id of the Rental.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "id": 123456,
+            "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
+            "transactionId": 1234567890,
+            "purchaseDate": "2015-02-23T11:31:52Z",
+            "purchaseDuration": 2592000,
+            "viewDate": "2015-02-23T11:32:03Z",
+            "viewDuration": 86400,
+            "affiliate": "cablevision",
+            "billingType": "rental",
+            "packageCode": null,
+            "showType": "Movies",
+            "price": 40.00,
+            "status": "active",
+            "assetId": 3,
+            "assetName": "Fight Club",
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Rental [GET]
+Attempts to retrieve a Rental.
+
++ Response 200
+
+    [Rental][]
+
+## Rental History [/account/rental/history]
+Represents the account rental history.
+
+### Retrieve the Rental History [GET]
+Attempts to retrieve the rental history.
+
++ Response 200 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": [
+            {
+                "id": 123456,
+                "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
+                "transactionId": 1234567890,
+                "purchaseDate": "2015-02-23T11:31:52Z",
+                "purchaseDuration": 2592000,
+                "viewDate": "2015-02-23T11:32:03Z",
+                "viewDuration": 86400,
+                "affiliate": "cablevision",
+                "billingType": "rental",
+                "packageCode": null,
+                "showType": "Movies",
+                "price": 40.00,
+                "status": "active",
+                "assetId": 3,
+                "assetName": "Fight Club",
+            }
+        ],
+        "messages": []
+    }
+    ```
+
+## Active Rentals [/account/rental/active]
+Represents the account active rentals.
+
+### Retrieve the Active Rentals [GET]
+Attempts to retrieve the active rentals.
+
++ Response 200 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": [
+            {
+                "id": 123456,
+                "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
+                "transactionId": 1234567890,
+                "purchaseDate": "2015-02-23T11:31:52Z",
+                "purchaseDuration": 2592000,
+                "viewDate": "2015-02-23T11:32:03Z",
+                "viewDuration": 86400,
+                "affiliate": "cablevision",
+                "billingType": "rental",
+                "packageCode": null,
+                "showType": "Movies",
+                "price": 40.00,
+                "status": "active",
+                "assetId": 3,
+                "assetName": "Fight Club",
+            }
+        ],
+        "messages": []
+    }
+    ```
 
 # Group Asset
 Represents actions against Asset objects
