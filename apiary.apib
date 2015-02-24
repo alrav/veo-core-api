@@ -799,25 +799,25 @@ Attempts to update a User Rating.
 # Group Account - Rental
 Represents actions against account rentals.
 
-## Movie Rental [/account/rental/asset/{assetId}]
+## Rental [/account/rental/asset/{assetId}]
 
-### Retrieve a Movie Rental [GET]
-Attempts to retrieve a Movie.
+### Retrieve a Rental [GET]
+Attempts to retrieve a Rental entitlement.
 
 + Request (application/json)
 
 + Response 200
 
-    [Rental][]
+    [Entitlement][]
 
-### Create a Movie Rental [POST]
-Attempts to rent a Movie.
+### Create a Rental [POST]
+Attempts to create a Rental entitlement.
 
 + Request (application/json)
 
 + Response 201
 
-    [Rental][]
+    [Entitlement][]
 
 + Response 400 (application/json)
 
@@ -833,11 +833,11 @@ Attempts to rent a Movie.
     }
     ```
 
-## Rental [/account/rental/{rentalId}]
+## Entitlement [/account/rental/{entitlementId}]
 Represents a rental entitlement.
 
 + Parameters
-    + rentalId (string, `1`) ... The id of the Rental.
+    + entitlementId (string, `1`) ... The id of the Entitlement.
 
 + Model (application/json)
 
@@ -865,18 +865,18 @@ Represents a rental entitlement.
     }
     ```
 
-### Retrieve a Rental [GET]
-Attempts to retrieve a Rental.
+### Retrieve an Entitlement [GET]
+Attempts to retrieve an Entitlement.
 
 + Response 200
 
-    [Rental][]
+    [Entitlement][]
 
-## Rental History [/account/rental/history]
-Represents the account rental history.
+## Active Rentals [/account/rental/active]
+Represents the account active rentals.
 
-### Retrieve the Rental History [GET]
-Attempts to retrieve the rental history.
+### Retrieve the Active Rentals [GET]
+Attempts to retrieve the active rentals.
 
 + Response 200 (application/json)
 
@@ -906,11 +906,11 @@ Attempts to retrieve the rental history.
     }
     ```
 
-## Active Rentals [/account/rental/active]
-Represents the account active rentals.
+## Rental History [/account/rental/history]
+Represents the account rental history.
 
-### Retrieve the Active Rentals [GET]
-Attempts to retrieve the active rentals.
+### Retrieve the Rental History [GET]
+Attempts to retrieve the rental history.
 
 + Response 200 (application/json)
 
