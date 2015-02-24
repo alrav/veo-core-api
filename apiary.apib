@@ -661,6 +661,22 @@ Attempts to retrieve the user Preferences.
 ### Update the Preferences [PUT]
 Attempts to update the user Preferences.
 
++ Request (application/json)
+
+    ```js
+    {
+        "data": {
+            "affiliate": "televisa",
+            "language": "en",
+            "pinRequired": true,
+            "permittedRatings": [
+                "PG-13"
+            ],
+            "timezone": "America/New_York"
+        }
+    }
+    ```
+
 + Response 200
 
     [Preferences][]
