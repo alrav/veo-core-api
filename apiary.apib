@@ -22,7 +22,7 @@ Attempts to authenticate the user credentials.
         "data": {
             "email": "user@gmail.com",
             "password": "password1",
-            "remember_me": true
+            "remember": true
         }
     }
     ```
@@ -38,7 +38,10 @@ Attempts to authenticate the user credentials.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "auth_invalid_credentials" }
+            {
+                "context": null,
+                "value": "You have entered an invalid email and/or password."
+            }
         ]
     }
     ```
@@ -72,7 +75,10 @@ Attempts to recover the user account's password. The response will always return
         "headers": {},
         "data": {},
         "messages": [
-            { "info": "account_recovery_email_sent" }
+            {
+                "context": null,
+                "value": "A recovery email has been sent to your account."
+            }
         ]
     }
     ```
@@ -105,7 +111,10 @@ Attempts to authenticate a user Device.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "auth_invalid_credentials" }
+            {
+                "context": null,
+                "value": "You have used an invalid device ID."
+            }
         ]
     }
     ```
@@ -140,9 +149,10 @@ Attempts to authenticate and link an account Device.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "auth_invalid_credentials" },
-            { "error": "account_device_invalid" },
-            { "error": "account_device_existing" }
+            {
+                "context": null,
+                "value": "You have entered an invalid username and/or password."
+            }
         ]
     }
     ```
@@ -179,8 +189,10 @@ Attempts to validate an account Device.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_invalid_token" },
-            { "error": "account_device_invalid" }
+            {
+                "context": null,
+                "value": "You are using an invalid device ID."
+            }
         ]
     }
     ```
@@ -207,8 +219,10 @@ Attempts to link an account Device.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_device_invalid" },
-            { "error": "account_device_existing" }
+            {
+                "context": null,
+                "value": "You are using an invalid device Id."
+            }
         ]
     }
     ```
@@ -225,16 +239,19 @@ Attempts to unlink an account Device.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_device_invalid" }
+            {
+                "context": null,
+                "value": "You are using an invalid device ID."
+            }
         ]
     }
     ```
 
 # Group Account - Details
-Represents actions against an user Account.
+Represents actions against an user account.
 
-## Account [/account/details]
-Represents an user Account.
+## Account [/account]
+Represents an user account.
 
 + Model (application/json)
 
@@ -249,9 +266,9 @@ Represents an user Account.
             "mso": [2],
             "status": "active",
             "email": "user@gmail.com",
-            "name": "John",
-            "surname": "Doe",
-            "nickname": "JD",
+            "firstName": "John",
+            "familyName": "Doe",
+            "displayName": "JD",
             "address1": "123 Rainbow St",
             "address2": "Apt 666",
             "city": "Doral",
@@ -259,7 +276,6 @@ Represents an user Account.
             "zip": "33178",
             "country": "United States of America",
             "preferences": {
-                "affiliate": "televisa",
                 "pinSet": false,
                 "pinRequired": false,
                 "permittedRatings": [
@@ -279,29 +295,31 @@ Represents an user Account.
             },
             "entitlements": [
                 {
+                    "type": "Subscription",
                     "packageCode": "TVOD",
                     "affiliate": "televisa"
                 },
                 {
+                    "type": "Rental",
+                    "id": 123456,
                     "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
-                    "id": 152,
-                    "name": "Sumas y Restas",
+                    "transactionId": 1234567890,
+                    "purchaseDate": "2015-02-23T11:31:52Z",
+                    "purchaseDuration": 2592000,
+                    "viewDate": "2015-02-23T11:32:03Z",
+                    "viewDuration": 86400,
+                    "timeToExpiry": 3600,
+                    "affiliate": "cablevision",
+                    "packageCode": null,
+                    "showType": "Movies",
+                    "price": 40.00,
                     "status": "active",
-                    "purchaseDate": 1423147017000,
-                    "purchaseDuration": 720,
-                    "expiration": 1425739017000,
-                    "hoursToExpiry": 406,
-                    "viewDate": null,
-                    "viewDuration": 24,
-                    "price": 25,
-                    "assetId": "6283",
-                    "episodeId": null,
-                    "showType": null,
-                    "assetName": "Sumas y Restas",
-                    "episodeName": null,
-                    "episodeNumber": null,
-                    "seasonNumber": null,
-                    "affiliate": "televisa"
+                    "asset": {
+                        "type": "Asset",
+                        "subType": "Movie",
+                        "id": 4754,
+                        "title": "Operación Dragón"
+                    }
                 }
             ]
         },
@@ -316,68 +334,8 @@ Attempts to retrieve the user account.
 
     [Account][]
 
-+ Response 400 (application/json)
-
-    ```js
-    {
-        "headers": {},
-        "data": {},
-        "messages": [
-            { "error": "auth_invalid_token" }
-        ]
-    }
-    ```
-
-### Update the Account [PATCH]
-Attempts to update the user account.
-
-+ Request (application/json)
-
-    ```js
-    {
-        "data": {
-            "email": "user@gmail.com",
-            "name": "John",
-            "surname": "Doe",
-            "nickname": "JD",
-            "address1": "123 Rainbow St",
-            "address2": "Apt 666",
-            "city": "Doral",
-            "state": "FL",
-            "zip": "33178",
-            "country": "United States of America"
-        }
-    }
-    ```
-
-+ Response 200
-
-    [Account][]
-
-+ Response 400 (application/json)
-
-    ```js
-    {
-        "headers": {},
-        "data": {},
-        "messages": [
-            { "error": "account_invalid_email" },
-            { "error": "account_existing_email" },
-            { "error": "account_invalid_name" },
-            { "error": "account_invalid_surname" },
-            { "error": "account_invalid_city" },
-            { "error": "account_invalid_password" }
-        ]
-    }
-    ```
-
-# Group Account - Registration
-Represents actions against account registration.
-
-## Register Account [/account/signup]
-Attempts to register a new user account.
-
-### Register new user account [POST]
+### Create an Account [POST]
+Attempts to create a new user account.
 
 + Request (application/json)
 
@@ -389,8 +347,8 @@ Attempts to register a new user account.
             "mso": "1",
             "svod": "1",
             "contract": "",
-            "name": "John",
-            "surname": "Doe",
+            "firstName": "John",
+            "familyName": "Doe",
             "city": "",
             "campaign": ""
         }
@@ -408,23 +366,10 @@ Attempts to register a new user account.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_invalid_email" },
-            { "error": "account_invalid_email_existing" },
-            { "error": "account_invalid_mso" },
-            { "error": "account_invalid_contract" },
-            { "error": "account_invalid_city" },
-            { "error": "account_invalid_password" },
-            { "error": "account_invalid_name" },
-            { "error": "account_invalid_surname" },
-            { "error": "account_service_active" },
-            { "error": "account_svod_contract_active" },
-            { "error": "account_missing_live_tv" },
-            { "error": "account_missing_rgu_video" },
-            { "error": "account_contract_inactive" },
-            { "error": "account_contract_closed" },
-            { "error": "account_contract_under_validation" },
-            { "error": "account_contract_inactive_address_change" },
-            { "error": "account_open_order" }
+            {
+                "context": "email_field",
+                "value": "You have entered an invalid email."
+            }
         ]
     }
     ```
@@ -439,7 +384,10 @@ Attempts to register a new user account.
             "initPoint": "https://www.mercadopago.com/mlm/debits/new?preapproval_id=605eb5548f9640d5be334ac5181e8e5c"
         },
         "messages": [
-            { "error": "account_payment_required" }
+            {
+                "context": null,
+                "value": "Payment information is required."
+            }
         ]
     }
     ```
@@ -455,10 +403,69 @@ Attempts to register a new user account.
             "fieldMasked": "553989****"
         },
         "messages": [
-            { "error": "account_verification_required" }
+            {
+                "context": null,
+                "value": "Account verification is required."
+            }
         ]
     }
     ```
+
+### Update the Account [PATCH]
+Attempts to update the user account.
+
++ Request (application/json)
+
+    ```js
+    {
+        "data": {
+            "email": "user@gmail.com",
+            "firstName": "John",
+            "familyName": "Doe",
+            "nickName": "JD",
+            "address1": "123 Rainbow St",
+            "address2": "Apt 666",
+            "city": "Doral",
+            "state": "FL",
+            "zip": "33178",
+            "country": "United States of America",
+            "preferences": {
+                "pinRequired": false,
+                "permittedRatings": [
+                    "G",
+                    "PG",
+                    "PG-13"
+                ],
+                "language": "en",
+                "timezone": "America/New_York"
+            }
+        }
+    }
+    ```
+
++ Response 200
+
+    [Account][]
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": "email_field",
+                "value": "You have entered an invalid email."
+            }
+        ]
+    }
+    ```
+
+### Cancel the Account [DELETE]
+Attempts to cancel the user account.
+
++ Response 204
 
 ## Verify Account [/account/verify]
 Attempts to verify a new user account.
@@ -470,7 +477,7 @@ Attempts to verify a new user account.
     ```js
     {
         "data": {
-            "accountId": "123456",
+            "accountId": 123456,
             "fieldLabel": "Teléfono",
             "fieldUnmasked": "5539894100"
         }
@@ -488,59 +495,22 @@ Attempts to verify a new user account.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_verification_failed" },
-            { "error": "account_verification_account_invalid" },
-            { "error": "account_verification_account_locked" }
+            {
+                "context": null,
+                "value": "Your account has been locked. Please call (000-000-0000)."
+            }
         ]
     }
     ```
-
-## Cancel Account [/account/cancel]
-Attempts to cancel an existing user account.
-
-### Cancel an existing user account [POST]
-
-+ Response 200 (application/json)
-
-    ```js
-    {
-        "headers": {},
-        "data": {},
-        "messages": [
-            { "info": "account_cancelled" }
-        ]
-    }
-    ```
-
-# Group Account - SVOD
-Represents actions against SVOD registration.
-
-## Activate SVOD [/account/svod/activate]
-Attempts to activate the SVOD package in the user account.
-
-### Activate SVOD package [POST]
-
-+ Response 200
-
-    [Account][]
-
-## Remove SVOD [/account/svod/remove]
-Attempts to remove the SVOD package from the user account
-
-### Remove SVOD package [POST]
-
-+ Response 200
-
-    [Account][]
 
 # Group Account - Pin
-Represents actions against the account Pin.
+Represents actions against the account pin.
 
-## User Pin [/account/pin]
-Represents the User Pin.
+## Account Pin [/account/pin]
+Represents the account pin.
 
-### Validate User Pin [GET]
-Attempts to validate the User Pin.
+### Validate Account Pin [POST]
+Attempts to validate the account pin.
 
 + Request (application/json)
 
@@ -561,13 +531,16 @@ Attempts to validate the User Pin.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_invalid_pin" }
+            {
+                "context": "current_pin_field",
+                "value": "You have entered an invalid PIN."
+            }
         ]
     }
     ```
 
-### Update User Pin [PATCH]
-Attempts to update the User Pin.
+### Update Account Pin [PATCH]
+Attempts to update the account pin.
 
 + Request (application/json)
 
@@ -589,13 +562,16 @@ Attempts to update the User Pin.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_invalid_pin" }
+            {
+                "context": "current_pin_field",
+                "value": "You have entered an invalid PIN."
+            }
         ]
     }
     ```
 
-### Clear User Pin [DELETE]
-Attempts to clear the User Pin.
+### Clear Account Pin [DELETE]
+Attempts to clear the account pin.
 
 + Request (application/json)
 
@@ -616,80 +592,10 @@ Attempts to clear the User Pin.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_invalid_pin" }
-        ]
-    }
-    ```
-
-# Group Account - Preferences
-Represents actions against the account preferences.
-
-## User Preferences [/account/preferences]
-Represents the User Preferences.
-
-+ Model (application/json)
-
-    ```js
-    {
-        "headers": {},
-        "data": {
-            "id": 123456,
-            "affiliate": "televisa",
-            "language": "en",
-            "pinSet": true,
-            "pinRequired": true,
-            "permittedRatings": [
-                "G",
-                "PG",
-                "PG-13"
-            ],
-            "timezone": "America/New_York",
-            "timezoneOffset": "-0500",
-            "lastUpdated": 1425739017952
-        },
-        "messages": []
-    }
-    ```
-
-### Retrieve User Preferences [GET]
-Attempts to retrieve the User Preferences.
-
-+ Response 200
-
-    [User Preferences][]
-
-
-### Update User Preferences [PATCH]
-Attempts to update the User Preferences.
-
-+ Request (application/json)
-
-    ```js
-    {
-        "data": {
-            "affiliate": "televisa",
-            "language": "en",
-            "pinRequired": true,
-            "permittedRatings": [
-                "PG-13"
-            ],
-            "timezone": "America/New_York"
-        }
-    }
-    ```
-
-+ Response 200
-
-    [User Preferences][]
-
-+ Response 400 (application/json)
-
-    ```js
-    {
-        "headers": {},
-        "data": {},
-        "messages": [
-            { "error": "account_invalid_user_preference" }
+            {
+                "context": "current_pin_field",
+                "value": "You have entered an invalid PIN."
+            }
         ]
     }
     ```
@@ -698,7 +604,7 @@ Attempts to update the User Preferences.
 Represents actions against user ratings.
 
 ## User Rating [/account/ratings/{assetId}]
-Represents the User Rating.
+Represents an user rating.
 
 + Parameters
     + assetId (string, `1`) ... The id of the Asset.
@@ -709,18 +615,15 @@ Represents the User Rating.
     {
         "headers": {},
         "data": {
-            "id": 123456,
-            "affiliate": "televisa",
             "rating": 5,
-            "dateRated": "2015-02-23T10:00:25Z",
-            "include": true
+            "ratedDate": "2015-02-23T10:00:25Z"
         },
         "messages": []
     }
     ```
 
 ### Retrieve User Rating [GET]
-Attempts to retrieve a User Rating.
+Attempts to retrieve an user rating.
 
 + Response 200
 
@@ -733,13 +636,16 @@ Attempts to retrieve a User Rating.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_rating_invalid_asset" }
+            {
+                "context": null,
+                "value": "The asset you have requested cannot be rated."
+            }
         ]
     }
     ```
 
 ### Create User Rating [POST]
-Attempts to create a User Rating.
+Attempts to create an user rating.
 
 + Request
 
@@ -762,7 +668,10 @@ Attempts to create a User Rating.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_rating_invalid_asset" }
+            {
+                "context": null,
+                "value": "The asset you have requested cannot be rated."
+            }
         ]
     }
     ```
@@ -791,7 +700,10 @@ Attempts to update a User Rating.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_rating_invalid_asset" }
+            {
+                "context": null,
+                "value": "The asset you have requested cannot be rated."
+            }
         ]
     }
     ```
@@ -799,25 +711,119 @@ Attempts to update a User Rating.
 # Group Account - Rental
 Represents actions against account rentals.
 
-## Rental [/account/rental/asset/{assetId}]
+## Rental Entitlement [/account/rental/{rentalId}]
+Represents a rental entitlement.
 
-### Retrieve a Rental [GET]
-Attempts to retrieve a Rental entitlement.
++ Parameters
+    + rentalId (string, `1`) ... The id of the Rental.
 
-+ Request (application/json)
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "type": "Rental",
+            "id": 123456,
+            "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
+            "transactionId": 1234567890,
+            "purchaseDate": "2015-02-23T11:31:52Z",
+            "purchaseDuration": 2592000,
+            "viewDate": "2015-02-23T11:32:03Z",
+            "viewDuration": 86400,
+            "timeToExpiry": 3600,
+            "affiliate": "cablevision",
+            "packageCode": null,
+            "showType": "Movies",
+            "price": 40.00,
+            "status": "active",
+            "asset": {
+                "type": "Asset",
+                "subType": "Movie",
+                "id": 4754,
+                "status": "published",
+                "createdAt": "2013-08-23 19:07:49",
+                "modifiedAt": "2014-08-07 02:50:31",
+                "title": "Operación Dragón",
+                "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                "duration": 3642,
+                "pictures": [
+                    {
+                        "type": "Picture",
+                        "id": 2853,
+                        "status": "published",
+                        "modifiedAt": "2014-03-28 00:25:46",
+                        "credits": "Tom Smith",
+                        "orientation": "portrait",
+                        "pictureType": "Poster",
+                        "title": "",
+                        "versions": [
+                            {
+                                "profile": "webLandscapeSmall",
+                                "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                                "width": "192",
+                                "height": "108"
+                            },
+                            {
+                                "profile": "webLandscapeMedium",
+                                "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                "width": "224",
+                                "height": "126"
+                            },
+                            {
+                                "profile": "webLandscapeLarge",
+                                "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                "width": "384",
+                                "height": "216"
+                            }
+                        ]
+                    }
+                ],
+                "publicationEvent": {
+                    "type": "PublicationEvent",
+                    "id": 18563,
+                    "status": "published",
+                    "createdAt": "2013-08-23 19:07:49",
+                    "modifiedAt": "2014-08-07 02:50:31",
+                    "startDate": "2014-04-09 06:00:00",
+                    "endDate": "2015-03-31 05:59:00",
+                    "billingType": "rental",
+                    "price": "25.00",
+                    "createdBy": 3,
+                    "modifiedBy": 4
+                }
+            }
+        },
+        "messages": []
+    }
+    ```
+
+### Retrieve a Rental Entitlement [GET]
+Attempts to retrieve a rental entitlement.
 
 + Response 200
 
-    [Entitlement][]
+    [Rental Entitlement][]
 
-### Create a Rental [POST]
+## Create Rental Entitlement [/account/rental]
+Represents a rental entitlement.
+
+### Create a Rental Entitlement [POST]
 Attempts to create a Rental entitlement.
 
 + Request (application/json)
 
+    ```js
+    {
+        "data": {
+            "assetId": 123456
+        }
+    }
+    ```
+
 + Response 201
 
-    [Entitlement][]
+    [Rental Entitlement][]
 
 + Response 400 (application/json)
 
@@ -826,56 +832,18 @@ Attempts to create a Rental entitlement.
         "headers": {},
         "data": {},
         "messages": [
-            { "error": "account_rental_invalid_asset" },
-            { "error": "account_rental_missing_payment_method" },
-            { "error": "account_rental_payment_declined" }
+            {
+                "context": null,
+                "value": "Failed to rent asset, because your payment method has been declined."
+            }
         ]
     }
     ```
 
-## Entitlement [/account/rental/{entitlementId}]
-Represents a rental entitlement.
+## Active Rental Entitlements [/account/rental/active]
+Represents the active rentals.
 
-+ Parameters
-    + entitlementId (string, `1`) ... The id of the Entitlement.
-
-+ Model (application/json)
-
-    ```js
-    {
-        "headers": {},
-        "data": {
-            "id": 123456,
-            "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
-            "transactionId": 1234567890,
-            "purchaseDate": "2015-02-23T11:31:52Z",
-            "purchaseDuration": 2592000,
-            "viewDate": "2015-02-23T11:32:03Z",
-            "viewDuration": 86400,
-            "affiliate": "cablevision",
-            "billingType": "rental",
-            "packageCode": null,
-            "showType": "Movies",
-            "price": 40.00,
-            "status": "active",
-            "assetId": 3,
-            "assetName": "Fight Club",
-        },
-        "messages": []
-    }
-    ```
-
-### Retrieve an Entitlement [GET]
-Attempts to retrieve an Entitlement.
-
-+ Response 200
-
-    [Entitlement][]
-
-## Active Rentals [/account/rental/active]
-Represents the account active rentals.
-
-### Retrieve the Active Rentals [GET]
+### Retrieve the active rentals [GET]
 Attempts to retrieve the active rentals.
 
 + Response 200 (application/json)
@@ -885,6 +853,7 @@ Attempts to retrieve the active rentals.
         "headers": {},
         "data": [
             {
+                "type": "Rental",
                 "id": 123456,
                 "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
                 "transactionId": 1234567890,
@@ -892,14 +861,68 @@ Attempts to retrieve the active rentals.
                 "purchaseDuration": 2592000,
                 "viewDate": "2015-02-23T11:32:03Z",
                 "viewDuration": 86400,
+                "timeToExpiry": 3600,
                 "affiliate": "cablevision",
-                "billingType": "rental",
                 "packageCode": null,
                 "showType": "Movies",
                 "price": 40.00,
                 "status": "active",
-                "assetId": 3,
-                "assetName": "Fight Club",
+                "asset": {
+                    "type": "Asset",
+                    "subType": "Movie",
+                    "id": 4754,
+                    "status": "published",
+                    "createdAt": "2013-08-23 19:07:49",
+                    "modifiedAt": "2014-08-07 02:50:31",
+                    "title": "Operación Dragón",
+                    "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                    "duration": 3642,
+                    "pictures": [
+                        {
+                            "type": "Picture",
+                            "id": 2853,
+                            "status": "published",
+                            "modifiedAt": "2014-03-28 00:25:46",
+                            "credits": "Tom Smith",
+                            "orientation": "portrait",
+                            "pictureType": "Poster",
+                            "title": "",
+                            "versions": [
+                                {
+                                    "profile": "webLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "webLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "224",
+                                    "height": "126"
+                                },
+                                {
+                                    "profile": "webLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "384",
+                                    "height": "216"
+                                }
+                            ]
+                        }
+                    ],
+                    "publicationEvent": {
+                        "type": "PublicationEvent",
+                        "id": 18563,
+                        "status": "published",
+                        "createdAt": "2013-08-23 19:07:49",
+                        "modifiedAt": "2014-08-07 02:50:31",
+                        "startDate": "2014-04-09 06:00:00",
+                        "endDate": "2015-03-31 05:59:00",
+                        "billingType": "rental",
+                        "price": "25.00",
+                        "createdBy": 3,
+                        "modifiedBy": 4
+                    }
+                }
             }
         ],
         "messages": []
@@ -907,9 +930,9 @@ Attempts to retrieve the active rentals.
     ```
 
 ## Rental History [/account/rental/history]
-Represents the account rental history.
+Represents the rental history.
 
-### Retrieve the Rental History [GET]
+### Retrieve the rental history [GET]
 Attempts to retrieve the rental history.
 
 + Response 200 (application/json)
@@ -919,6 +942,7 @@ Attempts to retrieve the rental history.
         "headers": {},
         "data": [
             {
+                "type": "Rental",
                 "id": 123456,
                 "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
                 "transactionId": 1234567890,
@@ -926,17 +950,114 @@ Attempts to retrieve the rental history.
                 "purchaseDuration": 2592000,
                 "viewDate": "2015-02-23T11:32:03Z",
                 "viewDuration": 86400,
+                "timeToExpiry": 3600,
                 "affiliate": "cablevision",
-                "billingType": "rental",
                 "packageCode": null,
                 "showType": "Movies",
                 "price": 40.00,
                 "status": "active",
-                "assetId": 3,
-                "assetName": "Fight Club",
+                "asset": {
+                    "type": "Asset",
+                    "subType": "Movie",
+                    "id": 4754,
+                    "status": "published",
+                    "createdAt": "2013-08-23 19:07:49",
+                    "modifiedAt": "2014-08-07 02:50:31",
+                    "title": "Operación Dragón",
+                    "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+                    "duration": 3642,
+                    "pictures": [
+                        {
+                            "type": "Picture",
+                            "id": 2853,
+                            "status": "published",
+                            "modifiedAt": "2014-03-28 00:25:46",
+                            "credits": "Tom Smith",
+                            "orientation": "portrait",
+                            "pictureType": "Poster",
+                            "title": "",
+                            "versions": [
+                                {
+                                    "profile": "webLandscapeSmall",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                                    "width": "192",
+                                    "height": "108"
+                                },
+                                {
+                                    "profile": "webLandscapeMedium",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "224",
+                                    "height": "126"
+                                },
+                                {
+                                    "profile": "webLandscapeLarge",
+                                    "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                                    "width": "384",
+                                    "height": "216"
+                                }
+                            ]
+                        }
+                    ],
+                    "publicationEvent": {
+                        "type": "PublicationEvent",
+                        "id": 18563,
+                        "status": "published",
+                        "createdAt": "2013-08-23 19:07:49",
+                        "modifiedAt": "2014-08-07 02:50:31",
+                        "startDate": "2014-04-09 06:00:00",
+                        "endDate": "2015-03-31 05:59:00",
+                        "billingType": "rental",
+                        "price": "25.00",
+                        "createdBy": 3,
+                        "modifiedBy": 4
+                    }
+                }
             }
         ],
         "messages": []
+    }
+    ```
+
+## SVOD Entitlement [/account/subscription]
+Represents a SVOD subscription entitlement.
+
+### Create SVOD Entitlement [POST]
+Attempts to create a SVOD subscription entitlement.
+
++ Response 204
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "Failed to activate SVOD, because your payment method has been declined."
+            }
+        ]
+    }
+    ```
+
+### Remove SVOD Entitlement [DELETE]
+Attempts to remove a SVOD subscription entitlement.
+
++ Response 204
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "Failed to remove SVOD."
+            }
+        ]
     }
     ```
 
