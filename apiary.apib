@@ -316,7 +316,7 @@ Represents an user account.
                     "status": "active",
                     "asset": {
                         "entity": "Asset",
-                        "type": "Movie",
+                        "category": "Movie",
                         "id": 4754,
                         "title": "Operación Dragón"
                     }
@@ -739,7 +739,7 @@ Represents a rental entitlement.
             "status": "active",
             "asset": {
                 "entity": "Asset",
-                "type": "Movie",
+                "category": "Movie",
                 "id": 4754,
                 "status": "published",
                 "createdAt": "2013-08-23 19:07:49",
@@ -869,7 +869,7 @@ Attempts to retrieve the active rentals.
                 "status": "active",
                 "asset": {
                     "entity": "Asset",
-                    "type": "Movie",
+                    "category": "Movie",
                     "id": 4754,
                     "status": "published",
                     "createdAt": "2013-08-23 19:07:49",
@@ -958,7 +958,7 @@ Attempts to retrieve the rental history.
                 "status": "active",
                 "asset": {
                     "entity": "Asset",
-                    "type": "Movie",
+                    "category": "Movie",
                     "id": 4754,
                     "status": "published",
                     "createdAt": "2013-08-23 19:07:49",
@@ -1076,7 +1076,7 @@ Represents an Asset
     {
         "data": {
             "entity": "Asset",
-            "type": "Movie",
+            "category": "Movie",
             "id": 4754,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Operación Dragón",
@@ -1267,7 +1267,7 @@ Returns a specific Asset.
     {
         "data": {
             "entity": "Asset",
-            "type": "Series",
+            "category": "Series",
             "id": 11173,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "La Viuda Negra",
@@ -1412,7 +1412,7 @@ Returns a specific Asset.
                     "episodes": [
                         {
                             "entity": "Asset",
-                            "type": "Episode",
+                            "category": "Episode",
                             "id": 11392,
                             "number": 40,
                             "title": "Fuera de todo plan",
@@ -1430,7 +1430,7 @@ Returns a specific Asset.
                         },
                         {
                             "entity": "Asset",
-                            "type": "Episode",
+                            "category": "Episode",
                             "id": 11569,
                             "number": 39,
                             "title": "Griselda se confiesa",
@@ -1458,7 +1458,7 @@ Returns a specific Asset.
                     "episodes": [
                         {
                             "entity": "Asset",
-                            "type": "Episode",
+                            "category": "Episode",
                             "id": 12780,
                             "number": 81,
                             "title": "El Legado",
@@ -1476,7 +1476,7 @@ Returns a specific Asset.
                         },
                         {
                             "entity": "Asset",
-                            "type": "Episode",
+                            "category": "Episode",
                             "id": 12781,
                             "number": 80,
                             "title": "Lucha de astucias",
@@ -1521,7 +1521,7 @@ Returns all Assets.
         "data": [
         {
             "entity": "Asset",
-            "type": "Movie",
+            "category": "Movie",
             "id": 4754,
             "title": "Operación Dragón",
             "titleShort": "Operación Dragón",
@@ -1638,7 +1638,7 @@ Represents a Channel
     {
         "data": {
             "entity": "Channel",
-            "type": "LinearChannel",
+            "category": "LinearChannel",
             "id": 16,
             "modifiedAt": "2014-03-28 00:25:46",
             "title": "Unicable",
@@ -1702,7 +1702,7 @@ Returns all Channels.
         "data": [
             {
                 "entity": "Channel",
-                "type": "LinearChannel",
+                "category": "LinearChannel",
                 "id": 16,
                 "modifiedAt": "2014-03-28 00:25:46",
                 "title": "Unicable",
@@ -1877,7 +1877,7 @@ Represents actions against the EPG
         "data": [
             {
                 "entity": "Channel",
-                "type": "LinearChannel",
+                "category": "LinearChannel",
                 "id": 16,
                 "modifiedAt": "2013-03-28 13:21:35",
                 "title": "Unicable",
@@ -1894,7 +1894,7 @@ Represents actions against the EPG
                     {
                         "id": 123,
                         "entity": "Schedule",
-                        "type": "LinearSchedule",
+                        "category": "LinearSchedule",
                         "scheduleDate": "2013-04-01 00:00:00",
                         "items": [
                             {
@@ -1903,7 +1903,7 @@ Represents actions against the EPG
                                 "endTime": "01:30:00",
                                 "program": {
                                     "entity": "Program",
-                                    "type": "LinearEpisodeProgram",
+                                    "category": "LinearEpisodeProgram",
                                     "id": 3,
                                     "duration": 2,
                                     "showType": "Series",
@@ -1917,7 +1917,7 @@ Represents actions against the EPG
                                 "endTime": "03:00:00",
                                 "program": {
                                     "entity": "Program",
-                                    "type": "LinearMovieProgram",
+                                    "category": "LinearMovieProgram",
                                     "id": 7,
                                     "duration": 2,
                                     "showType": "Movie",
@@ -2269,7 +2269,7 @@ Represents a Page
     {
         "data": {
             "entity": "Page",
-            "type": "Rental",
+            "category": "Rental",
             "id": 1,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Tienda",
@@ -2291,7 +2291,7 @@ Represents a Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "createdAt": "2013-08-23 19:07:49",
                             "modifiedAt": "2014-08-07 02:50:31",
@@ -2395,7 +2395,7 @@ Represents a Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "createdAt": "2013-08-23 19:07:49",
                             "modifiedAt": "2014-08-07 02:50:31",
@@ -2493,7 +2493,7 @@ Represents a Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "createdAt": "2013-08-23 19:07:49",
                             "modifiedAt": "2014-08-07 02:50:31",
@@ -2590,7 +2590,7 @@ Represents a Page
                     "items": [
                         {
                             "entity": "asset",
-                            "type": "movie",
+                            "category": "movie",
                             "id": 4754,
                             "createdAt": "2013-08-23 19:07:49",
                             "modifiedAt": "2014-08-07 02:50:31",
@@ -2697,7 +2697,7 @@ Returns a specific Page.
     {
         "data": {
             "entity": "Page",
-            "type": "Contact",
+            "category": "Contact",
             "id": 2,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Contáctanos",
@@ -2714,7 +2714,7 @@ Returns a specific Page.
             "widgets": [
                 {
                     "id": 2,
-                    "type":  "staticContent",
+                    "category":  "staticContent",
                     "title": "Contáctanos",
                     "sections": [
                         {
@@ -2735,7 +2735,7 @@ Returns a specific Page.
     {
         "data": {
             "entity": "Page",
-            "type": "Privacy",
+            "category": "Privacy",
             "id": 3,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Aviso de Privacidad en sitio web para Usuarios de VEO",
@@ -2805,7 +2805,7 @@ Returns a specific Page.
     {
         "data": {
             "entity": "Page",
-            "type": "Terms",
+            "category": "Terms",
             "id": 4,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "BIENVENIDO A VEO",
@@ -2865,7 +2865,7 @@ Returns a specific Page.
     {
         "data": {
             "entity": "Page",
-            "type": "About",
+            "category": "About",
             "id": 5,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "¿QUÉ ES VEO?",
@@ -2903,7 +2903,7 @@ Returns a specific Page.
     {
         "data": {
             "entity": "Page",
-            "type": "Help",
+            "category": "Help",
             "id": 6,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Ayuda",
@@ -2956,7 +2956,7 @@ Returns all Pages.
     {
         "data": [
             {
-                "type": "Rental",
+                "category": "Rental",
                 "modifiedAt": "2014-08-07 02:50:31",
                 "userId": 3,
                 "title": "Tienda"
@@ -3182,7 +3182,7 @@ Represents a Program
     {
         "data": {
             "entity": "Program",
-            "type": "LinearEpisodeProgram",
+            "category": "LinearEpisodeProgram",
             "id": 3,
             "modifiedAt": "2014-03-28 00:25:46",
             "duration": 2,
@@ -3227,7 +3227,7 @@ Returns all Programs.
         "data": [
             {
                 "entity": "Program",
-                "type": "LinearEpisodeProgram",
+                "category": "LinearEpisodeProgram",
                 "id": 3,
                 "modifiedAt": "2014-03-28 00:25:46",
                 "duration": 2,
@@ -3314,7 +3314,7 @@ Search result for assets search
         "data": [
                 {
                     "entity": "Asset",
-                    "type": "Movie",
+                    "category": "Movie",
                     "showType": "Movie",
                     "id": 4754,
                     "title": "Operación Dragón",
@@ -3464,7 +3464,7 @@ Represents a season
             "episodes": [
                 {
                     "entity": "Asset",
-                    "type": "Episode",
+                    "category": "Episode",
                     "id": 11392,
                     "number": 40,
                     "title": "Fuera de todo plan",
@@ -3481,7 +3481,7 @@ Represents a season
                 },
                 {
                     "entity": "Asset",
-                    "type": "Episode",
+                    "category": "Episode",
                     "id": 11569,
                     "number": 39,
                     "title": "Griselda se confiesa",
