@@ -295,12 +295,12 @@ Represents an user account.
             },
             "entitlements": [
                 {
-                    "entity": "Subscription",
+                    "entity": "subscription",
                     "packageCode": "TVOD",
                     "affiliate": "televisa"
                 },
                 {
-                    "entity": "Rental",
+                    "entity": "rental",
                     "id": 123456,
                     "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
                     "transactionId": 1234567890,
@@ -314,8 +314,8 @@ Represents an user account.
                     "price": 40.00,
                     "status": "active",
                     "asset": {
-                        "entity": "Asset",
-                        "category": "Movie",
+                        "entity": "asset",
+                        "category": "movie",
                         "parentShow": null,
                         "id": 4754,
                         "title": "Operación Dragón"
@@ -723,7 +723,7 @@ Represents a rental entitlement.
     {
         "headers": {},
         "data": {
-            "entity": "Rental",
+            "entity": "rental",
             "id": 123456,
             "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
             "transactionId": 1234567890,
@@ -737,8 +737,8 @@ Represents a rental entitlement.
             "price": 40.00,
             "status": "active",
             "asset": {
-                "entity": "Asset",
-                "category": "Movie",
+                "entity": "asset",
+                "category": "movie",
                 "parentShow": null,
                 "id": 4754,
                 "status": "published",
@@ -749,13 +749,13 @@ Represents a rental entitlement.
                 "duration": 3642,
                 "pictures": [
                     {
-                        "entity": "Picture",
+                        "entity": "picture",
                         "id": 2853,
                         "status": "published",
                         "modifiedAt": "2014-03-28 00:25:46",
                         "credits": "Tom Smith",
                         "orientation": "portrait",
-                        "pictureType": "Poster",
+                        "pictureType": "poster",
                         "title": "",
                         "versions": [
                             {
@@ -780,7 +780,7 @@ Represents a rental entitlement.
                     }
                 ],
                 "publicationEvent": {
-                    "entity": "PublicationEvent",
+                    "entity": "publicationEvent",
                     "id": 18563,
                     "status": "published",
                     "createdAt": "2013-08-23 19:07:49",
@@ -853,7 +853,7 @@ Attempts to retrieve the active rentals.
         "headers": {},
         "data": [
             {
-                "entity": "Rental",
+                "entity": "rental",
                 "id": 123456,
                 "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
                 "transactionId": 1234567890,
@@ -867,8 +867,8 @@ Attempts to retrieve the active rentals.
                 "price": 40.00,
                 "status": "active",
                 "asset": {
-                    "entity": "Asset",
-                    "category": "Movie",
+                    "entity": "asset",
+                    "category": "movie",
                     "parentShow": null,
                     "id": 4754,
                     "status": "published",
@@ -879,13 +879,13 @@ Attempts to retrieve the active rentals.
                     "duration": 3642,
                     "pictures": [
                         {
-                            "entity": "Picture",
+                            "entity": "picture",
                             "id": 2853,
                             "status": "published",
                             "modifiedAt": "2014-03-28 00:25:46",
                             "credits": "Tom Smith",
                             "orientation": "portrait",
-                            "pictureType": "Poster",
+                            "pictureType": "poster",
                             "title": "",
                             "versions": [
                                 {
@@ -910,7 +910,7 @@ Attempts to retrieve the active rentals.
                         }
                     ],
                     "publicationEvent": {
-                        "entity": "PublicationEvent",
+                        "entity": "publicationEvent",
                         "id": 18563,
                         "status": "published",
                         "createdAt": "2013-08-23 19:07:49",
@@ -942,7 +942,7 @@ Attempts to retrieve the rental history.
         "headers": {},
         "data": [
             {
-                "entity": "Rental",
+                "entity": "rental",
                 "id": 123456,
                 "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
                 "transactionId": 1234567890,
@@ -956,8 +956,8 @@ Attempts to retrieve the rental history.
                 "price": 40.00,
                 "status": "active",
                 "asset": {
-                    "entity": "Asset",
-                    "category": "Movie",
+                    "entity": "asset",
+                    "category": "movie",
                     "parentShow": null,
                     "id": 4754,
                     "status": "published",
@@ -968,13 +968,13 @@ Attempts to retrieve the rental history.
                     "duration": 3642,
                     "pictures": [
                         {
-                            "entity": "Picture",
+                            "entity": "picture",
                             "id": 2853,
                             "status": "published",
                             "modifiedAt": "2014-03-28 00:25:46",
                             "credits": "Tom Smith",
                             "orientation": "portrait",
-                            "pictureType": "Poster",
+                            "pictureType": "poster",
                             "title": "",
                             "versions": [
                                 {
@@ -999,7 +999,7 @@ Attempts to retrieve the rental history.
                         }
                     ],
                     "publicationEvent": {
-                        "entity": "PublicationEvent",
+                        "entity": "publicationEvent",
                         "id": 18563,
                         "status": "published",
                         "createdAt": "2013-08-23 19:07:49",
@@ -1075,8 +1075,8 @@ Represents an Asset
     ```js
     {
         "data": {
-            "entity": "Asset",
-            "category": "Movie",
+            "entity": "asset",
+            "category": "movie",
             "parentShow": null,
             "id": 4754,
             "modifiedAt": "2014-08-07 02:50:31",
@@ -1120,38 +1120,38 @@ Represents an Asset
             "people": [
                 {
                     "id": 7312,
-                    "role": "Actor",
+                    "role": "actor",
                     "communicationName": "John Saxon"
                 },
                 {
                     "id": 7313,
-                    "role": "Actor",
+                    "role": "actor",
                     "communicationName": "Bruce Lee"
                 },
                 {
                     "id": 7314,
-                    "role": "Director",
+                    "role": "director",
                     "communicationName": "Robert Clouse"
                 },
                 {
                     "id": 15010,
-                    "role": "Actor",
+                    "role": "actor",
                     "communicationName": "Jim Kelly"
                 },
                 {
                     "id": 15011,
-                    "role": "Actor",
+                    "role": "actor",
                     "communicationName": "Ahna Capri"
                 }
             ],
             "pictures": [
                 {
-                    "entity": "Picture",
+                    "entity": "picture",
                     "id": 2853,
                     "modifiedAt": "2014-03-28 00:25:46",
                     "credits": "Tom Smith",
                     "orientation": "portrait",
-                    "pictureType": "Poster",
+                    "pictureType": "poster",
                     "title": "",
                     "versions": [
                         {
@@ -1213,36 +1213,36 @@ Represents an Asset
             ],
             "videos": [
                 {
-                    "entity": "Video",
+                    "entity": "video",
                     "id": 4533,
                     "audioLanguage": {
                         "id": 3,
                         "title": "English"
                     },
-                    "audioType": "Stereo",
+                    "audioType": "stereo",
                     "definition": "SD",
                     "duration": 3642,
                     "files": [
                         {
                            "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
-                           "type": "HDS" 
+                           "type": "hds" 
                         },
                         {
                            "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
-                           "type": "HLS" 
+                           "type": "hls" 
                         },
                         {
                            "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
-                           "type": "SS" 
+                           "type": "ss" 
                         }
                     ],
                     "resolution": "480i",
-                    "screenFormat": "Widescreen",
+                    "screenFormat": "widescreen",
                     "videoType": "full"
                 }
             ],
             "publicationEvent": {
-                "entity": "PublicationEvent",
+                "entity": "publicationEvent",
                 "id": 18563,
                 "modifiedAt": "2014-08-07 02:50:31",
                 "startDate": "2014-04-09 06:00:00",
@@ -1267,8 +1267,8 @@ Returns a specific Asset.
     ```js
     {
         "data": {
-            "entity": "Asset",
-            "category": "Series",
+            "entity": "asset",
+            "category": "series",
             "parentShow": null,
             "id": 11173,
             "modifiedAt": "2014-08-07 02:50:31",
@@ -1338,12 +1338,12 @@ Returns a specific Asset.
             ],
             "pictures": [
                 {
-                    "entity": "Picture",
+                    "entity": "picture",
                     "id": 2853,
                     "modifiedAt": "2014-03-28 00:25:46",
                     "credits": "Tom Smith",
                     "orientation": "portrait",
-                    "pictureType": "Poster",
+                    "pictureType": "poster",
                     "title": "",
                     "versions": [
                         {
@@ -1405,7 +1405,7 @@ Returns a specific Asset.
             ],
             "seasons": [
                 {
-                    "entity": "Season",
+                    "entity": "season",
                     "id": 451,
                     "title": null,
                     "number": 1,
@@ -1413,8 +1413,8 @@ Returns a specific Asset.
                     "airDate": "2008-06-17T10:23:36Z",
                     "episodes": [
                         {
-                            "entity": "Asset",
-                            "category": "Episode",
+                            "entity": "asset",
+                            "category": "episode",
                             "id": 11392,
                             "number": 40,
                             "title": "Fuera de todo plan",
@@ -1422,17 +1422,17 @@ Returns a specific Asset.
                             "synopsisShort": "El Legado",
                             "pictures": [
                                 {
-                                    "entity": "Picture",
+                                    "entity": "picture",
                                     "id": 2853,
                                     "modifiedAt": "2014-03-28 00:25:46",
-                                    "pictureType": "Poster",
+                                    "pictureType": "poster",
                                     "title": ""
                                 }
                             ]
                         },
                         {
-                            "entity": "Asset",
-                            "category": "Episode",
+                            "entity": "asset",
+                            "category": "episode",
                             "id": 11569,
                             "number": 39,
                             "title": "Griselda se confiesa",
@@ -1440,10 +1440,10 @@ Returns a specific Asset.
                             "synopsisShort": "Griselda le cuenta a una guardia del reclusorio que Jones le confesó su amor y que nunca trató de hacerle daño. Mientras, Otálvaro planea la venganza por la muerte de su sobrina.",
                             "pictures": [
                                 {
-                                    "entity": "Picture",
+                                    "entity": "picture",
                                     "id": 2853,
                                     "modifiedAt": "2014-03-28 00:25:46",
-                                    "pictureType": "Poster",
+                                    "pictureType": "poster",
                                     "title": ""
                                 }
                             ]
@@ -1451,7 +1451,7 @@ Returns a specific Asset.
                     ]
                 },
                 {
-                    "entity": "Season",
+                    "entity": "season",
                     "id": 462,
                     "title": null,
                     "number": 2,
@@ -1459,8 +1459,8 @@ Returns a specific Asset.
                     "airDate": "2008-06-17T10:23:36Z",
                     "episodes": [
                         {
-                            "entity": "Asset",
-                            "category": "Episode",
+                            "entity": "asset",
+                            "category": "episode",
                             "id": 12780,
                             "number": 81,
                             "title": "El Legado",
@@ -1468,17 +1468,17 @@ Returns a specific Asset.
                             "synopsisShort": "Griselda se ve enfrentada a una trampa de García mientras Jones se encarga del rescate. García finalmente embosca a Griselda y a Richie, quienes deciden llevar a cabo un plan para evitar ser capturados. Michael toma cartas en este asunto y pone en la mira a García.",
                             "pictures": [
                                 {
-                                    "entity": "Picture",
+                                    "entity": "picture",
                                     "id": 2853,
                                     "modifiedAt": "2014-03-28 00:25:46",
-                                    "pictureType": "Poster",
+                                    "pictureType": "poster",
                                     "title": ""
                                 }
                             ]
                         },
                         {
-                            "entity": "Asset",
-                            "category": "Episode",
+                            "entity": "asset",
+                            "category": "episode",
                             "id": 12781,
                             "number": 80,
                             "title": "Lucha de astucias",
@@ -1486,10 +1486,10 @@ Returns a specific Asset.
                             "synopsisShort": "Jennifer rescata a Jones de un barranco, en tanto que Griselda y Silvio finalmente se enfrentan: sólo uno saldrá con vida. Jennifer y Jones tienen claro que capturar a Griselda es ahora su prioridad.",
                             "pictures": [
                                 {
-                                    "entity": "Picture",
+                                    "entity": "picture",
                                     "id": 2853,
                                     "modifiedAt": "2014-03-28 00:25:46",
-                                    "pictureType": "Poster",
+                                    "pictureType": "poster",
                                     "title": ""
                                 }
                             ]
@@ -1499,7 +1499,7 @@ Returns a specific Asset.
             ],
             "videos": [],
             "publicationEvent": {
-                "entity": "PublicationEvent",
+                "entity": "publicationEvent",
                 "id": 18563,
                 "modifiedAt": "2014-08-07 02:50:31",
                 "startDate": "2014-04-09 06:00:00",
@@ -1517,11 +1517,11 @@ Returns a specific Asset.
     ```js
     {
         "data": {
-            "entity": "Asset",
-            "category": "Episode",
+            "entity": "asset",
+            "category": "episode",
             "parentShow": {
-                "entity": "Asset",
-                "category": "Series",
+                "entity": "asset",
+                "category": "series",
                 "id": 11173
             },
             "id": 11174,
@@ -1592,12 +1592,12 @@ Returns a specific Asset.
             ],
             "pictures": [
                 {
-                    "entity": "Picture",
+                    "entity": "picture",
                     "id": 2853,
                     "modifiedAt": "2014-03-28 00:25:46",
                     "credits": "Tom Smith",
                     "orientation": "portrait",
-                    "pictureType": "Poster",
+                    "pictureType": "poster",
                     "title": "",
                     "versions": [
                         {
@@ -1660,36 +1660,36 @@ Returns a specific Asset.
             "seasons": null,
             "videos": [
                 {
-                    "entity": "Video",
+                    "entity": "video",
                     "id": 4533,
                     "audioLanguage": {
                         "id": 3,
                         "title": "English"
                     },
-                    "audioType": "Stereo",
+                    "audioType": "stereo",
                     "definition": "SD",
                     "duration": 3642,
                     "files": [
                         {
                            "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
-                           "type": "HDS" 
+                           "type": "hds" 
                         },
                         {
                            "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
-                           "type": "HLS" 
+                           "type": "hls" 
                         },
                         {
                            "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
-                           "type": "SS" 
+                           "type": "ss" 
                         }
                     ],
                     "resolution": "480i",
-                    "screenFormat": "Widescreen",
+                    "screenFormat": "widescreen",
                     "videoType": "full"
                 }
             ],
             "publicationEvent": {
-                "entity": "PublicationEvent",
+                "entity": "publicationEvent",
                 "id": 18563,
                 "modifiedAt": "2014-08-07 02:50:31",
                 "startDate": "2014-04-09 06:00:00",
@@ -1711,8 +1711,8 @@ Returns all Assets.
     {
         "data": [
         {
-            "entity": "Asset",
-            "category": "Movie",
+            "entity": "asset",
+            "category": "movie",
             "parentShow": null,
             "id": 4754,
             "title": "Operación Dragón",
@@ -1729,12 +1729,12 @@ Returns all Assets.
             },
             "pictures": [
                 {
-                    "entity": "Picture",
+                    "entity": "picture",
                     "id": 2853,
                     "modifiedAt": "2014-03-28 00:25:46",
                     "credits": "Tom Smith",
                     "orientation": "portrait",
-                    "pictureType": "Poster",
+                    "pictureType": "poster",
                     "title": "",
                     "versions": [
                         {
@@ -1795,7 +1795,7 @@ Returns all Assets.
                 }
             ],
             "publicationEvent": {
-                "entity": "PublicationEvent",
+                "entity": "publicationEvent",
                 "id": 18563,
                 "startDate": "2014-04-09 06:00:00",
                 "endDate": "2015-03-31 05:59:00",
@@ -1829,12 +1829,12 @@ Represents a Channel
     ```js
     {
         "data": {
-            "entity": "Channel",
-            "category": "LinearChannel",
+            "entity": "channel",
+            "category": "linearChannel",
             "id": 16,
             "modifiedAt": "2014-03-28 00:25:46",
             "title": "Unicable",
-            "affiliate": "Cablevision",
+            "affiliate": "cablevision",
             "callSign": "UNIC",
             "number": 203,
             "packageCodes": [
@@ -1893,8 +1893,8 @@ Returns all Channels.
     {
         "data": [
             {
-                "entity": "Channel",
-                "category": "LinearChannel",
+                "entity": "channel",
+                "category": "linearChannel",
                 "id": 16,
                 "modifiedAt": "2014-03-28 00:25:46",
                 "title": "Unicable",
@@ -1958,12 +1958,12 @@ A List of all countries.
                 {
                     "id": 1,
                     "title": "United States",
-                    "entity": "Country"
+                    "entity": "country"
                 },
                 {
                     "id": 2,
                     "title": "México",
-                    "entity": "Country"
+                    "entity": "country"
                 }
             ],
             "messages": [
@@ -1992,7 +1992,7 @@ Represents the Configuration of a Device (e.g., iOS, Android)
     ```js
     {
         "data": {
-            "entity": "DeviceConfiguration",
+            "entity": "deviceConfiguration",
             "id": 1,
             "modifiedAt": "2014-08-07 02:50:31",
             "properties": {
@@ -2068,8 +2068,8 @@ Represents actions against the EPG
     {
         "data": [
             {
-                "entity": "Channel",
-                "category": "LinearChannel",
+                "entity": "channel",
+                "category": "linearChannel",
                 "id": 16,
                 "modifiedAt": "2013-03-28 13:21:35",
                 "title": "Unicable",
@@ -2085,8 +2085,8 @@ Represents actions against the EPG
                 "schedules": [
                     {
                         "id": 123,
-                        "entity": "Schedule",
-                        "category": "LinearSchedule",
+                        "entity": "schedule",
+                        "category": "linearSchedule",
                         "scheduleDate": "2013-04-01 00:00:00",
                         "items": [
                             {
@@ -2094,11 +2094,11 @@ Represents actions against the EPG
                                 "startTime": "00:30:00",
                                 "endTime": "01:30:00",
                                 "program": {
-                                    "entity": "Program",
-                                    "category": "LinearEpisodeProgram",
+                                    "entity": "program",
+                                    "category": "linearEpisodeProgram",
                                     "id": 3,
                                     "duration": 2,
-                                    "subCategory": "Series",
+                                    "subCategory": "series",
                                     "title": "Co-Ed Confidential 4",
                                     "titleShort": "Co-Ed Confidential 4"
                                 }
@@ -2108,11 +2108,11 @@ Represents actions against the EPG
                                 "startTime": "01:30:00",
                                 "endTime": "03:00:00",
                                 "program": {
-                                    "entity": "Program",
-                                    "category": "LinearMovieProgram",
+                                    "entity": "program",
+                                    "category": "linearMovieProgram",
                                     "id": 7,
                                     "duration": 2,
-                                    "subCategory": "Movie",
+                                    "subCategory": "movie",
                                     "title": "Furia De Mujer",
                                     "titleShort": "Furia De Mujer"
                                 }
@@ -2168,17 +2168,17 @@ Represents a genre
             "data": {
                 "id": 28,
                 "title": "Deportes",
-                "entity": "Genre",
+                "entity": "genre",
                 "items": [
                     {
                         "id": 515,
                         "title": "Futbol",
-                        "entity": "Genre"
+                        "entity": "genre"
                     },
                     {
                         "id": 518,
                         "title": "Beisbol",
-                        "entity": "Genre"
+                        "entity": "genre"
                     }
                 ]
             },
@@ -2208,17 +2208,17 @@ Retrieve a List of all published Genres.
                 {
                     "id": 28,
                     "title": "Deportes",
-                    "entity": "Genre",
+                    "entity": "genre",
                     "items": [
                         {
                             "id": 515,
                             "title": "Futbol",
-                            "entity": "Genre"
+                            "entity": "genre"
                         },
                         {
                             "id": 518,
                             "title": "Beisbol",
-                            "entity": "Genre"
+                            "entity": "genre"
                         }
                     ]
                 } 
@@ -2252,12 +2252,12 @@ Retrieve a List of all published Geoblocking.
                 {
                     "id": 1,
                     "title": "Guatemala",
-                    "entity": "Geoblocking"
+                    "entity": "geoblocking"
                 },
                 {
                     "id": 2,
                     "title": "Italy",
-                    "entity": "Geoblocking"
+                    "entity": "geoblocking"
                 }
             ],
             "messages": [
@@ -2288,13 +2288,13 @@ Returns all menus for clients (WEB, IOS, Android, ...).
         "data": [
             {
                 "id": 1,
-                "entity": "Navigation",
+                "entity": "navigation",
                 "title": "Main menu",
                 "key": "main-menu",
                 "items": [
                     {
                         "id": 10,
-                        "entity": "Navigation",
+                        "entity": "navigation",
                         "title": "Tele para llevar",
                         "key": "main-menu-tele-para-llevar",
                         "link": "/tv/epg",
@@ -2302,7 +2302,7 @@ Returns all menus for clients (WEB, IOS, Android, ...).
                     },
                     {
                         "id": 11,
-                        "entity": "Navigation",
+                        "entity": "navigation",
                         "title": "Play",
                         "key": "main-menu-play",
                         "link": "/clubondemand",
@@ -2310,7 +2310,7 @@ Returns all menus for clients (WEB, IOS, Android, ...).
                     },
                     {
                         "id": 12,
-                        "entity": "Navigation",
+                        "entity": "navigation",
                         "title": "Rentas",
                         "key": "main-menu-rentas",
                         "link": "/tienda",
@@ -2320,13 +2320,13 @@ Returns all menus for clients (WEB, IOS, Android, ...).
             },
             {
                 "id": 2,
-                "entity": "Navigation",
+                "entity": "navigation",
                 "title": "Clubondemand",
                 "key": "clubondemand",
                 "items": [
                     {
                         "id": 20,
-                        "entity": "Navigation",
+                        "entity": "navigation",
                         "title": "Inicio",
                         "key": "clubondemand-inicio",
                         "link": "/clubondemand",
@@ -2334,7 +2334,7 @@ Returns all menus for clients (WEB, IOS, Android, ...).
                     },
                     {
                         "id": 21,
-                        "entity": "Navigation",
+                        "entity": "navigation",
                         "title": "Películas",
                         "key": "clubondemand-peliculas",
                         "link": "/clubondemand/peliculas",
@@ -2342,7 +2342,7 @@ Returns all menus for clients (WEB, IOS, Android, ...).
                     },
                     {
                         "id": 22,
-                        "entity": "Navigation",
+                        "entity": "navigation",
                         "title": "Series de TV",
                         "key": "clubondemand-series-de-tv",
                         "link": "/clubondemand/series",
@@ -2350,7 +2350,7 @@ Returns all menus for clients (WEB, IOS, Android, ...).
                     },
                     {
                         "id": 23,
-                        "entity": "Navigation",
+                        "entity": "navigation",
                         "title": "Telenovelas",
                         "key": "clubondemand-telenovelas",
                         "link": "/clubondemand/telenovelas",
@@ -2360,13 +2360,13 @@ Returns all menus for clients (WEB, IOS, Android, ...).
             },
             {
                 "id": 3,
-                "entity": "Navigation",
+                "entity": "navigation",
                 "title": "Tienda",
                 "key": "tienda",
                 "items": [
                     {
                         "id": 24,
-                        "entity": "Navigation",
+                        "entity": "navigation",
                         "title": "Inicio",
                         "key": "tienda-inicio",
                         "link": "/tienda",
@@ -2374,7 +2374,7 @@ Returns all menus for clients (WEB, IOS, Android, ...).
                     },
                     {
                         "id": 25,
-                        "entity": "Navigation",
+                        "entity": "navigation",
                         "title": "Catálogo Completo",
                         "key": "tienda-catalogo-completo",
                         "link": "/tienda/peliculas",
@@ -2405,13 +2405,13 @@ Returns a navigation item.
     {
         "data": {
             "id": 1,
-            "entity": "Navigation",
+            "entity": "navigation",
             "title": "Main menu",
             "key": "main-menu",
             "items": [
                 {
                     "id": 10,
-                    "entity": "Navigation",
+                    "entity": "navigation",
                     "title": "Tele para llevar",
                     "key": "main-menu-tele-para-llevar",
                     "link": "/tv/epg",
@@ -2419,7 +2419,7 @@ Returns a navigation item.
                 },
                 {
                     "id": 11,
-                    "entity": "Navigation",
+                    "entity": "navigation",
                     "title": "Play",
                     "key": "main-menu-play",
                     "link": "/clubondemand",
@@ -2427,7 +2427,7 @@ Returns a navigation item.
                 },
                 {
                     "id": 12,
-                    "entity": "Navigation",
+                    "entity": "navigation",
                     "title": "Rentas",
                     "key": "main-menu-rentas",
                     "link": "/tienda",
@@ -2460,8 +2460,8 @@ Represents a Page
     ```js
     {
         "data": {
-            "entity": "Page",
-            "category": "Rental",
+            "entity": "page",
+            "category": "rental",
             "id": 1,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Tienda",
@@ -2888,8 +2888,8 @@ Returns a specific Page.
     ```js
     {
         "data": {
-            "entity": "Page",
-            "category": "Static",
+            "entity": "page",
+            "category": "static",
             "id": 2,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Contáctanos",
@@ -2926,8 +2926,8 @@ Returns a specific Page.
     ```js
     {
         "data": {
-            "entity": "Page",
-            "category": "Static",
+            "entity": "page",
+            "category": "static",
             "id": 3,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Aviso de Privacidad en sitio web para Usuarios de VEO",
@@ -2996,8 +2996,8 @@ Returns a specific Page.
     ```js
     {
         "data": {
-            "entity": "Page",
-            "category": "Static",
+            "entity": "page",
+            "category": "static",
             "id": 4,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "BIENVENIDO A VEO",
@@ -3056,8 +3056,8 @@ Returns a specific Page.
     ```js
     {
         "data": {
-            "entity": "Page",
-            "category": "Static",
+            "entity": "page",
+            "category": "static",
             "id": 5,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "¿QUÉ ES VEO?",
@@ -3094,8 +3094,8 @@ Returns a specific Page.
     ```js
     {
         "data": {
-            "entity": "Page",
-            "category": "Static",
+            "entity": "page",
+            "category": "static",
             "id": 6,
             "modifiedAt": "2014-08-07 02:50:31",
             "title": "Ayuda",
@@ -3148,7 +3148,7 @@ Returns all Pages.
     {
         "data": [
             {
-                "category": "Rental",
+                "category": "rental",
                 "modifiedAt": "2014-08-07 02:50:31",
                 "userId": 3,
                 "title": "Tienda"
@@ -3182,14 +3182,14 @@ Retrieve a List of all published ParentalRating.
                     "title": "G",
                     "code": "G",
                     "level": 0,
-                    "entity": "ParentalRating"
+                    "entity": "parentalRating"
                 },
                 {
                   "id": 2,
                   "title": "PG",
                   "code": "PG",
                   "level": 1,
-                  "entity": "ParentalRating"
+                  "entity": "parentalRating"
                 }
             ],
             "messages": [
@@ -3373,8 +3373,8 @@ Represents a Program
     ```js
     {
         "data": {
-            "entity": "Program",
-            "category": "LinearEpisodeProgram",
+            "entity": "program",
+            "category": "linearEpisodeProgram",
             "id": 3,
             "modifiedAt": "2014-03-28 00:25:46",
             "duration": 2,
@@ -3393,7 +3393,7 @@ Represents a Program
             },
             "synopsisShort": "Karen cuida de Zach",
             "synopsis": "Karen cuida de Zach",
-            "subCategory": "Series",
+            "subCategory": "series",
             "title": "Co-Ed Confidential 4",
             "year": 2010
         },
@@ -3418,8 +3418,8 @@ Returns all Programs.
     {
         "data": [
             {
-                "entity": "Program",
-                "category": "LinearEpisodeProgram",
+                "entity": "program",
+                "category": "linearEpisodeProgram",
                 "id": 3,
                 "modifiedAt": "2014-03-28 00:25:46",
                 "duration": 2,
@@ -3435,7 +3435,7 @@ Returns all Programs.
                     "title": "R"
                 },
                 "synopsisShort": "Karen cuida de Zach",
-                "subCategory": "Series",
+                "subCategory": "series",
                 "title": "Co-Ed Confidential 4",
                 "year": 2010
             }
@@ -3469,12 +3469,12 @@ Search result for assets search
                 {
                     "total": 1,
                     "field": "category",
-                    "value": "Movies"
+                    "value": "movies"
                 },
                 {
                     "total": 0,
                     "field": "category",
-                    "value": "Telenovelas"
+                    "value": "telenovelas"
                 },
                 {
                     "total": 0,
@@ -3484,29 +3484,29 @@ Search result for assets search
                 {
                     "total": 0,
                     "field": "category",
-                    "value": "News"
+                    "value": "news"
                 },
                 {
                     "total": 0,
                     "field": "category",
-                    "value": "Shows"
+                    "value": "shows"
                 },
                 {
                     "total": 0,
                     "field": "category",
-                    "value": "Sports"
+                    "value": "sports"
                 },
                 {
                     "total": 0,
                     "field": "billingType",
-                    "value": "Rental"
+                    "value": "rental"
                 }
             ]
         },
         "data": [
                 {
-                    "entity": "Asset",
-                    "category": "Movie",
+                    "entity": "asset",
+                    "category": "movie",
                     "parentShow": null,
                     "id": 4754,
                     "title": "Operación Dragón",
@@ -3523,12 +3523,12 @@ Search result for assets search
                     },
                     "pictures": [
                         {
-                            "entity": "Picture",
+                            "entity": "picture",
                             "id": 2853,
                             "modifiedAt": "2014-03-28 00:25:46",
                             "credits": "Tom Smith",
                             "orientation": "portrait",
-                            "pictureType": "Poster",
+                            "pictureType": "poster",
                             "title": "",
                             "versions": [
                                 {
@@ -3589,7 +3589,7 @@ Search result for assets search
                         }
                     ],
                     "publicationEvent": {
-                        "entity": "PublicationEvent",
+                        "entity": "publicationEvent",
                         "id": 18563,
                         "startDate": "2014-04-09 06:00:00",
                         "endDate": "2015-03-31 05:59:00",
@@ -3646,7 +3646,7 @@ Represents a season
     ```js
     {
         "data": {
-            "entity": "Season",
+            "entity": "season",
             "id": 451,
             "modifiedAt": "2014-04-18 01:40:42",
             "title": null,
@@ -3655,35 +3655,35 @@ Represents a season
             "airDate": "2008-06-17T10:23:36Z",
             "episodes": [
                 {
-                    "entity": "Asset",
-                    "category": "Episode",
+                    "entity": "asset",
+                    "category": "episode",
                     "id": 11392,
                     "number": 40,
                     "title": "Fuera de todo plan",
                     "synopsisShort": "El Legado",
                     "pictures": [
                         {
-                            "entity": "Picture",
+                            "entity": "picture",
                             "id": 2853,
                             "modifiedAt": "2014-03-28 00:25:46",
-                            "pictureType": "Poster",
+                            "pictureType": "poster",
                             "title": ""
                         }
                     ]
                 },
                 {
-                    "entity": "Asset",
-                    "category": "Episode",
+                    "entity": "asset",
+                    "category": "episode",
                     "id": 11569,
                     "number": 39,
                     "title": "Griselda se confiesa",
                     "synopsisShort": "Griselda le cuenta a una guardia del reclusorio que Jones le confesó su amor y que nunca trató de hacerle daño. Mientras, Otálvaro planea la venganza por la muerte de su sobrina.",
                     "pictures": [
                         {
-                            "entity": "Picture",
+                            "entity": "picture",
                             "id": 2853,
                             "modifiedAt": "2014-03-28 00:25:46",
-                            "pictureType": "Poster",
+                            "pictureType": "poster",
                             "title": ""
                         }
                     ]
