@@ -97,8 +97,6 @@ Attempts to authenticate a user Device.
             "mso": "1",
             "device": "0"
         }
-    }
-    ```
 
 + Response 200
 
@@ -1064,7 +1062,7 @@ Attempts to remove a SVOD subscription entitlement.
 # Group Asset
 Represents actions against Asset objects
 
-## Asset [/asset/{id}]
+## Asset [/assets/{id}]
 Represents an Asset
 
 + Parameters
@@ -1822,7 +1820,7 @@ Retrieves all assets.
 # Group Channel
 Represents actions against Channel objects
 
-## Channel [/channel/{id}]
+## Channel [/channels/{id}]
 Represents a Channel
 
 + Parameters
@@ -1890,7 +1888,7 @@ Returns a specific Channel.
     [Channel][]
 
 
-## List Channels [/cms/business/channels]
+## List Channels [/channels]
 Returns all Channels.
 
 + Model (application/json)
@@ -2235,7 +2233,7 @@ Returns a specific EPG given relevant start and end times, filtered by a Channel
 # Group Genre
 Represents actions against Genre object
 
-## Genre [/genre/{id}]
+## Genre [/genres/{id}]
 Represents a genre
 
 + Parameters
@@ -2361,7 +2359,7 @@ Retrieves all Geoblocking.
 # Group Navigation
 Represents actions against SB Navigation objects
 
-## Navigation [/navigation]
+## Navigation [/navigations]
 Returns all menus for clients (WEB, IOS, Android, ...).
 
 + Model (application/json)
@@ -2477,7 +2475,7 @@ Retrieves all navigation menus for clients.
 
     [Navigation][]
 
-## Navigation item [/navigation/{key}]
+## Navigation item [/navigations/{key}]
 Returns a navigation item.
 
 + Parameters
@@ -2534,7 +2532,7 @@ Retrieves one navigation menu by key.
 # Group Page
 Represents actions against Page objects
 
-## Page [/page/{id}]
+## Page [/pages/{id}]
 Represents a Page
 
 + Parameters
@@ -3457,7 +3455,7 @@ Update the Channel PlayContext while streaming.
 # Group Program
 Represents actions against Program objects
 
-## Program [/program/{id}]
+## Program [/programs/{id}]
 Represents a Program
 
 + Parameters
@@ -3732,7 +3730,7 @@ Search result for assets search
 # Group Season
 Represents actions against Season objects
 
-## Season [/season/{id}]
+## Season [/seasons/{id}]
 Represents a season
 
 + Parameters
