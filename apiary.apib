@@ -51,6 +51,12 @@ Attempts to logout the user.
 
 ### Logout of the site [POST]
 
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+
 + Response 204
 
 ## Recover Password [/account/recover]
@@ -198,6 +204,12 @@ Attempts to validate an account Device.
 ### Links a Device [POST]
 Attempts to link an account Device.
 
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 201 (application/json)
 
     ```js
@@ -228,6 +240,12 @@ Attempts to link an account Device.
 ### Unlinks a Device [DELETE]
 Attempts to unlink an account Device.
 
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 204
 
 + Response 400 (application/json)
@@ -328,12 +346,18 @@ Represents an user account.
 ### Retrieve the Account [GET]
 Attempts to retrieve the user account.
 
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 200
 
     [Account][]
 
 ### Create an Account [POST]
-Attempts to create a new user account.
+Attempts to create a new user account (user registration).
 
 + Request (application/json)
 
@@ -440,7 +464,11 @@ Attempts to update the user account.
         }
     }
     ```
-
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 200
 
     [Account][]
@@ -462,6 +490,12 @@ Attempts to update the user account.
 
 ### Cancel the Account [DELETE]
 Attempts to cancel the user account.
+
++ Request
+
+    + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 204
 
@@ -519,6 +553,10 @@ Attempts to validate the account pin.
         }
     }
     ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 204
 
@@ -550,6 +588,10 @@ Attempts to update the account pin.
         }
     }
     ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 204
 
@@ -580,6 +622,10 @@ Attempts to clear the account pin.
         }
     }
     ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 204
 
@@ -654,6 +700,10 @@ Attempts to create an user rating.
         }
     }
     ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 201
 
@@ -686,6 +736,10 @@ Attempts to update a User Rating.
         }
     }
     ```
+    
+     + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 200
 
@@ -799,6 +853,12 @@ Represents a rental entitlement.
 ### Retrieve a Rental Entitlement [GET]
 Attempts to retrieve a rental entitlement.
 
++ Request
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 200
 
     [Rental Entitlement][]
@@ -818,6 +878,10 @@ Attempts to create a Rental entitlement.
         }
     }
     ```
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
 
 + Response 201
 
@@ -844,6 +908,12 @@ Represents the active rentals.
 ### Retrieve the active rentals [GET]
 Attempts to retrieve the active rentals.
 
++ Request
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 200 (application/json)
 
     ```js
@@ -933,6 +1003,12 @@ Represents the rental history.
 ### Retrieve the rental history [GET]
 Attempts to retrieve the rental history.
 
++ Request
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 200 (application/json)
 
     ```js
@@ -1022,6 +1098,12 @@ Represents a SVOD subscription entitlement.
 ### Create SVOD Entitlement [POST]
 Attempts to create a SVOD subscription entitlement.
 
++ Request
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 204
 
 + Response 400 (application/json)
@@ -1042,6 +1124,12 @@ Attempts to create a SVOD subscription entitlement.
 ### Remove SVOD Entitlement [DELETE]
 Attempts to remove a SVOD subscription entitlement.
 
++ Request
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 204
 
 + Response 400 (application/json)
@@ -3333,6 +3421,12 @@ Create the Asset PlayContext required before streaming.
 
 ### Create Asset PlayContext [POST]
 
++ Request
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 200
 
     [Initialize asset streaming][]
@@ -3369,6 +3463,12 @@ Create the Channel PlayContext required before streaming.
 
 ### Create Channel PlayContext [POST]
 
++ Request
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 200
 
     [Initialize channel streaming][]
@@ -3409,6 +3509,12 @@ Update the Asset PlayContext while streaming.
 
 ### Update Asset PlayContext [POST]
 
++ Request
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 200
 
     [Update Asset PlayContext][]
@@ -3447,6 +3553,12 @@ Update the Channel PlayContext while streaming.
 
 ### Update Channel PlayContext [POST]
 
++ Request
+    
+    + Headers
+            
+            X-Auth-Token: qwerty12345
+            
 + Response 200
 
     [Update Channel PlayContext][]
