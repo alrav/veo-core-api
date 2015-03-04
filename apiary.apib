@@ -35,7 +35,7 @@ Attempts to authenticate the user credentials.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -78,7 +78,7 @@ Attempts to recover the user account's password. The response will always return
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -114,7 +114,7 @@ Attempts to authenticate a user Device.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -152,7 +152,7 @@ Attempts to authenticate and link an account Device.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -173,7 +173,7 @@ Represents an account Device.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "accountId": "123456",
             "mso": [2]
@@ -192,7 +192,7 @@ Attempts to validate an account Device.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -216,7 +216,7 @@ Attempts to link an account Device.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             { "info": "account_device_linked" }
@@ -228,7 +228,7 @@ Attempts to link an account Device.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -254,7 +254,7 @@ Attempts to unlink an account Device.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -275,7 +275,7 @@ Represents an user account.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "id": 123456,
             "facebookId": null,
@@ -387,7 +387,7 @@ Attempts to create a new user account (user registration).
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -402,7 +402,7 @@ Attempts to create a new user account (user registration).
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "accountId": "123456",
             "initPoint": "https://www.mercadopago.com/mlm/debits/new?preapproval_id=605eb5548f9640d5be334ac5181e8e5c"
@@ -420,7 +420,7 @@ Attempts to create a new user account (user registration).
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "accountId": "123456",
             "fieldLabel": "Teléfono",
@@ -479,7 +479,7 @@ Attempts to update the user account.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -526,7 +526,7 @@ Attempts to verify a new user account.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -566,7 +566,7 @@ Attempts to validate the account pin.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -601,7 +601,7 @@ Attempts to update the account pin.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -635,7 +635,7 @@ Attempts to clear the account pin.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -659,7 +659,7 @@ Represents an user rating.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "rating": 5,
             "ratedDate": "2015-02-23T10:00:25Z"
@@ -679,7 +679,7 @@ Attempts to retrieve an user rating.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -715,7 +715,7 @@ Attempts to create an user rating.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -751,7 +751,7 @@ Attempts to update a User Rating.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -775,7 +775,7 @@ Represents a rental entitlement.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "rental",
             "id": 123456,
@@ -893,7 +893,7 @@ Attempts to create a Rental entitlement.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -920,7 +920,7 @@ Attempts to retrieve the active rentals.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": [
             {
                 "entity": "rental",
@@ -1015,7 +1015,7 @@ Attempts to retrieve the rental history.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": [
             {
                 "entity": "rental",
@@ -1112,7 +1112,7 @@ Attempts to create a SVOD subscription entitlement.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -1138,7 +1138,7 @@ Attempts to remove a SVOD subscription entitlement.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {},
         "messages": [
             {
@@ -1162,7 +1162,7 @@ Represents an Asset
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "asset",
             "category": "movie",
@@ -1355,7 +1355,7 @@ Returns a specific Asset.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "asset",
             "category": "series",
@@ -1606,7 +1606,7 @@ Returns a specific Asset.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "asset",
             "category": "episode",
@@ -1800,7 +1800,7 @@ Returns all Assets.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": [
         {
             "entity": "asset",
@@ -1920,7 +1920,7 @@ Represents a Channel
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "channel",
             "category": "linearChannel",
@@ -1985,7 +1985,7 @@ Returns all Channels.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": [
             {
                 "entity": "channel",
@@ -2051,7 +2051,7 @@ A List of all countries.
 
     ```js
         {
-            "headers": {},
+            "headers": {"ttl": 0},
             "data": [
                 {
                     "id": 1,
@@ -2089,7 +2089,7 @@ Represents the Configuration of a Device (e.g., iOS, Android)
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "deviceConfiguration",
             "id": 1,
@@ -2126,7 +2126,7 @@ Represents the Labels for a Device's Configuration
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": [
             {
                 "login": {
@@ -2166,7 +2166,7 @@ Represents actions against the EPG
     
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": [
             {
                 "entity": "channel",
@@ -2253,7 +2253,7 @@ Returns a specific EPG given relevant start and end times, filtered by a Channel
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "channel",
             "category": "linearChannel",
@@ -2333,7 +2333,7 @@ Represents a genre
 
     ```js
         {
-            "headers": {},
+            "headers": {"ttl": 0},
             "data": {
                 "id": 28,
                 "title": "Deportes",
@@ -2373,7 +2373,7 @@ Retrieve a List of all published Genres.
 
     ```js
         {
-            "headers": {},
+            "headers": {"ttl": 0},
             "data": [
                 {
                     "id": 28,
@@ -2418,7 +2418,7 @@ Retrieve a List of all published Geoblocking.
 
     ```js
         {
-            "headers": {},
+            "headers": {"ttl": 0},
             "data": [
                 {
                     "id": 1,
@@ -2456,7 +2456,7 @@ Returns all menus for clients (WEB, IOS, Android, ...).
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": [
             {
                 "id": 1,
@@ -2575,7 +2575,7 @@ Returns a navigation item.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "id": 1,
             "entity": "navigation",
@@ -2632,7 +2632,7 @@ Represents a Page
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "page",
             "category": "rental",
@@ -3061,7 +3061,7 @@ Returns a specific Page.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "page",
             "category": "static",
@@ -3100,7 +3100,7 @@ Returns a specific Page.
     
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "page",
             "category": "static",
@@ -3171,7 +3171,7 @@ Returns a specific Page.
     
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "page",
             "category": "static",
@@ -3232,7 +3232,7 @@ Returns a specific Page.
     
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "page",
             "category": "static",
@@ -3271,7 +3271,7 @@ Returns a specific Page.
     
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "page",
             "category": "static",
@@ -3325,7 +3325,7 @@ Returns all Pages.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": [
             {
                 "category": "rental",
@@ -3356,7 +3356,7 @@ Retrieve a List of all published ParentalRating.
 
     ```js
         {
-            "headers": {},
+            "headers": {"ttl": 0},
             "data": [
                 {
                     "id": 1,
@@ -3400,7 +3400,7 @@ Create the Asset PlayContext required before streaming.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "playContext": {
                 "locationUri": "http://www.veo.tv/player/user/1811/asset/4962/video/6538/stream/b7648850-1f21-4031-9cb3-e3a19eb800fb",
@@ -3443,7 +3443,7 @@ Create the Channel PlayContext required before streaming.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "playContext": {
                 "locationUri": "http://www.veo.tv:80/player/user/991580/channel/909/stream/a902f568-04b5-46a6-ae53-9cebde7b54a6",
@@ -3488,7 +3488,7 @@ Update the Asset PlayContext while streaming.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "playContext": {
                 "locationUri": null,
@@ -3533,7 +3533,7 @@ Update the Channel PlayContext while streaming.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "playContext": {
                 "locationUri": null,
@@ -3579,7 +3579,7 @@ Represents a Program
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "program",
             "category": "linearEpisodeProgram",
@@ -3624,7 +3624,7 @@ Returns all Programs.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": [
             {
                 "entity": "program",
@@ -3710,7 +3710,8 @@ Search result for assets search
                     "field": "billingType",
                     "value": "rental"
                 }
-            ]
+            ],
+            "ttl": 0
         },
         "data": [
                 {
@@ -3854,7 +3855,7 @@ Represents a season
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": {
             "entity": "season",
             "id": 451,
@@ -3923,7 +3924,7 @@ Returns all Seasons.
 
     ```js
     {
-        "headers": {},
+        "headers": {"ttl": 0},
         "data": [
             {
                 "modifiedAt": "2014-04-18T01:40:42Z",
