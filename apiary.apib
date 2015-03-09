@@ -3481,11 +3481,11 @@ Create the Asset PlayContext required before streaming.
 
     [Initialize asset streaming][]
 
-## Initialize channel streaming [/watch/channel/{channelName}]
+## Initialize channel streaming [/watch/channel/{channelId}]
 Create the Channel PlayContext required before streaming.
 
 + Parameters
-    + channelName (string, `GALA TV HD`) ... The name of the Channel.
+    + channelId (number, `123`) ... The id of the Channel.
 
 + Model (application/json)
 
@@ -3494,10 +3494,10 @@ Create the Channel PlayContext required before streaming.
         "headers": {"ttl": 0},
         "data": {
             "playContext": {
-                "locationUri": "http://www.veo.tv:80/player/user/991580/channel/909/stream/a902f568-04b5-46a6-ae53-9cebde7b54a6",
+                "locationUri": "http://www.veo.tv:80/player/user/991580/channel/123/stream/a902f568-04b5-46a6-ae53-9cebde7b54a6",
                 "playerState": null,
                 "userStream": {
-                    "channelNumber": 909,
+                    "channelId": 123,
                     "userId": 991580,
                     "streamId": "a902f568-04b5-46a6-ae53-9cebde7b54a6",
                     "expirationDate": null,
@@ -3569,12 +3569,12 @@ Update the Asset PlayContext while streaming.
 
     [Update Asset PlayContext][]
 
-## Update Channel PlayContext [/player/user/{accountId}/channel/{channelNumber}/stream/{streamId}]
+## Update Channel PlayContext [/player/user/{accountId}/channel/{channelId}/stream/{streamId}]
 Update the Channel PlayContext while streaming.
 
 + Parameters
     + accountId (string, `1181`) ... The accountId of the User.
-    + channelNumber (string, `909`) ... The number of the Channel.
+    + channelId (number, `123`) ... The number of the Channel.
     + streamId (string, `a902f568-04b5-46a6-ae53-9cebde7b54a6`) ... The id of the stream generated with the initial post.
 
 + Model (application/json)
@@ -3587,7 +3587,7 @@ Update the Channel PlayContext while streaming.
                 "locationUri": null,
                 "playerState": "START",
                 "userStream": {
-                    "channelNumber": 909,
+                    "channelId": 123,
                     "userId": "501000000129-01",
                     "expirationDate": null,
                     "streamId": "a902f568-04b5-46a6-ae53-9cebde7b54a6",
