@@ -3713,7 +3713,7 @@ Retrieves all Programs.
 # Group Search
 Represents the search engine
 
-## Search Assets [/search{?q}{?sort}{?sortdir}{?groupBy}{?offset}{?limit}]
+## Search Assets [/search{?q}{?sort}{?sortdir}{?groupBy}{?page}{?limit}]
 Search result for assets search
 
 + Model (application/json)
@@ -3887,7 +3887,7 @@ Search result for assets search
             + `genre`    ... Group by genre.
             + `category` ... Group by category.
             + `entity`   ... Group by entity.
-    + offset = `0` (optional, number, `0`) ... Search results offset.
+    + page = `1` (optional, number, `1`) ... Search results page.
     + limit (optional, number, `120`) ... Search results limit.
 
 + Response 200
