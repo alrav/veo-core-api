@@ -1,7 +1,7 @@
 FORMAT: 1A
 
-# Veo Core API
-The Veo Core API powers the website and device integrations within the Veo architecture
+# Veo Client API
+The Veo Client API powers the website and device integrations within the Veo architecture
 
 Please be sure to validate your response examples with [JSONLint][1].
 
@@ -2171,60 +2171,6 @@ Represents actions against the EPG
             {
                 "entity": "channel",
                 "category": "linearChannel",
-                "id": 16,
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
                 "id": 18,
                 "modifiedAt": "2013-03-28T13:21:35Z",
                 "title": "Unicable",
@@ -2232,7 +2178,7 @@ Represents actions against the EPG
                 "images": [
                     {
                         "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                        "link": "https://dyv52uavm19r4.cloudfront.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
                         "width": 31,
                         "height": 47
                     }
@@ -2246,13 +2192,13 @@ Represents actions against the EPG
                         "items": [
                             {
                                 "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
+                                "startTime": "2013-04-01T00:00:00Z",
+                                "endTime": "2013-04-01T01:30:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearEpisodeProgram",
                                     "id": 3,
-                                    "duration": 2,
+                                    "duration": 90,
                                     "subCategory": "series",
                                     "title": "Co-Ed Confidential 4",
                                     "titleShort": "Co-Ed Confidential 4"
@@ -2260,16 +2206,184 @@ Represents actions against the EPG
                             },
                             {
                                 "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
+                                "startTime": "2013-04-01T01:30:00Z",
+                                "endTime": "2013-04-01T03:00:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearMovieProgram",
                                     "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
+                                    "duration": 90,
+                                    "subCategory": "series",
                                     "title": "Furia De Mujer",
                                     "titleShort": "Furia De Mujer"
+                                }
+                            },
+                            {
+                                "id": 394,
+                                "startTime": "2013-04-01T03:00:00Z",
+                                "endTime": "2013-04-01T04:30:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearEpisodeProgram",
+                                    "id": 3,
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "La Cocina de...",
+                                    "titleShort": "La Cocina de..."
+                                }
+                            },
+                            {
+                                "id": 395,
+                                "startTime": "2013-04-01T04:30:00Z",
+                                "endTime": "2013-04-01T06:00:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearMovieProgram",
+                                    "id": 7,
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "El Señor de los Cielos",
+                                    "titleShort": "El Señor de los Cielos"
+                                }
+                            },
+                            {
+                                "id": 396,
+                                "startTime": "2013-04-01T06:00:00Z",
+                                "endTime": "2013-04-01T07:30:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearEpisodeProgram",
+                                    "id": 3,
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "Laura",
+                                    "titleShort": "Laura"
+                                }
+                            },
+                            {
+                                "id": 397,
+                                "startTime": "2013-04-01T07:30:00Z",
+                                "endTime": "2013-04-01T09:00:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearMovieProgram",
+                                    "id": 7,
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "El Gordo y la Flaca",
+                                    "titleShort": "El Gordo y la Flaca"
+                                }
+                            },
+                            {
+                                "id": 398,
+                                "startTime": "2013-04-01T09:00:00Z",
+                                "endTime": "2013-04-01T10:30:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearEpisodeProgram",
+                                    "id": 3,
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "Primer Impacto",
+                                    "titleShort": "Primer Impacto"
+                                }
+                            },
+                            {
+                                "id": 399,
+                                "startTime": "2013-04-01T10:30:00Z",
+                                "endTime": "2013-04-01T13:00:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearMovieProgram",
+                                    "id": 7,
+                                    "duration": 180,
+                                    "subCategory": "series",
+                                    "title": "Iron Chef America",
+                                    "titleShort": "Iron Chef America"
+                                }
+                            },
+                            {
+                                "id": 400,
+                                "startTime": "2013-04-01T13:00:00Z",
+                                "endTime": "2013-04-01T15:30:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearEpisodeProgram",
+                                    "id": 3,
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "Fashion Tour",
+                                    "titleShort": "Fashion Tour"
+                                }
+                            },
+                            {
+                                "id": 401,
+                                "startTime": "2013-04-01T15:30:00Z",
+                                "endTime": "2013-04-01T18:00:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearMovieProgram",
+                                    "id": 7,
+                                    "duration": 180,
+                                    "subCategory": "movie",
+                                    "title": "El Chivo",
+                                    "titleShort": "El Chivo"
+                                }
+                            },
+                            {
+                                "id": 402,
+                                "startTime": "2013-04-01T18:00:00Z",
+                                "endTime": "2013-04-01T19:30:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearEpisodeProgram",
+                                    "id": 3,
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "De Chile, Mole y Pozole",
+                                    "titleShort": "De Chile, Mole y Pozole"
+                                }
+                            },
+                            {
+                                "id": 403,
+                                "startTime": "2013-04-01T19:30:00Z",
+                                "endTime": "2013-04-01T21:00:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearMovieProgram",
+                                    "id": 7,
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "Bocaditos de Cielo",
+                                    "titleShort": "Bocaditos de Cielo"
+                                }
+                            },
+                            {
+                                "id": 404,
+                                "startTime": "2013-04-01T21:00:00Z",
+                                "endTime": "2013-04-01T23:30:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearEpisodeProgram",
+                                    "id": 3,
+                                    "duration": 180,
+                                    "subCategory": "series",
+                                    "title": "Repostería con Anna Olson",
+                                    "titleShort": "Repostería con Anna Olson"
+                                }
+                            },
+                            {
+                                "id": 405,
+                                "startTime": "2013-04-01T23:30:00Z",
+                                "endTime": "2013-04-02T01:00:00Z",
+                                "program": {
+                                    "entity": "program",
+                                    "category": "linearMovieProgram",
+                                    "id": 7,
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "Siempre Dulce",
+                                    "titleShort": "Siempre Dulce"
                                 }
                             }
                         ]
@@ -2281,427 +2395,217 @@ Represents actions against the EPG
                 "category": "linearChannel",
                 "id": 19,
                 "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "Unicable",
-                "number": 203,
+                "title": "HOLA TV",
+                "number": 228,
                 "images": [
                     {
                         "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                        "link": "https://dyv52uavm19r4.cloudfront.net/prod/LinearChannel/C_1_Channel_126_epgTimelineLogo.png",
                         "width": 31,
                         "height": 47
                     }
                 ],
                 "schedules": [
                     {
-                        "id": 123,
+                        "id": 124,
                         "entity": "schedule",
                         "category": "linearSchedule",
                         "scheduleDate": "2013-04-01T00:00:00Z",
                         "items": [
                             {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
+                                "id": 492,
+                                "startTime": "2013-04-01T00:00:00Z",
+                                "endTime": "2013-04-01T01:30:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearEpisodeProgram",
                                     "id": 3,
-                                    "duration": 2,
+                                    "duration": 90,
                                     "subCategory": "series",
                                     "title": "Co-Ed Confidential 4",
                                     "titleShort": "Co-Ed Confidential 4"
                                 }
                             },
                             {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
+                                "id": 493,
+                                "startTime": "2013-04-01T01:30:00Z",
+                                "endTime": "2013-04-01T03:00:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearMovieProgram",
                                     "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
+                                    "duration": 90,
+                                    "subCategory": "series",
                                     "title": "Furia De Mujer",
                                     "titleShort": "Furia De Mujer"
                                 }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 20,
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
+                            },
                             {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
+                                "id": 494,
+                                "startTime": "2013-04-01T03:00:00Z",
+                                "endTime": "2013-04-01T04:30:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearEpisodeProgram",
                                     "id": 3,
-                                    "duration": 2,
+                                    "duration": 90,
                                     "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
+                                    "title": "La Cocina de...",
+                                    "titleShort": "La Cocina de..."
                                 }
                             },
                             {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
+                                "id": 495,
+                                "startTime": "2013-04-01T04:30:00Z",
+                                "endTime": "2013-04-01T06:00:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearMovieProgram",
                                     "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "El Señor de los Cielos",
+                                    "titleShort": "El Señor de los Cielos"
                                 }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 21,
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
+                            },
                             {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
+                                "id": 496,
+                                "startTime": "2013-04-01T06:00:00Z",
+                                "endTime": "2013-04-01T07:30:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearEpisodeProgram",
                                     "id": 3,
-                                    "duration": 2,
+                                    "duration": 90,
                                     "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
+                                    "title": "Laura",
+                                    "titleShort": "Laura"
                                 }
                             },
                             {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
+                                "id": 497,
+                                "startTime": "2013-04-01T07:30:00Z",
+                                "endTime": "2013-04-01T09:00:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearMovieProgram",
                                     "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "El Gordo y la Flaca",
+                                    "titleShort": "El Gordo y la Flaca"
                                 }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 22,
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
+                            },
                             {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
+                                "id": 498,
+                                "startTime": "2013-04-01T09:00:00Z",
+                                "endTime": "2013-04-01T10:30:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearEpisodeProgram",
                                     "id": 3,
-                                    "duration": 2,
+                                    "duration": 90,
                                     "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
+                                    "title": "Primer Impacto",
+                                    "titleShort": "Primer Impacto"
                                 }
                             },
                             {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
+                                "id": 499,
+                                "startTime": "2013-04-01T10:30:00Z",
+                                "endTime": "2013-04-01T13:00:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearMovieProgram",
                                     "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
+                                    "duration": 180,
+                                    "subCategory": "series",
+                                    "title": "Iron Chef America",
+                                    "titleShort": "Iron Chef America"
                                 }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 23,
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
+                            },
                             {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
+                                "id": 500,
+                                "startTime": "2013-04-01T13:00:00Z",
+                                "endTime": "2013-04-01T15:30:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearEpisodeProgram",
                                     "id": 3,
-                                    "duration": 2,
+                                    "duration": 90,
                                     "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
+                                    "title": "Fashion Tour",
+                                    "titleShort": "Fashion Tour"
                                 }
                             },
                             {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
+                                "id": 501,
+                                "startTime": "2013-04-01T15:30:00Z",
+                                "endTime": "2013-04-01T18:00:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearMovieProgram",
                                     "id": 7,
-                                    "duration": 2,
+                                    "duration": 180,
                                     "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
+                                    "title": "El Chivo",
+                                    "titleShort": "El Chivo"
                                 }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 24,
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
+                            },
                             {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
+                                "id": 502,
+                                "startTime": "2013-04-01T18:00:00Z",
+                                "endTime": "2013-04-01T19:30:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearEpisodeProgram",
                                     "id": 3,
-                                    "duration": 2,
+                                    "duration": 90,
                                     "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
+                                    "title": "De Chile, Mole y Pozole",
+                                    "titleShort": "De Chile, Mole y Pozole"
                                 }
                             },
                             {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
+                                "id": 503,
+                                "startTime": "2013-04-01T19:30:00Z",
+                                "endTime": "2013-04-01T21:00:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearMovieProgram",
                                     "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
+                                    "duration": 90,
+                                    "subCategory": "series",
+                                    "title": "Bocaditos de Cielo",
+                                    "titleShort": "Bocaditos de Cielo"
                                 }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 25,
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
+                            },
                             {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
+                                "id": 504,
+                                "startTime": "2013-04-01T21:00:00Z",
+                                "endTime": "2013-04-01T23:30:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearEpisodeProgram",
                                     "id": 3,
-                                    "duration": 2,
+                                    "duration": 180,
                                     "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
+                                    "title": "Repostería con Anna Olson",
+                                    "titleShort": "Repostería con Anna Olson"
                                 }
                             },
                             {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
+                                "id": 505,
+                                "startTime": "2013-04-01T23:30:00Z",
+                                "endTime": "2013-04-02T01:00:00Z",
                                 "program": {
                                     "entity": "program",
                                     "category": "linearMovieProgram",
                                     "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 26,
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
+                                    "duration": 90,
                                     "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
+                                    "title": "Siempre Dulce",
+                                    "titleShort": "Siempre Dulce"
                                 }
                             }
                         ]
@@ -2709,11 +2613,7 @@ Represents actions against the EPG
                 ]
             }
         ],
-        "messages": [
-            {
-                "success": "Data successfully retrieved"
-            }
-        ]
+        "messages": []
     }
     ```
 
@@ -2732,779 +2632,243 @@ Represents actions against the EPG, filtered by Channel
     + end (int, `1424204313`) ... The end Unix timestamp of the Schedule.
     + channelId (int, `16`) ... The id of the schedule channel
 
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {"ttl": 0},
+        "data": {
+            "entity": "channel",
+            "category": "linearChannel",
+            "id": 18,
+            "modifiedAt": "2013-03-28T13:21:35Z",
+            "title": "Unicable",
+            "number": 203,
+            "images": [
+                {
+                    "type": "epgTimeline",
+                    "link": "https://dyv52uavm19r4.cloudfront.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
+                    "width": 31,
+                    "height": 47
+                }
+            ],
+            "schedules": [
+                {
+                    "id": 123,
+                    "entity": "schedule",
+                    "category": "linearSchedule",
+                    "scheduleDate": "2013-04-01T00:00:00Z",
+                    "items": [
+                        {
+                            "id": 392,
+                            "startTime": "2013-04-01T00:00:00Z",
+                            "endTime": "2013-04-01T01:30:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearEpisodeProgram",
+                                "id": 3,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "Co-Ed Confidential 4",
+                                "titleShort": "Co-Ed Confidential 4"
+                            }
+                        },
+                        {
+                            "id": 393,
+                            "startTime": "2013-04-01T01:30:00Z",
+                            "endTime": "2013-04-01T03:00:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearMovieProgram",
+                                "id": 7,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "Furia De Mujer",
+                                "titleShort": "Furia De Mujer"
+                            }
+                        },
+                        {
+                            "id": 394,
+                            "startTime": "2013-04-01T03:00:00Z",
+                            "endTime": "2013-04-01T04:30:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearEpisodeProgram",
+                                "id": 3,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "La Cocina de...",
+                                "titleShort": "La Cocina de..."
+                            }
+                        },
+                        {
+                            "id": 395,
+                            "startTime": "2013-04-01T04:30:00Z",
+                            "endTime": "2013-04-01T06:00:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearMovieProgram",
+                                "id": 7,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "El Señor de los Cielos",
+                                "titleShort": "El Señor de los Cielos"
+                            }
+                        },
+                        {
+                            "id": 396,
+                            "startTime": "2013-04-01T06:00:00Z",
+                            "endTime": "2013-04-01T07:30:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearEpisodeProgram",
+                                "id": 3,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "Laura",
+                                "titleShort": "Laura"
+                            }
+                        },
+                        {
+                            "id": 397,
+                            "startTime": "2013-04-01T07:30:00Z",
+                            "endTime": "2013-04-01T09:00:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearMovieProgram",
+                                "id": 7,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "El Gordo y la Flaca",
+                                "titleShort": "El Gordo y la Flaca"
+                            }
+                        },
+                        {
+                            "id": 398,
+                            "startTime": "2013-04-01T09:00:00Z",
+                            "endTime": "2013-04-01T10:30:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearEpisodeProgram",
+                                "id": 3,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "Primer Impacto",
+                                "titleShort": "Primer Impacto"
+                            }
+                        },
+                        {
+                            "id": 399,
+                            "startTime": "2013-04-01T10:30:00Z",
+                            "endTime": "2013-04-01T13:00:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearMovieProgram",
+                                "id": 7,
+                                "duration": 180,
+                                "subCategory": "series",
+                                "title": "Iron Chef America",
+                                "titleShort": "Iron Chef America"
+                            }
+                        },
+                        {
+                            "id": 400,
+                            "startTime": "2013-04-01T13:00:00Z",
+                            "endTime": "2013-04-01T15:30:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearEpisodeProgram",
+                                "id": 3,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "Fashion Tour",
+                                "titleShort": "Fashion Tour"
+                            }
+                        },
+                        {
+                            "id": 401,
+                            "startTime": "2013-04-01T15:30:00Z",
+                            "endTime": "2013-04-01T18:00:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearMovieProgram",
+                                "id": 7,
+                                "duration": 180,
+                                "subCategory": "movie",
+                                "title": "El Chivo",
+                                "titleShort": "El Chivo"
+                            }
+                        },
+                        {
+                            "id": 402,
+                            "startTime": "2013-04-01T18:00:00Z",
+                            "endTime": "2013-04-01T19:30:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearEpisodeProgram",
+                                "id": 3,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "De Chile, Mole y Pozole",
+                                "titleShort": "De Chile, Mole y Pozole"
+                            }
+                        },
+                        {
+                            "id": 403,
+                            "startTime": "2013-04-01T19:30:00Z",
+                            "endTime": "2013-04-01T21:00:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearMovieProgram",
+                                "id": 7,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "Bocaditos de Cielo",
+                                "titleShort": "Bocaditos de Cielo"
+                            }
+                        },
+                        {
+                            "id": 404,
+                            "startTime": "2013-04-01T21:00:00Z",
+                            "endTime": "2013-04-01T23:30:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearEpisodeProgram",
+                                "id": 3,
+                                "duration": 180,
+                                "subCategory": "series",
+                                "title": "Repostería con Anna Olson",
+                                "titleShort": "Repostería con Anna Olson"
+                            }
+                        },
+                        {
+                            "id": 405,
+                            "startTime": "2013-04-01T23:30:00Z",
+                            "endTime": "2013-04-02T01:00:00Z",
+                            "program": {
+                                "entity": "program",
+                                "category": "linearMovieProgram",
+                                "id": 7,
+                                "duration": 90,
+                                "subCategory": "series",
+                                "title": "Siempre Dulce",
+                                "titleShort": "Siempre Dulce"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "messages": []
+    }
+    ```
+
 ### Retrieve the EPG [GET]
 Returns a specific EPG given relevant start and end times, filtered by a Channel
 
 + Response 200
 
-    ```js
-    {
-        "headers": {
-            "ttl": 0
-        },
-        "data": [
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 13,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 14,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 15,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 16,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 17,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 18,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 19,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 20,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 21,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 22,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 24,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 25,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 26,
-                "status": "published",
-                "createdAt": "2013-03-28T13:21:35Z",
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "createdBy": 3,
-                "modifiedBy": 4,
-                "title": "Unicable",
-                "number": 203,
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
-                "schedules": [
-                    {
-                        "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "00:30:00",
-                                "endTime": "01:30:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 2,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
-                            },
-                            {
-                                "id": 393,
-                                "startTime": "01:30:00",
-                                "endTime": "03:00:00",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 2,
-                                    "subCategory": "movie",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "messages": [
-            {
-                "success": "Data successfully retrieved"
-            }
-        ]
-    }
-    ```
+    [Channel EPG][]
 
 # Group Genre
 Represents actions against Genre object
