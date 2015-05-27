@@ -49,7 +49,7 @@ Attempts to authenticate the user credentials.
 ## Logout [/account/logout]
 Attempts to logout the user.
 
-### Logout of the site [POST]
+### Logout of the site [GET]
 
 + Request
 
@@ -279,8 +279,8 @@ Represents an user account.
         "data": {
             "id": 123456,
             "facebookId": null,
-            "sessionToken": "dead-beef-dead-beef-dead-beef",
-            "accessToken": "deadbeef",
+            "sessionId": "dead-beef-dead-beef-dead-beef",
+            "accessToken": "dead-beef-dead-beef-dead-beef",
             "contract": "123456",
             "mso": [2],
             "status": "active",
@@ -308,7 +308,7 @@ Represents an user account.
                 "lastUpdated": 1425739017952
             },
             "permissions": {
-                "isTrial": false,
+                "trialAvailable": false,
                 "canRent": true,
                 "canPlayVideo": true
             },
