@@ -3287,6 +3287,15 @@ Retrieves one navigation menu by key.
 # Group Page
 Represents actions against Page objects
 
+The Page entity contains an array of zones, which in turn contains an array of widgets, which finally contain an array of asset items. 
+
+Below is the finite subset of widgets we currently support:
+
+1. Stage Widget - Represents the principal carousel of the page
+2. Collection Widget - Represents the supporting carousel of the page
+3. ResumePlay Widget - Represents a positional placeholder for the client to perform an API call to retrieve all movies left in progress (to be implemented) and iterate its items
+3. ActiveRentals Widget - Represents a positional placeholder for the client to perform an API call to Account - Rental : Active Rental Entitlements and iterate its items
+
 ## Welcome Page [/page/welcome]
 Represents the Welcome Page (e.g., Play)
 
