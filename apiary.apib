@@ -19,11 +19,9 @@ Attempts to authenticate the user credentials.
 
     ```js
     {
-        "data": {
             "email": "user@gmail.com",
             "password": "password1",
             "remember": true
-        }
     }
     ```
 
@@ -68,9 +66,7 @@ Attempts to recover the user account's password. The response will always return
 
     ```js
     {
-        "data": {
             "email": "user@gmail.com"
-        }
     }
     ```
 
@@ -98,11 +94,9 @@ Attempts to authenticate a user Device.
 
     ```js
     {
-        "data": {
             "uid": "1234567890",
             "mso": "1",
             "device": "0"
-        }
     }
     ```
 
@@ -134,13 +128,11 @@ Attempts to authenticate and link an account Device.
 
     ```js
     {
-        "data": {
             "email": "user@gmail.com",
             "password": "password1",
             "uid": "1234567890",
             "mso": "1",
             "device": "0"
-        }
     }
     ```
 
@@ -364,7 +356,6 @@ Attempts to create a new user account (user registration).
 
     ```js
     {
-        "data": {
             "email": "user@gmail.com",
             "password": "secretPassword",
             "mso": "1",
@@ -374,7 +365,6 @@ Attempts to create a new user account (user registration).
             "familyName": "Doe",
             "city": "",
             "campaign": ""
-        }
     }
     ```
 
@@ -441,7 +431,6 @@ Attempts to update the user account.
 
     ```js
     {
-        "data": {
             "email": "user@gmail.com",
             "firstName": "John",
             "familyName": "Doe",
@@ -462,7 +451,6 @@ Attempts to update the user account.
                 "language": "en",
                 "timezone": "America/New_York"
             }
-        }
     }
     ```
 
@@ -509,11 +497,9 @@ Attempts to verify a new user account.
 
     ```js
     {
-        "data": {
             "accountId": 123456,
             "fieldLabel": "Teléfono",
             "fieldUnmasked": "5539894100"
-        }
     }
     ```
 
@@ -549,9 +535,7 @@ Attempts to validate the account pin.
 
     ```js
     {
-        "data": {
             "currentPin": "1234"
-        }
     }
     ```
 
@@ -583,10 +567,8 @@ Attempts to update the account pin.
 
     ```js
     {
-        "data": {
             "currentPin": "1234",
             "newPin": "1234"
-        }
     }
     ```
 
@@ -618,9 +600,7 @@ Attempts to clear the account pin.
 
     ```js
     {
-        "data": {
             "currentPin": "1234"
-        }
     }
     ```
 
@@ -696,9 +676,7 @@ Attempts to create an user rating.
 
     ```js
     {
-        "data": {
             "rating": 5
-        }
     }
     ```
 
@@ -732,9 +710,7 @@ Attempts to update a User Rating.
 
     ```js
     {
-        "data": {
             "rating": 5
-        }
     }
     ```
 
@@ -874,9 +850,7 @@ Attempts to create a Rental entitlement.
 
     ```js
     {
-        "data": {
             "assetId": 123456
-        }
     }
     ```
 
