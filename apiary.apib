@@ -19073,7 +19073,7 @@ Create the Channel PlayContext required before streaming.
 
     [Initialize channel streaming][]
 
-## Update Asset PlayContext [/player/asset/{assetId}/video/{videoId}/stream/{streamId}{?state}{?program_start}{?timeline_position}]
+## Update Asset PlayContext [/player/asset/{assetId}/video/{videoId}/stream/{streamId}{?state}{?asset_duration}{?timeline_position}]
 Update the Asset PlayContext while streaming.
 
 + Parameters
@@ -19085,8 +19085,8 @@ Update the Asset PlayContext while streaming.
             + `START` - Acquires the Stream
             + `CONTINUE` - Retains the Stream
             + `STOP` - Releases the Stream
-    + program_start (integer, `0`) ... The starting timeline position.
-    + timeline_position (integer, `0`) ... The current timeline position.
+    + asset_duration (integer, `0`) ... The duration of the asset in seconds.
+    + timeline_position (integer, `0`) ... The current timeline position in seconds.
 
 + Model (application/json)
 
@@ -19140,8 +19140,8 @@ Update the Channel PlayContext while streaming.
         + Members
             + `LIVE` - Live stream
             + `CATCH_UP` - On-demand stream
-    + program_start (integer, `0`) ... The starting timeline position.
-    + timeline_position (integer, `0`) ... The current timeline position.
+    + program_start (integer, `0`) ... The starting timeline position as a Unix timestamp.
+    + timeline_position (integer, `0`) ... The current timeline position in seconds.
 
 + Model (application/json)
 
