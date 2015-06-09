@@ -1,11 +1,8 @@
 FORMAT: 1A
 
-# Veo Client API
-The Veo Client API powers the website and device integrations within the Veo architecture
+# Client API
 
-Please be sure to validate your response examples with [JSONLint][1].
-
-[1]:  http://jsonlint.com/
+The Client API powers the website and device integrations within the Veo architecture
 
 # Group Account - Authentication
 Represents authentication actions against an user account.
@@ -53,7 +50,7 @@ Attempts to logout the user.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 204
 
@@ -202,7 +199,7 @@ Attempts to link an account Device.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 201 (application/json)
 
@@ -238,7 +235,7 @@ Attempts to unlink an account Device.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 204
 
@@ -343,7 +340,7 @@ Attempts to retrieve the user account.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 200
 
@@ -456,7 +453,7 @@ Attempts to update the user account.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 200
 
@@ -484,7 +481,7 @@ Attempts to cancel the user account.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 204
 
@@ -541,7 +538,7 @@ Attempts to validate the account pin.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 204
 
@@ -574,7 +571,7 @@ Attempts to update the account pin.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 204
 
@@ -606,7 +603,7 @@ Attempts to clear the account pin.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 204
 
@@ -682,7 +679,7 @@ Attempts to create an user rating.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 201
 
@@ -716,7 +713,7 @@ Attempts to update a User Rating.
 
      + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 200
 
@@ -834,7 +831,7 @@ Attempts to retrieve a rental entitlement.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 200
 
@@ -856,7 +853,7 @@ Attempts to create a Rental entitlement.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 201
 
@@ -887,7 +884,7 @@ Attempts to retrieve the active rentals.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 200 (application/json)
 
@@ -982,7 +979,7 @@ Attempts to retrieve the rental history.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 200 (application/json)
 
@@ -1077,7 +1074,7 @@ Attempts to create a SVOD subscription entitlement.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 204
 
@@ -1103,7 +1100,7 @@ Attempts to remove a SVOD subscription entitlement.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 204
 
@@ -3261,7 +3258,7 @@ Retrieves one navigation menu by key.
 # Group Page
 Represents actions against Page objects
 
-The Page entity contains an array of zones, which in turn contains an array of widgets, which finally contain an array of asset items. 
+The Page entity contains an array of zones, which in turn contains an array of widgets, which finally contain an array of asset items.
 
 Below is the finite subset of widgets we currently support:
 
@@ -3281,7 +3278,7 @@ Returns a specific Page.
     ```js
     {
       "headers": {
-        
+
       },
       "data": {
         "entity": "page",
@@ -3310,7 +3307,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -3542,7 +3539,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -3563,7 +3560,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -3795,7 +3792,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -3816,7 +3813,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -4048,7 +4045,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -4069,7 +4066,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -4301,7 +4298,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 10,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG"
@@ -4321,7 +4318,7 @@ Returns a specific Page.
                 "rank": 0,
                 "title": "Stage",
                 "zone": {
-                  
+
                 }
               },
               {
@@ -4343,7 +4340,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -4575,7 +4572,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -4596,7 +4593,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -4828,7 +4825,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -4858,7 +4855,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -5090,7 +5087,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -5111,7 +5108,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -5343,7 +5340,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -5364,7 +5361,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -5596,7 +5593,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -5617,7 +5614,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -5849,7 +5846,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 10,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG"
@@ -5870,7 +5867,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -6102,7 +6099,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -6123,7 +6120,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -6355,7 +6352,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -6376,7 +6373,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -6608,7 +6605,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 9,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "R"
@@ -6629,7 +6626,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -6861,7 +6858,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 9,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "R"
@@ -6891,7 +6888,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -7123,7 +7120,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -7144,7 +7141,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -7376,7 +7373,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -7397,7 +7394,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -7629,7 +7626,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -7650,7 +7647,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -7882,7 +7879,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 10,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG"
@@ -7903,7 +7900,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -8135,7 +8132,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -8156,7 +8153,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -8388,7 +8385,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -8409,7 +8406,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -8641,7 +8638,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 9,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "R"
@@ -8662,7 +8659,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -8894,7 +8891,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 9,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "R"
@@ -8924,7 +8921,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -9156,7 +9153,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -9177,7 +9174,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -9409,7 +9406,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -9430,7 +9427,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -9662,7 +9659,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -9683,7 +9680,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -9915,7 +9912,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 10,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG"
@@ -9936,7 +9933,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -10168,7 +10165,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -10189,7 +10186,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -10421,7 +10418,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 3,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "PG-13"
@@ -10442,7 +10439,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -10674,7 +10671,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 9,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "R"
@@ -10695,7 +10692,7 @@ Returns a specific Page.
                       "entity": "genre",
                       "id": 111,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "Acci\u00f3n y Aventura"
@@ -10927,7 +10924,7 @@ Returns a specific Page.
                       "entity": "parentalRating",
                       "id": 9,
                       "items": [
-                        
+
                       ],
                       "parent": null,
                       "title": "R"
@@ -10948,7 +10945,7 @@ Returns a specific Page.
         ]
       },
       "messages": [
-        
+
       ]
     }
     ```
@@ -10964,7 +10961,7 @@ Returns a specific Page.
     ```js
         {
           "headers": {
-            
+
           },
           "data": {
             "entity": "page",
@@ -11000,7 +10997,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -11232,7 +11229,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -11253,7 +11250,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -11485,7 +11482,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -11515,7 +11512,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -11747,7 +11744,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -11768,7 +11765,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -12000,7 +11997,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -12021,7 +12018,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -12253,7 +12250,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -12274,7 +12271,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -12506,7 +12503,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 10,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG"
@@ -12527,7 +12524,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -12759,7 +12756,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -12780,7 +12777,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -13012,7 +13009,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -13033,7 +13030,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -13265,7 +13262,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 9,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "R"
@@ -13286,7 +13283,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -13518,7 +13515,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 9,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "R"
@@ -13548,7 +13545,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -13780,7 +13777,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -13801,7 +13798,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -14033,7 +14030,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -14054,7 +14051,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -14286,7 +14283,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -14307,7 +14304,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -14539,7 +14536,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 10,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG"
@@ -14560,7 +14557,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -14792,7 +14789,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -14813,7 +14810,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -15045,7 +15042,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -15066,7 +15063,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -15298,7 +15295,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 9,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "R"
@@ -15319,7 +15316,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -15551,7 +15548,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 9,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "R"
@@ -15581,7 +15578,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -15813,7 +15810,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -15834,7 +15831,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -16066,7 +16063,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -16087,7 +16084,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -16319,7 +16316,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -16340,7 +16337,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -16572,7 +16569,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 10,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG"
@@ -16593,7 +16590,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -16825,7 +16822,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -16846,7 +16843,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -17078,7 +17075,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 3,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "PG-13"
@@ -17099,7 +17096,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -17331,7 +17328,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 9,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "R"
@@ -17352,7 +17349,7 @@ Returns a specific Page.
                           "entity": "genre",
                           "id": 111,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "Acci\u00f3n y Aventura"
@@ -17584,7 +17581,7 @@ Returns a specific Page.
                           "entity": "parentalRating",
                           "id": 9,
                           "items": [
-                            
+
                           ],
                           "parent": null,
                           "title": "R"
@@ -17605,7 +17602,7 @@ Returns a specific Page.
             ]
           },
           "messages": [
-            
+
           ]
         }
     ```
@@ -19004,7 +19001,7 @@ Create the Asset PlayContext required before streaming.
         "headers": {"ttl": 0},
         "data": {
             "playContext": {
-                "locationUri": "http://www.veo.tv/player/user/1811/asset/4962/video/6538/stream/b7648850-1f21-4031-9cb3-e3a19eb800fb",
+                "locationUri": "/player/asset/4962/video/6538/stream/b7648850-1f21-4031-9cb3-e3a19eb800fb",
                 "playerState": null,
                 "userStream": {
                     "videoId": 6538,
@@ -19028,13 +19025,13 @@ Create the Asset PlayContext required before streaming.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 200
 
     [Initialize asset streaming][]
 
-## Initialize channel streaming [/watch/channel/{channelId}]
+## Initialize channel streaming [/play/channel/{channelId}]
 Create the Channel PlayContext required before streaming.
 
 + Parameters
@@ -19047,7 +19044,7 @@ Create the Channel PlayContext required before streaming.
         "headers": {"ttl": 0},
         "data": {
             "playContext": {
-                "locationUri": "http://www.veo.tv:80/player/user/991580/channel/123/stream/a902f568-04b5-46a6-ae53-9cebde7b54a6",
+                "locationUri": "/player/channel/123/stream/a902f568-04b5-46a6-ae53-9cebde7b54a6",
                 "playerState": null,
                 "userStream": {
                     "channelId": 123,
@@ -19070,20 +19067,26 @@ Create the Channel PlayContext required before streaming.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 200
 
     [Initialize channel streaming][]
 
-## Update Asset PlayContext [/player/user/{userId}/asset/{assetId}/video/{videoId}/stream/{streamId}]
+## Update Asset PlayContext [/player/asset/{assetId}/video/{videoId}/stream/{streamId}{?state}{?program_start}{?timeline_position}]
 Update the Asset PlayContext while streaming.
 
 + Parameters
-    + userId (string, `1181`) ... The id of the User.
     + assetId (string, `4962`) ... The id of the Asset.
     + videoId (string, `6538`) ... The id of the VideoAsset.
     + streamId (string, `b7648850-1f21-4031-9cb3-e3a19eb800fb`) ... The id of the stream generated with the initial post.
+    + state (enum[string]) ... The transition state of the User Stream.
+        + Members
+            + `START` - Acquires the Stream
+            + `CONTINUE` - Retains the Stream
+            + `STOP` - Releases the Stream
+    + program_start (integer, `0`) ... The starting timeline position.
+    + timeline_position (integer, `0`) ... The current timeline position.
 
 + Model (application/json)
 
@@ -19092,7 +19095,7 @@ Update the Asset PlayContext while streaming.
         "headers": {"ttl": 0},
         "data": {
             "playContext": {
-                "locationUri": null,
+                "locationUri": "/player/asset/4962/video/6538/stream/b7648850-1f21-4031-9cb3-e3a19eb800fb",
                 "playerState": "CONTINUE",
                 "userStream": {
                     "videoId": 6538,
@@ -19116,19 +19119,29 @@ Update the Asset PlayContext while streaming.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 200
 
     [Update Asset PlayContext][]
 
-## Update Channel PlayContext [/player/user/{accountId}/channel/{channelId}/stream/{streamId}]
+## Update Channel PlayContext [/player/channel/{channelId}/stream/{streamId}{?state}{?type}{?program_start}{?timeline_position}]
 Update the Channel PlayContext while streaming.
 
 + Parameters
-    + accountId (string, `1181`) ... The accountId of the User.
     + channelId (number, `123`) ... The number of the Channel.
     + streamId (string, `a902f568-04b5-46a6-ae53-9cebde7b54a6`) ... The id of the stream generated with the initial post.
+    + state (enum[string]) ... The transition state of the Stream.
+        + Members
+            + `START` - Acquires the Stream
+            + `CONTINUE` - Retains the Stream
+            + `STOP` - Releases the Stream
+    + type (enum[string]) ... The type of Program.
+        + Members
+            + `LIVE` - Live stream
+            + `CATCH_UP` - On-demand stream
+    + program_start (integer, `0`) ... The starting timeline position.
+    + timeline_position (integer, `0`) ... The current timeline position.
 
 + Model (application/json)
 
@@ -19137,7 +19150,7 @@ Update the Channel PlayContext while streaming.
         "headers": {"ttl": 0},
         "data": {
             "playContext": {
-                "locationUri": null,
+                "locationUri": "/player/channel/123/stream/a902f568-04b5-46a6-ae53-9cebde7b54a6",
                 "playerState": "START",
                 "userStream": {
                     "channelId": 123,
@@ -19160,7 +19173,7 @@ Update the Channel PlayContext while streaming.
 
     + Headers
 
-            X-Auth-Token: qwerty12345
+            Authorization: OAuth ...
 
 + Response 200
 
