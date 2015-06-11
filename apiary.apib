@@ -637,8 +637,9 @@ Represents an user rating.
     {
         "headers": {"ttl": 0},
         "data": {
-            "rating": 5,
-            "ratedDate": "2015-02-23T10:00:25Z"
+            "entity": "userRating",
+            "ratedDate": "2015-02-23T10:00:25Z",
+            "rating": 5
         },
         "messages": []
     }
@@ -660,14 +661,25 @@ Attempts to retrieve an user rating.
         "messages": [
             {
                 "context": null,
-                "value": "The asset you have requested cannot be rated."
+                "value": "The asset you requested does not have an user rating."
             }
         ]
     }
     ```
 
-### Create User Rating [POST]
-Attempts to create an user rating.
+### Delete User Rating [DELETE]
+Attempts to delete an user rating.
+
++ Request
+
+    + Headers
+
+            Authorization: OAuth ...
+
++ Response 204
+
+### Update User Rating [PUT]
+Attempts to update an user rating.
 
 + Request
 
@@ -681,58 +693,9 @@ Attempts to create an user rating.
 
             Authorization: OAuth ...
 
-+ Response 201
-
-    [User Rating][]
-
-+ Response 400 (application/json)
-
-    ```js
-    {
-        "headers": {"ttl": 0},
-        "data": {},
-        "messages": [
-            {
-                "context": null,
-                "value": "The asset you have requested cannot be rated."
-            }
-        ]
-    }
-    ```
-
-### Update User Rating [PATCH]
-Attempts to update a User Rating.
-
-+ Request
-
-    ```js
-    {
-            "rating": 5
-    }
-    ```
-
-     + Headers
-
-            Authorization: OAuth ...
-
 + Response 200
 
     [User Rating][]
-
-+ Response 400 (application/json)
-
-    ```js
-    {
-        "headers": {"ttl": 0},
-        "data": {},
-        "messages": [
-            {
-                "context": null,
-                "value": "The asset you have requested cannot be rated."
-            }
-        ]
-    }
-    ```
 
 # Group Account - Rental
 Represents actions against account rentals.
