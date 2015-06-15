@@ -1840,6 +1840,8 @@ Retrieves all assets.
 
     [List Assets][]
 
+
+
 # Group Channel
 Represents actions against Channel objects
 
@@ -18946,6 +18948,932 @@ Retrieves all Parental Rating.
 + Response 200
 
     [List Parental Rating][]
+
+
+# Group PlayResume
+Represents actions to resume play
+
+## PlayResume [/play/resume]
+Represent viewed assets
+
+### Retrieve the viewed assets [GET]
+List of viewed assets.
+
++ Response 200
+
+  ```js
+  {
+      "headers": {"ttl": 0, "total": 1},
+      "data": [
+        {
+            "entity": "asset",
+            "category": "movie",
+            "parentShow": null,
+            "id": 4754,
+            "title": "Operación Dragón",
+            "titleShort": "Operación Dragón",
+            "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+            "duration": 3642,
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "genre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "pictures": [
+                {
+                    "entity": "picture",
+                    "id": 2853,
+                    "modifiedAt": "2014-03-28T00:25:46Z",
+                    "credits": "Tom Smith",
+                    "orientation": "portrait",
+                    "pictureType": "poster",
+                    "title": "",
+                    "versions": [
+                        {
+                            "profile": "webLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "webLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "224",
+                            "height": "126"
+                        },
+                        {
+                            "profile": "webLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "384",
+                            "height": "216"
+                        },
+                        {
+                            "profile": "mobileLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "96",
+                            "height": "54"
+                        },
+                        {
+                            "profile": "mobileLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "160",
+                            "height": "90"
+                        },
+                        {
+                            "profile": "mobileLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "640",
+                            "height": "360"
+                        }
+                    ]
+                }
+            ],
+            "publicationEvent": {
+                "entity": "publicationEvent",
+                "id": 18563,
+                "startDate": "2014-04-09T06:00:00Z",
+                "endDate": "2015-03-31T05:59:00Z",
+                "billingType": "rental",
+                "price": "25.00"
+            }
+        },
+        {
+            "entity": "asset",
+            "category": "series",
+            "parentShow": null,
+            "id": 11173,
+            "modifiedAt": "2014-08-07T02:50:31Z",
+            "title": "La Viuda Negra",
+            "titleShort": "La Viuda Negra",
+            "synopsisShort": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida.",
+            "synopsis": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida, pero a un alto precio.",
+            "duration": 3642,
+            "airDate": "2008-06-17T10:23:36Z",
+            "externalBillingId": "000557397",
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "genre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "pictures": [
+                {
+                    "entity": "picture",
+                    "id": 2853,
+                    "modifiedAt": "2014-03-28T00:25:46Z",
+                    "credits": "Tom Smith",
+                    "orientation": "portrait",
+                    "pictureType": "poster",
+                    "title": "",
+                    "versions": [
+                        {
+                            "profile": "webLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "webLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "224",
+                            "height": "126"
+                        },
+                        {
+                            "profile": "webLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "384",
+                            "height": "216"
+                        },
+                        {
+                            "profile": "mobileLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "96",
+                            "height": "54"
+                        },
+                        {
+                            "profile": "mobileLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "160",
+                            "height": "90"
+                        },
+                        {
+                            "profile": "mobileLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "640",
+                            "height": "360"
+                        }
+                    ]
+                }
+            ],
+            "seasons": [
+                {
+                    "entity": "season",
+                    "id": 451,
+                    "title": null,
+                    "number": 1,
+                    "episodeCount": 0,
+                    "airDate": "2008-06-17T10:23:36Z"
+                },
+                {
+                    "entity": "season",
+                    "id": 462,
+                    "title": null,
+                    "number": 2,
+                    "episodeCount": 0,
+                    "airDate": "2008-06-17T10:23:36Z"
+                }
+            ],
+            "publicationEvent": {
+                "entity": "publicationEvent",
+                "id": 18563,
+                "modifiedAt": "2014-08-07T02:50:31Z",
+                "startDate": "2014-04-09T06:00:00Z",
+                "endDate": "2015-03-31T05:59:00Z",
+                "billingType": "rental",
+                "price": "25.00"
+            }
+        },
+        {
+            "headers": {"ttl": 0},
+            "data": {
+                "entity": "asset",
+                "category": "episode",
+                "parentShow": {
+                    "entity": "asset",
+                    "category": "series",
+                    "id": 11173
+                },
+                "id": 11174,
+                "modifiedAt": "2014-08-07T02:50:31Z",
+                "title": "Abusan de Griselda",
+                "titleShort": "Abusan de Griselda",
+                "synopsisShort": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida.",
+                "synopsis": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida, pero a un alto precio.",
+                "duration": 3642,
+                "airDate": "2008-06-17T10:23:36Z",
+                "externalBillingId": "000557397",
+                "parentalRating": {
+                    "id": 9,
+                    "title": "R"
+                },
+                "genre": {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                },
+                "publicationEvent": {
+                    "entity": "publicationEvent",
+                    "id": 18563,
+                    "modifiedAt": "2014-08-07T02:50:31Z",
+                    "startDate": "2014-04-09T06:00:00Z",
+                    "endDate": "2015-03-31T05:59:00Z",
+                    "billingType": "rental",
+                    "price": "25.00"
+                }
+            },
+            "messages": []
+        }
+      ],
+      "messages": []
+  }
+  ```
+
+
+## Retrieve data for a viewed asset [/play/resume/{assetId}]
+Return information specific to a given asset, including the view object.
+
++ Parameters
+    + assetId (integer) ... The asset id.
+
+
+### Retrieve asset info [GET]
+Retrieves the info for the given asset.
+
+
++ Response 200
+
+    ```js
+    {
+        "headers": {"ttl": 0},
+        "data": {
+            "entity": "asset",
+            "category": "movie",
+            "parentShow": null,
+            "id": 4754,
+            "modifiedAt": "2014-08-07T02:50:31Z",
+            "title": "Operación Dragón",
+            "titleShort": "Operación Dragón",
+            "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
+            "synopsis": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo. Es la película que tras estrenarse en Hong Kong, dio a conocer a Bruce Lee en Estados Unidos.",
+            "keywords": [
+                "dragon",
+                "ball"
+            ],
+            "duration": 3642,
+            "airDate": "2008-06-17T10:23:36Z",
+            "externalBillingId": "000557397",
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "genre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "otherGenres": [
+                {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                },
+                {
+                    "id": 112,
+                    "title": "Dibujos Animados"
+                }
+            ],
+            "distributor": {
+                "id": 12,
+                "title": "Warner Bros."
+            },
+            "studio": {
+                "id": 22,
+                "title": "WDD"
+            },
+            "people": [
+                {
+                    "id": 7312,
+                    "category": "actor",
+                    "displayName": "John Saxon"
+                },
+                {
+                    "id": 7313,
+                    "category": "actor",
+                    "displayName": "Bruce Lee"
+                },
+                {
+                    "id": 7314,
+                    "category": "director",
+                    "displayName": "Robert Clouse"
+                },
+                {
+                    "id": 15010,
+                    "category": "actor",
+                    "displayName": "Jim Kelly"
+                },
+                {
+                    "id": 15011,
+                    "category": "actor",
+                    "displayName": "Ahna Capri"
+                }
+            ],
+            "pictures": [
+                {
+                    "entity": "picture",
+                    "id": 2853,
+                    "modifiedAt": "2014-03-28T00:25:46Z",
+                    "credits": "Tom Smith",
+                    "orientation": "portrait",
+                    "pictureType": "poster",
+                    "title": "",
+                    "versions": [
+                        {
+                            "profile": "webLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "webLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "224",
+                            "height": "126"
+                        },
+                        {
+                            "profile": "webLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "384",
+                            "height": "216"
+                        },
+                        {
+                            "profile": "mobileLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "96",
+                            "height": "54"
+                        },
+                        {
+                            "profile": "mobileLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "160",
+                            "height": "90"
+                        },
+                        {
+                            "profile": "mobileLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "640",
+                            "height": "360"
+                        }
+                    ]
+                }
+            ],
+            "videos": [
+                {
+                    "entity": "video",
+                    "id": 4533,
+                    "audioLanguage": {
+                        "id": 3,
+                        "title": "English"
+                    },
+                    "audioType": "stereo",
+                    "definition": "SD",
+                    "duration": 3642,
+                    "files": [
+                        {
+                           "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
+                           "type": "hds"
+                        },
+                        {
+                           "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
+                           "type": "hls"
+                        },
+                        {
+                           "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
+                           "type": "ss"
+                        }
+                    ],
+                    "resolution": "480i",
+                    "screenFormat": "widescreen",
+                    "videoType": "full"
+                }
+            ],
+            "publicationEvent": {
+                "entity": "publicationEvent",
+                "id": 18563,
+                "modifiedAt": "2014-08-07T02:50:31Z",
+                "startDate": "2014-04-09T06:00:00Z",
+                "endDate": "2015-03-31T05:59:00Z",
+                "billingType": "rental",
+                "price": "25.00"
+            },
+            "view": {
+              "position" : 20,
+              "current"  : false
+            }
+        },
+        "messages": []
+    }
+    ```
+
++ Response 201
+
+    ```js
+    {
+        "headers": {"ttl": 0},
+        "data": {
+            "entity": "asset",
+            "category": "series",
+            "parentShow": null,
+            "id": 11173,
+            "modifiedAt": "2014-08-07T02:50:31Z",
+            "title": "La Viuda Negra",
+            "titleShort": "La Viuda Negra",
+            "synopsisShort": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida.",
+            "synopsis": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida, pero a un alto precio.",
+            "keywords": [
+                "dragon",
+                "ball"
+            ],
+            "duration": 3642,
+            "airDate": "2008-06-17T10:23:36Z",
+            "externalBillingId": "000557397",
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "genre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "otherGenres": [
+                {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                },
+                {
+                    "id": 112,
+                    "title": "Dibujos Animados"
+                }
+            ],
+            "distributor": {
+                "id": 12,
+                "title": "Warner Bros."
+            },
+            "studio": {
+                "id": 22,
+                "title": "WDD"
+            },
+            "people": [
+                {
+                    "id": 7312,
+                    "category": "actor",
+                    "displayName": "John Saxon"
+                },
+                {
+                    "id": 7313,
+                    "category": "actor",
+                    "displayName": "Bruce Lee"
+                },
+                {
+                    "id": 7314,
+                    "category": "director",
+                    "displayName": "Robert Clouse"
+                },
+                {
+                    "id": 15010,
+                    "category": "actor",
+                    "displayName": "Jim Kelly"
+                },
+                {
+                    "id": 15011,
+                    "category": "actor",
+                    "displayName": "Ahna Capri"
+                }
+            ],
+            "pictures": [
+                {
+                    "entity": "picture",
+                    "id": 2853,
+                    "modifiedAt": "2014-03-28T00:25:46Z",
+                    "credits": "Tom Smith",
+                    "orientation": "portrait",
+                    "pictureType": "poster",
+                    "title": "",
+                    "versions": [
+                        {
+                            "profile": "webLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "webLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "224",
+                            "height": "126"
+                        },
+                        {
+                            "profile": "webLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "384",
+                            "height": "216"
+                        },
+                        {
+                            "profile": "mobileLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "96",
+                            "height": "54"
+                        },
+                        {
+                            "profile": "mobileLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "160",
+                            "height": "90"
+                        },
+                        {
+                            "profile": "mobileLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "640",
+                            "height": "360"
+                        }
+                    ]
+                }
+            ],
+            "seasons": [
+                {
+                    "entity": "season",
+                    "id": 451,
+                    "title": null,
+                    "number": 1,
+                    "episodeCount": 0,
+                    "airDate": "2008-06-17T10:23:36Z",
+                    "episodes": [
+                        {
+                            "entity": "asset",
+                            "category": "episode",
+                            "id": 11392,
+                            "episodeNumber": 40,
+                            "title": "Fuera de todo plan",
+                            "titleShort": "Fuera de todo plan",
+                            "synopsisShort": "El Legado",
+                            "pictures": [
+                                {
+                                    "entity": "picture",
+                                    "id": 2853,
+                                    "modifiedAt": "2014-03-28T00:25:46Z",
+                                    "pictureType": "poster",
+                                    "title": ""
+                                }
+                            ],
+                            "view": {
+                              "position" : 30,
+                              "current"  : true
+                            }
+                        },
+                        {
+                            "entity": "asset",
+                            "category": "episode",
+                            "id": 11569,
+                            "episodeNumber": 39,
+                            "title": "Griselda se confiesa",
+                            "titleShort": "Griselda se confiesa",
+                            "synopsisShort": "Griselda le cuenta a una guardia del reclusorio que Jones le confesó su amor y que nunca trató de hacerle daño. Mientras, Otálvaro planea la venganza por la muerte de su sobrina.",
+                            "pictures": [
+                                {
+                                    "entity": "picture",
+                                    "id": 2853,
+                                    "modifiedAt": "2014-03-28T00:25:46Z",
+                                    "pictureType": "poster",
+                                    "title": ""
+                                }
+                            ],
+                            "view": {
+                              "position" : 22,
+                              "current"  : false
+                            }
+                        }
+                    ]
+                },
+                {
+                    "entity": "season",
+                    "id": 462,
+                    "title": null,
+                    "number": 2,
+                    "episodeCount": 0,
+                    "airDate": "2008-06-17T10:23:36Z",
+                    "episodes": [
+                        {
+                            "entity": "asset",
+                            "category": "episode",
+                            "id": 12780,
+                            "episodeNumber": 81,
+                            "title": "El Legado",
+                            "titleShort": "El Legado",
+                            "synopsisShort": "Griselda se ve enfrentada a una trampa de García mientras Jones se encarga del rescate. García finalmente embosca a Griselda y a Richie, quienes deciden llevar a cabo un plan para evitar ser capturados. Michael toma cartas en este asunto y pone en la mira a García.",
+                            "pictures": [
+                                {
+                                    "entity": "picture",
+                                    "id": 2853,
+                                    "modifiedAt": "2014-03-28T00:25:46Z",
+                                    "pictureType": "poster",
+                                    "title": ""
+                                }
+                            ]
+                        },
+                        {
+                            "entity": "asset",
+                            "category": "episode",
+                            "id": 12781,
+                            "episodeNumber": 80,
+                            "title": "Lucha de astucias",
+                            "titleShort": "Lucha de astucias",
+                            "synopsisShort": "Jennifer rescata a Jones de un barranco, en tanto que Griselda y Silvio finalmente se enfrentan: sólo uno saldrá con vida. Jennifer y Jones tienen claro que capturar a Griselda es ahora su prioridad.",
+                            "pictures": [
+                                {
+                                    "entity": "picture",
+                                    "id": 2853,
+                                    "modifiedAt": "2014-03-28T00:25:46Z",
+                                    "pictureType": "poster",
+                                    "title": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "videos": [],
+            "publicationEvent": {
+                "entity": "publicationEvent",
+                "id": 18563,
+                "modifiedAt": "2014-08-07T02:50:31Z",
+                "startDate": "2014-04-09T06:00:00Z",
+                "endDate": "2015-03-31T05:59:00Z",
+                "billingType": "rental",
+                "price": "25.00"
+            }
+        },
+        "messages": []
+    }
+    ```
+
++ Response 202
+
+    ```js
+    {
+        "headers": {"ttl": 0},
+        "data": {
+            "entity": "asset",
+            "category": "episode",
+            "parentShow": {
+                "entity": "asset",
+                "category": "series",
+                "id": 11173
+            },
+            "id": 11174,
+            "modifiedAt": "2014-08-07T02:50:31Z",
+            "title": "Abusan de Griselda",
+            "titleShort": "Abusan de Griselda",
+            "synopsisShort": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida.",
+            "synopsis": "Griselda Blanco, \"la patrona\" de Pablo Escobar, usa al narco para vengar sus profundas decepciones de vida, pero a un alto precio.",
+            "keywords": [
+                "dragon",
+                "ball"
+            ],
+            "duration": 3642,
+            "airDate": "2008-06-17T10:23:36Z",
+            "externalBillingId": "000557397",
+            "parentalRating": {
+                "id": 9,
+                "title": "R"
+            },
+            "genre": {
+                "id": 111,
+                "title": "Acción y Aventura"
+            },
+            "otherGenres": [
+                {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                },
+                {
+                    "id": 112,
+                    "title": "Dibujos Animados"
+                }
+            ],
+            "distributor": {
+                "id": 12,
+                "title": "Warner Bros."
+            },
+            "studio": {
+                "id": 22,
+                "title": "WDD"
+            },
+            "people": [
+                {
+                    "id": 7312,
+                    "category": "actor",
+                    "displayName": "John Saxon"
+                },
+                {
+                    "id": 7313,
+                    "category": "actor",
+                    "displayName": "Bruce Lee"
+                },
+                {
+                    "id": 7314,
+                    "category": "director",
+                    "displayName": "Robert Clouse"
+                },
+                {
+                    "id": 15010,
+                    "category": "actor",
+                    "displayName": "Jim Kelly"
+                },
+                {
+                    "id": 15011,
+                    "category": "actor",
+                    "displayName": "Ahna Capri"
+                }
+            ],
+            "pictures": [
+                {
+                    "entity": "picture",
+                    "id": 2853,
+                    "modifiedAt": "2014-03-28T00:25:46Z",
+                    "credits": "Tom Smith",
+                    "orientation": "portrait",
+                    "pictureType": "poster",
+                    "title": "",
+                    "versions": [
+                        {
+                            "profile": "webLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "webLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "224",
+                            "height": "126"
+                        },
+                        {
+                            "profile": "webLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "384",
+                            "height": "216"
+                        },
+                        {
+                            "profile": "mobileLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "96",
+                            "height": "54"
+                        },
+                        {
+                            "profile": "mobileLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "160",
+                            "height": "90"
+                        },
+                        {
+                            "profile": "mobileLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeSmall",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "192",
+                            "height": "108"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeMedium",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "320",
+                            "height": "180"
+                        },
+                        {
+                            "profile": "mobileRetinaLandscapeLarge",
+                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
+                            "width": "640",
+                            "height": "360"
+                        }
+                    ]
+                }
+            ],
+            "seasons": null,
+            "videos": [
+                {
+                    "entity": "video",
+                    "id": 4533,
+                    "audioLanguage": {
+                        "id": 3,
+                        "title": "English"
+                    },
+                    "audioType": "stereo",
+                    "definition": "SD",
+                    "duration": 3642,
+                    "files": [
+                        {
+                           "path": "http://vodhds-video.cablevision.veo.tv/veo_4533/veo_4533__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
+                           "type": "hds"
+                        },
+                        {
+                           "path": "http://vodhls-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.m3u8",
+                           "type": "hls"
+                        },
+                        {
+                           "path": "http://vodss-video.cablevision.veo.tv/veo_4533__CV/veo_4533__CV.ism/Manifest",
+                           "type": "ss"
+                        }
+                    ],
+                    "resolution": "480i",
+                    "screenFormat": "widescreen",
+                    "videoType": "full"
+                }
+            ],
+            "publicationEvent": {
+                "entity": "publicationEvent",
+                "id": 18563,
+                "modifiedAt": "2014-08-07T02:50:31Z",
+                "startDate": "2014-04-09T06:00:00Z",
+                "endDate": "2015-03-31T05:59:00Z",
+                "billingType": "rental",
+                "price": "25.00"
+            },
+            "view": {
+              "position" : 20,
+              "current"  : false
+            }
+        },
+        "messages": []
+    }
+    ```
+
 
 # Group PlayContext
 Actions required for playing and tracking video streaming
