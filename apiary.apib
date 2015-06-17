@@ -52,7 +52,22 @@ Attempts to logout the user.
 
             Authorization: OAuth ...
 
-+ Response 204
++ Response 200
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {"ttl": 0},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "You are using an invalid session."
+            }
+        ]
+    }
+    ```
 
 ## Recover Password [/account/recover]
 Attempts to recover the user account's password. The response will always return `200` in order to prevent account sniffing.
@@ -485,10 +500,10 @@ Attempts to cancel the user account.
 
 + Response 204
 
-## Verify Account [/account/verify]
+## Validate Account [/account/validate]
 Attempts to verify a new user account.
 
-### Verify new user account [POST]
+### Validate new user account [POST]
 
 + Request (application/json)
 
@@ -540,17 +555,17 @@ Attempts to validate the account pin.
 
             Authorization: OAuth ...
 
-+ Response 204
++ Response 200
 
 + Response 400 (application/json)
 
     ```js
     {
-        "headers": {"ttl": 0},
+        "headers": {},
         "data": {},
         "messages": [
             {
-                "context": "current_pin_field",
+                "context": null,
                 "value": "You have entered an invalid PIN."
             }
         ]
@@ -573,17 +588,17 @@ Attempts to update the account pin.
 
             Authorization: OAuth ...
 
-+ Response 204
++ Response 200
 
 + Response 400 (application/json)
 
     ```js
     {
-        "headers": {"ttl": 0},
+        "headers": {},
         "data": {},
         "messages": [
             {
-                "context": "current_pin_field",
+                "context": null,
                 "value": "You have entered an invalid PIN."
             }
         ]
@@ -611,11 +626,11 @@ Attempts to clear the account pin.
 
     ```js
     {
-        "headers": {"ttl": 0},
+        "headers": {},
         "data": {},
         "messages": [
             {
-                "context": "current_pin_field",
+                "context": null,
                 "value": "You have entered an invalid PIN."
             }
         ]
@@ -818,7 +833,7 @@ Attempts to create a Rental entitlement.
 
             Authorization: OAuth ...
 
-+ Response 201
++ Response 200
 
     [Rental Entitlement][]
 
@@ -837,7 +852,7 @@ Attempts to create a Rental entitlement.
     }
     ```
 
-## Active Rental Entitlements [/account/rental/active]
+## Active Rental Entitlements [/account/rental-active]
 Represents the active rentals.
 
 ### Retrieve the active rentals [GET]
@@ -853,7 +868,7 @@ Attempts to retrieve the active rentals.
 
     ```js
     {
-        "headers": {"ttl": 0, "total": 1},
+        "headers": {},
         "data": [
             {
                 "entity": "rental",
@@ -862,7 +877,7 @@ Attempts to retrieve the active rentals.
                 "transactionId": 1234567890,
                 "purchaseDate": "2015-02-23T11:31:52Z",
                 "purchaseDuration": 2592000,
-                "viewDate": "2015-02-23T11:32:03Z",
+                "viewDate": null,
                 "viewDuration": 86400,
                 "timeToExpiry": 3600,
                 "affiliate": "cablevision",
@@ -932,7 +947,7 @@ Attempts to retrieve the active rentals.
     }
     ```
 
-## Rental History [/account/rental/history]
+## Rental History [/account/rental-history]
 Represents the rental history.
 
 ### Retrieve the rental history [GET]
@@ -948,7 +963,7 @@ Attempts to retrieve the rental history.
 
     ```js
     {
-        "headers": {"ttl": 0, "total": 1},
+        "headers": {},
         "data": [
             {
                 "entity": "rental",
@@ -959,11 +974,11 @@ Attempts to retrieve the rental history.
                 "purchaseDuration": 2592000,
                 "viewDate": "2015-02-23T11:32:03Z",
                 "viewDuration": 86400,
-                "timeToExpiry": 3600,
+                "timeToExpiry": 0,
                 "affiliate": "cablevision",
                 "packageCode": null,
                 "price": 40.00,
-                "status": "active",
+                "status": "inactive",
                 "asset": {
                     "entity": "asset",
                     "category": "movie",
@@ -1039,7 +1054,7 @@ Attempts to create a SVOD subscription entitlement.
 
             Authorization: OAuth ...
 
-+ Response 204
++ Response 200
 
 + Response 400 (application/json)
 
