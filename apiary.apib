@@ -2357,25 +2357,10 @@ Represents the Configuration of a Device (e.g., iOS, Android)
 + Model (application/json)
 
     ```js
-    {
-        "headers": {"ttl": 0},
-        "data": {
-            "entity": "deviceConfiguration",
-            "id": 1,
-            "modifiedAt": "2014-08-07T02:50:31Z",
-            "properties": {
-               "mainMenu": "http://private-2bfb-veocoreapi.apiary-mock.com/navigation/main-menu",
-               "labelLinks": {
-                    "phone": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/phone",
-                    "tablet": "http://private-2bfb-veocoreapi.apiary-mock.com/device-config/labels/tablet"
-               },
-               "rentalsEnabled": true,
-               "minimunSecondsBufferVideo": 1,
-               "maximunSecondsBufferVideo": 5
-            }
-        },
-        "messages": []
-    }
+	{
+	    "mainMenu": "/navigation/main-menu",
+	    "labelLinks": "/device-config/label"
+	}
     ```
 
 ### Retrieve Device Configuration [GET]
@@ -2385,32 +2370,47 @@ Returns a specific Device Configuration.
 
     [Device Configuration][]
 
-## Labels [/device-config/label/{key}]
+## Labels [/device-config/label]
 Represents the Labels for a Device's Configuration
 
-+ Parameters
-    + key (string, `tablet`) ... The key for the labels configuration.
 
 + Model (application/json)
 
     ```js
-    {
-        "headers": {"ttl": 0, "total": 1},
-        "data": [
-            {
-                "login": {
-                    "accountOnHoldMessageSky": "Su cuenta está inactivo. Para tener acceso al contenido de BlueToGo revisa su perfil BlueToGo.",
-                    "learnMoreNoDot": "Más información",
-                    "manageProfile": "Administrar Perfil",
-                    "genres": {
-                        "action": "Acción",
-                        "comedy": "Comedia"
-                    }
-                }
-            }
-        ],
-        "messages": []
-    }
+	{
+	    "site_section": {
+	        "title_reception": "VEO",
+	        "title_EPGPage": "TV",
+	        "title_OnDemandLandingPage": "Suscripción",
+	        "title_RentalLandingPage": "Renta",
+	        "welcome_to": "Bienvenido a",
+	        "title_signup": "Regístrate"
+	    },
+	    "show_types": {
+	        "movies": "Películas",
+	        "documentaries": "Documentales",
+	        "tv_series": "Series de TV",
+	        "telenovelas": "Telenovelas",
+	        "rental": "Rentas",
+	        "sports": "En Vivo",
+	        "news": "Noticias",
+	        "shows": "Espectáculos"
+	    },
+	    "header": {
+	        "greeting": "Hola {username}",
+	        "help": "Ayuda",
+	        "logout": "Cerrar sesión",
+	        "login": "Ingresar",
+	        "rentals_tool_title": "Tus Rentas",
+	        "rentals_tool_button": "Ver todas tus rentas",
+	        "rentals_tool_button_empty": "Ver historial de rentas",
+	        "rentals_tool_empty": "No hay rentas activas",
+	        "rentals_tool_login_again": "Por favor inicie sesión de nuevo",
+	        "timed_out": "Tu sesión ha terminado. Por favor regístrate nuevamente.",
+	        "manage_profile_button": "Administrar perfil",
+	        "search": "Buscar"
+	    }
+	}
     ```
 
 ### Retrieve Labels [GET]
