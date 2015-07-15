@@ -1113,6 +1113,133 @@ Attempts to remove a SVOD subscription entitlement.
     }
     ```
 
+# Group OAuth - Device
+Represents authentication actions against an user account from a device.
+
+## Device Code [/oauth/device/code]
+Attempts to retrieve a device code for OAuth authentication.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "deviceCode" : "NDhlZTA0NjAyODA2OWE5YzZkZWQ5ODQ0OTExZWFiOTAyMDM4OWFjMDY3ZTJhODc3MjI0NGI5OWJlMTgyZTA2Mw",
+            "userCode" : "ABCD-1234",
+            "verificationUrl" : "https://www.veo.tv/device",
+            "expiresIn" : 1800,
+            "interval" : 5
+        },
+        "messages": []
+    }
+    ```
+
+### Request device code [POST]
+
++ Request (application/json)
+
+    ```text
+    {
+        "clientId": "ExampleApplicationId"
+    }
+    ```
+
++ Response 200
+
+    [Device Code][]
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "You are using an invalid application id."
+            }
+        ]
+    }
+    ```
+
+## Access Token [/oauth/token]
+Attempts to retrieve an access token for OAuth authentication.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "sessionId" : "ZTcyOWRhYjdjYWMwZmM3MmVmNjk2ZDk4OTc4NjczYTgwNzYyN2ZjMw",
+            "accessToken" : "MGY4ZDI1NzM1ZmY3NmEwNzlkNmM4OGMxZTA1NjUwYjdkZDRmMDJlZQ"
+        },
+        "messages": []
+    }
+    ```
+
+### Request access token [POST]
+
++ Request (application/json)
+
+    ```text
+    {
+        "clientId": "ExampleApplicationId",
+        "deviceCode": "NDhlZTA0NjAyODA2OWE5YzZkZWQ5ODQ0OTExZWFiOTAyMDM4OWFjMDY3ZTJhODc3MjI0NGI5OWJlMTgyZTA2Mw"
+    }
+    ```
+
++ Response 200
+
+    [Access Token][]
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "User authorization pending."
+            }
+        ]
+    }
+    ```
+
++ Response 403 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "User authorization denied."
+            }
+        ]
+    }
+    ```
+
++ Response 410 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "Device code has expired."
+            }
+        ]
+    }
+    ```
+
 # Group Asset
 Represents actions against Asset objects
 
