@@ -69,6 +69,24 @@ Attempts to logout the user.
     }
     ```
 
+## Change Password [/account/password]
+Attempts to change the user account's password. Verification of new passwords (via duplicate) is left to the clients.
+
+### Change account password [POST]
+
++ Request (application/json)
+
+    ```js
+    {
+            "currentPassword": "old-password",
+            "newPassword": "new-password"
+    }
+    ```
+
++ Response 200 (application/json)
+
+    [Account][]
+
 ## Recover Password [/account/recover]
 Attempts to recover the user account's password. The response will always return `200` in order to prevent account sniffing.
 
@@ -86,14 +104,9 @@ Attempts to recover the user account's password. The response will always return
 
     ```js
     {
-        "headers": {"ttl": 0},
+        "headers": {},
         "data": {},
-        "messages": [
-            {
-                "context": null,
-                "value": "A recovery email has been sent to your account."
-            }
-        ]
+        "messages": []
     }
     ```
 
