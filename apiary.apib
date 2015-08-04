@@ -281,6 +281,109 @@ Attempts to unlink an account Device.
         ]
     }
     ```
+    
+## Facebook login [/account/facebook/login]
+Attempts to authenticate a user through facebook.
+
++ Model (application/json)
+
+    ```js
+    {
+      "headers": {},
+      "data": {
+        "accessToken": "111111111111111111111111",
+        "address1": "my address",
+        "address2": null,
+        "canPlayVideo": false,
+        "canRent": false,
+        "city": null,
+        "contract": null,
+        "country": null,
+        "deviceId": null,
+        "deviceType": null,
+        "displayName": "My name",
+        "email": "email@email.com",
+        "entitlements": [
+          {
+            "affiliate": "cablevision",
+            "entity": "subscription",
+            "packageCode": "familiar"
+          },
+          {
+            "affiliate": "cablevision",
+            "entity": "subscription",
+            "packageCode": "TVOD"
+          }
+        ],
+        "facebookId": "222222222222222",
+        "familyName": "Generated",
+        "firstName": "User",
+        "id": "33333",
+        "mso": [
+          2
+        ],
+        "preferences": {
+          "affiliate": "cablevision",
+          "isPinRequired": false,
+          "isPinSet": false,
+          "language": "ES",
+          "lastUpdated": "2015-07-29T12:51:54Z",
+          "permittedRatings": [
+            "NR",
+            "UR",
+            "G",
+            "AA",
+            "A",
+            "PG",
+            "B",
+            "PG-13",
+            "B15",
+            "R",
+            "C",
+            "D",
+            "NC-17"
+          ],
+          "timezone": "CST6CDT"
+        },
+        "sessionId": "444444444444444444444",
+        "state": null,
+        "status": "Active",
+        "trialAvailable": false,
+        "zip": null
+      },
+      "messages": []
+    }
+    ```
+
+### Facebook login [POST]
+
++ Request (application/json)
+
+    ```text
+    {
+        "accessToken": "555555555555555555555555555555555555555"
+    }
+    ```
+
++ Response 200
+
+    [Facebook login][]
+
++ Response 403 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "Invalid facebook access token."
+            }
+        ]
+    }
+    ```
+    
 
 # Group Account - Details
 Represents actions against an user account.
@@ -1126,110 +1229,6 @@ Attempts to remove a SVOD subscription entitlement.
     }
     ```
 
-# Group Facebook
-Represents actions against facebook.
-
-## Facebook login [/account/facebook/login]
-Attempts to authenticate a user through facebook.
-
-+ Model (application/json)
-
-    ```js
-    {
-      "headers": {},
-      "data": {
-        "accessToken": "111111111111111111111111",
-        "address1": "my address",
-        "address2": null,
-        "canPlayVideo": false,
-        "canRent": false,
-        "city": null,
-        "contract": null,
-        "country": null,
-        "deviceId": null,
-        "deviceType": null,
-        "displayName": "My name",
-        "email": "email@email.com",
-        "entitlements": [
-          {
-            "affiliate": "cablevision",
-            "entity": "subscription",
-            "packageCode": "familiar"
-          },
-          {
-            "affiliate": "cablevision",
-            "entity": "subscription",
-            "packageCode": "TVOD"
-          }
-        ],
-        "facebookId": "222222222222222",
-        "familyName": "Generated",
-        "firstName": "User",
-        "id": "33333",
-        "mso": [
-          2
-        ],
-        "preferences": {
-          "affiliate": "cablevision",
-          "isPinRequired": false,
-          "isPinSet": false,
-          "language": "ES",
-          "lastUpdated": "2015-07-29T12:51:54Z",
-          "permittedRatings": [
-            "NR",
-            "UR",
-            "G",
-            "AA",
-            "A",
-            "PG",
-            "B",
-            "PG-13",
-            "B15",
-            "R",
-            "C",
-            "D",
-            "NC-17"
-          ],
-          "timezone": "CST6CDT"
-        },
-        "sessionId": "444444444444444444444",
-        "state": null,
-        "status": "Active",
-        "trialAvailable": false,
-        "zip": null
-      },
-      "messages": []
-    }
-    ```
-
-### Facebook login [POST]
-
-+ Request (application/json)
-
-    ```text
-    {
-        "userToken": "555555555555555555555555555555555555555"
-    }
-    ```
-
-+ Response 200
-
-    [Facebook login][]
-
-+ Response 403 (application/json)
-
-    ```js
-    {
-        "headers": {},
-        "data": {},
-        "messages": [
-            {
-                "context": null,
-                "value": "Invalid OAuth access token."
-            }
-        ]
-    }
-    ```
 
 
 # Group OAuth - Device
