@@ -1235,7 +1235,7 @@ Attempts to remove a SVOD subscription entitlement.
 Represents authentication actions against an user account from a device.
 
 ## Device Code [/oauth/device/code]
-Attempts to retrieve a device code for OAuth authentication.
+Represents a device code for OAuth authentication.
 
 + Model (application/json)
 
@@ -1253,11 +1253,12 @@ Attempts to retrieve a device code for OAuth authentication.
     }
     ```
 
-### Request device code [POST]
+### Create a Device Code [POST]
+Attempts to create a device code.
 
 + Request (application/json)
 
-    ```text
+    ```js
     {
         "clientId": "ExampleApplicationId"
     }
@@ -1277,6 +1278,40 @@ Attempts to retrieve a device code for OAuth authentication.
             {
                 "context": null,
                 "value": "You are using an invalid application id."
+            }
+        ]
+    }
+    ```
+
+### Activate a Device Code [PUT]
+Attempts to activate a device code.
+
++ Request (application/json)
+
+    ```js
+    {
+        "userCode": "ABCD-1234"
+    }
+    ```
+
+    + Headers
+
+        Authorization: OAuth ...
+
++ Response 200
+
+    [Device Code][]
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "Invalid user code."
             }
         ]
     }
