@@ -2607,6 +2607,144 @@ Retrieves all Channels.
 
     [List Channels][]
 
+# Group Collection
+Represents actions against Collection objects
+
+## Collection [/collection/{id}]
+Represents a Collection
+
++ Parameters
+    + id (string, `1`) ... The id of the Collection.
+
++ Model (application/json)
+
+    ```js
+    
+    {
+    "headers": {},
+    "data": {
+        "entity": "collection",
+        "id": 1,
+        "modifiedAt": "2015-05-26T00:00:00Z",
+        "searchQuery": null,
+        "items": [
+            {
+                "duration": 4860,
+                "entity": "asset",
+                "genre": {
+                    "entity": "genre",
+                    "id": 111,
+                    "items": [],
+                    "parent": null,
+                    "title": "Acción y Aventura"
+                },
+                "id": 1974,
+                "parentalRating": {
+                    "entity": "parentalRating",
+                    "id": 3,
+                    "items": [],
+                    "parent": null,
+                    "title": "PG-13"
+                },
+                "pictures": [
+                    {
+                        "entity": "picture",
+                        "id": 1150,
+                        "pictureType": "frame",
+                        "title": "ASST0000000000909263_Dark_warrior.png",
+                        "versions": []
+                    }
+                ],
+                "publicationEvent": {
+                    "billingType": "subscription",
+                    "endDate": "2015-07-26T05:59:00Z",
+                    "entity": "publicationEvent",
+                    "id": 7893,
+                    "price": "0.00",
+                    "startDate": "2015-01-05T06:00:00Z"
+                },
+                "synopsisShort": "Derek Woo, principal sospechoso de una serie de asesinatos en Los Ángeles, tiene una misión: demostrar su inocencia.",
+                "title": "Dark Warrior",
+                "titleEditorial": "Dark Warrior",
+                "titleShort": "Dragón Rojo",
+                "category": "movie"
+            },
+            {
+                "duration": 8940,
+                "entity": "asset",
+                "genre": {
+                    "entity": "genre",
+                    "id": 111,
+                    "items": [],
+                    "parent": null,
+                    "title": "Acción y Aventura"
+                },
+                "id": 166,
+                "parentalRating": {
+                    "entity": "parentalRating",
+                    "id": 3,
+                    "items": [],
+                    "parent": null,
+                    "title": "PG-13"
+                },
+                "pictures": [
+                    {
+                        "entity": "picture",
+                        "id": 61,
+                        "pictureType": "poster",
+                        "title": "ASST0000000000880845_Transformers__Revenge_of_the_Fallen.png",
+                        "versions": [
+                            {
+                                "entity": "pictureImage",
+                                "height": 330,
+                                "id": 39625,
+                                "width": 220,
+                                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_61_image.png",
+                                "profile": "main"
+                            },
+                            {
+                                "entity": "pictureImage",
+                                "height": null,
+                                "id": 39629,
+                                "width": null,
+                                "link": null,
+                                "profile": "webLandscapeSmall"
+                            }
+                        ]
+                    }
+                ],
+                "publicationEvent": {
+                    "billingType": "rental",
+                    "endDate": "2015-08-02T05:59:00Z",
+                    "entity": "publicationEvent",
+                    "id": 666,
+                    "price": "25.00",
+                    "startDate": "2014-08-04T06:00:00Z"
+                },
+                "synopsisShort": "San Witwicky deja a los Autobots atrás para llevar una vida normal. Pero cuando su mente es llenada con símbolos crípticos, los Decépticos se les acercan y él es llevado a una nueva guerra de los Transformers.",
+                "title": "Transformers: La Venganza de los Caídos",
+                "titleEditorial": "Transformers: La Venganza de los Caídos",
+                "titleShort": "Transformers: Revenge of the Fallen",
+                "category": "movie"
+            }
+        ],
+        "title": "Test - Action Movies",
+        "type": "static"
+    },
+    "messages": []
+}
+
+    ```
+
+### Retrieve a Collection [GET]
+Returns a specific Collection.
+
++ Response 200
+
+    [Collection][]
+
+
+
 
 # Group Country
 Represents actions against Country object
