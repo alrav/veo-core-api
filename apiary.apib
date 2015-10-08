@@ -20990,6 +20990,1827 @@ Retrieves the info for the given asset.
     ```
 
 
+# Group Recommendation Engine
+Represents actions to recommendation engine
+
+## Recommended for you [/re/recomended-for-you]
+Represent recommended for you assets
+
++ Parameters
+    + start = `One month ago`  (optional, timestamp, `1444232877778`) ... start and end are the number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame .
+    + end = `Now`  (optional, timestamp, `1444239999999`) ... start and end are the number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame .
+    + numRecommendations = `20`  (optional, integer, `25`) ... number of recommended assets to receive
+    + allowPreviousRecommendations = `false` (optional, boolean, `false`) ... allow or not previous recommendations
+        + Values
+            + `true`    ... allow.
+            + `false`   ... don't allow.
+
+
+### Retrieve the recommended for you assets [GET]
+List of recommended for you assets.
+
++ Response 200
+
+  ```js
+    [
+        {
+            "airDate": "2012-01-03T06:00:00Z",
+            "distributor": {
+                "entity": "distributor",
+                "id": 1,
+                "title": "televisa.networks.mx"
+            },
+            "duration": 5460,
+            "entity": "asset",
+            "genre": {
+                "entity": "genre",
+                "id": 23,
+                "items": [],
+                "parent": null,
+                "title": "Drama"
+            },
+            "id": 2082,
+            "keywords": null,
+            "legacyPeople": {},
+            "modifiedAt": "2015-01-16T23:24:33Z",
+            "otherGenres": [
+                {
+                    "entity": "genre",
+                    "id": 23,
+                    "items": [],
+                    "parent": null,
+                    "title": "Drama"
+                }
+            ],
+            "parentShow": null,
+            "parentalRating": {
+                "entity": "parentalRating",
+                "id": 10,
+                "items": [],
+                "parent": null,
+                "title": "PG"
+            },
+            "people": [],
+            "pictures": [
+                {
+                    "entity": "picture",
+                    "id": 1254,
+                    "pictureType": "landscape",
+                    "title": "201112232471_frame.png",
+                    "versions": [
+                        {
+                            "entity": "pictureImage",
+                            "height": 576,
+                            "id": 326015,
+                            "width": 1024,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_image.png",
+                            "profile": "main"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326016,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326017,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326018,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326022,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPhonePortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326023,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPhoneRetinaPortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326030,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPadPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326031,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPadPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 108,
+                            "id": 659729,
+                            "width": 192,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile150Image.png",
+                            "profile": "webLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 126,
+                            "id": 659730,
+                            "width": 224,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile151Image.png",
+                            "profile": "webLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 216,
+                            "id": 659731,
+                            "width": 384,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile152Image.png",
+                            "profile": "webLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 54,
+                            "id": 659734,
+                            "width": 96,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile250Image.png",
+                            "profile": "iPhoneLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 659735,
+                            "width": 160,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile251Image.png",
+                            "profile": "iPhoneLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 659736,
+                            "width": 320,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile252Image.png",
+                            "profile": "iPhoneLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 108,
+                            "id": 659737,
+                            "width": 192,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile270Image.png",
+                            "profile": "iPhoneRetinaLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 659738,
+                            "width": 320,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile271Image.png",
+                            "profile": "iPhoneRetinaLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 360,
+                            "id": 659739,
+                            "width": 640,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile272Image.png",
+                            "profile": "iPhoneRetinaLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 270,
+                            "id": 659742,
+                            "width": 480,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile350Image.png",
+                            "profile": "iPadLandscape1"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 243,
+                            "id": 659743,
+                            "width": 432,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile351Image.png",
+                            "profile": "iPadLandscape2"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 207,
+                            "id": 659744,
+                            "width": 368,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile352Image.png",
+                            "profile": "iPadLandscape3"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 162,
+                            "id": 659745,
+                            "width": 288,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile353Image.png",
+                            "profile": "iPadLandscape4"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 144,
+                            "id": 659746,
+                            "width": 256,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile354Image.png",
+                            "profile": "iPadLandscape5"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 126,
+                            "id": 659747,
+                            "width": 224,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile355Image.png",
+                            "profile": "iPadLandscape6"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 117,
+                            "id": 659748,
+                            "width": 208,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile356Image.png",
+                            "profile": "iPadLandscape7"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 659749,
+                            "width": 160,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile357Image.png",
+                            "profile": "iPadLandscape8"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 81,
+                            "id": 659750,
+                            "width": 144,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1254_profile358Image.png",
+                            "profile": "iPadLandscape9"
+                        }
+                    ]
+                }
+            ],
+            "publicationEvent": {
+                "billingType": "subscription",
+                "endDate": "2021-01-01T05:59:00Z",
+                "entity": "publicationEvent",
+                "id": 8325,
+                "price": "0.00",
+                "startDate": "2012-01-03T06:00:00Z"
+            },
+            "studio": null,
+            "synopsis": "El día de su boda, Consuelo anuncia sorpresivamente que no va a casarse, deja el pueblo y se va con su hermana Beatriz. Ambas se aíslan de la sociedad, lo que despierta rumores sobre ellas. La verdad será una gran sorpresa.",
+            "synopsisShort": "El día de su boda, Consuelo anuncia sorpresivamente que no va a casarse, deja el pueblo y se va con su hermana Beatriz. Ambas se aíslan de la sociedad, lo que despierta rumores sobre ellas. La verdad será una gran sorpresa. ",
+            "title": "La Mujer Sin Lágrimas",
+            "titleEditorial": "La Mujer Sin Lágrimas",
+            "titleSeo": "",
+            "titleShort": "La Mujer Sin Lágrimas",
+            "videos": [
+                {
+                    "audioLanguage": {
+                        "entity": "language",
+                        "id": 4,
+                        "items": [],
+                        "parent": null,
+                        "title": "Spanish"
+                    },
+                    "definition": "HD",
+                    "duration": 0,
+                    "entity": "video",
+                    "files": [
+                        {
+                            "entity": "videoFile",
+                            "id": 117520,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_1974/veo_1974__CV_MP4_16x9_2500kbps_1280x720_29.97fps.f4m",
+                            "type": "hds"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 117521,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_1974__CV/veo_1974__CV.m3u8",
+                            "type": "hls"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 117522,
+                            "type": "isma"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 117523,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_1974__CV/veo_1974__CV.ism/Manifest",
+                            "type": "ss"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 117524,
+                            "type": "ismc"
+                        }
+                    ],
+                    "id": 1974,
+                    "resolution": "",
+                    "screenFormat": "widescreen",
+                    "videoType": "full"
+                }
+            ],
+            "category": "movie"
+        },
+        {
+            "airDate": "2013-09-16T11:00:00Z",
+            "distributor": {
+                "entity": "distributor",
+                "id": 2,
+                "title": "ondemand"
+            },
+            "duration": 1320,
+            "entity": "asset",
+            "genre": {
+                "entity": "genre",
+                "id": 251,
+                "items": [],
+                "parent": null,
+                "title": "Animación"
+            },
+            "id": 8346,
+            "keywords": null,
+            "legacyPeople": {},
+            "modifiedAt": "2013-12-18T00:06:03Z",
+            "otherGenres": [
+                {
+                    "entity": "genre",
+                    "id": 118,
+                    "items": [],
+                    "parent": null,
+                    "title": "Infantiles y Familiares"
+                },
+                {
+                    "entity": "genre",
+                    "id": 251,
+                    "items": [],
+                    "parent": null,
+                    "title": "Animación"
+                }
+            ],
+            "parentShow": {
+                "entity": "asset",
+                "id": 6152,
+                "title": "The Adventures of Madeline",
+                "titleEditorial": "The Adventures of Madeline",
+                "category": "series"
+            },
+            "parentalRating": {
+                "entity": "parentalRating",
+                "id": 11,
+                "items": [],
+                "parent": null,
+                "title": "G"
+            },
+            "people": [],
+            "pictures": [
+                {
+                    "entity": "picture",
+                    "id": 5177,
+                    "pictureType": "landscape",
+                    "title": "ASST0000000001060114_Madeline__s1___ep20_SD.png",
+                    "versions": [
+                        {
+                            "entity": "pictureImage",
+                            "height": 576,
+                            "id": 151269,
+                            "width": 1024,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_image.png",
+                            "profile": "main"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 151270,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 151271,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 151272,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 151276,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPhonePortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 151277,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPhoneRetinaPortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 151284,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPadPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 151285,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPadPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 108,
+                            "id": 488441,
+                            "width": 192,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile150Image.png",
+                            "profile": "webLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 126,
+                            "id": 488442,
+                            "width": 224,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile151Image.png",
+                            "profile": "webLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 216,
+                            "id": 488443,
+                            "width": 384,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile152Image.png",
+                            "profile": "webLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 54,
+                            "id": 488446,
+                            "width": 96,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile250Image.png",
+                            "profile": "iPhoneLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 488447,
+                            "width": 160,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile251Image.png",
+                            "profile": "iPhoneLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 488448,
+                            "width": 320,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile252Image.png",
+                            "profile": "iPhoneLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 108,
+                            "id": 488449,
+                            "width": 192,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile270Image.png",
+                            "profile": "iPhoneRetinaLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 488450,
+                            "width": 320,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile271Image.png",
+                            "profile": "iPhoneRetinaLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 360,
+                            "id": 488451,
+                            "width": 640,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile272Image.png",
+                            "profile": "iPhoneRetinaLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 270,
+                            "id": 488454,
+                            "width": 480,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile350Image.png",
+                            "profile": "iPadLandscape1"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 243,
+                            "id": 488455,
+                            "width": 432,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile351Image.png",
+                            "profile": "iPadLandscape2"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 207,
+                            "id": 488456,
+                            "width": 368,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile352Image.png",
+                            "profile": "iPadLandscape3"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 162,
+                            "id": 488457,
+                            "width": 288,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile353Image.png",
+                            "profile": "iPadLandscape4"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 144,
+                            "id": 488458,
+                            "width": 256,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile354Image.png",
+                            "profile": "iPadLandscape5"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 126,
+                            "id": 488459,
+                            "width": 224,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile355Image.png",
+                            "profile": "iPadLandscape6"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 117,
+                            "id": 488460,
+                            "width": 208,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile356Image.png",
+                            "profile": "iPadLandscape7"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 488461,
+                            "width": 160,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile357Image.png",
+                            "profile": "iPadLandscape8"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 81,
+                            "id": 488462,
+                            "width": 144,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_5177_profile358Image.png",
+                            "profile": "iPadLandscape9"
+                        }
+                    ]
+                }
+            ],
+            "publicationEvent": {
+                "billingType": "subscription",
+                "endDate": "2016-07-31T10:59:00Z",
+                "entity": "publicationEvent",
+                "id": 31993,
+                "price": "0.00",
+                "startDate": "2013-09-16T11:00:00Z"
+            },
+            "studio": {
+                "entity": "studio",
+                "id": 30,
+                "title": "DHX"
+            },
+            "synopsis": "Durante sus vacaciones en Nueva York, las niñas y Pepito asisten a un partido de los Yankees. A raíz de este partido sucederán muchas aventuras locas donde Madeline hace muestra de su generosidad.",
+            "synopsisShort": "Durante sus vacaciones en Nueva York, las niñas y Pepito asisten a un partido de los Yankees. A raíz de este partido sucederán muchas aventuras locas donde Madeline hace muestra de su generosidad.",
+            "title": "Madeline en Nueva York",
+            "titleEditorial": "Madeline en Nueva York",
+            "titleSeo": "",
+            "titleShort": "Madeline en Nueva York",
+            "videos": [
+                {
+                    "audioLanguage": {
+                        "entity": "language",
+                        "id": 4,
+                        "items": [],
+                        "parent": null,
+                        "title": "Spanish"
+                    },
+                    "definition": "SD",
+                    "duration": 1353,
+                    "entity": "video",
+                    "files": [
+                        {
+                            "entity": "videoFile",
+                            "id": 87430,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_7992/veo_7992__CV_MP4_4x3_1600kbps_640x480_29.97fps.f4m",
+                            "type": "hds"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 87431,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_7992__CV/veo_7992__CV.m3u8",
+                            "type": "hls"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 87432,
+                            "type": "isma"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 87433,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_7992__CV/veo_7992__CV.ism/Manifest",
+                            "type": "ss"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 87434,
+                            "type": "ismc"
+                        }
+                    ],
+                    "id": 7992,
+                    "resolution": "480i",
+                    "screenFormat": "standard",
+                    "videoType": "full"
+                }
+            ],
+            "category": "episode",
+            "parentSeason": {
+                "airDate": null,
+                "entity": "season",
+                "episodeCount": 20,
+                "id": 337,
+                "number": 1,
+                "title": ""
+            }
+        }
+    ]
+  ```
+
+
+## Because you watched [/re/because-you-watched]
+Represent recommended for you assets because you watched some asset
+
++ Parameters
+    + assetId (integer, `123`) ... The asset you watched
+    + start = `One month ago`  (optional, timestamp, `1444232877778`) ... start and end are the number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame .
+    + end = `Now`  (optional, timestamp, `1444239999999`) ... start and end are the number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame .
+    + numRecommendations = `20`  (optional, integer, `25`) ... number of recommended assets to receive
+    + allowPreviousRecommendations = `false` (optional, boolean, `false`) ... allow or not previous recommendations
+        + Values
+            + `true`    ... allow.
+            + `false`   ... don't allow.
+
+
+### Because you watched assets [GET]
+Retrieves recommended for you assets because you watched some asset.
+
+
++ Response 200
+
+    ```js
+    [
+        {
+            "airDate": "2012-01-03T06:00:00Z",
+            "distributor": {
+                "entity": "distributor",
+                "id": 1,
+                "title": "televisa.networks.mx"
+            },
+            "duration": 5940,
+            "entity": "asset",
+            "genre": {
+                "entity": "genre",
+                "id": 23,
+                "items": [],
+                "parent": null,
+                "title": "Drama"
+            },
+            "id": 2141,
+            "keywords": null,
+            "legacyPeople": {},
+            "modifiedAt": "2015-01-20T23:36:57Z",
+            "otherGenres": [
+                {
+                    "entity": "genre",
+                    "id": 23,
+                    "items": [],
+                    "parent": null,
+                    "title": "Drama"
+                }
+            ],
+            "parentShow": null,
+            "parentalRating": {
+                "entity": "parentalRating",
+                "id": 10,
+                "items": [],
+                "parent": null,
+                "title": "PG"
+            },
+            "people": [],
+            "pictures": [
+                {
+                    "entity": "picture",
+                    "id": 1309,
+                    "pictureType": "landscape",
+                    "title": "201111285823_frame.png",
+                    "versions": [
+                        {
+                            "entity": "pictureImage",
+                            "height": 576,
+                            "id": 326639,
+                            "width": 1024,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_image.png",
+                            "profile": "main"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326640,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326641,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326642,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326646,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPhonePortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326647,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPhoneRetinaPortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326654,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPadPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 326655,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPadPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 108,
+                            "id": 660249,
+                            "width": 192,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile150Image.png",
+                            "profile": "webLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 126,
+                            "id": 660250,
+                            "width": 224,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile151Image.png",
+                            "profile": "webLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 216,
+                            "id": 660251,
+                            "width": 384,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile152Image.png",
+                            "profile": "webLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 54,
+                            "id": 660254,
+                            "width": 96,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile250Image.png",
+                            "profile": "iPhoneLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 660255,
+                            "width": 160,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile251Image.png",
+                            "profile": "iPhoneLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 660256,
+                            "width": 320,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile252Image.png",
+                            "profile": "iPhoneLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 108,
+                            "id": 660257,
+                            "width": 192,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile270Image.png",
+                            "profile": "iPhoneRetinaLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 660258,
+                            "width": 320,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile271Image.png",
+                            "profile": "iPhoneRetinaLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 360,
+                            "id": 660259,
+                            "width": 640,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile272Image.png",
+                            "profile": "iPhoneRetinaLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 270,
+                            "id": 660262,
+                            "width": 480,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile350Image.png",
+                            "profile": "iPadLandscape1"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 243,
+                            "id": 660263,
+                            "width": 432,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile351Image.png",
+                            "profile": "iPadLandscape2"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 207,
+                            "id": 660264,
+                            "width": 368,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile352Image.png",
+                            "profile": "iPadLandscape3"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 162,
+                            "id": 660265,
+                            "width": 288,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile353Image.png",
+                            "profile": "iPadLandscape4"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 144,
+                            "id": 660266,
+                            "width": 256,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile354Image.png",
+                            "profile": "iPadLandscape5"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 126,
+                            "id": 660267,
+                            "width": 224,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile355Image.png",
+                            "profile": "iPadLandscape6"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 117,
+                            "id": 660268,
+                            "width": 208,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile356Image.png",
+                            "profile": "iPadLandscape7"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 660269,
+                            "width": 160,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile357Image.png",
+                            "profile": "iPadLandscape8"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 81,
+                            "id": 660270,
+                            "width": 144,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1309_profile358Image.png",
+                            "profile": "iPadLandscape9"
+                        }
+                    ]
+                }
+            ],
+            "publicationEvent": {
+                "billingType": "subscription",
+                "endDate": "2021-01-01T05:59:00Z",
+                "entity": "publicationEvent",
+                "id": 8561,
+                "price": "0.00",
+                "startDate": "2012-01-03T06:00:00Z"
+            },
+            "studio": null,
+            "synopsis": "Después de vivir una vida de tragedias, Soledad es una famosa cantante. Se enamora de un joven doctor pero no se imagina que tendrá que luchar por su amor enfrentándose a su propia hija. ",
+            "synopsisShort": "Después de vivir una vida de tragedias, Soledad es una famosa cantante. Se enamora de un joven doctor pero no se imagina que tendrá que luchar por su amor enfrentándose a su propia hija. ",
+            "title": "Soledad",
+            "titleEditorial": "Soledad",
+            "titleSeo": "",
+            "titleShort": "Soledad",
+            "videos": [
+                {
+                    "audioLanguage": {
+                        "entity": "language",
+                        "id": 4,
+                        "items": [],
+                        "parent": null,
+                        "title": "Spanish"
+                    },
+                    "definition": "HD",
+                    "duration": 0,
+                    "entity": "video",
+                    "files": [
+                        {
+                            "entity": "videoFile",
+                            "id": 118613,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_2033/veo_2033__CV_MP4_16x9_2500kbps_1280x720_29.97fps.f4m",
+                            "type": "hds"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 118614,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_2033__CV/veo_2033__CV.m3u8",
+                            "type": "hls"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 118615,
+                            "type": "isma"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 118616,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_2033__CV/veo_2033__CV.ism/Manifest",
+                            "type": "ss"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 118617,
+                            "type": "ismc"
+                        }
+                    ],
+                    "id": 2033,
+                    "resolution": "",
+                    "screenFormat": "widescreen",
+                    "videoType": "full"
+                }
+            ],
+            "category": "movie"
+        },
+        {
+            "airDate": "2012-01-03T06:00:00Z",
+            "distributor": {
+                "entity": "distributor",
+                "id": 1,
+                "title": "televisa.networks.mx"
+            },
+            "duration": 7200,
+            "entity": "asset",
+            "genre": {
+                "entity": "genre",
+                "id": 23,
+                "items": [],
+                "parent": null,
+                "title": "Drama"
+            },
+            "id": 2968,
+            "keywords": null,
+            "legacyPeople": {},
+            "modifiedAt": "2014-03-14T05:02:00Z",
+            "otherGenres": [
+                {
+                    "entity": "genre",
+                    "id": 23,
+                    "items": [],
+                    "parent": null,
+                    "title": "Drama"
+                },
+                {
+                    "entity": "genre",
+                    "id": 260,
+                    "items": [],
+                    "parent": null,
+                    "title": "Suspenso"
+                }
+            ],
+            "parentShow": null,
+            "parentalRating": {
+                "entity": "parentalRating",
+                "id": 9,
+                "items": [],
+                "parent": null,
+                "title": "R"
+            },
+            "people": [],
+            "pictures": [
+                {
+                    "entity": "picture",
+                    "id": 2523,
+                    "pictureType": "landscape",
+                    "title": "Fuera del Cielo",
+                    "versions": [
+                        {
+                            "entity": "pictureImage",
+                            "height": 576,
+                            "id": 85489,
+                            "width": 1024,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_image.jpg",
+                            "profile": "main"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 85490,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 85491,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 85492,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 85496,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPhonePortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 85497,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPhoneRetinaPortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 85504,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPadPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 85505,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPadPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 108,
+                            "id": 422869,
+                            "width": 192,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile150Image.jpg",
+                            "profile": "webLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 126,
+                            "id": 422870,
+                            "width": 224,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile151Image.jpg",
+                            "profile": "webLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 216,
+                            "id": 422871,
+                            "width": 384,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile152Image.jpg",
+                            "profile": "webLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 54,
+                            "id": 422874,
+                            "width": 96,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile250Image.jpg",
+                            "profile": "iPhoneLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 422875,
+                            "width": 160,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile251Image.jpg",
+                            "profile": "iPhoneLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 422876,
+                            "width": 320,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile252Image.jpg",
+                            "profile": "iPhoneLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 108,
+                            "id": 422877,
+                            "width": 192,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile270Image.jpg",
+                            "profile": "iPhoneRetinaLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 422878,
+                            "width": 320,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile271Image.jpg",
+                            "profile": "iPhoneRetinaLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 360,
+                            "id": 422879,
+                            "width": 640,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile272Image.jpg",
+                            "profile": "iPhoneRetinaLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 270,
+                            "id": 422882,
+                            "width": 480,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile350Image.jpg",
+                            "profile": "iPadLandscape1"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 243,
+                            "id": 422883,
+                            "width": 432,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile351Image.jpg",
+                            "profile": "iPadLandscape2"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 207,
+                            "id": 422884,
+                            "width": 368,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile352Image.jpg",
+                            "profile": "iPadLandscape3"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 162,
+                            "id": 422885,
+                            "width": 288,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile353Image.jpg",
+                            "profile": "iPadLandscape4"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 144,
+                            "id": 422886,
+                            "width": 256,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile354Image.jpg",
+                            "profile": "iPadLandscape5"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 126,
+                            "id": 422887,
+                            "width": 224,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile355Image.jpg",
+                            "profile": "iPadLandscape6"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 117,
+                            "id": 422888,
+                            "width": 208,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile356Image.jpg",
+                            "profile": "iPadLandscape7"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 422889,
+                            "width": 160,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile357Image.jpg",
+                            "profile": "iPadLandscape8"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 81,
+                            "id": 422890,
+                            "width": 144,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2523_profile358Image.jpg",
+                            "profile": "iPadLandscape9"
+                        }
+                    ]
+                },
+                {
+                    "entity": "picture",
+                    "id": 1962,
+                    "pictureType": "portrait",
+                    "title": "201112077054_poster.jpg",
+                    "versions": [
+                        {
+                            "entity": "pictureImage",
+                            "height": 99,
+                            "id": 412232,
+                            "width": 66,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1962_profile100Image.jpg",
+                            "profile": "webPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 204,
+                            "id": 412233,
+                            "width": 136,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1962_profile101Image.jpg",
+                            "profile": "webPortraitMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 330,
+                            "id": 412234,
+                            "width": 220,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1962_profile102Image.jpg",
+                            "profile": "webPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 412238,
+                            "width": 60,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1962_profile200Image.jpg",
+                            "profile": "iPhonePortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 412239,
+                            "width": 120,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1962_profile220Image.jpg",
+                            "profile": "iPhoneRetinaPortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 192,
+                            "id": 412246,
+                            "width": 128,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1962_profile300Image.jpg",
+                            "profile": "iPadPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 309,
+                            "id": 412247,
+                            "width": 206,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_1962_profile301Image.jpg",
+                            "profile": "iPadPortraitLarge"
+                        }
+                    ]
+                }
+            ],
+            "publicationEvent": {
+                "billingType": "subscription",
+                "endDate": "2016-01-24T05:59:00Z",
+                "entity": "publicationEvent",
+                "id": 11762,
+                "price": "0.00",
+                "startDate": "2012-01-03T06:00:00Z"
+            },
+            "studio": null,
+            "synopsis": "Tras una ausencia de cinco años, Malboro, el hermano mayor del Cucú regresa y a partir de ese instante, los dos inician un viaje por los diferentes lugares que habitan los seres cercanos a ellos, teniendo tan sólo hasta las seis de la mañana del día siguiente para demostrarse su cercanía y lealtad. ",
+            "synopsisShort": "Tras una ausencia de cinco años, Malboro, el hermano mayor del Cucú regresa y a partir de ese instante, los dos inician un viaje por los diferentes lugares que habitan los seres cercanos a ellos, teniendo tan sólo hasta las seis de la mañana del día siguiente para demostrarse su cercanía y lealtad. ",
+            "title": "Fuera del Cielo",
+            "titleEditorial": "Fuera del Cielo",
+            "titleSeo": "",
+            "titleShort": "Fuera del Cielo",
+            "videos": [
+                {
+                    "audioLanguage": {
+                        "entity": "language",
+                        "id": 4,
+                        "items": [],
+                        "parent": null,
+                        "title": "Spanish"
+                    },
+                    "definition": "HD",
+                    "duration": 0,
+                    "entity": "video",
+                    "files": [
+                        {
+                            "entity": "videoFile",
+                            "id": 85637,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_2838/veo_2838__CV_MP4_16x9_2500kbps_1280x720_29.97fps.f4m",
+                            "type": "hds"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 85638,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_2838__CV/veo_2838__CV.m3u8",
+                            "type": "hls"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 85639,
+                            "type": "isma"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 85640,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_2838__CV/veo_2838__CV.ism/Manifest",
+                            "type": "ss"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 85641,
+                            "type": "ismc"
+                        }
+                    ],
+                    "id": 2838,
+                    "resolution": "",
+                    "screenFormat": "widescreen",
+                    "videoType": "full"
+                }
+            ],
+            "category": "movie"
+        },
+        {
+            "airDate": "2014-10-07T05:00:00Z",
+            "distributor": {
+                "entity": "distributor",
+                "id": 10,
+                "title": "Paramount"
+            },
+            "duration": 7140,
+            "entity": "asset",
+            "genre": {
+                "entity": "genre",
+                "id": 9,
+                "items": [],
+                "parent": null,
+                "title": "Drama"
+            },
+            "id": 5984,
+            "keywords": null,
+            "legacyPeople": {},
+            "modifiedAt": "2015-01-21T05:26:31Z",
+            "otherGenres": [
+                {
+                    "entity": "genre",
+                    "id": 9,
+                    "items": [],
+                    "parent": null,
+                    "title": "Drama"
+                }
+            ],
+            "parentShow": null,
+            "parentalRating": {
+                "entity": "parentalRating",
+                "id": 9,
+                "items": [],
+                "parent": null,
+                "title": "R"
+            },
+            "people": [],
+            "pictures": [
+                {
+                    "entity": "picture",
+                    "id": 3635,
+                    "pictureType": "landscape",
+                    "title": "Untouchables_1886001000_frame.jpg",
+                    "versions": [
+                        {
+                            "entity": "pictureImage",
+                            "height": 576,
+                            "id": 317981,
+                            "width": 1024,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_image.jpg",
+                            "profile": "main"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 317982,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 317983,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 317984,
+                            "width": null,
+                            "link": null,
+                            "profile": "webPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 317988,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPhonePortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 317989,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPhoneRetinaPortrait"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 317996,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPadPortraitSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": null,
+                            "id": 317997,
+                            "width": null,
+                            "link": null,
+                            "profile": "iPadPortraitLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 108,
+                            "id": 651721,
+                            "width": 192,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile150Image.jpg",
+                            "profile": "webLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 126,
+                            "id": 651722,
+                            "width": 224,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile151Image.jpg",
+                            "profile": "webLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 216,
+                            "id": 651723,
+                            "width": 384,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile152Image.jpg",
+                            "profile": "webLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 54,
+                            "id": 651726,
+                            "width": 96,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile250Image.jpg",
+                            "profile": "iPhoneLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 651727,
+                            "width": 160,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile251Image.jpg",
+                            "profile": "iPhoneLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 651728,
+                            "width": 320,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile252Image.jpg",
+                            "profile": "iPhoneLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 108,
+                            "id": 651729,
+                            "width": 192,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile270Image.jpg",
+                            "profile": "iPhoneRetinaLandscapeSmall"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 180,
+                            "id": 651730,
+                            "width": 320,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile271Image.jpg",
+                            "profile": "iPhoneRetinaLandscapeMedium"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 360,
+                            "id": 651731,
+                            "width": 640,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile272Image.jpg",
+                            "profile": "iPhoneRetinaLandscapeLarge"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 270,
+                            "id": 651734,
+                            "width": 480,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile350Image.jpg",
+                            "profile": "iPadLandscape1"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 243,
+                            "id": 651735,
+                            "width": 432,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile351Image.jpg",
+                            "profile": "iPadLandscape2"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 207,
+                            "id": 651736,
+                            "width": 368,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile352Image.jpg",
+                            "profile": "iPadLandscape3"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 162,
+                            "id": 651737,
+                            "width": 288,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile353Image.jpg",
+                            "profile": "iPadLandscape4"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 144,
+                            "id": 651738,
+                            "width": 256,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile354Image.jpg",
+                            "profile": "iPadLandscape5"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 126,
+                            "id": 651739,
+                            "width": 224,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile355Image.jpg",
+                            "profile": "iPadLandscape6"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 117,
+                            "id": 651740,
+                            "width": 208,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile356Image.jpg",
+                            "profile": "iPadLandscape7"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 90,
+                            "id": 651741,
+                            "width": 160,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile357Image.jpg",
+                            "profile": "iPadLandscape8"
+                        },
+                        {
+                            "entity": "pictureImage",
+                            "height": 81,
+                            "id": 651742,
+                            "width": 144,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_3635_profile358Image.jpg",
+                            "profile": "iPadLandscape9"
+                        }
+                    ]
+                }
+            ],
+            "publicationEvent": {
+                "billingType": "subscription",
+                "endDate": "2016-01-01T05:59:00Z",
+                "entity": "publicationEvent",
+                "id": 23166,
+                "price": "0.00",
+                "startDate": "2014-10-07T05:00:00Z"
+            },
+            "studio": null,
+            "synopsis": "Esta obra maestra de Brian De Palma es una gloriosa, intensa y amplia presentación de Al Capone, líder de la mafia en la época de la prohibición en Chicago, y el defensor de la ley que juró capturarlo, Eliot Ness. ",
+            "synopsisShort": "Esta obra maestra de Brian De Palma es una gloriosa, intensa y amplia presentación de Al Capone, líder de la mafia en la época de la prohibición en Chicago, y el defensor de la ley que juró capturarlo, Eliot Ness. ",
+            "title": "The Untouchables ",
+            "titleEditorial": "The Untouchables ",
+            "titleSeo": "",
+            "titleShort": "Los Intocables",
+            "videos": [
+                {
+                    "audioLanguage": {
+                        "entity": "language",
+                        "id": 4,
+                        "items": [],
+                        "parent": null,
+                        "title": "Spanish"
+                    },
+                    "definition": "HD",
+                    "duration": 0,
+                    "entity": "video",
+                    "files": [
+                        {
+                            "entity": "videoFile",
+                            "id": 76396,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_5701/veo_5701__CV_MP4_16x9_2500kbps_1280x720_29.97fps.f4m",
+                            "type": "hds"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 76397,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_5701__CV/veo_5701__CV.m3u8",
+                            "type": "hls"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 76398,
+                            "type": "isma"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 76399,
+                            "type": "ismt"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 76400,
+                            "path": "http://www.veo.tv.s3.amazonaws.com/veo_5701__CV/veo_5701__CV.ism/Manifest",
+                            "type": "ss"
+                        },
+                        {
+                            "entity": "videoFile",
+                            "id": 76401,
+                            "type": "ismc"
+                        }
+                    ],
+                    "id": 5701,
+                    "resolution": "",
+                    "screenFormat": "widescreen",
+                    "videoType": "full"
+                }
+            ],
+            "category": "movie"
+        }
+    ]
+    ```
+
+## Learn action [/re/learn-action]
+Represents the action to feed the recommendation engine
+
++ Parameters
+    + assetId (integer, `123`) ... The asset you watched
+    + actionId = `100` (integer, `103`) ... indicate the action 
+        + Values
+            + `100` ... Played
+            + `101` ... Share
+            + `102` ... Watchlist
+            + `103` ... Clicked
+
+### Learn action related to an asset [POST]
+Indicate to the recommendation engine an action over an asset
+
++ Request (application/json)
+
+    ```js
+    {
+        "assetId" : 5076,
+        "actionId" : 100
+    }
+    ```
+
++ Response 200
+
+    ```js
+    {}
+    ```
+
+## Store rating [/re/store-rating]
+Represents the action to store rating for an asset
+
++ Parameters
+    + assetId (integer, `123`) ... The asset you watched
+    + rating = `3` (integer, `4`) ... indicate the rating 
+        + Values
+            + `1`
+            + `2`
+            + `3`
+            + `4`
+            + `5`
+
+### Store rating for an asset [POST]
+Store some rating for an asset
+
++ Request (application/json)
+
+    ```js
+    {
+        "assetId" : 5076,
+        "rating" : 5
+    }
+    ```
+
++ Response 200
+
+    ```js
+    {}
+    ```
+
+
+
 # Group PlayContext
 Actions required for playing and tracking video streaming
 
