@@ -2486,55 +2486,40 @@ Represents a Channel
 + Model (application/json)
 
     ```js
-    {
-        "headers": {"ttl": 0},
-        "data": {
+        {
+          "headers": {},
+          "data": {
             "entity": "channel",
-            "category": "linearChannel",
-            "id": 16,
-            "modifiedAt": "2014-03-28T00:25:46Z",
-            "title": "Unicable",
-            "callSign": "UNIC",
-            "number": 203,
+            "id": 1,
+            "title": "TNT",
+            "number": 45,
+            "affiliate": "Cablevision",
             "packageCodes": [
-                "mini-basico",
-                "basico",
-                "familiar",
-                "premium-hbo",
-                "premium-moviecity",
-                "LIVETV",
-                "MIN-B",
-                "MODULAR",
-                "BASICO",
-                "TOTAL HD",
-                "packTV",
-                "packHD",
-                "packHDMax"
+              "mini-basico",
+              "basico",
+              "familiar",
+              "premium-hbo"
             ],
             "msos": [
-                "2",
-                "3",
-                "5"
+              "2",
+              "5"
             ],
-            "isRestricted": false,
-            "streamName": "CV_Unicable",
-            "previewUrl": "http://pmorigin.veo.tv/Content/SS/Live/Channel(CV_Unicable).isml",
-            "hlsStreamName": null,
-            "hlsLiveAkamaiId": 206354,
-            "hasSearchResultOverlay": true,
-            "hasASpotOverlay": true,
-            "epgDescription": "Unicable",
-            "images": [
-                {
-                    "type": "epgTimeline",
-                    "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                    "width": 31,
-                    "height": 47
-                }
-            ]
-        },
-        "messages": []
-    }
+            "image": 25,
+            "createdAt": "2014-03-28T00:25:44Z",
+            "modifiedAt": "2014-03-28T00:25:46Z",
+            "createdBy": {
+              "entity": "user",
+              "id": 3,
+              "name": "Feed Televisa"
+            },
+            "modifiedBy": {
+              "entity": "user",
+              "id": 10000,
+              "name": "Test User"
+            }
+          },
+          "messages": []
+        }
     ```
 
 ### Retrieve a Channel [GET]
@@ -2544,6 +2529,39 @@ Returns a specific Channel.
 
     [Channel][]
 
+### Updates a Channel [PATCH]
+Updates a specific Channel
+
++ Request
+
+    ```js
+    {
+        "title": "TNT",
+        "number": 45,
+        "affiliate": "Cablemas",
+    }
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [Channel][]
+
+### Deletes a Channel [DELETE]
+Deletes a Channel
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 204
 
 ## List Channels [/channel]
 Returns all Channels.
@@ -2551,53 +2569,71 @@ Returns all Channels.
 + Model (application/json)
 
     ```js
-    {
-        "headers": {"ttl": 0, "total": 1},
-        "data": [
+        {
+          "headers": {
+            "total": 2
+          },
+          "data": [
             {
-                "entity": "channel",
-                "category": "linearChannel",
-                "id": 16,
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "title": "Unicable",
-                "callSign": "UNIC",
-                "number": 203,
-                "packageCodes": [
-                    "mini-basico",
-                    "basico",
-                    "familiar",
-                    "premium-hbo",
-                    "premium-moviecity",
-                    "LIVETV",
-                    "MIN-B",
-                    "MODULAR",
-                    "BASICO",
-                    "TOTAL HD",
-                    "packTV",
-                    "packHD",
-                    "packHDMax"
-                ],
-                "msos": [
-                    "2",
-                    "3",
-                    "5"
-                ],
-                "isRestricted": false,
-                "hasSearchResultOverlay": true,
-                "hasASpotOverlay": true,
-                "epgDescription": "Unicable",
-                "images": [
-                    {
-                        "type": "epgTimeline",
-                        "link": "https://scablevision-a.akamaihd.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ]
+              "entity": "channel",
+              "id": 1,
+              "title": "TNT",
+              "number": 45,
+              "affiliate": "Cablevision",
+              "packageCodes": [
+                "mini-basico",
+                "basico",
+                "familiar",
+                "premium-hbo"
+              ],
+              "msos": [
+                "2",
+                "5"
+              ],
+              "image": 25,
+              "createdAt": "2014-03-28T00:25:44Z",
+              "modifiedAt": "2014-03-28T00:25:46Z",
+              "createdBy": {
+                "entity": "user",
+                "id": 3,
+                "name": "Feed Televisa"
+              },
+              "modifiedBy": {
+                "entity": "user",
+                "id": 10000,
+                "name": "Test User"
+              }
+            },
+            {
+              "entity": "channel",
+              "id": 6,
+              "title": "FOX",
+              "number": 35,
+              "affiliate": "Cablevision",
+              "packageCodes": [
+                "familiar",
+                "premium-hbo"
+              ],
+              "msos": [
+                "5"
+              ],
+              "image": 56,
+              "createdAt": "2015-03-28T00:25:44Z",
+              "modifiedAt": "2015-03-28T00:25:46Z",
+              "createdBy": {
+                "entity": "user",
+                "id": 3,
+                "name": "Feed Televisa"
+              },
+              "modifiedBy": {
+                "entity": "user",
+                "id": 10000,
+                "name": "Test User"
+              }
             }
-        ],
-        "messages": []
-    }
+          ],
+          "messages": []
+        }
     ```
 
 ### Retrieve all Channels [GET]
