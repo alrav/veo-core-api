@@ -1393,13 +1393,11 @@ Attempts to retrieve an access token for OAuth authentication.
     }
     ```
     
-    
-
 # Group Asset
 Represents actions against Asset objects
 
 ## Asset [/asset/{id}]
-Represents an Asset
+Represents a Asset
 
 + Parameters
     + id (string, `1`) ... The id of the Asset.
@@ -1408,955 +1406,110 @@ Represents an Asset
 
     ```js
     {
-      "headers": {
-      },
+      "headers": {},
       "data": {
-        "distributor": {
-          "entity": "distributor",
-          "id": 2,
-          "title": "ondemand"
-        },
-        "duration": 7680,
         "entity": "asset",
-        "genre": {
-          "entity": "genre",
-          "id": 9,
-          "items": [
-            {
-              "entity": "genre",
-              "id": 834,
-              "items": [],
-              "parent": {
-                "id": 9
-              },
-              "title": "Drama 1-1"
-            },
-            {
-              "entity": "genre",
-              "id": 832,
-              "items": [],
-              "parent": {
-                "id": 9
-              },
-              "title": "Drama 1"
-            },
-            {
-              "entity": "genre",
-              "id": 835,
-              "items": [],
-              "parent": {
-                "id": 9
-              },
-              "title": "Drama 2"
-            }
-          ],
-          "parent": null,
-          "title": "Dram"
-        },
-        "id": 19882,
+        "id": 2,
+        "type": "Event",
+        "title": "Amelie",
+        "titleEditorial": "Amelie",
         "keywords": null,
-        "modifiedAt": "2015-05-17T15:04:34Z",
-        "otherGenres": [
-          {
-            "entity": "genre",
-            "id": 9,
-            "items": [
-              {
-                "entity": "genre",
-                "id": 834,
-                "items": [],
-                "parent": {
-                  "id": 9
-                },
-                "title": "Drama 1-1"
-              },
-              {
-                "entity": "genre",
-                "id": 832,
-                "items": [],
-                "parent": {
-                  "id": 9
-                },
-                "title": "Drama 1"
-              },
-              {
-                "entity": "genre",
-                "id": 835,
-                "items": [],
-                "parent": {
-                  "id": 9
-                },
-                "title": "Drama 2"
-              }
-            ],
-            "parent": null,
-            "title": "Dram"
-          }
-        ],
-        "people": [
-          {
-            "category": "actor",
-            "displayName": "Josh Brolin",
-            "entity": "person",
-            "id": 21696
-          },
-          {
-            "category": "actor",
-            "displayName": "Sean Penn",
-            "entity": "person",
-            "id": 21697
-          },
-          {
-            "category": "actor",
-            "displayName": "Emile Hirsch",
-            "entity": "person",
-            "id": 21698
-          },
-          {
-            "category": "director",
-            "displayName": "Gus Van Sant",
-            "entity": "person",
-            "id": 21699
-          },
-          {
-            "category": "actor",
-            "displayName": "Diego Luna",
-            "entity": "person",
-            "id": 21888
-          },
-          {
-            "category": "actor",
-            "displayName": "James Franco",
-            "entity": "person",
-            "id": 21889
-          },
-          {
-            "category": "actor",
-            "displayName": "Alison Pill",
-            "entity": "person",
-            "id": 21890
-          }
-        ],
+        "status": "deleted",
+        "mainPoster": {
+          "id": 4
+        },
+        "mainFrame": {
+          "id": 6
+        },
         "pictures": [
           {
+            "createdAt": "2013-07-30T18:03:31Z",
+            "createdBy": {
+              "entity": "user",
+              "id": 20,
+              "name": "Valentina Rubio"
+            },
             "entity": "picture",
-            "id": 12968,
-            "pictureType": "poster",
-            "title": "ASST0000000001357145_Milk_SD_Package.png",
+            "id": 2587,
+            "modifiedAt": "2013-07-30T18:04:40Z",
+            "modifiedBy": null,
+            "pictureType": "landscape",
+            "title": "Amelie",
             "versions": [
               {
                 "entity": "pictureImage",
-                "height": 99,
-                "id": 701846,
-                "width": 66,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_12968_profile100Image.png",
-                "profile": "webPortraitSmall"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 204,
-                "id": 701847,
-                "width": 136,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_12968_profile101Image.png",
-                "profile": "webPortraitMedium"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 330,
-                "id": 701848,
-                "width": 220,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_12968_profile102Image.png",
-                "profile": "webPortraitLarge"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 90,
-                "id": 701852,
-                "width": 60,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_12968_profile200Image.png",
-                "profile": "iPhonePortrait"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 180,
-                "id": 701853,
-                "width": 120,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_12968_profile220Image.png",
-                "profile": "iPhoneRetinaPortrait"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 192,
-                "id": 701860,
-                "width": 128,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_12968_profile300Image.png",
-                "profile": "iPadPortraitSmall"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 309,
-                "id": 701861,
-                "width": 206,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_12968_profile301Image.png",
-                "profile": "iPadPortraitLarge"
+                "height": 576,
+                "id": 88973,
+                "size": 970902,
+                "width": 1024,
+                "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2587_image.png",
+                "profile": "main"
               }
             ]
           }
         ],
-        "studio": {
-          "entity": "studio",
-          "id": 6,
-          "title": "UNIVERSAL"
+        "createdAt": "2013-03-27T21:43:10Z",
+        "createdBy": {
+          "entity": "user",
+          "id": 3,
+          "name": "Feed Televisa"
         },
-        "synopsis": "Hoy, en el D\u00eda Internacional contra la Homfobia, recordamos a Harvey Milk, un incansable activista y pol\u00edtico interpretado por Sean Penn en \"Milk\".",
-        "synopsisShort": "Hoy, en el D\u00eda Internacional contra la Homfobia, recordamos a Harvey Milk, un incansable activista y pol\u00edtico interpretado por Sean Penn en \"Milk\".",
-        "title": "Mi Nombre es Harvey Milk",
-        "titleSeo": "",
-        "titleShort": "Mi Nombre es Harvey Milk",
-        "category": "movie",
-        "airDate": "2015-01-26T06:00:00Z",
-        "parentalRating": {
-          "entity": "parentalRating",
-          "id": 9,
-          "items": [],
-          "parent": null,
-          "title": "R"
-        },
-        "publicationEvent": {
-          "billingType": "rental",
-          "endDate": "2015-10-25T05:59:00Z",
-          "entity": "publicationEvent",
-          "id": 73373,
-          "price": "25.00",
-          "startDate": "2015-01-26T06:00:00Z"
-        },
-        "videos": [
-          {
-            "definition": "SD",
-            "duration": 7689,
-            "entity": "video",
-            "files": [
-              {
-                "entity": "videoFile",
-                "id": 141785,
-                "path": "http:\/\/vodhds-video.cablevision.veo.tv\/veo_19387\/veo_19387__CV_MP4_SD_16x9_1600kbps_640x480_29.97fps.f4m",
-                "type": "hds"
-              },
-              {
-                "entity": "videoFile",
-                "id": 141786,
-                "path": "http:\/\/vodhls-video.cablevision.veo.tv\/veo_19387__CV\/veo_19387__CV.m3u8",
-                "type": "hls"
-              },
-              {
-                "entity": "videoFile",
-                "id": 141787,
-                "type": "isma"
-              },
-              {
-                "entity": "videoFile",
-                "id": 141788,
-                "path": "http:\/\/vodss-video.cablevision.veo.tv\/veo_19387__CV\/veo_19387__CV.ism\/Manifest",
-                "type": "ss"
-              },
-              {
-                "entity": "videoFile",
-                "id": 141789,
-                "type": "ismc"
-              }
-            ],
-            "id": 19387
-          }
-        ],
-        "averageRating": 3
+        "modifiedAt": "2014-08-03T11:01:50Z",
+        "modifiedBy": null
       },
       "messages": []
     }
     ```
 
-### Retrieve a Asset [GET]
+### Retrieve an Asset [GET]
 Returns a specific Asset.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
 
 + Response 200
 
     [Asset][]
 
-+ Response 201
+
+### Updates a Asset [PATCH]
+Updates a specific Asset
+
++ Request
 
     ```js
     {
-      "headers": {
-
-      },
-      "data": {
-        "distributor": {
-          "entity": "distributor",
-          "id": 1,
-          "title": "televisa.networks.mx"
-        },
-        "duration": 0,
-        "entity": "asset",
-        "genre": {
-          "entity": "genre",
-          "id": 102,
-          "items": [],
-          "parent": null,
-          "title": "Comedia"
-        },
-        "id": 71,
-        "keywords": null,
-        "modifiedAt": "2015-04-14T22:12:32Z",
-        "otherGenres": [
-          {
-            "entity": "genre",
-            "id": 102,
-            "items": [],
-            "parent": null,
-            "title": "Comedia"
-          }
-        ],
-        "people": [
-          {
-            "category": "actor",
-            "displayName": "Ren\u00e9 Franco Velasco",
-            "entity": "person",
-            "id": 220
-          },
-          {
-            "category": "actor",
-            "displayName": "Mart\u00edn Sobrino Lavalle",
-            "entity": "person",
-            "id": 221
-          },
-          {
-            "category": "actor",
-            "displayName": "Juan Francisco Matencio Calderon De La Barca",
-            "entity": "person",
-            "id": 222
-          },
-          {
-            "category": "actor",
-            "displayName": "Karla G\u00f3mez",
-            "entity": "person",
-            "id": 223
-          },
-          {
-            "category": "director",
-            "displayName": "Ren\u00e9 Franco Velasco",
-            "entity": "person",
-            "id": 224
-          },
-          {
-            "category": "producer",
-            "displayName": "Juan Francisco Matencio Calderon De La Barca",
-            "entity": "person",
-            "id": 225
-          }
-        ],
-        "pictures": [
-          {
-            "entity": "picture",
-            "id": 42,
-            "pictureType": "frame",
-            "title": "201208270299.jpg",
-            "versions": [
-              {
-                "entity": "pictureImage",
-                "height": 576,
-                "id": 46515,
-                "width": 1024,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_image.jpg",
-                "profile": "main"
-              },
-              {
-                "entity": "pictureImage",
-                "height": null,
-                "id": 46516,
-                "width": null,
-                "link": null,
-                "profile": "webPortraitSmall"
-              },
-              {
-                "entity": "pictureImage",
-                "height": null,
-                "id": 46517,
-                "width": null,
-                "link": null,
-                "profile": "webPortraitMedium"
-              },
-              {
-                "entity": "pictureImage",
-                "height": null,
-                "id": 46518,
-                "width": null,
-                "link": null,
-                "profile": "webPortraitLarge"
-              },
-              {
-                "entity": "pictureImage",
-                "height": null,
-                "id": 46522,
-                "width": null,
-                "link": null,
-                "profile": "iPhonePortrait"
-              },
-              {
-                "entity": "pictureImage",
-                "height": null,
-                "id": 46523,
-                "width": null,
-                "link": null,
-                "profile": "iPhoneRetinaPortrait"
-              },
-              {
-                "entity": "pictureImage",
-                "height": null,
-                "id": 46530,
-                "width": null,
-                "link": null,
-                "profile": "iPadPortraitSmall"
-              },
-              {
-                "entity": "pictureImage",
-                "height": null,
-                "id": 46531,
-                "width": null,
-                "link": null,
-                "profile": "iPadPortraitLarge"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 108,
-                "id": 386313,
-                "width": 192,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile150Image.jpg",
-                "profile": "webLandscapeSmall"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 126,
-                "id": 386314,
-                "width": 224,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile151Image.jpg",
-                "profile": "webLandscapeMedium"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 216,
-                "id": 386315,
-                "width": 384,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile152Image.jpg",
-                "profile": "webLandscapeLarge"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 54,
-                "id": 386318,
-                "width": 96,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile250Image.jpg",
-                "profile": "iPhoneLandscapeSmall"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 90,
-                "id": 386319,
-                "width": 160,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile251Image.jpg",
-                "profile": "iPhoneLandscapeMedium"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 180,
-                "id": 386320,
-                "width": 320,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile252Image.jpg",
-                "profile": "iPhoneLandscapeLarge"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 108,
-                "id": 386321,
-                "width": 192,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile270Image.jpg",
-                "profile": "iPhoneRetinaLandscapeSmall"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 180,
-                "id": 386322,
-                "width": 320,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile271Image.jpg",
-                "profile": "iPhoneRetinaLandscapeMedium"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 360,
-                "id": 386323,
-                "width": 640,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile272Image.jpg",
-                "profile": "iPhoneRetinaLandscapeLarge"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 270,
-                "id": 386326,
-                "width": 480,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile350Image.jpg",
-                "profile": "iPadLandscape1"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 243,
-                "id": 386327,
-                "width": 432,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile351Image.jpg",
-                "profile": "iPadLandscape2"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 207,
-                "id": 386328,
-                "width": 368,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile352Image.jpg",
-                "profile": "iPadLandscape3"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 162,
-                "id": 386329,
-                "width": 288,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile353Image.jpg",
-                "profile": "iPadLandscape4"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 144,
-                "id": 386330,
-                "width": 256,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile354Image.jpg",
-                "profile": "iPadLandscape5"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 126,
-                "id": 386331,
-                "width": 224,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile355Image.jpg",
-                "profile": "iPadLandscape6"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 117,
-                "id": 386332,
-                "width": 208,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile356Image.jpg",
-                "profile": "iPadLandscape7"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 90,
-                "id": 386333,
-                "width": 160,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile357Image.jpg",
-                "profile": "iPadLandscape8"
-              },
-              {
-                "entity": "pictureImage",
-                "height": 81,
-                "id": 386334,
-                "width": 144,
-                "link": "https:\/\/dyv52uavm19r4.cloudfront.net\/prod\/Picture\/C_1_Picture_42_profile358Image.jpg",
-                "profile": "iPadLandscape9"
-              }
-            ]
-          }
-        ],
-        "studio": null,
-        "synopsis": "Divi\u00e9rtete con el talk show de uno de los conductores m\u00e1s irreverentes y din\u00e1micos que tiene la pantalla: Ren\u00e9 Franco.",
-        "synopsisShort": "Divi\u00e9rtete con el talk show de uno de los conductores m\u00e1s irreverentes y din\u00e1micos que tiene la pantalla: Ren\u00e9 Franco.",
-        "title": "Es de Noche y ya Llegu\u00e9",
-        "titleSeo": "",
-        "titleShort": "Es de Noche y ya Llegue",
-        "category": "series",
-        "seasons": [
-          {
-            "airDate": null,
-            "entity": "season",
-            "episodeCount": 15,
-            "episodes": [
-              {
-                "duration": 4620,
-                "entity": "asset",
-                "episodeNumber": 1,
-                "id": 75,
-                "pictures": [],
-                "synopsis": "Esta noche la incomparable voz de Natalia Sosa, el comediante Gustavo Mungu\u00eda; y en la m\u00fasica, Babas\u00f3nicos, Mart\u00edn sobrino y los due\u00f1os del segundo piso.\n",
-                "title": "Episodio 1",
-                "category": "episode"
-              },
-              {
-                "duration": 4500,
-                "entity": "asset",
-                "episodeNumber": 2,
-                "id": 78,
-                "pictures": [],
-                "synopsis": "Esta noche la suegra de M\u00e9xico, Do\u00f1a Lucha, el gur\u00fa Ruben Carvajal y en la m\u00fasica R\u00edo Roma.\n",
-                "title": "Episodio 2",
-                "category": "episode"
-              },
-              {
-                "duration": 4620,
-                "entity": "asset",
-                "episodeNumber": 3,
-                "id": 81,
-                "pictures": [],
-                "synopsis": "Esta noche los productores de Broadway Guillermo Wiechers y Juan Torres; los aut\u00e9nticos magos reyes Ari Sandy, El Mago de la Media Barba y el Mago Herrera; y en la m\u00fasica Pablo Montero.\n",
-                "title": "Episodio 3",
-                "category": "episode"
-              },
-              {
-                "duration": 4620,
-                "entity": "asset",
-                "episodeNumber": 4,
-                "id": 77,
-                "pictures": [],
-                "synopsis": "Esta noche un abismo de pasi\u00f3n; Angelique Boyer, Mark Tacher y David Zepeda; la voz de M\u00e9xico, Oscar Cruz y en la m\u00fasica; Jot Dog y Juan Carlos Lozano.\n",
-                "title": "Episodio 4",
-                "category": "episode"
-              },
-              {
-                "duration": 4620,
-                "entity": "asset",
-                "episodeNumber": 5,
-                "id": 76,
-                "pictures": [],
-                "synopsis": "Esta noche la esencia del perfume Sebasti\u00e1n Rulli; el mejor imitador de M\u00e9xico, Gilberto Gless. Joserra y en la m\u00fasica, La \u00danica Internacional Sonora Santanera.\n",
-                "title": "Episodio 5",
-                "category": "episode"
-              },
-              {
-                "duration": 4500,
-                "entity": "asset",
-                "episodeNumber": 6,
-                "id": 79,
-                "pictures": [],
-                "synopsis": "Esta noche Kika Edgar, Flavio Medina, Gloria Aura y Alex de la Madrid. Edgar Vivar, Sabrina y en la m\u00fasica, La Arrolladora Banda El Lim\u00f3n.\n",
-                "title": "Episodio 6",
-                "category": "episode"
-              },
-              {
-                "duration": 4560,
-                "entity": "asset",
-                "episodeNumber": 7,
-                "id": 74,
-                "pictures": [],
-                "synopsis": "Esta noche Jaime Mauss\u00e1n, Mar\u00eda Jos\u00e9, Omar Chaparro y en la m\u00fasica, Kinky.\n",
-                "title": "Episodio 7",
-                "category": "episode"
-              },
-              {
-                "duration": 4500,
-                "entity": "asset",
-                "episodeNumber": 11,
-                "id": 73,
-                "pictures": [],
-                "synopsis": "Esta noche la suegra de M\u00e9xico, Do\u00f1a Lucha, el gur\u00fa Ruben Carvajal y en la m\u00fasica R\u00edo Roma.\n",
-                "title": "Episodio 11",
-                "category": "episode"
-              },
-              {
-                "duration": 4740,
-                "entity": "asset",
-                "episodeNumber": 15,
-                "id": 2980,
-                "pictures": [],
-                "synopsis": "Esta noche Chabelo, Marisol Gonzalez, Enrique Burak, Fernando Platas y Francisco Javier Gonz\u00e1lez. Y en la m\u00fasica, Paquita la del barrio.",
-                "title": "Episodio 15",
-                "category": "episode"
-              },
-              {
-                "duration": 4560,
-                "entity": "asset",
-                "episodeNumber": 16,
-                "id": 2951,
-                "pictures": [],
-                "synopsis": "Esta noche Joaqu\u00edn Cordero, Jorge Falc\u00f3n y en la m\u00fasica, Carlos Cuevas.",
-                "title": "Episodio 16",
-                "category": "episode"
-              },
-              {
-                "duration": 4440,
-                "entity": "asset",
-                "episodeNumber": 17,
-                "id": 2952,
-                "pictures": [],
-                "synopsis": "Esta noche el actor Julio Bracho, Gianmarco, la imaginaci\u00f3n de Mayumana y en la m\u00fasica, R\u00edo Roma.",
-                "title": "Episodio 17",
-                "category": "episode"
-              },
-              {
-                "duration": 4620,
-                "entity": "asset",
-                "episodeNumber": 18,
-                "id": 2971,
-                "pictures": [],
-                "synopsis": "Esta noche del punto al punto G de Karina Velasco, la pareja maravilla Felipe N\u00e1jera y Jaime Morales, Mois\u00e9s Su\u00e1rez y en la m\u00fasica, Circo Pop y Dan Masciarelli.",
-                "title": "Episodio 18",
-                "category": "episode"
-              },
-              {
-                "duration": 4500,
-                "entity": "asset",
-                "episodeNumber": 19,
-                "id": 2953,
-                "pictures": [],
-                "synopsis": "Esta noche un panorama desde el puente con Sara Maldonado, Fabi\u00e1n Robles y Mauricio Mart\u00ednez, Israel Jaitovich y Roxanna Castellanos y Gustavo Mungu\u00eda, Ricardo Casta\u00f1eda y en la m\u00fasica Johnny Laboriel.",
-                "title": "Episodio 19",
-                "category": "episode"
-              },
-              {
-                "duration": 4620,
-                "entity": "asset",
-                "episodeNumber": 20,
-                "id": 2955,
-                "pictures": [],
-                "synopsis": "Esta noche buen Rock and Roll con Julissa, la eterna juventud de Pierre Angelo, Francisco Javier Gonz\u00e1lez y Carolina Mor\u00e1n y en la m\u00fasica, La Apuesta.",
-                "title": "Episodio 20",
-                "category": "episode"
-              },
-              {
-                "duration": 4680,
-                "entity": "asset",
-                "episodeNumber": 21,
-                "id": 2956,
-                "pictures": [],
-                "synopsis": "Esta noche Los hermanos Castro, Sandra Echeverr\u00eda, Sandra Montoya y en la m\u00fasica, Mar\u00eda Jos\u00e9.",
-                "title": "Episodio 21",
-                "category": "episode"
-              }
-            ],
-            "id": 7,
-            "number": 1,
-            "title": ""
-          },
-          {
-            "airDate": null,
-            "entity": "season",
-            "episodeCount": 6,
-            "episodes": [
-              {
-                "duration": 4680,
-                "entity": "asset",
-                "episodeNumber": 8,
-                "id": 2978,
-                "pictures": [],
-                "synopsis": "Esta noche Miguel el Piojo Herrera, Sexo para el fin del mundo con Silvia Olmedo y en la m\u00fasica Ha-ash.",
-                "title": "Episodio 8",
-                "category": "episode"
-              },
-              {
-                "duration": 4860,
-                "entity": "asset",
-                "episodeNumber": 9,
-                "id": 2990,
-                "pictures": [],
-                "synopsis": "Esta noche el villano por naturaleza Salvador Pineda, desde la tierra de Oz Adriana Riveramelo y Mauricio Clark, en la m\u00fasica OV7.",
-                "title": "Episodio 9",
-                "category": "episode"
-              },
-              {
-                "duration": 4680,
-                "entity": "asset",
-                "episodeNumber": 10,
-                "id": 2954,
-                "pictures": [],
-                "synopsis": "Esta noche la edec\u00e1n del debate Julia Orayen, Luis de Llano, Arath de la Torre, el Macaco y en la m\u00fasica Playa Limbo.",
-                "title": "Episodio 10",
-                "category": "episode"
-              },
-              {
-                "duration": 4500,
-                "entity": "asset",
-                "episodeNumber": 12,
-                "id": 2981,
-                "pictures": [],
-                "synopsis": "Esta noche sin censura Polo Polo, Sammy, Cirque \u00c9loize ID y en la m\u00fasica Moenia.",
-                "title": "Episodio 12",
-                "category": "episode"
-              },
-              {
-                "duration": 4860,
-                "entity": "asset",
-                "episodeNumber": 13,
-                "id": 3011,
-                "pictures": [],
-                "synopsis": "Esta noche Rogelio Guerra, Christian Chavez, Iv\u00e1n S\u00e1nchez y en la m\u00fasica el Instituto Mexicano del Sonido.",
-                "title": "Episodio 13",
-                "category": "episode"
-              },
-              {
-                "duration": 4800,
-                "entity": "asset",
-                "episodeNumber": 14,
-                "id": 2972,
-                "pictures": [],
-                "synopsis": "Esta noche Ignacio L\u00f3pez Tarso, Sherlyn, Los Insignificantes y en la m\u00fasica Ana Victoria.",
-                "title": "Episodio 14",
-                "category": "episode"
-              }
-            ],
-            "id": 119,
-            "number": 1,
-            "title": ""
-          }
-        ],
-        "airDate": "2012-01-03T00:00:00Z",
-        "parentalRating": {
-          "entity": "parentalRating",
-          "id": 3,
-          "items": [],
-          "parent": null,
-          "title": "PG-13"
-        },
-        "publicationEvent": {
-          "billingType": "subscription",
-          "endDate": "2020-12-31T23:59:00Z",
-          "entity": "publicationEvent",
-          "id": 271,
-          "price": "0.00",
-          "startDate": "2012-01-03T00:00:00Z"
-        },
-        "videos": [],
-        "averageRating": 5
-      },
-      "messages": []
+            "title": "Operación Dragón",
+            "status": "published"
     }
     ```
 
-+ Response 202
+    + Headers
 
-    ```js
-    {
-      "headers": {},
-      "data": {
-        "distributor": {
-          "entity": "distributor",
-          "id": 1,
-          "title": "televisa.networks.mx"
-        },
-        "duration": 4620,
-        "entity": "asset",
-        "genre": {
-          "entity": "genre",
-          "id": 259,
-          "items": [],
-          "parent": null,
-          "title": "Talk Shows"
-        },
-        "id": 75,
-        "keywords": null,
-        "modifiedAt": "2014-09-05T03:52:50Z",
-        "otherGenres": [
-          {
-            "entity": "genre",
-            "id": 104,
-            "items": [
-              {
-                "entity": "genre",
-                "id": 500,
-                "items": [],
-                "parent": {
-                  "id": 104
-                },
-                "title": "Concierto"
-              }
-            ],
-            "parent": null,
-            "title": "Entretenimiento"
-          },
-          {
-            "entity": "genre",
-            "id": 259,
-            "items": [],
-            "parent": null,
-            "title": "Talk Shows"
-          }
-        ],
-        "people": [],
-        "pictures": [],
-        "studio": null,
-        "synopsis": "Esta noche la incomparable voz de Natalia Sosa, el comediante Gustavo Mungu\u00eda; y en la m\u00fasica, Babas\u00f3nicos, Mart\u00edn sobrino y los due\u00f1os del segundo piso.\n",
-        "synopsisShort": "Esta noche la incomparable voz de Natalia Sosa, el comediante Gustavo Mungu\u00eda; y en la m\u00fasica, Babas\u00f3nicos, Mart\u00edn sobrino y los due\u00f1os del segundo piso.\n",
-        "title": "Episodio 1",
-        "titleSeo": "",
-        "titleShort": "Episodio 1",
-        "category": "episode",
-        "parentShow": {
-          "entity": "asset",
-          "id": 71,
-          "title": "Es de Noche y ya Llegu\u00e9",
-          "category": "series"
-        },
-        "episodeNumber": 1,
-        "airDate": "2012-01-03T00:00:00Z",
-        "parentalRating": {
-          "entity": "parentalRating",
-          "id": 3,
-          "items": [],
-          "parent": null,
-          "title": "PG-13"
-        },
-        "publicationEvent": {
-          "billingType": "subscription",
-          "endDate": "2020-12-31T23:59:00Z",
-          "entity": "publicationEvent",
-          "id": 283,
-          "price": "0.00",
-          "startDate": "2012-01-03T00:00:00Z"
-        },
-        "videos": [
-          {
-            "definition": "SD",
-            "duration": 0,
-            "entity": "video",
-            "files": [
-              {
-                "entity": "videoFile",
-                "id": 110780,
-                "path": "http:\/\/vodhds-video.cablevision.veo.tv\/veo_70\/veo_70__CV_MP4_4x3_1600kbps_640x480_29.97fps.f4m",
-                "type": "hds"
-              },
-              {
-                "entity": "videoFile",
-                "id": 110781,
-                "path": "http:\/\/vodhls-video.cablevision.veo.tv\/veo_70__CV\/veo_70__CV.m3u8",
-                "type": "hls"
-              },
-              {
-                "entity": "videoFile",
-                "id": 110782,
-                "type": "isma"
-              },
-              {
-                "entity": "videoFile",
-                "id": 110783,
-                "path": "http:\/\/vodss-video.cablevision.veo.tv\/veo_70__CV\/veo_70__CV.ism\/Manifest",
-                "type": "ss"
-              },
-              {
-                "entity": "videoFile",
-                "id": 110784,
-                "type": "ismc"
-              }
-            ],
-            "id": 70
-          }
-        ],
-        "averageRating": 3
-      },
-      "messages": []
-    }
-    ```
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [Asset][]
+
+### Deletes an Asset [DELETE]
+Deletes an Asset
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 204
+
 
 ## List Assets [/asset]
 Returns all Assets.
@@ -2365,114 +1518,162 @@ Returns all Assets.
 
     ```js
     {
-        "headers": {"ttl": 0, "total": 1},
-        "data": [
+    "headers": {"total": 2},
+    "data": [
         {
             "entity": "asset",
-            "category": "movie",
-            "parentShow": null,
-            "id": 4754,
-            "title": "Operación Dragón",
-            "titleShort": "Operación Dragón",
-            "synopsisShort": "Un maestro de artes marciales decide espiar a un solitario criminal usando su invitación a un torneo.",
-            "duration": 3642,
-            "parentalRating": {
-                "id": 9,
-                "title": "R"
+            "id": 2,
+            "type": "Event",
+            "title": "Amelie",
+            "titleEditorial": "Amelie",
+            "keywords": null,
+            "status": "deleted",
+            "mainPoster": {
+                "id": 4
             },
-            "genre": {
-                "id": 111,
-                "title": "Acción y Aventura"
+            "mainFrame": {
+                "id": 6
             },
             "pictures": [
                 {
+                    "createdAt": "2013-07-30T18:03:31Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 20,
+                        "name": "Valentina Rubio"
+                    },
                     "entity": "picture",
-                    "id": 2853,
-                    "modifiedAt": "2014-03-28T00:25:46Z",
-                    "credits": "Tom Smith",
-                    "orientation": "portrait",
-                    "pictureType": "poster",
-                    "title": "",
+                    "id": 2587,
+                    "modifiedAt": "2013-07-30T18:04:40Z",
+                    "modifiedBy": null,
+                    "pictureType": "landscape",
+                    "title": "Amelie",
                     "versions": [
                         {
-                            "profile": "webLandscapeSmall",
-                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile150Image.jpg",
-                            "width": "192",
-                            "height": "108"
-                        },
-                        {
-                            "profile": "webLandscapeMedium",
-                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
-                            "width": "224",
-                            "height": "126"
-                        },
-                        {
-                            "profile": "webLandscapeLarge",
-                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
-                            "width": "384",
-                            "height": "216"
-                        },
-                        {
-                            "profile": "mobileLandscapeSmall",
-                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
-                            "width": "96",
-                            "height": "54"
-                        },
-                        {
-                            "profile": "mobileLandscapeMedium",
-                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
-                            "width": "160",
-                            "height": "90"
-                        },
-                        {
-                            "profile": "mobileLandscapeLarge",
-                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
-                            "width": "320",
-                            "height": "180"
-                        },
-                        {
-                            "profile": "mobileRetinaLandscapeSmall",
-                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
-                            "width": "192",
-                            "height": "108"
-                        },
-                        {
-                            "profile": "mobileRetinaLandscapeMedium",
-                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
-                            "width": "320",
-                            "height": "180"
-                        },
-                        {
-                            "profile": "mobileRetinaLandscapeLarge",
-                            "link": "https://cdnassets.veo.tv/prod/Picture/C_1_Picture_7315_profile151Image.jpg",
-                            "width": "640",
-                            "height": "360"
+                            "entity": "pictureImage",
+                            "height": 576,
+                            "id": 88973,
+                            "size": 970902,
+                            "width": 1024,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/C_1_Picture_2587_image.png",
+                            "profile": "main"
                         }
                     ]
                 }
             ],
-            "publicationEvent": {
-                "entity": "publicationEvent",
-                "id": 18563,
-                "startDate": "2014-04-09T06:00:00Z",
-                "endDate": "2015-03-31T05:59:00Z",
-                "billingType": "rental",
-                "price": "25.00"
-            }
+            "createdAt": "2013-03-27T21:43:10Z",
+            "createdBy": {
+                "entity": "user",
+                "id": 3,
+                "name": "Feed Televisa"
+            },
+            "modifiedAt": "2014-08-03T11:01:50Z",
+            "modifiedBy": null
+        },
+        {
+            "entity": "asset",
+            "id": 3,
+            "type": "Event",
+            "title": "Operacion Dragon",
+            "titleEditorial": "Operacion Dragon Honk-kong",
+            "keywords": null,
+            "status": "published",
+            "mainPoster": {
+                "id": 7
+            },
+            "mainFrame": {
+                "id": 2
+            },
+            "pictures": [
+                {
+                    "createdAt": "2014-07-30T18:03:31Z",
+                    "createdBy": {
+                        "entity": "user",
+                        "id": 5,
+                        "name": "Valentina Rubio"
+                    },
+                    "entity": "picture",
+                    "id": 45,
+                    "modifiedAt": "2014-07-30T18:04:40Z",
+                    "modifiedBy": null,
+                    "pictureType": "landscape",
+                    "title": "Amelie",
+                    "versions": [
+                        {
+                            "entity": "pictureImage",
+                            "height": 576,
+                            "id": 88973,
+                            "size": 970902,
+                            "width": 1024,
+                            "link": "https://dyv52uavm19r4.cloudfront.net/prod/Picture/dragon.png",
+                            "profile": "main"
+                        }
+                    ]
+                }
+            ],
+            "createdAt": "2014-03-27T21:43:10Z",
+            "createdBy": {
+                "entity": "user",
+                "id": 3,
+                "name": "Feed Televisa"
+            },
+            "modifiedAt": "2014-08-03T11:01:50Z",
+            "modifiedBy": null
         }
-        ],
-        "messages": []
+    ],
+    "messages": []
     }
     ```
 
 ### Retrieve all Assets [GET]
-Retrieves all assets.
+Retrieves all Assets.
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
 
 + Response 200
 
     [List Assets][]
 
+### Creates an Asset [POST]
+Creates a new Asset.
 
++ Request
+
+    ```js
+        {
+            "type": "Event",
+            "title": "Amelie",
+            "titleEditorial": "Amelie",
+            "keywords": null,
+            "status": "published",
+            "mainPoster": {
+                "id": 4
+            },
+            "mainFrame": {
+                "id": 6
+            },
+            "pictures": [
+                {
+                    "id": 2853
+                }
+            ]
+        }
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 201
+
+    [Asset][]
+    
 
 # Group Channel
 Represents actions against Channel objects
