@@ -23042,7 +23042,6 @@ Update the Channel PlayContext while streaming.
 
     [Update Channel PlayContext][]
 
-
 # Group Program
 Represents actions against Program objects
 
@@ -23055,47 +23054,87 @@ Represents a Program
 + Model (application/json)
 
     ```js
-    {
-        "headers": {"ttl": 0},
-        "data": {
+        {
+          "headers": {},
+          "data": {
             "entity": "program",
-            "category": "linearEpisodeProgram",
-            "id": 3,
+            "id": 1,
+            "title": "Mickey",
+            "isApproved": true,
+            "titleSEO": "Aventura de Mickey",
+            "affiliate": "Cablevision",
+            "duration": 1800,
+            "keywords": "mickey mouse, aventura",
+            "isAdult": false,
+            "isRightsBlocked": false,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa",
+            "editorialRating": 9,
+            "asset": 12,
+            "version": 1,
+            "year": 2001,
+            "createdAt": "2014-03-28T00:25:44Z",
             "modifiedAt": "2014-03-28T00:25:46Z",
-            "isHd": false,
-            "isLive": false,
-            "keywords": [
-               "dragon",
-               "ball"
-             ],
-            "areRightsBlocked": false,
-            "genre": {
-                "id": 111,
-                "title": "Acción y Aventura"
+            "createdBy": {
+              "entity": "user",
+              "id": 3,
+              "name": "Feed Televisa"
             },
-            "packageCodes": [
-                "Premium"
-            ],
-            "parentalRating": {
-                "id": 9,
-                "title": "R"
-            },
-            "synopsisShort": "Karen cuida de Zach",
-            "synopsis": "Karen cuida de Zach",
-            "subCategory": "series",
-            "title": "Co-Ed Confidential 4",
-            "airDate": "2010-06-17T00:00:00Z"
-        },
-        "messages": []
-    }
+            "modifiedBy": {
+              "entity": "user",
+              "id": 10000,
+              "name": "Test User"
+            }
+          },
+          "messages": []
+        }
     ```
 
 ### Retrieve a Program [GET]
 Returns a specific Program.
 
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
 + Response 200
 
     [Program][]
+
+### Updates a Program [PATCH]
+Updates a specific Program
+
++ Request
+
+    ```js
+    {
+        "title": "Lorem"
+    }
+    ```
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 200
+
+    [Program][]
+
+### Deletes a Program [DELETE]
+Deletes a Program
+
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
++ Response 204
 
 
 ## List Programs [/program]
@@ -23105,29 +23144,68 @@ Returns all Programs.
 
     ```js
     {
-        "headers": {"ttl": 0, "total": 1},
+        "headers": {"total": 2},
         "data": [
             {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
-                "id": 3,
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "isHd": false,
-                "isLive": false,
-                "areRightsBlocked": false,
-                "genre": {
-                    "id": 111,
-                    "title": "Acción y Aventura"
-                },
-                "parentalRating": {
-                    "id": 9,
-                    "title": "R"
-                },
-                "synopsisShort": "Karen cuida de Zach",
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "airDate": "2010-06-17T00:00:00Z"
+            "entity": "program",
+            "id": 1,
+            "title": "Mickey",
+            "isApproved": true,
+            "titleSEO": "Aventura de Mickey",
+            "affiliate": "Cablevision",
+            "duration": 1800,
+            "keywords": "mickey mouse, aventura",
+            "isAdult": false,
+            "isRightsBlocked": false,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa",
+            "editorialRating": 9,
+            "asset": 12,
+            "version": 1,
+            "year": 2001,
+            "createdAt": "2014-03-28T00:25:44Z",
+            "modifiedAt": "2014-03-28T00:25:46Z",
+            "createdBy": {
+              "entity": "user",
+              "id": 3,
+              "name": "Feed Televisa"
+            },
+            "modifiedBy": {
+              "entity": "user",
+              "id": 10000,
+              "name": "Test User"
             }
+          },
+          {
+            "entity": "program",
+            "id": 2,
+            "title": "Lorem",
+            "isApproved": true,
+            "titleSEO": "Lorem ipsum dolor sit amet",
+            "affiliate": "Cablevision",
+            "duration": 3600,
+            "keywords": "lorem, sit, amet",
+            "isAdult": true,
+            "isRightsBlocked": false,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa",
+            "editorialRating": 9,
+            "asset": 3,
+            "version": 1,
+            "year": 2011,
+            "createdAt": "2014-03-28T00:25:44Z",
+            "modifiedAt": "2014-03-28T00:25:46Z",
+            "createdBy": {
+              "entity": "user",
+              "id": 3,
+              "name": "Feed Televisa"
+            },
+            "modifiedBy": {
+              "entity": "user",
+              "id": 10000,
+              "name": "Test User"
+            }
+          }
         ],
         "messages": []
     }
@@ -23136,10 +23214,16 @@ Returns all Programs.
 ### Retrieve all Programs [GET]
 Retrieves all Programs.
 
++ Request
+
+    + Headers
+
+            Authorization: X-Auth-Token qwerty12345
+
+
 + Response 200
 
     [List Programs][]
-
 
 
 # Group Search
