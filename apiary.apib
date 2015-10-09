@@ -281,10 +281,10 @@ Attempts to unlink an account Device.
         ]
     }
     ```
-    
+
 ## Facebook login [/account/facebook/login]
 Attempts to authenticate a user through facebook.
-
+    
 + Model (application/json)
 
     ```js
@@ -384,6 +384,123 @@ Attempts to authenticate a user through facebook.
     }
     ```
     
+
+
+## Facebook link [/account/facebook/link]
+Attempts to link/unlink a facebook account.
+    
++ Model (application/json)
+
+    ```js
+    {
+      "headers": {},
+      "data": {
+        "accessToken": "111111111111111111111111",
+        "address1": "my address",
+        "address2": null,
+        "canPlayVideo": false,
+        "canRent": false,
+        "city": null,
+        "contract": null,
+        "country": null,
+        "deviceId": null,
+        "deviceType": null,
+        "displayName": "My name",
+        "email": "email@email.com",
+        "entitlements": [
+          {
+            "affiliate": "cablevision",
+            "entity": "subscription",
+            "packageCode": "familiar"
+          },
+          {
+            "affiliate": "cablevision",
+            "entity": "subscription",
+            "packageCode": "TVOD"
+          }
+        ],
+        "facebookId": "222222222222222",
+        "familyName": "Generated",
+        "firstName": "User",
+        "id": "33333",
+        "mso": [
+          2
+        ],
+        "preferences": {
+          "affiliate": "cablevision",
+          "isPinRequired": false,
+          "isPinSet": false,
+          "language": "ES",
+          "lastUpdated": "2015-07-29T12:51:54Z",
+          "permittedRatings": [
+            "NR",
+            "UR",
+            "G",
+            "AA",
+            "A",
+            "PG",
+            "B",
+            "PG-13",
+            "B15",
+            "R",
+            "C",
+            "D",
+            "NC-17"
+          ],
+          "timezone": "CST6CDT"
+        },
+        "sessionId": "444444444444444444444",
+        "state": null,
+        "status": "Active",
+        "trialAvailable": false,
+        "zip": null
+      },
+      "messages": []
+    }
+    ```
+
+### Link [POST]
+
++ Request (application/json)
+
+    ```text
+    {
+        "accessToken": "555555555555555555555555555555555555555"
+    }
+    ```
+
++ Response 200
+
+    [Facebook link][]
+
++ Response 403 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "Invalid facebook access token."
+            }
+        ]
+    }
+    ```
+
+
+
+### Unlink [DELETE]
+
++ Request (application/json)
+
+    ```text
+    []
+    ```
+
++ Response 204
+
+
 
 # Group Account - Details
 Represents actions against an user account.
@@ -1296,7 +1413,7 @@ Attempts to activate a device code.
 
     + Headers
 
-    Authorization: OAuth ...
+        Authorization: OAuth ...
 
 + Response 200
 
@@ -2477,7 +2594,7 @@ Retrieves all assets.
 # Group Channel
 Represents actions against Channel objects
 
-## Channel [/tv/epg/channel/{id}/start/{start}/end/{end}]
+## Channel [/channel/{id}]
 Represents a Channel
 
 + Parameters
@@ -2494,20 +2611,6 @@ Represents a Channel
             "id": 16,
             "modifiedAt": "2014-03-28T00:25:46Z",
             "title": "Unicable",
-            "listing": [
-                {
-                    "entity": "listing",
-                    "id": 1,
-                    "startTime": "2014-03-28T00:15:44Z",
-                    "endTime": "2014-03-28T00:16:44Z",
-                    "program": 5,
-                    "airingType": "new",
-                    "rating": 4,
-                    "isSubtitled": false,
-                    "owner": 1,
-                    "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                }
-            ]
             "callSign": "UNIC",
             "number": 203,
             "packageCodes": [
@@ -2559,7 +2662,7 @@ Returns a specific Channel.
     [Channel][]
 
 
-## List Channels [/tv/epg/channel]
+## List Channels [/channel]
 Returns all Channels.
 
 + Model (application/json)
@@ -2574,20 +2677,6 @@ Returns all Channels.
                 "id": 16,
                 "modifiedAt": "2014-03-28T00:25:46Z",
                 "title": "Unicable",
-                "listing": [
-                    {
-                        "entity": "listing",
-                        "id": 1,
-                        "startTime": "2014-03-28T00:15:44Z",
-                        "endTime": "2014-03-28T00:16:44Z",
-                        "program": 5,
-                        "airingType": "new",
-                        "rating": 4,
-                        "isSubtitled": false,
-                        "owner": 1,
-                        "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                    }
-                ]
                 "callSign": "UNIC",
                 "number": 203,
                 "packageCodes": [
@@ -3728,174 +3817,6 @@ Retrieves all Geoblocking.
 + Response 200
 
     [List Geoblocking][]
-
-# Group Listing
-Represents actions against Listing objects
-
-## Listing [/tv/epg/{id}/start/{start}/end/{end}]
-Represents a Listing
-
-+ Parameters
-    + id (string, `1`) ... The id of the Listing.
-    + start (int, `1423720800`) ... The start Unix timestamp of the EPG.
-    + end (int, `1424204313`) ... The end Unix timestamp of the EPG.
-
-+ Model (application/json)
-
-    ```js
-        {
-          "headers": {},
-          "data": {
-            "entity": "listing",
-            "id": 1,
-            "startTime": "2014-03-28T00:15:44Z",
-            "endTime": "2014-03-28T00:16:44Z",
-            "program": 5,
-            "airingType": "new",
-            "rating": 4,
-            "isSubtitled": false,
-            "owner": 1,
-            "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-            "createdAt": "2014-03-28T00:25:44Z",
-            "modifiedAt": "2014-03-28T00:25:46Z",
-            "createdBy": {
-              "entity": "user",
-              "id": 3,
-              "name": "Feed Televisa"
-            },
-            "modifiedBy": {
-              "entity": "user",
-              "id": 10000,
-              "name": "Test User"
-            }
-          },
-          "messages": []
-        }
-    ```
-
-### Retrieve a Listing [GET]
-Returns a specific Listing.
-
-+ Request
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Listing][]
-
-### Updates a Listing [PATCH]
-Updates a specific Listing
-
-+ Request
-
-    ```js
-    {
-        "program": 4
-    }
-    ```
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [Listing][]
-
-### Deletes a Listing [DELETE]
-Deletes a Listing
-
-+ Request
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 204
-
-
-## List Listings [/tv/epg]
-Returns all Listings.
-
-+ Model (application/json)
-
-    ```js
-    {
-        "headers": {"total": 2},
-        "data": [
-            {
-            "entity": "listing",
-            "id": 1,
-            "startTime": "2014-03-28T00:15:44Z",
-            "endTime": "2014-03-28T00:16:44Z",
-            "program": 5,
-            "airingType": "new",
-            "rating": 4,
-            "isSubtitled": false,
-            "owner": 1,
-            "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-            "createdAt": "2014-03-28T00:25:44Z",
-            "modifiedAt": "2014-03-28T00:25:46Z",
-            "createdBy": {
-              "entity": "user",
-              "id": 3,
-              "name": "Feed Televisa"
-            },
-            "modifiedBy": {
-              "entity": "user",
-              "id": 10000,
-              "name": "Test User"
-            }
-          },
-          {
-            "entity": "listing",
-            "id": 1,
-            "startTime": "2014-05-28T00:15:44Z",
-            "endTime": "2014-05-28T00:16:44Z",
-            "program": 2,
-            "airingType": "repeat",
-            "rating": 5,
-            "isSubtitled": false,
-            "owner": 1,
-            "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-            "createdAt": "2014-03-28T00:25:44Z",
-            "modifiedAt": "2014-03-28T00:25:46Z",
-            "createdBy": {
-              "entity": "user",
-              "id": 3,
-              "name": "Feed Televisa"
-            },
-            "modifiedBy": {
-              "entity": "user",
-              "id": 10000,
-              "name": "Test User"
-            }
-          }
-        ],
-        "messages": []
-    }
-    ```
-
-### Retrieve all Listings [GET]
-Retrieves all Listings.
-
-+ Request
-
-    + Headers
-
-            Authorization: X-Auth-Token qwerty12345
-
-
-+ Response 200
-
-    [List Listings][]
-
 
 # Group Navigation
 Represents actions against SB Navigation objects
@@ -21189,12 +21110,12 @@ Retrieves the info for the given asset.
 # Group Recommendation Engine
 Represents actions to recommendation engine
 
-## Recommended for you [/re/recomended-for-you]
+## Recommended for you [/re/recomended-for-you{?start}{?end}{?numRecommendations}{?allowPreviousRecommendations}]
 Represent recommended for you assets
 
 + Parameters
-    + start = `One month ago`  (optional, timestamp, `1444232877778`) ... start and end are the number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame .
-    + end = `Now`  (optional, timestamp, `1444239999999`) ... start and end are the number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame .
+    + start = `1444232870000`  (optional, timestamp, `1444232877778`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame. Default is one month ago
+    + end = `144423287999`  (optional, timestamp, `1444239999999`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame . Default is now
     + numRecommendations = `20`  (optional, integer, `25`) ... number of recommended assets to receive
     + allowPreviousRecommendations = `false` (optional, boolean, `false`) ... allow or not previous recommendations
         + Values
@@ -21880,13 +21801,13 @@ List of recommended for you assets.
   ```
 
 
-## Because you watched [/re/because-you-watched]
+## Because you watched [/re/because-you-watched?{?assetId}{?start}{?end}{?numRecommendations}{?allowPreviousRecommendations}]
 Represent recommended for you assets because you watched some asset
 
 + Parameters
     + assetId (integer, `123`) ... The asset you watched
-    + start = `One month ago`  (optional, timestamp, `1444232877778`) ... start and end are the number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame .
-    + end = `Now`  (optional, timestamp, `1444239999999`) ... start and end are the number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame .
+    + start = `1444232870000`  (optional, timestamp, `1444232877778`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame. Default is one month ago
+    + end = `144423287999`  (optional, timestamp, `1444239999999`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame . Default is now    
     + numRecommendations = `20`  (optional, integer, `25`) ... number of recommended assets to receive
     + allowPreviousRecommendations = `false` (optional, boolean, `false`) ... allow or not previous recommendations
         + Values
