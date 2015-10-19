@@ -21110,13 +21110,14 @@ Retrieves the info for the given asset.
 # Group Recommendation Engine
 Represents actions to recommendation engine
 
-## Recommended for you [/re/recomended-for-you{?start}{?end}{?numRecommendations}{?allowPreviousRecommendations}]
+## Recommended for you [/re/recomended-for-you{?start}{?end}{?numRecommendations}{?allowPreviousRecommendations}{?collectionId}]
 Represent recommended for you assets
 
 + Parameters
     + start = `1444232870000`  (optional, timestamp, `1444232877778`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame. Default is one month ago
     + end = `144423287999`  (optional, timestamp, `1444239999999`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame . Default is now
     + numRecommendations = `20`  (optional, integer, `25`) ... number of recommended assets to receive
+    + collectionId  (optional, integer) ... if the collection is static + recommended, send the collection id to append static assets
     + allowPreviousRecommendations = `false` (optional, boolean, `false`) ... allow or not previous recommendations
         + Values
             + `true`    ... allow.
@@ -21801,7 +21802,7 @@ List of recommended for you assets.
   ```
 
 
-## Because you watched [/re/because-you-watched?{?assetId}{?start}{?end}{?numRecommendations}{?allowPreviousRecommendations}]
+## Because you watched [/re/because-you-watched?{?assetId}{?start}{?end}{?numRecommendations}{?allowPreviousRecommendations}{?collectionId}]
 Represent recommended for you assets because you watched some asset
 
 + Parameters
@@ -21809,6 +21810,7 @@ Represent recommended for you assets because you watched some asset
     + start = `1444232870000`  (optional, timestamp, `1444232877778`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame. Default is one month ago
     + end = `144423287999`  (optional, timestamp, `1444239999999`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame . Default is now    
     + numRecommendations = `20`  (optional, integer, `25`) ... number of recommended assets to receive
+    + collectionId  (optional, integer) ... if the collection is static + recommended, send the collection id to append static assets
     + allowPreviousRecommendations = `false` (optional, boolean, `false`) ... allow or not previous recommendations
         + Values
             + `true`    ... allow.
