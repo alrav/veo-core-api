@@ -1413,7 +1413,7 @@ Attempts to activate a device code.
 
     + Headers
 
-        Authorization: OAuth ...
+             Authorization: OAuth ...
 
 + Response 200
 
@@ -2992,448 +2992,232 @@ Represents actions against the EPG
         "data": [
             {
                 "entity": "channel",
-                "category": "linearChannel",
                 "id": 18,
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "Unicable",
-                "number": 203,
+                "title": "Hola TV",
+                "titleEditorial": "Hola TV",
+                "number": 228,
+                "description": "Hola TV Lo mejor de la revista ¡HOLA! Reinventado para la televisión con noticias, exclusivas y programación especial.",
                 "images": [
                     {
-                        "type": "epgTimeline",
+                        "profile": "thumbnail",
                         "link": "https://dyv52uavm19r4.cloudfront.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
                         "width": 31,
                         "height": 47
                     }
                 ],
-                "schedules": [
+                "listings": [
                     {
                         "id": 123,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 392,
-                                "startTime": "2013-04-01T00:00:00Z",
-                                "endTime": "2013-04-01T01:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
+                        "entity": "listing",
+                        "title": "Especiales Realeza",
+                        "aitingType": "live",
+                        "startTime": "2015-11-08T00:00:00Z",
+                        "endTime": "2015-11-08T01:30:00Z",
+                        "parentalRating": {
+                            "entity": "parentalRating",
+                            "id": 9,
+                            "items": [],
+                            "parent": null,
+                            "title": "R"
+                        },
+                        "program": {
+                            "id": 200,
+                            "entity": "program",
+                            "title": "Especiales Realeza",
+                            "titleEditorial": "Especiales Realeza",
+                            "description": "Esta es la historia íntima de las bodas reales de Gran Bretaña desde la reina madre hasta la actualidad contada por las personas que estaban allí con relatos de primera mano de los preparativos.",
+                            "images": [],
+                            "category": "episode",
+                            "parentalRating": {
+                                "entity": "parentalRating",
+                                "id": 9,
+                                "items": [],
+                                "parent": null,
+                                "title": "R"
                             },
-                            {
-                                "id": 393,
-                                "startTime": "2013-04-01T01:30:00Z",
-                                "endTime": "2013-04-01T03:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
+                            "airDate": "2013-03-28T13:21:35Z"
+                        }
+                    },
+                    {
+                        "id": 124,
+                        "entity": "listing",
+                        "title": "Behind the Label",
+                        "aitingType": "repeat",
+                        "startTime": "2015-11-08T01:30:00Z",
+                        "endTime": "2015-11-08T02:00:00Z",
+                        "parentalRating": {
+                            "entity": "parentalRating",
+                            "id": 9,
+                            "items": [],
+                            "parent": null,
+                            "title": "R"
+                        },
+                        "program": {
+                            "id": 201,
+                            "entity": "program",
+                            "title": "Behind the Label",
+                            "titleEditorial": "Behind the Label",
+                            "description": "Conozca a una de las leyendas del mundo de la moda y descubre cómo entró en el mundo del diseño.",
+                            "images": [],
+                            "category": "episode",
+                            "parentalRating": {
+                                "entity": "parentalRating",
+                                "id": 9,
+                                "items": [],
+                                "parent": null,
+                                "title": "R"
                             },
-                            {
-                                "id": 394,
-                                "startTime": "2013-04-01T03:00:00Z",
-                                "endTime": "2013-04-01T04:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "La Cocina de...",
-                                    "titleShort": "La Cocina de..."
-                                }
+                            "airDate": "2013-05-29T13:00:00Z"
+                        }
+                    },
+                    {
+                        "id": 125,
+                        "entity": "listing",
+                        "title": "Videofashion: Designers",
+                        "aitingType": "repeat",
+                        "startTime": "2015-11-08T02:00:00Z",
+                        "endTime": "2015-11-08T02:30:00Z",
+                        "parentalRating": {
+                            "entity": "parentalRating",
+                            "id": 9,
+                            "items": [],
+                            "parent": null,
+                            "title": "R"
+                        },
+                        "program": {
+                            "id": 201,
+                            "entity": "program",
+                            "title": "Videofashion: Designers",
+                            "titleEditorial": "Videofashion: Designers",
+                            "description": "Los diseñadores de la marca Rag & Bone.",
+                            "images": [],
+                            "category": "episode",
+                            "parentalRating": {
+                                "entity": "parentalRating",
+                                "id": 9,
+                                "items": [],
+                                "parent": null,
+                                "title": "R"
                             },
-                            {
-                                "id": 395,
-                                "startTime": "2013-04-01T04:30:00Z",
-                                "endTime": "2013-04-01T06:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "El Señor de los Cielos",
-                                    "titleShort": "El Señor de los Cielos"
-                                }
-                            },
-                            {
-                                "id": 396,
-                                "startTime": "2013-04-01T06:00:00Z",
-                                "endTime": "2013-04-01T07:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Laura",
-                                    "titleShort": "Laura"
-                                }
-                            },
-                            {
-                                "id": 397,
-                                "startTime": "2013-04-01T07:30:00Z",
-                                "endTime": "2013-04-01T09:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "El Gordo y la Flaca",
-                                    "titleShort": "El Gordo y la Flaca"
-                                }
-                            },
-                            {
-                                "id": 398,
-                                "startTime": "2013-04-01T09:00:00Z",
-                                "endTime": "2013-04-01T10:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Primer Impacto",
-                                    "titleShort": "Primer Impacto"
-                                }
-                            },
-                            {
-                                "id": 399,
-                                "startTime": "2013-04-01T10:30:00Z",
-                                "endTime": "2013-04-01T13:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 180,
-                                    "subCategory": "series",
-                                    "title": "Iron Chef America",
-                                    "titleShort": "Iron Chef America"
-                                }
-                            },
-                            {
-                                "id": 400,
-                                "startTime": "2013-04-01T13:00:00Z",
-                                "endTime": "2013-04-01T15:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Fashion Tour",
-                                    "titleShort": "Fashion Tour"
-                                }
-                            },
-                            {
-                                "id": 401,
-                                "startTime": "2013-04-01T15:30:00Z",
-                                "endTime": "2013-04-01T18:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 180,
-                                    "subCategory": "movie",
-                                    "title": "El Chivo",
-                                    "titleShort": "El Chivo"
-                                }
-                            },
-                            {
-                                "id": 402,
-                                "startTime": "2013-04-01T18:00:00Z",
-                                "endTime": "2013-04-01T19:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "De Chile, Mole y Pozole",
-                                    "titleShort": "De Chile, Mole y Pozole"
-                                }
-                            },
-                            {
-                                "id": 403,
-                                "startTime": "2013-04-01T19:30:00Z",
-                                "endTime": "2013-04-01T21:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Bocaditos de Cielo",
-                                    "titleShort": "Bocaditos de Cielo"
-                                }
-                            },
-                            {
-                                "id": 404,
-                                "startTime": "2013-04-01T21:00:00Z",
-                                "endTime": "2013-04-01T23:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 180,
-                                    "subCategory": "series",
-                                    "title": "Repostería con Anna Olson",
-                                    "titleShort": "Repostería con Anna Olson"
-                                }
-                            },
-                            {
-                                "id": 405,
-                                "startTime": "2013-04-01T23:30:00Z",
-                                "endTime": "2013-04-02T01:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Siempre Dulce",
-                                    "titleShort": "Siempre Dulce"
-                                }
-                            }
-                        ]
+                            "airDate": "2013-09-02T15:00:00Z"
+                        }
                     }
                 ]
             },
-            {
+           {
                 "entity": "channel",
-                "category": "linearChannel",
                 "id": 19,
-                "modifiedAt": "2013-03-28T13:21:35Z",
-                "title": "HOLA TV",
-                "number": 228,
+                "title": "Univision TDN",
+                "titleEditorial": "Univision TDN",
+                "number": 502,
+                "description": "Univision TDN.",
                 "images": [
                     {
-                        "type": "epgTimeline",
-                        "link": "https://dyv52uavm19r4.cloudfront.net/prod/LinearChannel/C_1_Channel_126_epgTimelineLogo.png",
+                        "profile": "thumbnail",
+                        "link": "https://dyv52uavm19r4.cloudfront.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
                         "width": 31,
                         "height": 47
                     }
                 ],
-                "schedules": [
+                "listings": [
                     {
-                        "id": 124,
-                        "entity": "schedule",
-                        "category": "linearSchedule",
-                        "scheduleDate": "2013-04-01T00:00:00Z",
-                        "items": [
-                            {
-                                "id": 492,
-                                "startTime": "2013-04-01T00:00:00Z",
-                                "endTime": "2013-04-01T01:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Co-Ed Confidential 4",
-                                    "titleShort": "Co-Ed Confidential 4"
-                                }
+                        "id": 126,
+                        "entity": "listing",
+                        "title": "FIFA Mundial de Fútbol Sub-17",
+                        "aitingType": "live",
+                        "startTime": "2015-11-08T00:00:00Z",
+                        "endTime": "2015-11-08T01:30:00Z",
+                        "parentalRating": {
+                            "entity": "parentalRating",
+                            "id": 9,
+                            "items": [],
+                            "parent": null,
+                            "title": "R"
+                        },
+                        "program": {
+                            "id": 200,
+                            "entity": "program",
+                            "title": "FIFA Mundial de Fútbol Sub-17",
+                            "titleEditorial": "FIFA Mundial de Fútbol Sub-17",
+                            "description": "Desde el Estadio Francisco Sánchez Rumoroso Municipal en Coquimbo, Chile.",
+                            "images": [],
+                            "category": "sport",
+                            "parentalRating": {
+                                "entity": "parentalRating",
+                                "id": 9,
+                                "items": [],
+                                "parent": null,
+                                "title": "R"
                             },
-                            {
-                                "id": 493,
-                                "startTime": "2013-04-01T01:30:00Z",
-                                "endTime": "2013-04-01T03:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Furia De Mujer",
-                                    "titleShort": "Furia De Mujer"
-                                }
+                            "airDate": "2013-03-28T13:21:35Z"
+                        }
+                    },
+                    {
+                        "id": 127,
+                        "entity": "listing",
+                        "title": "Adrenalina Xtreme",
+                        "aitingType": "repeat",
+                        "startTime": "2015-11-08T01:30:00Z",
+                        "endTime": "2015-11-08T02:00:00Z",
+                        "parentalRating": {
+                            "entity": "parentalRating",
+                            "id": 9,
+                            "items": [],
+                            "parent": null,
+                            "title": "R"
+                        },
+                        "program": {
+                            "id": 201,
+                            "entity": "program",
+                            "title": "Adrenalina Xtreme",
+                            "titleEditorial": "Adrenalina Xtreme",
+                            "description": "Toda la emoción de los deportes extremos a manos de expertos.",
+                            "images": [],
+                            "category": "episode",
+                            "parentalRating": {
+                                "entity": "parentalRating",
+                                "id": 9,
+                                "items": [],
+                                "parent": null,
+                                "title": "R"
                             },
-                            {
-                                "id": 494,
-                                "startTime": "2013-04-01T03:00:00Z",
-                                "endTime": "2013-04-01T04:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "La Cocina de...",
-                                    "titleShort": "La Cocina de..."
-                                }
+                            "airDate": "2013-05-29T13:00:00Z"
+                        }
+                    },
+                    {
+                        "id": 128,
+                        "entity": "listing",
+                        "title": "Pasión",
+                        "aitingType": "taped",
+                        "startTime": "2015-11-08T02:00:00Z",
+                        "endTime": "2015-11-08T02:30:00Z",
+                        "parentalRating": {
+                            "entity": "parentalRating",
+                            "id": 9,
+                            "items": [],
+                            "parent": null,
+                            "title": "R"
+                        },
+                        "program": {
+                            "id": 201,
+                            "entity": "program",
+                            "title": "Pasión",
+                            "titleEditorial": "Pasión",
+                            "description": "Mesa de discusión sobre lo ocurrido cada jornada deportiva, con entrevistas en vivo.",
+                            "images": [],
+                            "category": "episode",
+                            "parentalRating": {
+                                "entity": "parentalRating",
+                                "id": 9,
+                                "items": [],
+                                "parent": null,
+                                "title": "R"
                             },
-                            {
-                                "id": 495,
-                                "startTime": "2013-04-01T04:30:00Z",
-                                "endTime": "2013-04-01T06:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "El Señor de los Cielos",
-                                    "titleShort": "El Señor de los Cielos"
-                                }
-                            },
-                            {
-                                "id": 496,
-                                "startTime": "2013-04-01T06:00:00Z",
-                                "endTime": "2013-04-01T07:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Laura",
-                                    "titleShort": "Laura"
-                                }
-                            },
-                            {
-                                "id": 497,
-                                "startTime": "2013-04-01T07:30:00Z",
-                                "endTime": "2013-04-01T09:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "El Gordo y la Flaca",
-                                    "titleShort": "El Gordo y la Flaca"
-                                }
-                            },
-                            {
-                                "id": 498,
-                                "startTime": "2013-04-01T09:00:00Z",
-                                "endTime": "2013-04-01T10:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Primer Impacto",
-                                    "titleShort": "Primer Impacto"
-                                }
-                            },
-                            {
-                                "id": 499,
-                                "startTime": "2013-04-01T10:30:00Z",
-                                "endTime": "2013-04-01T13:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 180,
-                                    "subCategory": "series",
-                                    "title": "Iron Chef America",
-                                    "titleShort": "Iron Chef America"
-                                }
-                            },
-                            {
-                                "id": 500,
-                                "startTime": "2013-04-01T13:00:00Z",
-                                "endTime": "2013-04-01T15:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Fashion Tour",
-                                    "titleShort": "Fashion Tour"
-                                }
-                            },
-                            {
-                                "id": 501,
-                                "startTime": "2013-04-01T15:30:00Z",
-                                "endTime": "2013-04-01T18:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 180,
-                                    "subCategory": "movie",
-                                    "title": "El Chivo",
-                                    "titleShort": "El Chivo"
-                                }
-                            },
-                            {
-                                "id": 502,
-                                "startTime": "2013-04-01T18:00:00Z",
-                                "endTime": "2013-04-01T19:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "De Chile, Mole y Pozole",
-                                    "titleShort": "De Chile, Mole y Pozole"
-                                }
-                            },
-                            {
-                                "id": 503,
-                                "startTime": "2013-04-01T19:30:00Z",
-                                "endTime": "2013-04-01T21:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Bocaditos de Cielo",
-                                    "titleShort": "Bocaditos de Cielo"
-                                }
-                            },
-                            {
-                                "id": 504,
-                                "startTime": "2013-04-01T21:00:00Z",
-                                "endTime": "2013-04-01T23:30:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearEpisodeProgram",
-                                    "id": 3,
-                                    "duration": 180,
-                                    "subCategory": "series",
-                                    "title": "Repostería con Anna Olson",
-                                    "titleShort": "Repostería con Anna Olson"
-                                }
-                            },
-                            {
-                                "id": 505,
-                                "startTime": "2013-04-01T23:30:00Z",
-                                "endTime": "2013-04-02T01:00:00Z",
-                                "program": {
-                                    "entity": "program",
-                                    "category": "linearMovieProgram",
-                                    "id": 7,
-                                    "duration": 90,
-                                    "subCategory": "series",
-                                    "title": "Siempre Dulce",
-                                    "titleShort": "Siempre Dulce"
-                                }
-                            }
-                        ]
+                            "airDate": "2013-09-02T15:00:00Z"
+                        }
                     }
                 ]
-            }
+            } 
         ],
         "messages": []
     }
@@ -3461,223 +3245,115 @@ Represents actions against the EPG, filtered by Channel
         "headers": {"ttl": 0},
         "data": {
             "entity": "channel",
-            "category": "linearChannel",
             "id": 18,
-            "modifiedAt": "2013-03-28T13:21:35Z",
-            "title": "Unicable",
-            "number": 203,
+            "title": "Hola TV",
+            "titleEditorial": "Hola TV",
+            "number": 228,
+            "description": "Hola TV Lo mejor de la revista ¡HOLA! Reinventado para la televisión con noticias, exclusivas y programación especial.",
             "images": [
                 {
-                    "type": "epgTimeline",
+                    "profile": "thumbnail",
                     "link": "https://dyv52uavm19r4.cloudfront.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
                     "width": 31,
                     "height": 47
                 }
             ],
-            "schedules": [
+            "listings": [
                 {
                     "id": 123,
-                    "entity": "schedule",
-                    "category": "linearSchedule",
-                    "scheduleDate": "2013-04-01T00:00:00Z",
-                    "items": [
-                        {
-                            "id": 392,
-                            "startTime": "2013-04-01T00:00:00Z",
-                            "endTime": "2013-04-01T01:30:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearEpisodeProgram",
-                                "id": 3,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "Co-Ed Confidential 4",
-                                "titleShort": "Co-Ed Confidential 4"
-                            }
+                    "entity": "listing",
+                    "title": "Especiales Realeza",
+                    "aitingType": "live",
+                    "startTime": "2015-11-08T00:00:00Z",
+                    "endTime": "2015-11-08T01:30:00Z",
+                    "parentalRating": {
+                        "entity": "parentalRating",
+                        "id": 9,
+                        "items": [],
+                        "parent": null,
+                        "title": "R"
+                    },
+                    "program": {
+                        "id": 200,
+                        "entity": "program",
+                        "title": "Especiales Realeza",
+                        "titleEditorial": "Especiales Realeza",
+                        "description": "Esta es la historia íntima de las bodas reales de Gran Bretaña desde la reina madre hasta la actualidad contada por las personas que estaban allí con relatos de primera mano de los preparativos.",
+                        "images": [],
+                        "category": "episode",
+                        "parentalRating": {
+                            "entity": "parentalRating",
+                            "id": 9,
+                            "items": [],
+                            "parent": null,
+                            "title": "R"
                         },
-                        {
-                            "id": 393,
-                            "startTime": "2013-04-01T01:30:00Z",
-                            "endTime": "2013-04-01T03:00:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearMovieProgram",
-                                "id": 7,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "Furia De Mujer",
-                                "titleShort": "Furia De Mujer"
-                            }
+                        "airDate": "2013-03-28T13:21:35Z"
+                    }
+                },
+                {
+                    "id": 124,
+                    "entity": "listing",
+                    "title": "Behind the Label",
+                    "aitingType": "repeat",
+                    "startTime": "2015-11-08T01:30:00Z",
+                    "endTime": "2015-11-08T02:00:00Z",
+                    "parentalRating": {
+                        "entity": "parentalRating",
+                        "id": 9,
+                        "items": [],
+                        "parent": null,
+                        "title": "R"
+                    },
+                    "program": {
+                        "id": 201,
+                        "entity": "program",
+                        "title": "Behind the Label",
+                        "titleEditorial": "Behind the Label",
+                        "description": "Conozca a una de las leyendas del mundo de la moda y descubre cómo entró en el mundo del diseño.",
+                        "images": [],
+                        "category": "episode",
+                        "parentalRating": {
+                            "entity": "parentalRating",
+                            "id": 9,
+                            "items": [],
+                            "parent": null,
+                            "title": "R"
                         },
-                        {
-                            "id": 394,
-                            "startTime": "2013-04-01T03:00:00Z",
-                            "endTime": "2013-04-01T04:30:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearEpisodeProgram",
-                                "id": 3,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "La Cocina de...",
-                                "titleShort": "La Cocina de..."
-                            }
+                        "airDate": "2013-05-29T13:00:00Z"
+                    }
+                },
+                {
+                    "id": 125,
+                    "entity": "listing",
+                    "title": "Videofashion: Designers",
+                    "aitingType": "repeat",
+                    "startTime": "2015-11-08T02:00:00Z",
+                    "endTime": "2015-11-08T02:30:00Z",
+                    "parentalRating": {
+                        "entity": "parentalRating",
+                        "id": 9,
+                        "items": [],
+                        "parent": null,
+                        "title": "R"
+                    },
+                    "program": {
+                        "id": 201,
+                        "entity": "program",
+                        "title": "Videofashion: Designers",
+                        "titleEditorial": "Videofashion: Designers",
+                        "description": "Los diseñadores de la marca Rag & Bone.",
+                        "images": [],
+                        "category": "episode",
+                        "parentalRating": {
+                            "entity": "parentalRating",
+                            "id": 9,
+                            "items": [],
+                            "parent": null,
+                            "title": "R"
                         },
-                        {
-                            "id": 395,
-                            "startTime": "2013-04-01T04:30:00Z",
-                            "endTime": "2013-04-01T06:00:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearMovieProgram",
-                                "id": 7,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "El Señor de los Cielos",
-                                "titleShort": "El Señor de los Cielos"
-                            }
-                        },
-                        {
-                            "id": 396,
-                            "startTime": "2013-04-01T06:00:00Z",
-                            "endTime": "2013-04-01T07:30:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearEpisodeProgram",
-                                "id": 3,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "Laura",
-                                "titleShort": "Laura"
-                            }
-                        },
-                        {
-                            "id": 397,
-                            "startTime": "2013-04-01T07:30:00Z",
-                            "endTime": "2013-04-01T09:00:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearMovieProgram",
-                                "id": 7,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "El Gordo y la Flaca",
-                                "titleShort": "El Gordo y la Flaca"
-                            }
-                        },
-                        {
-                            "id": 398,
-                            "startTime": "2013-04-01T09:00:00Z",
-                            "endTime": "2013-04-01T10:30:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearEpisodeProgram",
-                                "id": 3,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "Primer Impacto",
-                                "titleShort": "Primer Impacto"
-                            }
-                        },
-                        {
-                            "id": 399,
-                            "startTime": "2013-04-01T10:30:00Z",
-                            "endTime": "2013-04-01T13:00:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearMovieProgram",
-                                "id": 7,
-                                "duration": 180,
-                                "subCategory": "series",
-                                "title": "Iron Chef America",
-                                "titleShort": "Iron Chef America"
-                            }
-                        },
-                        {
-                            "id": 400,
-                            "startTime": "2013-04-01T13:00:00Z",
-                            "endTime": "2013-04-01T15:30:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearEpisodeProgram",
-                                "id": 3,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "Fashion Tour",
-                                "titleShort": "Fashion Tour"
-                            }
-                        },
-                        {
-                            "id": 401,
-                            "startTime": "2013-04-01T15:30:00Z",
-                            "endTime": "2013-04-01T18:00:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearMovieProgram",
-                                "id": 7,
-                                "duration": 180,
-                                "subCategory": "movie",
-                                "title": "El Chivo",
-                                "titleShort": "El Chivo"
-                            }
-                        },
-                        {
-                            "id": 402,
-                            "startTime": "2013-04-01T18:00:00Z",
-                            "endTime": "2013-04-01T19:30:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearEpisodeProgram",
-                                "id": 3,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "De Chile, Mole y Pozole",
-                                "titleShort": "De Chile, Mole y Pozole"
-                            }
-                        },
-                        {
-                            "id": 403,
-                            "startTime": "2013-04-01T19:30:00Z",
-                            "endTime": "2013-04-01T21:00:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearMovieProgram",
-                                "id": 7,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "Bocaditos de Cielo",
-                                "titleShort": "Bocaditos de Cielo"
-                            }
-                        },
-                        {
-                            "id": 404,
-                            "startTime": "2013-04-01T21:00:00Z",
-                            "endTime": "2013-04-01T23:30:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearEpisodeProgram",
-                                "id": 3,
-                                "duration": 180,
-                                "subCategory": "series",
-                                "title": "Repostería con Anna Olson",
-                                "titleShort": "Repostería con Anna Olson"
-                            }
-                        },
-                        {
-                            "id": 405,
-                            "startTime": "2013-04-01T23:30:00Z",
-                            "endTime": "2013-04-02T01:00:00Z",
-                            "program": {
-                                "entity": "program",
-                                "category": "linearMovieProgram",
-                                "id": 7,
-                                "duration": 90,
-                                "subCategory": "series",
-                                "title": "Siempre Dulce",
-                                "titleShort": "Siempre Dulce"
-                            }
-                        }
-                    ]
+                        "airDate": "2013-09-02T15:00:00Z"
+                    }
                 }
             ]
         },
