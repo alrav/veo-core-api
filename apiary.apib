@@ -3063,6 +3063,10 @@ Represents actions against the EPG
                                 "title": "Tiempo de Barro",
                                 "titleEditorial": null,
                                 "category": "episode"
+                            },
+                            "genre": {
+                                "id": 111,
+                                "title": "Aventura"
                             }
                         }
                     },
@@ -3097,7 +3101,11 @@ Represents actions against the EPG
                             },
                             "airDate": "2013-05-29T13:00:00Z",
                             "duration": 1800,
-                            "asset": null
+                            "asset": null,
+                            "genre": {
+                                "id": 111,
+                                "title": "Aventura"
+                            }
                         }
                     },
                     {
@@ -3131,7 +3139,11 @@ Represents actions against the EPG
                             },
                             "airDate": "2013-09-02T15:00:00Z",
                             "duration": 1800,
-                            "asset": null
+                            "asset": null,
+                            "genre": {
+                                "id": 111,
+                                "title": "Aventura"
+                            }
                         }
                     }
                 ]
@@ -3208,7 +3220,11 @@ Represents actions against the EPG
                             },
                             "airDate": "2013-03-28T13:21:35Z",
                             "duration": 1800,
-                            "asset": null
+                            "asset": null,
+                            "genre": {
+                                "id": 111,
+                                "title": "Aventura"
+                            }
                         }
                     },
                     {
@@ -3242,7 +3258,11 @@ Represents actions against the EPG
                             },
                             "airDate": "2013-05-29T13:00:00Z",
                             "duration": 1800,
-                            "asset": null
+                            "asset": null,
+                            "genre": {
+                                "id": 111,
+                                "title": "Aventura"
+                            }
                         }
                     },
                     {
@@ -3276,7 +3296,11 @@ Represents actions against the EPG
                             },
                             "airDate": "2013-09-02T15:00:00Z",
                             "duration": 1800,
-                            "asset": null
+                            "asset": null,
+                            "genre": {
+                                "id": 111,
+                                "title": "Aventura"
+                            }
                         }
                     }
                 ]
@@ -3378,7 +3402,11 @@ Represents actions against the EPG, filtered by Channel
                         },
                         "airDate": "2013-03-28T13:21:35Z",
                         "duration": 1800,
-                        "asset": null
+                        "asset": null,
+                        "genre": {
+                            "id": 111,
+                            "title": "Aventura"
+                        }
                     }
                 },
                 {
@@ -3412,7 +3440,11 @@ Represents actions against the EPG, filtered by Channel
                         },
                         "airDate": "2013-05-29T13:00:00Z",
                         "duration": 1800,
-                        "asset": null
+                        "asset": null,
+                        "genre": {
+                            "id": 111,
+                            "title": "Aventura"
+                        }
                     }
                 },
                 {
@@ -3446,7 +3478,11 @@ Represents actions against the EPG, filtered by Channel
                         },
                         "airDate": "2013-09-02T15:00:00Z",
                         "duration": 1800,
-                        "asset": null
+                        "asset": null,
+                        "genre": {
+                            "id": 111,
+                            "title": "Aventura"
+                        }
                     }
                 }
             ]
@@ -22900,33 +22936,34 @@ Represents a Program
     {
         "headers": {"ttl": 0},
         "data": {
-            "entity": "program",
-            "category": "linearEpisodeProgram",
             "id": 3,
-            "modifiedAt": "2014-03-28T00:25:46Z",
-            "isHd": false,
-            "isLive": false,
-            "keywords": [
-               "dragon",
-               "ball"
-             ],
-            "areRightsBlocked": false,
+            "entity": "program",
+            "title": "Co-Ed Confidential 4",
+            "titleEditorial": null,
+            "description": "Karen cuida de Zach.",
+            "picture": null,
+            "category": "episode",
+            "parentalRating": {
+                "entity": "parentalRating",
+                "id": 9,
+                "title": "R"
+            },
+            "airDate": "2013-03-28T13:21:35Z",
+            "duration": 1800,
+            "asset": {
+                "entity": "asset",
+                "id": 24,
+                "title": "Tiempo de Barro",
+                "titleEditorial": null,
+                "category": "episode"
+            },
             "genre": {
                 "id": 111,
                 "title": "Acción y Aventura"
             },
             "packageCodes": [
                 "Premium"
-            ],
-            "parentalRating": {
-                "id": 9,
-                "title": "R"
-            },
-            "synopsisShort": "Karen cuida de Zach",
-            "synopsis": "Karen cuida de Zach",
-            "subCategory": "series",
-            "title": "Co-Ed Confidential 4",
-            "airDate": "2010-06-17T00:00:00Z"
+            ]
         },
         "messages": []
     }
@@ -22950,25 +22987,31 @@ Returns all Programs.
         "headers": {"ttl": 0, "total": 1},
         "data": [
             {
-                "entity": "program",
-                "category": "linearEpisodeProgram",
                 "id": 3,
-                "modifiedAt": "2014-03-28T00:25:46Z",
-                "isHd": false,
-                "isLive": false,
-                "areRightsBlocked": false,
-                "genre": {
-                    "id": 111,
-                    "title": "Acción y Aventura"
-                },
+                "entity": "program",
+                "title": "Co-Ed Confidential 4",
+                "titleEditorial": null,
+                "description": "Karen cuida de Zach.",
+                "picture": null,
+                "category": "episode",
                 "parentalRating": {
+                    "entity": "parentalRating",
                     "id": 9,
                     "title": "R"
                 },
-                "synopsisShort": "Karen cuida de Zach",
-                "subCategory": "series",
-                "title": "Co-Ed Confidential 4",
-                "airDate": "2010-06-17T00:00:00Z"
+                "airDate": "2013-03-28T13:21:35Z",
+                "duration": 1800,
+                "asset": {
+                    "entity": "asset",
+                    "id": 24,
+                    "title": "Tiempo de Barro",
+                    "titleEditorial": null,
+                    "category": "episode"
+                },
+                "genre": {
+                    "id": 111,
+                    "title": "Acción y Aventura"
+                }
             }
         ],
         "messages": []
