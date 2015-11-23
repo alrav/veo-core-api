@@ -2976,8 +2976,8 @@ Represents actions against the Veo EPG
 Represents actions against the EPG
 
 + Parameters
-    + start (int, `1423720800`) ... The start Unix timestamp of the EPG.
-    + end (int, `1424204313`) ... The end Unix timestamp of the EPG.
+    + start (int, `2015-01-01T00:00:00Z`) ... The start date time, in ISO format, of the EPG.
+    + end (int, `2015-11-18T00:00:00Z`) ... The end date time, in ISO format, of the EPG.
 
 + Model (application/json)
 
@@ -3012,17 +3012,16 @@ Represents actions against the EPG
                 "isPayPerView": false,
                 "streams": [
                     {
-                        "format": "ss",
-                        "urls": [
-                            {
-                                "type": "live",
-                                "link": "http://veocdn294859sk.com/out/u/filtername.m3u8"
-                            },
-                            {
-                                "type": "catchup",
-                                "link": "http://veocdn294859sk.com/start/1430155800/end/1430157600/out/u/filtername.ism/Manifest"
-                            }
-                        ]
+                      "type": "ss",
+                      "path": "http://video.veo.tv/PAID0000000000578580/ss/b8e76095419ced846b920e15f3fb6f0b07226fd9dcf0a08170ec38d88a200f18/ss_b8e76095419ced846b920e15f3fb6f0b07226fd9dcf0a08170ec38d88a200f18.ism/Manifest"
+                    },
+                    {
+                      "type": "mpd",
+                      "path": "http://video.veo.tv/PAID0000000000578580/dash/18515_c74fe423e91616204df0ebf3050e4a34/mpds/18515.mpd?cb=144482980"
+                    },
+                    {
+                      "type": "hls",
+                      "path": "http://video.veo.tv/PAID0000000000578580/hls/26289_8c74f1d7a89a3b640e67f7efa367eead/m3u8s/26289.m3u8?cb=144648325"
                     }
                 ],
                 "listings": [
@@ -3175,17 +3174,16 @@ Represents actions against the EPG
                 "isPayPerView": false,
                 "streams": [
                     {
-                        "format": "ss",
-                        "urls": [
-                            {
-                                "type": "live",
-                                "link": "http://veocdn294859sk.com/out/u/filtername.m3u8"
-                            },
-                            {
-                                "type": "catchup",
-                                "link": "http://veocdn294859sk.com/start/1430155800/end/1430157600/out/u/filtername.ism/Manifest"
-                            }
-                        ]
+                      "type": "ss",
+                      "path": "http://video.veo.tv/PAID0000000000578580/ss/b8e76095419ced846b920e15f3fb6f0b07226fd9dcf0a08170ec38d88a200f18/ss_b8e76095419ced846b920e15f3fb6f0b07226fd9dcf0a08170ec38d88a200f18.ism/Manifest"
+                    },
+                    {
+                      "type": "mpd",
+                      "path": "http://video.veo.tv/PAID0000000000578580/dash/18515_c74fe423e91616204df0ebf3050e4a34/mpds/18515.mpd?cb=144482980"
+                    },
+                    {
+                      "type": "hls",
+                      "path": "http://video.veo.tv/PAID0000000000578580/hls/26289_8c74f1d7a89a3b640e67f7efa367eead/m3u8s/26289.m3u8?cb=144648325"
                     }
                 ],
                 "listings": [
@@ -3321,8 +3319,8 @@ Returns a specific EPG given relevant start and end times
 Represents actions against the EPG, filtered by Channel
 
 + Parameters
-    + start (int, `1423720800`) ... The start Unix timestamp of the Schedule.
-    + end (int, `1424204313`) ... The end Unix timestamp of the Schedule.
+    + start (int, `2015-01-01T00:00:00Z`) ... The start date time, in ISO format, of the EPG.
+    + end (int, `2015-11-18T00:00:00Z`) ... The end date time, in ISO format, of the EPG.
     + channelId (int, `16`) ... The id of the schedule channel
 
 + Model (application/json)
@@ -3357,17 +3355,16 @@ Represents actions against the EPG, filtered by Channel
             "isPayPerView": false,
             "streams": [
                 {
-                    "format": "ss",
-                    "urls": [
-                        {
-                            "type": "live",
-                            "link": "http://veocdn294859sk.com/out/u/filtername.m3u8"
-                        },
-                        {
-                            "type": "catchup",
-                            "link": "http://veocdn294859sk.com/start/1430155800/end/1430157600/out/u/filtername.ism/Manifest"
-                        }
-                    ]
+                  "type": "ss",
+                  "path": "http://video.veo.tv/PAID0000000000578580/ss/b8e76095419ced846b920e15f3fb6f0b07226fd9dcf0a08170ec38d88a200f18/ss_b8e76095419ced846b920e15f3fb6f0b07226fd9dcf0a08170ec38d88a200f18.ism/Manifest"
+                },
+                {
+                  "type": "mpd",
+                  "path": "http://video.veo.tv/PAID0000000000578580/dash/18515_c74fe423e91616204df0ebf3050e4a34/mpds/18515.mpd?cb=144482980"
+                },
+                {
+                  "type": "hls",
+                  "path": "http://video.veo.tv/PAID0000000000578580/hls/26289_8c74f1d7a89a3b640e67f7efa367eead/m3u8s/26289.m3u8?cb=144648325"
                 }
             ],
             "listings": [
