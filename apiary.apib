@@ -282,6 +282,52 @@ Attempts to unlink an account Device.
     }
     ```
 
+## iZZi Login [/account/izzi/login]
+Attempts to authenticate with iZZi credentials.
+
+### Login to the site [POST]
+
++ Request (application/json)
+
+    ```js
+    {
+            "email": "user@gmail.com",
+            "password": "password1",
+            "remember": true
+    }
+    ```
+
++ Response 200
+
+    [Account][]
+
++ Response 202 (application/json)
+
+    ```js
+    {
+        "email": "somebody@veo.tv",
+        "iZZiId": "8faa1ac4dcc0369e94f68b03a172eceb",
+        "type": "iZZiAccount"
+    }
+    ```    
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "headers": {"ttl": 0},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "You have entered an invalid email and/or password."
+            }
+        ]
+    }
+    ```    
+
+
+
 ## Facebook login [/account/facebook/login]
 Attempts to authenticate a user through facebook.
     
@@ -383,8 +429,6 @@ Attempts to authenticate a user through facebook.
         ]
     }
     ```
-    
-
 
 ## Facebook link [/account/facebook/link]
 Attempts to link/unlink a facebook account.
