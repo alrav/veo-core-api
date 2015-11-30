@@ -301,15 +301,42 @@ Attempts to authenticate with iZZi credentials.
 
     [Account][]
 
-+ Response 202 (application/json)
++ Response 401 (application/json)
 
     ```js
     {
-        "email": "somebody@veo.tv",
-        "iZZiId": "8faa1ac4dcc0369e94f68b03a172eceb",
-        "type": "iZZiAccount"
+        "headers": {"ttl": 0},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "You have entered invalid iZZi credentials."
+            }
+        ]
     }
     ```    
+
+## iZZi Register [/account/izzi/register]
+### Create an Account based on iZZi user[POST]
+Attempts to create a new account linked to iZZi user.
+
++ Request (application/json)
+
+    ```js
+    {
+        "izziUser": "user@gmail.com",
+        "izziPassword": "*********",
+        "mso": "2",
+        "firstName": "John",
+        "familyName": "Doe",
+        "city": ""
+    }
+    ```
+
++ Response 201
+
+    [Account][]
+
 
 + Response 401 (application/json)
 
@@ -320,11 +347,11 @@ Attempts to authenticate with iZZi credentials.
         "messages": [
             {
                 "context": null,
-                "value": "You have entered an invalid email and/or password."
+                "value": "You have entered invalid iZZi credentials."
             }
         ]
     }
-    ```    
+    ```
 
 
 
