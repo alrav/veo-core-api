@@ -1417,7 +1417,64 @@ Attempts to remove a SVOD subscription entitlement.
     }
     ```
 
+# Group Account - Payment
+Represents payment actions against an user account.
 
+## Payment Method [/account//paymentMethod/{accountId}]
+Represents actions against an account payment method.
+
++ Parameters
+    + accountId (string, `1`) ... The id of the Rental.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "gateway": "BRAINTREE",
+            "payload": {
+                "payment_method_nonce": "fake-paypal-billing-agreement-nonce",
+                "device_data": ""
+            }
+        },
+        "messages": []
+    }
+    ```
+
+### Update Payment Method [PUT]
+Attempts to update an account payment method.
+
++ Request (application/json)
+
+    ```js
+    {
+        "gateway": "BRAINTREE",
+        "payload": {
+            "payment_method_nonce": "fake-paypal-billing-agreement-nonce",
+            "device_data": ""
+        }
+    }
+    ```
+
++ Response 200
+
+    [Payment Method][]
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "Invalid Gateway."
+            }
+        ]
+    }
+    ```
 
 # Group OAuth - Device
 Represents authentication actions against an user account from a device.
