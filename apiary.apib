@@ -3613,6 +3613,71 @@ Returns a specific EPG given relevant start and end times, filtered by a Channel
 
     [Channel EPG][]
 
+## Listing EPG [/epg/listing/{id}]
+Represents a Listing
+
++ Parameters
+    + id (string, `1`) ... The id of the Listing.
+
++ Model (application/json)
+
+    ```js
+{
+    "headers": {},
+    "data": {
+        "airingType": "",
+        "channel": {
+            "description": "",
+            "entity": "channel",
+            "id": 289,
+            "isHd": false,
+            "isPayPerView": false,
+            "number": "0",
+            "picture": null,
+            "title": "Sky 1",
+            "titleEditorial": null,
+            "streams": [
+                {
+                    "type": "ss",
+                    "path": "http://video.veo.tv/PAID0000000000578580/ss/b8e76095419ced846b920e15f3fb6f0b07226fd9dcf0a08170ec38d88a200f18/ss_b8e76095419ced846b920e15f3fb6f0b07226fd9dcf0a08170ec38d88a200f18.ism/Manifest"
+                },
+                {
+                    "type": "mpd",
+                    "path": "http://video.veo.tv/PAID0000000000578580/dash/18515_c74fe423e91616204df0ebf3050e4a34/mpds/18515.mpd?cb=144482980"
+                },
+                {
+                    "type": "hls",
+                    "path": "http://video.veo.tv/PAID0000000000578580/hls/26289_8c74f1d7a89a3b640e67f7efa367eead/m3u8s/26289.m3u8?cb=144648325"
+                }
+            ]
+        },
+        "endDate": "2015-12-23T07:00:00Z",
+        "entity": "listing",
+        "id": 23061,
+        "isSubtitled": false,
+        "modifiedAt": "2015-12-18T18:03:41Z",
+        "program": {
+            "category": "Episode",
+            "description": "Karl Pilkington is 40 now, and after three successful series of `An Idiot Abroad' that sent him around the world, it's time to re-assess his life. So, of course, he sets off on another globetrotting adventure, one of self-discovery that he hopes yields more answers than questions. From India to Los Angeles, Pilkington visits varied places to experience other cultures and the ways in which people deal with life's big questions. \"I've never worried about life's big questions,\" he says. \"People at my age sit about pondering about `why are we here?' The only time I ever asked myself that is when (partner) Suzanne booked us a surprise holiday to Lanzarote.\"",
+            "entity": "program",
+            "id": 67465,
+            "picture": null,
+            "title": "Karl Pilkington: The Moaning of Life",
+            "titleEditorial": null
+        },
+        "startDate": "2015-12-23T06:00:00Z",
+        "nextListing": 18932
+    },
+    "messages": []
+}
+    ```   
+### Retrieve the EPG [GET]
+Returns a specific Listing given listingId
+
++ Response 200
+
+    [Listing EPG][]
+
 # Group Genre
 Represents actions against Genre object
 
