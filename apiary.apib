@@ -291,9 +291,8 @@ Attempts to authenticate with iZZi credentials.
 
     ```js
     {
-            "email": "user@gmail.com",
-            "password": "password1",
-            "remember": true
+            "token": "qwe3-sankk374bj-3nfnjskdjfksndfkj33i46858vhe",
+            "mso": "2"
     }
     ```
 
@@ -310,51 +309,57 @@ Attempts to authenticate with iZZi credentials.
         "messages": [
             {
                 "context": null,
-                "value": "You have entered invalid iZZi credentials."
+                "value": "Invalid authentication credentials."
             }
         ]
     }
-    ```    
-
-## iZZi Register [/account/izzi/register]
-### Create an Account based on iZZi user[POST]
-Attempts to create a new account linked to iZZi user.
-
-+ Request (application/json)
-
-    ```js
-    {
-        "izziUser": "user@gmail.com",
-        "izziPassword": "*********",
-        "mso": "2",
-        "firstName": "John",
-        "familyName": "Doe",
-        "city": ""
-    }
     ```
-
-+ Response 201
-
-    [Account][]
-
-
+    
 + Response 401 (application/json)
 
     ```js
     {
-        "headers": {"ttl": 0},
+        "headers": {},
         "data": {},
         "messages": [
             {
                 "context": null,
-                "value": "You have entered invalid iZZi credentials."
+                "value": "Invalid mso."
             }
         ]
     }
     ```
 
++ Response 422 (application/json)
 
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": "mso",
+                "value": "Value is required and can't be empty."
+            }
+        ]
+    }
+    ```
 
++ Response 422 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": "token",
+                "value": "Value is required and can't be empty."
+            }
+        ]
+    }
+    ```
+    
 ## Facebook login [/account/facebook/login]
 Attempts to authenticate a user through facebook.
     
