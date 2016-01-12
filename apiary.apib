@@ -3022,7 +3022,7 @@ Retrieves all Countries.
 # Group Configuration
 Represents actions against Configuration
 
-## Configuration [/device-config]
+## Configuration [/configuration]
 Represents the general Configuration
 
 + Model (application/json)
@@ -3041,6 +3041,79 @@ Returns the Configuration.
 + Response 200
 
     [Configuration][]
+
+# Group Device Configuration
+Represents actions against Device Configuration
+
+## Device Configuration [/device-config]
+Represents the Configuration of a Device (e.g., iOS, Android)
+
+  + Model (application/json)
+
+    ```js
+    {
+        "mainMenu": "/navigation/main-menu",
+        "labelLinks": "/device-config/label"
+    }
+    ```
+
+### Retrieve Device Configuration [GET]
+Returns a specific Device Configuration.
+
++ Response 200
+
+    [Device Configuration][]
+
+## Labels [/device-config/label]
+Represents the Labels for a Device's Configuration
+
+
++ Model (application/json)
+
+    ```js
+    {
+        "site_section": {
+            "title_reception": "VEO",
+            "title_EPGPage": "TV",
+            "title_OnDemandLandingPage": "Suscripción",
+            "title_RentalLandingPage": "Renta",
+            "welcome_to": "Bienvenido a",
+            "title_signup": "Regístrate"
+        },
+        "show_types": {
+            "movies": "Películas",
+            "documentaries": "Documentales",
+            "tv_series": "Series de TV",
+            "telenovelas": "Telenovelas",
+            "rental": "Rentas",
+            "sports": "En Vivo",
+            "news": "Noticias",
+            "shows": "Espectáculos"
+        },
+        "header": {
+            "greeting": "Hola {username}",
+            "help": "Ayuda",
+            "logout": "Cerrar sesión",
+            "login": "Ingresar",
+            "rentals_tool_title": "Tus Rentas",
+            "rentals_tool_button": "Ver todas tus rentas",
+            "rentals_tool_button_empty": "Ver historial de rentas",
+            "rentals_tool_empty": "No hay rentas activas",
+            "rentals_tool_login_again": "Por favor inicie sesión de nuevo",
+            "timed_out": "Tu sesión ha terminado. Por favor regístrate nuevamente.",
+            "manage_profile_button": "Administrar perfil",
+            "search": "Buscar"
+        }
+    }
+    ```
+
+### Retrieve Labels [GET]
+Returns the Labels for a Device's Configuration
+
++ Response 200
+
+    [Labels][]
+
 
 # Group EPG
 Represents actions against the Veo EPG
