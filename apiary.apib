@@ -3019,78 +3019,28 @@ Retrieves all Countries.
 
     [List Countries][]
 
-# Group Device Configuration
-Represents actions against Device Configuration
+# Group Configuration
+Represents actions against Configuration
 
-## Device Configuration [/device-config]
-Represents the Configuration of a Device (e.g., iOS, Android)
-
-+ Model (application/json)
-
-    ```js
-    {
-        "mainMenu": "/navigation/main-menu",
-        "labelLinks": "/device-config/label"
-    }
-    ```
-
-### Retrieve Device Configuration [GET]
-Returns a specific Device Configuration.
-
-+ Response 200
-
-    [Device Configuration][]
-
-## Labels [/device-config/label]
-Represents the Labels for a Device's Configuration
-
+## Configuration [/device-config]
+Represents the general Configuration
 
 + Model (application/json)
 
     ```js
     {
-        "site_section": {
-            "title_reception": "VEO",
-            "title_EPGPage": "TV",
-            "title_OnDemandLandingPage": "Suscripción",
-            "title_RentalLandingPage": "Renta",
-            "welcome_to": "Bienvenido a",
-            "title_signup": "Regístrate"
-        },
-        "show_types": {
-            "movies": "Películas",
-            "documentaries": "Documentales",
-            "tv_series": "Series de TV",
-            "telenovelas": "Telenovelas",
-            "rental": "Rentas",
-            "sports": "En Vivo",
-            "news": "Noticias",
-            "shows": "Espectáculos"
-        },
-        "header": {
-            "greeting": "Hola {username}",
-            "help": "Ayuda",
-            "logout": "Cerrar sesión",
-            "login": "Ingresar",
-            "rentals_tool_title": "Tus Rentas",
-            "rentals_tool_button": "Ver todas tus rentas",
-            "rentals_tool_button_empty": "Ver historial de rentas",
-            "rentals_tool_empty": "No hay rentas activas",
-            "rentals_tool_login_again": "Por favor inicie sesión de nuevo",
-            "timed_out": "Tu sesión ha terminado. Por favor regístrate nuevamente.",
-            "manage_profile_button": "Administrar perfil",
-            "search": "Buscar"
+        "izziConnect": {
+            "auth_url": "http://52.21.207.24:15100/ms_oauth/oauth2/endpoints/oauthservice/authorize?response_type=code&client_id=35ae4f9aa9574e1a86a9319e32f318d3&redirect_uri=https://www-test.blim.com/account/izzi/login&scope=UserProfile.me&state=getauthz"
         }
     }
     ```
 
-### Retrieve Labels [GET]
-Returns the Labels for a Device's Configuration
+### Retrieve Configuration [GET]
+Returns the Configuration.
 
 + Response 200
 
-    [Labels][]
-
+    [Configuration][]
 
 # Group EPG
 Represents actions against the Veo EPG
