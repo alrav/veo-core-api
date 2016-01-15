@@ -2845,11 +2845,13 @@ Retrieves all Channels.
 # Group Collection
 Represents actions against Collection objects
 
-## Collection [/collection/{id}]
+## Collection [/collection/{id}{?itemsLimit,itemsPage}]
 Represents a Collection
 
 + Parameters
     + id (string, `1`) ... The id of the Collection.
+    + itemsLimit (optional, string, `25`) ... The collection items limit per page.
+    + itemsPage (optional, string, `1`) ... The collection items page.
 
 + Model (application/json)
 
