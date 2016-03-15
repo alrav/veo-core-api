@@ -21595,6 +21595,68 @@ Search result for assets search
     }
     ```
 
+# Group Suggest
+Represents the search suggestions
+
+## Suggest [/search/suggest{?q}
+Suggestions
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": [
+            "tiempos de amigos",
+            "temporada de cosecha",
+            "el amor en los tiempos del cólera",
+            "sueños de gloria"
+        ],
+        "messages": []
+    }
+    ```
+ 
+### Suggest queries [GET]
++ Parameters
+    + q (required, string, `amor`) ... The suggest query
+        + Values
+            + `amor`
+            + `amor a tres`
+
++ Response 200
+
+    [Suggest queries][]
+
++ Response 422 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": [],
+        "messages": [
+            {
+                "value": "Query is required",
+                "context": null
+            }
+        ]
+    }
+    ```
+
++ Response 500 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": [],
+        "messages": [
+            {
+                "value": "Invalid structure in Solr response",
+                "context": null
+            }
+        ]
+}
+    ```
+
 # Group Season
 Represents actions against Season objects
 
