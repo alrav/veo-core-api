@@ -21338,7 +21338,7 @@ Search result for assets search
 # Group Suggest
 Represents the search suggestions
 
-## Suggest [/search/suggest{?q}]
+## Suggest [/search/suggest{?q}{?count}]
 Suggestions
 
 + Model (application/json)
@@ -21362,6 +21362,10 @@ Suggestions
         + Values
             + `amor`
             + `amor a tres`
+    + count (optional, string, `5`) ... The suggestions count
+        + Values
+            + `5`
+            + `10`
 
 + Response 200
 
