@@ -18,7 +18,8 @@ Attempts to authenticate the user credentials.
     {
             "email": "user@gmail.com",
             "password": "password1",
-            "remember": true
+            "remember": true,
+            "clientId": 1
     }
     ```
 
@@ -2798,17 +2799,22 @@ Represents a Channel
             "isPayPerView": false,
             "streams": [
                 {
-                    "format": "ss",
-                    "urls": [
-                        {
-                            "type": "live",
-                            "link": "http://veocdn294859sk.com/out/u/filtername.m3u8"
-                        },
-                        {
-                            "type": "catchup",
-                            "link": "http://veocdn294859sk.com/start/1430155800/end/1430157600/out/u/filtername.ism/Manifest"
-                        }
-                    ]
+                    "entity": "stream",
+                    "id": 112,
+                    "path": "http://edge.televisa-veo-live.top.comcast.net/out/u/televisa-distritocomedia-replay-cenc.mpd",
+                    "type": "mpd"
+                },
+                {
+                    "entity": "stream",
+                    "id": 113,
+                    "path": "http://edge.televisa-veo-live.top.comcast.net/out/u/televisa-distritocomedia-replay-playready.ism/Manifest",
+                    "type": "SS"
+                },
+                {
+                    "entity": "stream",
+                    "id": 114,
+                    "path": "http://edge.televisa-veo-live.top.comcast.net/out/u/televisa-distritocomedia-replay-hlsenc.m3u8",
+                    "type": "HLS"
                 }
             ],
         },
@@ -2864,14 +2870,22 @@ Returns all Channels.
                 "titleEditorial": "Univision TDN",
                 "number": 502,
                 "description": "Univision TDN.",
-                "images": [
-                    {
-                        "profile": "thumbnail",
-                        "link": "https://dyv52uavm19r4.cloudfront.net/prod/LinearChannel/C_1_Channel_16_epgTimelineLogo.png",
-                        "width": 31,
-                        "height": 47
-                    }
-                ],
+                "picture": {
+                    "entity": "picture",
+                    "id": 12,
+                    "pictureType": "landscape",
+                    "title": "ASST0000000004621838_Animal_Mechanicals_Season_1_.jpg",
+                    "versions": [
+                        {
+                          "entity": "pictureImage",
+                          "height": 1080,
+                          "id": 54,
+                          "profile": "main",
+                          "width": 1920,
+                          "link": "https://s3.amazonaws.com/static.veo.tv/mpx/images/Veo/131/555/ASST0000000004621838_Animal_Mechanicals_Season_1__landscape.jpg"
+                        }
+                    ]
+                },
             }
         ],
         "messages": []
