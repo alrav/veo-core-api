@@ -861,6 +861,39 @@ Attempts to verify a new user account.
     }
     ```
 
+# Group Account - Initpoint
+Represents actions against a gateway.
+
+## Initpoint [/account/initpoint]
+Attempts to fetch the initpoint for a specific gateway.
+
++ Model (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+            "initpoint": "...."
+        },
+        "messages": []
+    }
+    ```
+
+### Fetch initpoint [POST]
+
++ Request (application/json)
+
+    ```js
+    {
+        "gateway": "MERCADOPAGO"
+    }
+    ```
+
++ Response 200
+
+    [Initpoint][]
+
+
 # Group Account - Pin
 Represents actions against the account pin.
 
@@ -1443,11 +1476,11 @@ Attempts to remove a SVOD subscription entitlement.
 # Group Account - Payment
 Represents payment actions against an user account.
 
-## Payment Method [/account//payment-method/{accountId}]
+## Payment Method [/account/payment-method/{paymentMethodId}]
 Represents actions against an account payment method.
 
 + Parameters
-    + accountId (string, `1`) ... The id of the Rental.
+    + paymentMethodId (string, `1`) ... The id of the payment method.
 
 + Model (application/json)
 
@@ -1484,6 +1517,39 @@ Attempts to update an account payment method.
             {
                 "context": null,
                 "value": "Invalid Gateway."
+            }
+        ]
+    }
+    ```
+    
+### Verify Payment Method [GET]
+Returns a payment method
+
++ Response 200
+
+    ```js
+    {
+        "headers": {},
+        "data": {
+        "descriptor": "407559******3764",
+        "id": "187",
+        "state": "verified",
+        "type": "Visa"
+    },
+    "messages": []
+    ```
+}
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "No se encuentra el método de pago solicitado."
             }
         ]
     }
