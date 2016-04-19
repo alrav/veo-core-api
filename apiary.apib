@@ -1485,7 +1485,15 @@ Represents actions against an account payment method.
 + Model (application/json)
 
     ```js
-    {}
+    {
+        "headers": {},
+        "data": {
+        "descriptor": "407559******3764",
+        "id": "187",
+        "state": "verified",
+        "type": "Visa"
+    },
+    "messages": []
     ```
 
 ### Update Payment Method [PUT]
@@ -1527,17 +1535,8 @@ Returns a payment method
 
 + Response 200
 
-    ```js
-    {
-        "headers": {},
-        "data": {
-        "descriptor": "407559******3764",
-        "id": "187",
-        "state": "verified",
-        "type": "Visa"
-    },
-    "messages": []
-    ```
+    [Payment Method][]
+
 }
 
 + Response 400 (application/json)
