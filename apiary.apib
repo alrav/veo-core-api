@@ -315,7 +315,7 @@ Attempts to authenticate with iZZi credentials.
         ]
     }
     ```
-    
+
 + Response 401 (application/json)
 
     ```js
@@ -360,10 +360,10 @@ Attempts to authenticate with iZZi credentials.
         ]
     }
     ```
-    
+
 ## Facebook login [/account/facebook/login]
 Attempts to authenticate a user through facebook.
-    
+
 + Model (application/json)
 
     ```js
@@ -465,7 +465,7 @@ Attempts to authenticate a user through facebook.
 
 ## Facebook link [/account/facebook/link]
 Attempts to link/unlink a facebook account.
-    
+
 + Model (application/json)
 
     ```js
@@ -549,7 +549,7 @@ Attempts to link/unlink a facebook account.
 + Response 200
 
     [Facebook link][]
-    
+
 + Response 400 (application/json)
 
     ```js
@@ -563,7 +563,7 @@ Attempts to link/unlink a facebook account.
             }
         ]
     }
-    ```    
+    ```
 
 + Response 403 (application/json)
 
@@ -996,7 +996,7 @@ Attempts to clear the account pin.
         ]
     }
     ```
-    
+
 ## Account Pin Recovery [/account/pin/recovery]
 Recover the account pin.
 
@@ -1529,7 +1529,7 @@ Attempts to update an account payment method.
         ]
     }
     ```
-    
+
 ### Verify Payment Method [GET]
 Returns a payment method
 
@@ -1715,8 +1715,8 @@ Attempts to retrieve an access token for OAuth authentication.
         ]
     }
     ```
-    
-    
+
+
 
 # Group Asset
 Represents actions against Asset objects
@@ -2999,7 +2999,7 @@ Represents a Collection
 + Model (application/json)
 
     ```js
-    
+
     {
     "headers": {},
     "data": {
@@ -3594,7 +3594,7 @@ Represents actions against the EPG
                         }
                     }
                 ]
-            } 
+            }
         ],
         "messages": []
     }
@@ -3844,7 +3844,7 @@ Represents a Listing
     },
     "messages": []
 }
-    ```   
+    ```
 ### Retrieve the Listing EPG [GET]
 Returns a specific Listing given listingId
 
@@ -17317,7 +17317,7 @@ Represent recommended for you assets because you watched some asset
 + Parameters
     + assetId (integer, `123`) ... The asset you watched
     + start = `1444232870000`  (optional, timestamp, `1444232877778`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame. Default is one month ago
-    + end = `144423287999`  (optional, timestamp, `1444239999999`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame . Default is now    
+    + end = `144423287999`  (optional, timestamp, `1444239999999`) ... number of seconds since January 1, 1970, 00:00 UTC for the desired publication time frame . Default is now
     + numRecommendations = `20`  (optional, integer, `25`) ... number of recommended assets to receive
     + collectionId  (optional, integer) ... if the collection is static + recommended, send the collection id to append static assets
     + allowPreviousRecommendations = `false` (optional, boolean, `false`) ... allow or not previous recommendations
@@ -21478,7 +21478,7 @@ Suggestions
         "messages": []
     }
     ```
- 
+
 ### Suggest queries [GET]
 + Parameters
     + q (required, string, `amor`) ... The suggest query
@@ -21675,3 +21675,98 @@ Returns a specific Season.
 + Response 200
 
     [Season][]
+
+
+# Group Supported Country
+Represents authentication actions against supported countries
+
+## List Supported Countries [/supported-country]
+Returns ISO codes for all countries with current subscription packages
+
++ Model (application/json)
+
+    ```js
+    {
+      "headers": {
+        "total": 18
+      },
+      "data": [
+        {
+          "countryIsoCode": "AR"
+        },
+        {
+          "countryIsoCode": "BO"
+        },
+        {
+          "countryIsoCode": "BZ"
+        },
+        {
+          "countryIsoCode": "CL"
+        },
+        {
+          "countryIsoCode": "CO"
+        },
+        {
+          "countryIsoCode": "CR"
+        },
+        {
+          "countryIsoCode": "DO"
+        },
+        {
+          "countryIsoCode": "EC"
+        },
+        {
+          "countryIsoCode": "GT"
+        },
+        {
+          "countryIsoCode": "HN"
+        },
+        {
+          "countryIsoCode": "MX"
+        },
+        {
+          "countryIsoCode": "NI"
+        },
+        {
+          "countryIsoCode": "PA"
+        },
+        {
+          "countryIsoCode": "PE"
+        },
+        {
+          "countryIsoCode": "PY"
+        },
+        {
+          "countryIsoCode": "SV"
+        },
+        {
+          "countryIsoCode": "UY"
+        },
+        {
+          "countryIsoCode": "VE"
+        }
+      ],
+      "messages": []
+    }
+    ```
+
+### List Supported Countries [GET]
+
++ Response 200
+
+    [List Supported Countries][]
+
++ Response 500 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "Error retrieving supported countries"
+            }
+        ]
+    }
+    ```
