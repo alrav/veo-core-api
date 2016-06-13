@@ -3130,36 +3130,37 @@ Returns a specific Collection.
 # Group Country
 Represents actions against Country object
 
-## List Countries [/country]
+## List Countries [/country{?supported}]
 A List of all countries.
 
 + Model (application/json)
 
     ```js
         {
-            "headers": {"ttl": 0, "total": 2},
+            "headers": {"total": 2},
             "data": [
                 {
-                    "id": 1,
-                    "title": "United States",
-                    "entity": "country"
+                  "code": "MX",
+                  "entity": "country",
+                  "id": 5,
+                  "title": "Mexico"
                 },
                 {
-                    "id": 2,
-                    "title": "México",
-                    "entity": "country"
+                  "code": "GT",
+                  "entity": "country",
+                  "id": 91,
+                  "title": "Guatemala"
                 }
             ],
-            "messages": [
-                {
-                    "success": "Data successfully retrieved"
-                }
-            ]
+            "messages": []
         }
     ```
 
 ### Retrieve all Countries [GET]
 Retrieves all Countries.
+
++ Parameters
+    + supported (boolean, `true`) ... Option to only retrieve countries with current subscription packages
 
 + Response 200
 
