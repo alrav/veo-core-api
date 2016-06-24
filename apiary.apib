@@ -885,7 +885,7 @@ Attempts to fetch the initpoint for a specific gateway.
 
     ```js
     {
-        "gateway": "MERCADOPAGO"
+        "adapter": "mercadoPago"
     }
     ```
 
@@ -14497,6 +14497,46 @@ Retrieves all Parental Rating.
 + Response 200
 
     [List Parental Rating][]
+
+
+# Group Payment
+Payment-related services
+
+## Payment adapters by country [/payment/adapter/{country}]
+List of payment adapter by country
+
+### Retrieve payment adapters by a given country [GET]
+Retrieve all the payment adapters by country
+
++ Parameters
+    + country (string) - country ISO Alpha-2 code
+
++ Response 200 (application/json)
+
+    ```js
+       {
+        "headers":{},
+        "data": [
+            {
+             "name": "spreadly",
+             "paymentOptions": [
+                "visa",
+                "mastercard",
+                "amex"
+             ]
+            },
+            {
+             "name": "braintree",
+             "paymentOptions": [
+                "visa",
+                "mastercard",
+                "amex"
+             ]
+            }
+        ],
+        "messages": []
+       }
+    ```
 
 
 # Group PlayResume
