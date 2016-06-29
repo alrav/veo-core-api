@@ -3979,6 +3979,47 @@ Retrieves all Geoblocking.
 
     [List Geoblocking][]
 
+
+
+# Group IPN
+
+## OpenPay [/ipn/openpay]
+
+### Post Event Openpay [POST]
++ Request (application/json)
++ Response 200 (application/json)
+    + Attributes
+        + gateway:A `openpay` (string)
+        + payload (object) - Openpay event info
++ Response 400 (application/json)
+    + Attributes
+        + message: `Something went wrong` (string)
+
+## MercadoPago [/ipn/mercadopago]
+
+### Post Event MercadoPago [POST]
++ Request (application/json)
++ Response 200 (application/json)
+    + Attributes
+        + gateway: `mercadoPago` (string)
+        + payload (object) - MercadoPago event info
++ Response 400 (application/json)
+    + Attributes
+        + message: `Something went wrong` (string)
+
+## Paypal [/ipn/paypal]
+
+### Post Event Paypal [POST]
++ Request (application/json)
++ Response 200 (application/json)
+    + Attributes
+        + gateway: `paypal` (string)
+        + payload (object) - Paypal event info
++ Response 400 (application/json)
+    + Attributes
+        + message: `Something went wrong` (string)
+
+
 # Group Navigation
 Represents actions against SB Navigation objects
 
@@ -14502,7 +14543,7 @@ Retrieves all Parental Rating.
 # Group Payment
 Payment-related services
 
-## Payment adapters by country [/payment/adapter/{country}]
+## Payment adapters by country [/payment/adapter{?country}]
 List of payment adapter by country
 
 ### Retrieve payment adapters by a given country [GET]
