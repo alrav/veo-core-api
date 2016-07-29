@@ -1500,16 +1500,18 @@ Represents actions against an account payment method.
 Attempts to update an account payment method.
 
 + Request (application/json)
-
-    ```js
-    {
-        "gateway": "BRAINTREE",
-        "payload": {
-            "payment_method_nonce": "fake-paypal-billing-agreement-nonce",
-            "device_data": ""
-        }
-    }
-    ```
+    + Attributes
+        + adapter (required, enum[string])
+            + Members
+                + spreedly
+                + braintree
+                + mercadoPago
+        + payload (required, object)
+            + paymentMethodToken: `Z4Xhc5AvWpveOWA53BoiETY43u9` (string)
+            + country: `US` (string)
+            + currency: `USD` (string)
+            + verificationAmount: `1000` (string)
+            + initpoint: `spreedly_974f2491d3d5fac49b58a085481844c8` (string)
 
 + Response 200
 
@@ -19005,7 +19007,7 @@ Create the Channel PlayContext required before streaming.
 
     [Initialize channel streaming][]
 
-## Update Asset PlayContext [/player/asset/{assetId}/video/{videoId}/stream/{streamId}{?state}{?asset_duration}{?timeline_position}]
+## Update Asset PlayContext [/player/asset/{assetId}/video/{videoId}/stream/{streamId}{?state}{?asset_duration}{?timeline_position}{?keep_position}]
 Update the Asset PlayContext while streaming.
 
 + Parameters
@@ -19019,6 +19021,7 @@ Update the Asset PlayContext while streaming.
             + `STOP` - Releases the Stream
     + asset_duration (integer, `0`) ... The duration of the asset in seconds.
     + timeline_position (integer, `0`) ... The current timeline position in seconds.
+    + keep_position (boolean, `true`) ... Keep the timeline position (only works with state:STOP)
 
 + Model (application/json)
 
