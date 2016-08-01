@@ -84,7 +84,7 @@ Attempts to change the user account's password. Verification of new passwords (v
     }
     ```
 
-+ Response 200 (application/json)
++ Response 200
 
     [Account][]
 
@@ -198,6 +198,7 @@ Represents an account Device.
         },
         "messages": []
     }
+    ```
 
 ### Validates a Device [GET]
 Attempts to validate an account Device.
@@ -21406,7 +21407,7 @@ Search result for assets search
             + `category:(movie)`                                                  ... Filter by category (movie, series, telenovela, episode)
             + `entity:(asset)`                                                    ... For Assets
             + `parentalRating:(PG)`                                               ... Filter Assets by Parental Rating
-            + `super+8+AND+category:(movie)+OR+category:(series)` ... Full search query example
+            + `super%2B8%2BAND%2Bcategory%3A(movie)%2BOR%2Bcategory%3A(series)`   ... Full search query example
     + sort (optional, string, `title`)       ... Results sorting. By default will be sorted by relevance.
         + Values
             + `title`              ... Sorts by title.
