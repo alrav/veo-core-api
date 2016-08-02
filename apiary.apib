@@ -76,6 +76,9 @@ Attempts to change the user account's password. Verification of new passwords (v
 ### Change account password [POST]
 
 + Request (application/json)
+    + Attributes
+        + currentPassword (string)
+        + newPassword (string) - 7-100 characters
 
     ```js
     {
