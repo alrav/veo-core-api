@@ -13,15 +13,20 @@ Attempts to authenticate the user credentials.
 ### Login to the site [POST]
 
 + Request (application/json)
-
-    ```js
-    {
-            "email": "user@gmail.com",
-            "password": "password1",
-            "remember": true,
-            "clientId": 1
-    }
-    ```
+    + Attributes
+        + email (required, string)
+        + password (required, string) 
+        + remember (optional, boolean)
+        + clientId (optional, number)
+        
+    + Body
+    
+            {
+                "email": "user@gmail.com",
+                "password": "password1",
+                "remember": true,
+                "clientId": 1
+            }
 
 + Response 200
 
@@ -29,23 +34,34 @@ Attempts to authenticate the user credentials.
 
 + Response 400 (application/json)
 
-    ```js
-    {
-        "headers": {"ttl": 0},
-        "data": {},
-        "messages": [
-            {
-                "context": null,
-                "value": "You have entered an invalid email and/or password."
-            }
-        ]
-    }
-    ```
+        {
+            "headers": {},
+            "data": {},
+            "messages": [
+                {
+                    "context": null,
+                    "value": "You have entered an invalid email and/or password."
+                }
+            ]
+        }
 
++ Response 422 (application/json)
+
+        {
+            "headers": {},
+            "data": [],
+            "messages": [
+                {
+                    "value": "The input is not a valid email address. Use the basic format local-part@hostname",
+                    "context": "email"
+                }
+            ]
+        }
+        
 ## Logout [/account/logout]
 Attempts to logout the user.
 
-### Logout of the site [GET]
+### Logout of the site [POST]
 
 + Request
 
@@ -77,15 +93,16 @@ Attempts to change the user account's password. Verification of new passwords (v
 
 + Request (application/json)
     + Attributes
-        + currentPassword (string)
-        + newPassword (string) - 7-100 characters
-
-    ```js
-    {
-            "currentPassword": "old-password",
-            "newPassword": "new-password"
-    }
-    ```
+        + currentPassword (required, string)
+        + newPassword (required, string) ... 7-100 characters long. Valid characters are (a-zA-Z0-9áéíóúüñçÁÉÍÓÚÜÑÇ!@#$%^&*._-)
+    
+    + Body
+        
+            {
+                "currentPassword": "oldPassword",
+                "newPassword": "newPassword"
+            }
+        
 
 + Response 200
 
@@ -127,7 +144,7 @@ Attempts to authenticate a user Device.
             "mso": "1",
             "device": "0"
     }
-    ```
+    ``` 
 
 + Response 200
 
