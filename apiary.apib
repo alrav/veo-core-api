@@ -147,21 +147,35 @@ Attempts to recover the user account's password. The response will always return
 
 + Request (application/json)
 
-    ```js
-    {
-        "email": "user@gmail.com"
-    }
-    ```
+    + Attributes
+        + email (required, string) ... Valid email address
+
+    + Body
+            {
+                "email": "user@gmail.com"
+            }
 
 + Response 200 (application/json)
 
-    ```js
-    {
-        "headers": {},
-        "data": {},
-        "messages": []
-    }
-    ```
+        {
+            "headers": {},
+            "data": [],
+            "messages": []
+        }
+
++ Response 422 (application/json)
+    
+        {
+            "headers": {},
+            "data": [],
+            "messages": [
+                {
+                    "value": "The input is not a valid email address. Use the basic format local-part@hostname",
+                    "context": "email"
+                }
+            ]
+        }
+    
 
 ## Authenticate Device [/account/device/login]
 Attempts to authenticate a user Device.
