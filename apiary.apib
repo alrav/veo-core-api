@@ -92,9 +92,14 @@ Attempts to change the user account's password. Verification of new passwords (v
 ### Change account password [POST]
 
 + Request (application/json)
+
     + Attributes
         + currentPassword (required, string)
         + newPassword (required, string) - `7-100 characters long. Valid characters are (a-zA-Z0-9áéíóúüñçÁÉÍÓÚÜÑÇ!@#$%^&*._-)`
+        
+    + Headers
+        
+            Authorization: OAuth ...
     
     + Body
         
@@ -108,6 +113,33 @@ Attempts to change the user account's password. Verification of new passwords (v
 
     [Account][]
 
++ Response 400 (application/json)
+
+        {
+            "headers": {},
+            "data": [],
+            "messages": [
+                {
+                    "value": "Contraseña actual inválida.",
+                    "context": "password"
+                }
+            ]
+        }
+
++ Response 400 (application/json)
+
+        {
+            "headers": {},
+            "data": [],
+            "messages": [
+                {
+                    "value": "Tu contraseña no es valida.",
+                    "context": "newPassword"
+                }
+            ]
+        }
+        
+    
 ## Recover Password [/account/recover]
 Attempts to recover the user account's password. The response will always return `200` in order to prevent account sniffing.
 
