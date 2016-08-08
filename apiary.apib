@@ -671,74 +671,146 @@ Represents an user account.
 + Model (application/json)
 
     ```js
-    {
-        "headers": {"ttl": 0},
-        "data": {
-            "id": 123456,
-            "facebookId": null,
-            "sessionId": "dead-beef-dead-beef-dead-beef",
-            "accessToken": "dead-beef-dead-beef-dead-beef",
-            "contract": "123456",
-            "mso": [2],
-            "status": "active",
-            "email": "user@gmail.com",
-            "firstName": "John",
-            "familyName": "Doe",
-            "displayName": "JD",
-            "address1": "123 Rainbow St",
-            "address2": "Apt 666",
-            "city": "Doral",
-            "state": "FL",
-            "zip": "33178",
-            "country": "United States of America",
-            "preferences": {
-                "isPinSet": false,
-                "isPinRequired": false,
-                "permittedRatings": [
-                    "G",
-                    "PG",
-                    "PG-13"
-                ],
-                "language": "en",
-                "timezone": "America/New_York",
-                "timezoneOffset": "-0500",
-                "lastUpdated": 1425739017952
-            },
-            "trialAvailable": false,
-            "canRent": true,
-            "canPlayVideo": true,
-            "entitlements": [
+   {
+        "headers":{},
+        "data":{
+            "accessToken":"dead-beef-dead-beef-dead-beef",
+            "address1":null,
+            "address2":null,
+            "canPlayVideo":false,
+            "canRent":false,
+            "city":null,
+            "contract":null,
+            "country":null,
+            "defaultTimezone":"CST6CDT",
+            "deviceId":null,
+            "deviceType":null,
+            "displayName":null,
+            "email":"email@example.com",
+            "entitlements":[
                 {
-                    "entity": "subscription",
-                    "packageCode": "TVOD",
-                    "affiliate": "televisa"
-                },
-                {
-                    "entity": "rental",
-                    "id": 123456,
-                    "entitlementId": "dead-beef-dead-beef-dead-beef-dead-beef",
-                    "transactionId": 1234567890,
-                    "purchaseDate": "2015-02-23T11:31:52Z",
-                    "purchaseDuration": 2592000,
-                    "viewDate": "2015-02-23T11:32:03Z",
-                    "viewDuration": 86400,
-                    "timeToExpiry": 3600,
-                    "affiliate": "cablevision",
-                    "packageCode": null,
-                    "price": 40.00,
-                    "status": "active",
-                    "asset": {
-                        "entity": "asset",
-                        "category": "movie",
-                        "parentShow": null,
-                        "id": 4754,
-                        "title": "Operación Dragón"
-                    }
+                    "affiliate":"televisa",
+                    "entity":"subscription",
+                    "packageCode":"SVOD"
                 }
             ],
-            "trackingSignature": "dead-beef-dead-beef-dead-beef-dead-beef"
+            "facebookId":null,
+            "familyName":null,
+            "firstName":"John",
+            "firstTimeLogin":false,
+            "id":"33034",
+            "mso":[
+                1
+            ],
+            "package":{
+                "amount":"109.00",
+                "countryIsoCode":"MX",
+                "currency":{
+                    "gateways":[
+                        {
+                            "id":1,
+                            "name":"BRAINTREE",
+                            "paymentOptions":[
+                                {
+                                    "id":1,
+                                    "name":"PAYPAL"
+                                },
+                                {
+                                    "id":2,
+                                    "name":"VISA"
+                                },
+                                {
+                                    "id":3,
+                                    "name":"AMEX"
+                                },
+                                {
+                                    "id":4,
+                                    "name":"MASTERCARD"
+                                }
+                            ]
+                        },
+                        {
+                            "id":2,
+                            "name":"MERCADOPAGO",
+                            "paymentOptions":[
+                                {
+                                    "id":10,
+                                    "name":"IXE"
+                                },
+                                {
+                                    "id":5,
+                                    "name":"BANAMEX"
+                                },
+                                {
+                                    "id":6,
+                                    "name":"BANCOMER"
+                                },
+                                {
+                                    "id":7,
+                                    "name":"SANTANDER"
+                                },
+                                {
+                                    "id":8,
+                                    "name":"HSBC"
+                                },
+                                {
+                                    "id":9,
+                                    "name":"BANORTE"
+                                }
+                            ]
+                        }
+                    ],
+                    "id":9,
+                    "isoCode":"MXN",
+                    "paymentOptions":{}
+                },
+                "id":1,
+                "name":"Blim Mexico Launch",
+                "privileges":[
+                    {
+                        "id":1,
+                        "key":"svod",
+                        "name":"SVOD"
+                    }
+                ]
+            },
+            "paymentOptions":[
+                {
+                    "provider":"braintree",
+                    "token":"dead-beef-dead-beef-dead-beef"
+                }
+            ],
+            "preferences":{
+                "affiliate":"televisa",
+                "isPinRequired":false,
+                "isPinSet":false,
+                "language":"ES",
+                "lastUpdated":"2016-08-08T19:01:10Z",
+                "permittedRatings":[
+                    "NR",
+                    "UR",
+                    "G",
+                    "AA",
+                    "A",
+                    "PG",
+                    "B",
+                    "PG-13",
+                    "B15",
+                    "R",
+                    "C",
+                    "D",
+                    "NC-17"
+                ],
+                "timezone":"CST6CDT"
+            },
+            "sessionId":"dead-beef-dead-beef-dead-beef",
+            "state":null,
+            "status":"New",
+            "subscriptionEnd":"1970-01-01T00:00:00Z",
+            "trialAvailable":true,
+            "zip":null
         },
-        "messages": []
+        "messages":[]
     }
     ```
 
@@ -760,20 +832,33 @@ Attempts to create a new user account (user registration).
 
 + Request (application/json)
 
-    ```js
-    {
-            "email": "user@gmail.com",
-            "password": "secretPassword",
-            "mso": "1",
-            "svod": "1",
-            "contract": "",
-            "firstName": "John",
-            "familyName": "Doe",
-            "city": "",
-            "campaign": "",
-            "package": 1
-    }
-    ```
+    + Attributes
+        + firstName (required, string) 
+        + email (required, string) - Valid email address
+        + password (required, string) - `7-100 characters long. Valid characters are (a-zA-Z0-9áéíóúüñçÁÉÍÓÚÜÑÇ!@#$%^&*._-)`
+        + package (required, number) - Package ID
+        + mso (number) - Default to 1
+        + svod (number) - Default to 0
+        + contract (string)
+        + familyName (string) 
+        + campaign (number) - Valid campaign ID 
+        + city (number) - Valid city ID
+        
+
+    + Body
+    
+            {
+                "email": "user@gmail.com",
+                "password": "secretPassword",
+                "mso": "1",
+                "svod": "1",
+                "contract": "",
+                "firstName": "John",
+                "familyName": "Doe",
+                "city": "",
+                "campaign": "",
+                "package": 1
+            }
 
 + Response 200
 
@@ -830,6 +915,19 @@ Attempts to create a new user account (user registration).
         ]
     }
     ```
+
++ Response 422 (application/json)
+
+        {
+            "headers": {},
+            "data": [],
+            "messages": [
+                {
+                    "value": "Value is required and can't be empty",
+                    "context": "package"
+                }
+            ]
+        }
 
 ### Update the Account [PATCH]
 Attempts to update the user account.
