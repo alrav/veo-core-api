@@ -654,12 +654,24 @@ Attempts to link/unlink a facebook account.
 
 + Request (application/json)
 
-    ```text
-    []
-    ```
+    + Body
+    
+            {}
 
 + Response 204
 
++ Response 400 (application/json)
+
+        {
+            "headers": {},
+            "data": [],
+            "messages": [
+                {
+                    "value": "El usuario no está vinculado a ninguna cuenta de facebook",
+                    "context": null
+                }
+            ]
+        }
 
 
 # Group Account - Details
