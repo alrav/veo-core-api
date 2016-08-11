@@ -946,34 +946,31 @@ Attempts to update the user account.
 
 + Request (application/json)
 
-    ```js
-    {
-            "email": "user@gmail.com",
-            "firstName": "John",
-            "familyName": "Doe",
-            "nickName": "JD",
-            "address1": "123 Rainbow St",
-            "address2": "Apt 666",
-            "city": "Doral",
-            "state": "FL",
-            "zip": "33178",
-            "country": "United States of America",
-            "preferences": {
-                "pinRequired": false,
-                "permittedRatings": [
-                    "G",
-                    "PG",
-                    "PG-13"
-                ],
-                "language": "en",
-                "timezone": "America/New_York"
-            }
-    }
-    ```
-
     + Headers
 
             Authorization: OAuth ...
+
+    + Body
+        
+            {
+                "email": "email@email.com",
+                "firstName": "John",
+                "familyName": "Doe",
+                "city": "Doral",
+                "preferences": {
+                    "pinRequired": true,
+                    "permittedRatings": [
+                        "G",
+                        "PG",
+                        "PG-13"
+                    ],
+                    "language": "en",
+                    "timezone": "America/New_York"
+                }
+            }
+    
+
+    
 
 + Response 200
 
@@ -983,7 +980,7 @@ Attempts to update the user account.
 
     ```js
     {
-        "headers": {"ttl": 0},
+        "headers": {},
         "data": {},
         "messages": [
             {
