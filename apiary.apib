@@ -945,6 +945,19 @@ Attempts to create a new user account (user registration).
 Attempts to update the user account.
 
 + Request (application/json)
+    
+    + Attributes
+        + email (required, string) - Valid email address
+        + firstName (required, string) 
+        + familyName (required, string) 
+        + preferences 
+            + pinRequired (boolean)
+            + permittedRatings (enum[string])
+                + G
+                + PG
+                + PG-13
+            + language (string)
+            + timezone (string)
 
     + Headers
 
