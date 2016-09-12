@@ -4167,6 +4167,200 @@ Retrieves all Geoblocking.
 
     [List Geoblocking][]
 
+# Group HUB
+
+## List Hub Assets [/hub/{alias}{?limit}{?page}{?sort}{?sortdir}]
+
++ Model (application/json)
+
+    ```js
+        {
+            "headers":{
+                "total":39,
+                "summary":{
+                    "genre":[
+                        "Drama",
+                        "Comedia",
+                        "Romanticas"
+                    ]
+                }
+            },
+            "data":[
+                {
+                    "airDate":"1995-01-02T06:00:00Z",
+                    "category":"series",
+                    "duration":null,
+                    "entity":"asset",
+                    "genre":{
+                        "entity":"genre",
+                        "id":9,
+                        "items":[
+        
+                        ],
+                        "parent":null,
+                        "title":"Drama"
+                    },
+                    "id":907,
+                    "licenseEndDate":"2030-12-30T06:00:00Z",
+                    "licenseStartDate":"2015-03-16T06:00:00Z",
+                    "parentShow":null,
+                    "parentalRating":{
+                        "entity":"parentalRating",
+                        "id":17,
+                        "items":[
+        
+                        ],
+                        "parent":null,
+                        "title":"B"
+                    },
+                    "pictures":[
+                        {
+                            "entity":"picture",
+                            "id":11319,
+                            "pictureType":"landscape",
+                            "title":"El Premio Mayor.jpg",
+                            "versions":[
+                                {
+                                    "entity":"pictureImage",
+                                    "height":1080,
+                                    "id":51598,
+                                    "profile":"main",
+                                    "width":1920,
+                                    "link":"http:\\static-test.veo.tv.s3.amazonaws.com\images\picture\2016\01\15\308\el_premio_mayor_main.jpg"
+                                },
+                                {
+                                    "entity":"pictureImage",
+                                    "height":360,
+                                    "id":153695,
+                                    "profile":"vga-landscape",
+                                    "width":640,
+                                    "link":"http:\\static-test.veo.tv.s3.amazonaws.com\images\picture\2016\03\30\2831\el_premio_mayor_main_3.jpg"
+                                },
+                                {
+                                    "entity":"pictureImage",
+                                    "height":576,
+                                    "id":153700,
+                                    "profile":"xga-landscape",
+                                    "width":1024,
+                                    "link":"http:\\static-test.veo.tv.s3.amazonaws.com\images\picture\2016\03\30\2831\el_premio_mayor_main_5.jpg"
+                                },
+                                {
+                                    "entity":"pictureImage",
+                                    "height":720,
+                                    "id":153702,
+                                    "profile":"hd-landscape",
+                                    "width":1280,
+                                    "link":"http:\\static-test.veo.tv.s3.amazonaws.com\images\picture\2016\03\30\2831\el_premio_mayor_main_6.jpg"
+                                },
+                                {
+                                    "entity":"pictureImage",
+                                    "height":1080,
+                                    "id":153705,
+                                    "profile":"fhd-landscape",
+                                    "width":1920,
+                                    "link":"http:\\static-test.veo.tv.s3.amazonaws.com\images\picture\2016\03\30\2831\el_premio_mayor_main_7.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "entity":"picture",
+                            "id":25218,
+                            "pictureType":"portrait",
+                            "title":"el_premio_mayor.jpg",
+                            "versions":[
+                                {
+                                    "entity":"pictureImage",
+                                    "height":1400,
+                                    "id":147450,
+                                    "profile":"main",
+                                    "width":1000,
+                                    "link":"http:\\static-test.veo.tv.s3.amazonaws.com\images\picture\2016\03\19\2429\el_premio_mayor_main.jpg"
+                                },
+                                {
+                                    "entity":"pictureImage",
+                                    "height":448,
+                                    "id":147451,
+                                    "profile":"hvga-portrait",
+                                    "width":320,
+                                    "link":"http:\\static-test.veo.tv.s3.amazonaws.com\images\picture\2016\03\19\2429\el_premio_mayor_1.jpg"
+                                },
+                                {
+                                    "entity":"pictureImage",
+                                    "height":640,
+                                    "id":147452,
+                                    "profile":"vga-portrait",
+                                    "width":457,
+                                    "link":"http:\\static-test.veo.tv.s3.amazonaws.com\images\picture\2016\03\19\2429\el_premio_mayor_2.jpg"
+                                },
+                                {
+                                    "entity":"pictureImage",
+                                    "height":1024,
+                                    "id":147453,
+                                    "profile":"xga-portrait",
+                                    "width":731,
+                                    "link":"http:\\static-test.veo.tv.s3.amazonaws.com\images\picture\2016\03\19\2429\el_premio_mayor_4.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "subCategory":"telenovelas",
+                    "synopsisShort":null,
+                    "title":"EL PREMIO MAYOR",
+                    "titleEditorial":"El Premio Mayor",
+                    "titleShort":null,
+                    "trackingData":{
+                        "trackingDomain":"z4831qmrff.execute-api.us-east-1.amazonaws.com",
+                        "trackingUrl":"\dev",
+                        "map":{
+                            "page":"telenovelas",
+                            "pageId":"q=entity%3A%28asset%29%2BAND%2Bcategory%3A%28series%29%2BAND%2BsubCategory%3A%28telenovelas%29\u0026limit=1\u0026page=1",
+                            "segment":"1",
+                            "subsegment":1,
+                            "entity":"asset",
+                            "entityId":907,
+                            "entityPosition":0
+                        }
+                    },
+                    "publicationEvent":{
+                        "billingType":"subscription",
+                        "endDate":"2030-12-30T06:00:00Z",
+                        "entity":"publicationEvent",
+                        "id":907,
+                        "price":"0.00",
+                        "startDate":"2015-03-16T06:00:00Z"
+                    }
+                }
+            ],
+            "messages":[
+        
+            ]
+        }
+    ```
+
+### List Hub Assets [GET]
+
++ Parameters
+    + alias (string, `peliculas`) ... The alias of the hub.
+        + Values
+            + `series`
+            + `peliculas`
+            + `telenovelas`
+            + `programas`
+    + limit (optional, string, `25`) ... The hub items limit per page
+    + page (optional, string, `1`) ... The hub items page.
+    + sort (optional, string, `recommended`) ... the hubs item sort by.
+        + Values
+            + `recommended`
+            + `title`
+            + `createdAt`
+    + sortdir (optional, string, `asc`) ... Sort direction
+        + Values
+            + `asc`
+            + `desc`
+
++ Response 200 (application/json)
+
+        [List Hub Assets]
 
 
 # Group IPN
