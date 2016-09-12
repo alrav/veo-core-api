@@ -4171,7 +4171,28 @@ Retrieves all Geoblocking.
 
 ## List Hub Assets [/hub/{alias}{?limit}{?page}{?sort}{?sortdir}]
 
-+ Model (application/json)
+### List Hub Assets [GET]
+
++ Parameters
+    + alias (string, `peliculas`) ... The alias of the hub.
+        + Values
+            + `series`
+            + `peliculas`
+            + `telenovelas`
+            + `programas`
+    + limit (optional, string, `25`) ... The hub items limit per page
+    + page (optional, string, `1`) ... The hub items page.
+    + sort (optional, string, `recommended`) ... the hubs item sort by.
+        + Values
+            + `recommended`
+            + `title`
+            + `createdAt`
+    + sortdir (optional, string, `asc`) ... Sort direction
+        + Values
+            + `asc`
+            + `desc`
+
++ Response 200 (application/json)
 
     ```js
         {
@@ -4336,31 +4357,6 @@ Retrieves all Geoblocking.
             ]
         }
     ```
-
-### List Hub Assets [GET]
-
-+ Parameters
-    + alias (string, `peliculas`) ... The alias of the hub.
-        + Values
-            + `series`
-            + `peliculas`
-            + `telenovelas`
-            + `programas`
-    + limit (optional, string, `25`) ... The hub items limit per page
-    + page (optional, string, `1`) ... The hub items page.
-    + sort (optional, string, `recommended`) ... the hubs item sort by.
-        + Values
-            + `recommended`
-            + `title`
-            + `createdAt`
-    + sortdir (optional, string, `asc`) ... Sort direction
-        + Values
-            + `asc`
-            + `desc`
-
-+ Response 200 (application/json)
-
-        [List Hub Assets]
 
 
 # Group IPN
