@@ -13,6 +13,7 @@ Attempts to authenticate the user credentials.
 ### Login to the site [POST]
 
 + Request (application/json)
+
     + Attributes
         + email (required, string)
         + password (required, string) 
@@ -20,12 +21,13 @@ Attempts to authenticate the user credentials.
         + clientId (optional, number)
 
     + Body
-        {
-            "email": "urcher@gmail.com",
-            "password": "password1",
-            "remember": true,
-            "clientId": 1
-        }
+    
+            {
+                "email": "urcher@gmail.com",
+                "password": "password1",
+                "remember": true,
+                "clientId": 1
+            }
 
 + Response 200
 
@@ -4395,6 +4397,54 @@ Retrieves all Geoblocking.
 + Response 400 (application/json)
     + Attributes
         + message: `Something went wrong` (string)
+
+# Group Mso
+
+## List MSO [/mso{?country}]
+
++ Parameters
+    + country (optional, string, `MX`) ... Country iso  (MX, EC, AR). Default will use country from ip
+
+### List Msos [GET]
+Returns a list of MSOs
+
++ Response 200 (application/json)
+    
+    ```js
+    {
+        headers: { },
+        data: [
+            {
+                id: 13,
+                name: "tvcable",
+                displayName: null,
+                countries: [
+                    "EC"
+                ],
+                login: {
+                    auth_url: "http://200.63.213.68/BLIM/autenticacion.php?redirect_uri=https://www-test.blim.com/account/mso/login/tvcable",
+                    device_auth_url: "http://200.63.213.68/BLIM/autenticacion.php?redirect_uri=https://www-test.blim.com/account/mso/device/login/tvcable"
+                }
+            }
+        ],
+        messages: [ ]
+    }
+    ```
+    
++ Response 500 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": null,
+                "value": "Country header value is empty or not supplied."
+            }
+        ]
+    }
+    ```
 
 
 # Group Navigation
