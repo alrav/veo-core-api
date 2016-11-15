@@ -4445,7 +4445,45 @@ Returns a list of MSOs
         ]
     }
     ```
+    
+## Get By Id [/mso/{id}]
 
+### Get Mso By Id [GET]
+Returns Mso by id
+
++ Response 200 (application/json)
+    
+    ```js
+    {
+        headers: { },
+        data: {
+            id: 13,
+            name: "tvcable",
+            displayName: null,
+            countries: [
+                "EC"
+            ],
+            login: {
+                auth_url: "http://200.63.213.68/BLIM/autenticacion.php?redirect_uri=https://www-test.blim.com/account/mso/login/tvcable",
+                device_auth_url: "http://200.63.213.68/BLIM/autenticacion.php?redirect_uri=https://www-test.blim.com/account/mso/device/login/tvcable"
+            }
+        },
+        messages: [ ]
+    }
+    ```
+    
++ Response 404 (application/json)
+
+    ```js
+    {
+        headers: { },
+        data: [],
+        messages: [{
+            value: "Mso not found",
+            context: null
+        }]
+    }
+    ```
 
 # Group Navigation
 Represents actions against SB Navigation objects
