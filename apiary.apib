@@ -1742,6 +1742,119 @@ Returns a payment method
         ]
     }
     ```
+    
+## Search Transactions [/transaction{?search_limit,search_page,search_sort,amount,adapter}] 
+Allows the consumer to search transactions
+
+### Search [GET]
+
++ Parameters
+    + search_limit = 25 (number, optional, `10`) - The limit of transactions in the response
+    + search_page = 1 (number, optional, `2`) - The page number(for pagination)
+    + search_sort (enum[string], optional) - To sort results. The format is: transactionField-Order
+        + Members
+            + `id-ASC` - Order by id ascending
+            + `adapter-DESC` - Order by adapter, descending
+            + `amount` - Order by amount (by default, ASC)
+    + amount (float, optional, `3.5`) - The amount of the transaction
+    + adapter (string, optional, `SPREEDLY`) - The adater of the transaction
+    
++ Response 200 (application/json)
+  ```js
+       {
+          "headers": {},
+          "data": [
+            {
+              "adapter": "BRAINTREE",
+              "amount": 5.8,
+              "authorizationCode": "577331",
+              "createdAt": "2016-01-26T00:13:41Z",
+              "createdBy": null,
+              "currency": null,
+              "currencyCode": "",
+              "dateEntered": "2016-01-26T00:13:41Z",
+              "deleted": "0",
+              "description": "",
+              "externalToken": "",
+              "id": 1,
+              "name": "Suscripción mensual Blim",
+              "originalToken": null,
+              "paymentMethod": null,
+              "paymentMethodName": "Credit Card",
+              "paymentStatus": "settled",
+              "paymentStatusDetail": "",
+              "purchaseDate": "2016-02-01T15:02:41Z",
+              "status": true,
+              "subscriber": null,
+              "subscriptionSettlementId": 0,
+              "subtype": "subscription",
+              "token": "5h494kj",
+              "transactionComponent": null,
+              "type": "income",
+              "entity": "transaction"
+            },
+            {
+              "adapter": "BRAINTREE",
+              "amount": 5.8,
+              "authorizationCode": null,
+              "createdAt": "2016-01-26T00:13:43Z",
+              "createdBy": null,
+              "currency": null,
+              "currencyCode": "",
+              "dateEntered": "2016-01-26T00:13:43Z",
+              "deleted": "0",
+              "description": "",
+              "externalToken": "",
+              "id": 2,
+              "name": "Suscripción mensual Blim",
+              "originalToken": null,
+              "paymentMethod": null,
+              "paymentMethodName": "",
+              "paymentStatus": "processor_declined",
+              "paymentStatusDetail": "",
+              "purchaseDate": "2016-01-26T00:01:04Z",
+              "status": false,
+              "subscriber": null,
+              "subscriptionSettlementId": 0,
+              "subtype": "subscription",
+              "token": "7bj48r4",
+              "transactionComponent": null,
+              "type": "income",
+              "entity": "transaction"
+            },
+            {
+              "adapter": "BRAINTREE",
+              "amount": 5.8,
+              "authorizationCode": "186577",
+              "createdAt": "2016-01-28T00:13:38Z",
+              "createdBy": null,
+              "currency": null,
+              "currencyCode": "",
+              "dateEntered": "2016-01-28T00:13:38Z",
+              "deleted": "0",
+              "description": "",
+              "externalToken": "",
+              "id": 3,
+              "name": "Suscripción mensual Blim",
+              "originalToken": null,
+              "paymentMethod": null,
+              "paymentMethodName": "Credit Card",
+              "paymentStatus": "settled",
+              "paymentStatusDetail": "",
+              "purchaseDate": "2016-02-01T15:02:41Z",
+              "status": true,
+              "subscriber": null,
+              "subscriptionSettlementId": 0,
+              "subtype": "subscription",
+              "token": "m546pyy",
+              "transactionComponent": null,
+              "type": "income",
+              "entity": "transaction"
+            }
+          ],
+          "messages": []
+        }
+    ```
 
 # Group OAuth - Device
 Represents authentication actions against an user account from a device.
@@ -8390,120 +8503,6 @@ Retrieve all the payment adapters by country
         ],
         "messages": []
        }
-    ```
-    
-## Search Transactions [/transaction{?search_limit,search_page,search_sort,amount,adapter,anyOtherTransactionProperty}] 
-Allows the consumer to search transactions
-
-### Search [GET]
-
-+ Parameters
-    + search_limit = 25 (number, optional, `10`) - The limit of transactions in the response
-    + search_page = 1 (number, optional, `2`) - The page number(for pagination)
-    + search_sort (enum[string], optional) - To sort results. The format is: transactionField-Order
-        + Members
-            + `id-ASC` - Order by id ascending
-            + `adapter-DESC` - Order by adapter, descending
-            + `amount` - Order by amount (by default, ASC)
-    + amount (float, optional, `3.5`) - The amount of the transaction
-    + adapter (string, optional, `SPREEDLY`) - The adater of the transaction
-    + anyOtherTransactionProperty (string, optional) - Any valid transaction property
-    
-+ Response 200 (application/json)
-  ```js
-       {
-          "headers": {},
-          "data": [
-            {
-              "adapter": "BRAINTREE",
-              "amount": 5.8,
-              "authorizationCode": "577331",
-              "createdAt": "2016-01-26T00:13:41Z",
-              "createdBy": null,
-              "currency": null,
-              "currencyCode": "",
-              "dateEntered": "2016-01-26T00:13:41Z",
-              "deleted": "0",
-              "description": "",
-              "externalToken": "",
-              "id": 1,
-              "name": "Suscripción mensual Blim",
-              "originalToken": null,
-              "paymentMethod": null,
-              "paymentMethodName": "Credit Card",
-              "paymentStatus": "settled",
-              "paymentStatusDetail": "",
-              "purchaseDate": "2016-02-01T15:02:41Z",
-              "status": true,
-              "subscriber": null,
-              "subscriptionSettlementId": 0,
-              "subtype": "subscription",
-              "token": "5h494kj",
-              "transactionComponent": null,
-              "type": "income",
-              "entity": "transaction"
-            },
-            {
-              "adapter": "BRAINTREE",
-              "amount": 5.8,
-              "authorizationCode": null,
-              "createdAt": "2016-01-26T00:13:43Z",
-              "createdBy": null,
-              "currency": null,
-              "currencyCode": "",
-              "dateEntered": "2016-01-26T00:13:43Z",
-              "deleted": "0",
-              "description": "",
-              "externalToken": "",
-              "id": 2,
-              "name": "Suscripción mensual Blim",
-              "originalToken": null,
-              "paymentMethod": null,
-              "paymentMethodName": "",
-              "paymentStatus": "processor_declined",
-              "paymentStatusDetail": "",
-              "purchaseDate": "2016-01-26T00:01:04Z",
-              "status": false,
-              "subscriber": null,
-              "subscriptionSettlementId": 0,
-              "subtype": "subscription",
-              "token": "7bj48r4",
-              "transactionComponent": null,
-              "type": "income",
-              "entity": "transaction"
-            },
-            {
-              "adapter": "BRAINTREE",
-              "amount": 5.8,
-              "authorizationCode": "186577",
-              "createdAt": "2016-01-28T00:13:38Z",
-              "createdBy": null,
-              "currency": null,
-              "currencyCode": "",
-              "dateEntered": "2016-01-28T00:13:38Z",
-              "deleted": "0",
-              "description": "",
-              "externalToken": "",
-              "id": 3,
-              "name": "Suscripción mensual Blim",
-              "originalToken": null,
-              "paymentMethod": null,
-              "paymentMethodName": "Credit Card",
-              "paymentStatus": "settled",
-              "paymentStatusDetail": "",
-              "purchaseDate": "2016-02-01T15:02:41Z",
-              "status": true,
-              "subscriber": null,
-              "subscriptionSettlementId": 0,
-              "subtype": "subscription",
-              "token": "m546pyy",
-              "transactionComponent": null,
-              "type": "income",
-              "entity": "transaction"
-            }
-          ],
-          "messages": []
-        }
     ```
 
 # Group PlayResume
