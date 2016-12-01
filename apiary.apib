@@ -1743,7 +1743,7 @@ Returns a payment method
     }
     ```
     
-## Search Transactions [/transaction{?search_limit,search_page,search_sort,amount,adapter}] 
+## Search Transactions [/transaction{?search_limit,search_page,search_sort,amount,adapter,paymentStatus}] 
 Allows the consumer to search transactions
 
 ### Search [GET]
@@ -1758,6 +1758,7 @@ Allows the consumer to search transactions
             + `amount` - Order by amount (by default, ASC)
     + amount (float, optional, `3.5`) - The amount of the transaction
     + adapter (string, optional, `SPREEDLY`) - The adater of the transaction
+    + paymentStatus (string, optional, `approved`) - The payment status of the transaction
     
 + Response 200 (application/json)
   ```js
