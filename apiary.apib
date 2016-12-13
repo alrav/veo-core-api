@@ -951,12 +951,17 @@ Attempts to update the user account.
         + email (required, string) - Valid email address
         + firstName (required, string) 
         + familyName (required, string) 
+        + currentPassword (string) - Will be validated if updating PIN or permittedRatings
         + preferences 
-            + pinRequired (boolean)
+            + pin (number)
             + permittedRatings (enum[string])
+                + NR
+                + UR
                 + G
+                + AA
                 + PG
-                + PG-13
+                + B
+                + `PG-13`
             + language (string)
             + timezone (string)
 
@@ -971,15 +976,12 @@ Attempts to update the user account.
                 "firstName": "John",
                 "familyName": "Doe",
                 "preferences": {
-                    "pinRequired": true,
-                    "permittedRatings": [
-                        "G",
-                        "PG",
-                        "PG-13"
-                    ],
+                    "pin": 9124,
+                    "permittedRatings": "AA",
                     "language": "en",
                     "timezone": "America/New_York"
-                }
+                },
+                "currentPassword": "myPassword"
             }
     
 
