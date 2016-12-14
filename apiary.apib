@@ -951,9 +951,8 @@ Attempts to update the user account.
         + email (required, string) - Valid email address
         + firstName (required, string) 
         + familyName (required, string) 
-        + currentPassword (string) - Will be validated if updating PIN or permittedRatings
+        + currentPassword (string) - Will be validated if updating permittedRatings
         + preferences 
-            + pin (number)
             + permittedRatings (enum[string])
                 + NR
                 + UR
@@ -976,7 +975,6 @@ Attempts to update the user account.
                 "firstName": "John",
                 "familyName": "Doe",
                 "preferences": {
-                    "pin": 9124,
                     "permittedRatings": "AA",
                     "language": "en",
                     "timezone": "America/New_York"
@@ -1130,7 +1128,8 @@ Attempts to update the account pin.
     ```js
     {
             "currentPin": "1234",
-            "newPin": "1234"
+            "newPin": "1234",
+            "currentPassword": "secretPassword"
     }
     ```
 
@@ -1154,6 +1153,20 @@ Attempts to update the account pin.
         ]
     }
     ```
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": "currentPassword",
+                "value": "Contraseña actual inválida."
+            }
+        ]
+    }
+    ```
 
 ### Clear Account Pin [DELETE]
 Attempts to clear the account pin.
@@ -1162,7 +1175,8 @@ Attempts to clear the account pin.
 
     ```js
     {
-            "currentPin": "1234"
+            "currentPin": "1234",
+            "currentPassword": "secretPassword"
     }
     ```
 
@@ -1182,6 +1196,20 @@ Attempts to clear the account pin.
             {
                 "context": null,
                 "value": "You have entered an invalid PIN."
+            }
+        ]
+    }
+    ```
++ Response 400 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "context": "currentPassword",
+                "value": "Contraseña actual inválida."
             }
         ]
     }
