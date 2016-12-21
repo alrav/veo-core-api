@@ -1127,7 +1127,6 @@ Attempts to update the account pin.
 
     ```js
     {
-            "currentPin": "1234",
             "newPin": "1234",
             "currentPassword": "secretPassword"
     }
@@ -1139,7 +1138,7 @@ Attempts to update the account pin.
 
 + Response 200
 
-+ Response 400 (application/json)
++ Response 422 (application/json)
 
     ```js
     {
@@ -1147,12 +1146,28 @@ Attempts to update the account pin.
         "data": {},
         "messages": [
             {
-                "context": null,
-                "value": "You have entered an invalid PIN."
+                "value": "El pin solo puede tener dígitos.",
+                "context": "newPin"
             }
         ]
     }
     ```
+    
++ Response 422 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "value": "El pin puede tener un máximo de 4 dígitos.",
+                "context": "newPin"
+            }
+        ]
+    }
+    ```
+    
 + Response 400 (application/json)
 
     ```js
@@ -1175,7 +1190,6 @@ Attempts to clear the account pin.
 
     ```js
     {
-            "currentPin": "1234",
             "currentPassword": "secretPassword"
     }
     ```
@@ -1186,20 +1200,6 @@ Attempts to clear the account pin.
 
 + Response 204
 
-+ Response 400 (application/json)
-
-    ```js
-    {
-        "headers": {},
-        "data": {},
-        "messages": [
-            {
-                "context": null,
-                "value": "You have entered an invalid PIN."
-            }
-        ]
-    }
-    ```
 + Response 400 (application/json)
 
     ```js
