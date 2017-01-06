@@ -477,19 +477,12 @@ Attempts to authenticate a user through facebook.
           "language": "ES",
           "lastUpdated": "2015-07-29T12:51:54Z",
           "permittedRatings": [
-            "NR",
-            "UR",
-            "G",
             "AA",
             "A",
-            "PG",
             "B",
-            "PG-13",
-            "B15",
-            "R",
+            "B-15",
             "C",
-            "D",
-            "NC-17"
+            "D"
           ],
           "timezone": "CST6CDT"
         },
@@ -579,19 +572,12 @@ Attempts to link/unlink a facebook account.
           "language": "ES",
           "lastUpdated": "2015-07-29T12:51:54Z",
           "permittedRatings": [
-            "NR",
-            "UR",
-            "G",
             "AA",
             "A",
-            "PG",
             "B",
-            "PG-13",
-            "B15",
-            "R",
+            "B-15",
             "C",
-            "D",
-            "NC-17"
+            "D"
           ],
           "timezone": "CST6CDT"
         },
@@ -800,19 +786,12 @@ Represents an user account.
                 "language":"ES",
                 "lastUpdated":"2016-08-08T19:01:10Z",
                 "permittedRatings":[
-                    "NR",
-                    "UR",
-                    "G",
                     "AA",
                     "A",
-                    "PG",
                     "B",
-                    "PG-13",
-                    "B15",
-                    "R",
+                    "B-15",
                     "C",
-                    "D",
-                    "NC-17"
+                    "D"
                 ],
                 "timezone":"CST6CDT"
             },
@@ -954,13 +933,12 @@ Attempts to update the user account.
         + currentPassword (string) - Will be validated if updating permittedRatings
         + preferences 
             + permittedRatings (enum[string])
-                + NR
-                + UR
-                + G
                 + AA
-                + PG
+                + A
                 + B
-                + `PG-13`
+                + B-15
+                + C
+                + D
             + language (string)
             + timezone (string)
 
