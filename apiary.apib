@@ -3778,11 +3778,23 @@ Retrieves all Geoblocking.
 + Request (application/json)
 + Response 200 (application/json)
     + Attributes
-        + gateway:A `openpay` (string)
+        + gateway: `openpay` (string)
         + payload (object) - Openpay event info
 + Response 400 (application/json)
     + Attributes
         + message: `Something went wrong` (string)
+        
+## Worldpay [/ipn/worldpay]
+
+### Post Event Worldpay [POST]
++ Request (application/json)
++ Response 200 (application/json)
+    + Attributes
+        + gateway: `worldpay` (string)
+        + payload (object) - WorldpaySB- event info
++ Response 400 (application/json)
+    + Attributes
+        + message: `Something went wrong` (string)        
 
 ## MercadoPago [/ipn/mercadopago]
 
