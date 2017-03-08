@@ -1049,16 +1049,56 @@ Attempts to fetch the initpoint for a specific gateway.
 
 + Request (application/json)
 
-    ```js
-    {
-        "adapter": "mercadoPago"
-    }
-    ```
+    + Attributes
+        + adapter (required, enum[string]) - The adapter related to the initpoint
+            + Members
+                + spreedly
+                + braintree
+                + mercadoPago
+                + third_party
+                + paypal
+                + zuggy
+
+
+    + Body
+    
+            {
+                "adapter": "mercadoPago"
+            }
 
 + Response 200
 
     [Initpoint][]
 
++ Response 422
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "value": "Value is required and can't be empty",
+                "context": "adapter"
+            }
+        ]
+    }
+    ```
+
++ Response 400
+
+    ```js
+    {
+        "headers": {},
+        "data": {},
+        "messages": [
+            {
+                "value": "Invalid adapter",
+                "context": null
+            }
+        ]
+    }
+    ```
 
 # Group Account - Pin
 Represents actions against the account pin.
