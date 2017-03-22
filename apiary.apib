@@ -8157,12 +8157,11 @@ List of viewed assets.
     ```
 
 
-## Retrieve data and view object for an asset [/play/resume/{assetId}]
+## Data and view object for an asset [/play/resume/{assetId}]
 Return information specific to a given asset, including the view object.
 
 + Parameters
     + assetId (integer) ... The asset id.
-
 
 ### Retrieve asset info [GET]
 Retrieves the info for the given asset.
@@ -8514,7 +8513,28 @@ Retrieves the info for the given asset.
       "messages": []
     }
     ```
-    
+
+### Delete resume position [DELETE]
+Deletes the resume position data for the given asset.
+
++ Response 204
+
++ Response 404 (application/json)
+
+    ```js
+    {
+        "headers": {},
+        "data": [],
+        "messages": [
+            {
+              "value": "Resume position(s) not found",
+              "context": null
+            }
+        ]
+    }
+    ```
+
+
 
 # Group Recommendation Engine
 Represents actions to recommendation engine
