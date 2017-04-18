@@ -8156,7 +8156,6 @@ List of viewed assets.
     }
     ```
 
-
 ## Data and view object for an asset [/play/resume/{assetId}]
 Return information specific to a given asset, including the view object.
 
@@ -8534,7 +8533,276 @@ Deletes the resume position data for the given asset.
     }
     ```
 
+# Group Watch again
+Represents actions against completed assets by a user
 
+## WatchAgain [/play/resume/again]
+Represents a watch again resource
+
+### Retrieve assets to watch again [GET]
+Attempts to retreive assets to watch again.
+
++ Response 200
+
+  ```js
+    {
+      "headers": {},
+      "data": [
+          {
+      "category": "movie",
+      "duration": 6840,
+      "entity": "asset",
+      "genre": {
+        "entity": "genre",
+        "id": 260,
+        "items": [],
+        "parent": null,
+        "title": "Suspenso"
+      },
+      "id": 24279,
+      "licenseEndDate": "2018-08-31T05:59:59Z",
+      "licenseStartDate": "2016-09-01T06:00:00Z",
+      "parentalRating": {
+        "entity": "parentalRating",
+        "id": 17,
+        "items": [],
+        "parent": null,
+        "title": "B"
+      },
+      "pictures": [
+        {
+          "entity": "picture",
+          "id": 56836,
+          "pictureType": "landscape",
+          "title": "ASST0000000005217814_Traitor_HD_Package.jpg",
+          "versions": [
+            {
+              "entity": "pictureImage",
+              "height": 576,
+              "id": 416688,
+              "profile": "xga-landscape",
+              "width": 1024,
+              "link": "https://images.blim.com/mpx/images/Veo/626/379/ASST0000000005217814_Traitor_HD_Package_PAID0000000000825310_1024x576_new_1473975959476.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 720,
+              "id": 416689,
+              "profile": "hd-landscape",
+              "width": 1280,
+              "link": "https://images.blim.com/mpx/images/Veo/626/379/ASST0000000005217814_Traitor_HD_Package_PAID0000000000825310_1280x720_new_1473975960280.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 1080,
+              "id": 416690,
+              "profile": "fhd-landscape",
+              "width": 1920,
+              "link": "https://images.blim.com/mpx/images/Veo/626/379/ASST0000000005217814_Traitor_HD_Package_PAID0000000000825310_1920x1080_new_1473975961080.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 1080,
+              "id": 416691,
+              "profile": "main",
+              "width": 1920,
+              "link": "https://images.blim.com/mpx/images/Veo/626/379/ASST0000000005217814_Traitor_HD_Package_PAID0000000000825310_landscape_orig_new_1473975962763.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 360,
+              "id": 416692,
+              "profile": "vga-landscape",
+              "width": 640,
+              "link": "https://images.blim.com/mpx/images/Veo/626/379/ASST0000000005217814_Traitor_HD_Package_PAID0000000000825310_640x360_new_1473975958357.jpg"
+            }
+          ]
+        },
+        {
+          "entity": "picture",
+          "id": 56835,
+          "pictureType": "portrait",
+          "title": "ASST0000000005217813_Traitor_HD_Package.jpg",
+          "versions": [
+            {
+              "entity": "pictureImage",
+              "height": 447,
+              "id": 416684,
+              "profile": "hvga-portrait",
+              "width": 320,
+              "link": "https://images.blim.com/mpx/images/Veo/626/379/ASST0000000005217813_Traitor_HD_Package_PAID0000000000825310_320x447_new_1473975956452.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 673,
+              "id": 416685,
+              "profile": "vga-portrait",
+              "width": 480,
+              "link": "https://images.blim.com/mpx/images/Veo/626/379/ASST0000000005217813_Traitor_HD_Package_PAID0000000000825310_480x673_new_1473975957240.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 1076,
+              "id": 416686,
+              "profile": "xga-portrait",
+              "width": 768,
+              "link": "https://images.blim.com/mpx/images/Veo/626/379/ASST0000000005217813_Traitor_HD_Package_PAID0000000000825310_768x1076_new_1473975957916.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 1400,
+              "id": 416687,
+              "profile": "main",
+              "width": 1000,
+              "link": "https://images.blim.com/mpx/images/Veo/626/379/ASST0000000005217813_Traitor_HD_Package_PAID0000000000825310_portrait_orig_new_1473975961789.jpg"
+            }
+          ]
+        }
+      ],
+      "subCategory": null,
+      "synopsisShort": "Samir Horn es un ex soldado americano y musulmán  quien se encuentra en el Medio Oriente vendiendo explosivos a los radicales islámicos. Horn es enviado a los Estados Unidos para orquestrar un ataque terrorista.",
+      "title": "Traidor",
+      "titleEditorial": "Traidor",
+      "titleShort": "Traidor",
+      "trackingData": {},
+      "publicationEvent": {
+        "billingType": "subscription",
+        "endDate": "2018-08-31T05:59:59Z",
+        "entity": "publicationEvent",
+        "id": 24279,
+        "price": "0.00",
+        "startDate": "2016-09-01T06:00:00Z"
+      }
+    },
+    {
+      "category": "movie",
+      "duration": 8640,
+      "entity": "asset",
+      "genre": {
+        "entity": "genre",
+        "id": 9,
+        "items": [],
+        "parent": null,
+        "title": "Drama"
+      },
+      "id": 11780,
+      "licenseEndDate": "2017-09-30T05:00:59Z",
+      "licenseStartDate": "2016-10-01T05:00:00Z",
+      "parentalRating": {
+        "entity": "parentalRating",
+        "id": 18,
+        "items": [],
+        "parent": null,
+        "title": "C"
+      },
+      "pictures": [
+        {
+          "entity": "picture",
+          "id": 24809,
+          "pictureType": "landscape",
+          "title": "ASST0000000005014984_Born_On_The_Fourth_Of_July__Package.jpg",
+          "versions": [
+            {
+              "entity": "pictureImage",
+              "height": 360,
+              "id": 465098,
+              "profile": "vga-landscape",
+              "width": 640,
+              "link": "https://images.blim.com/mpx/images/Veo/272/147/ASST0000000005276697_Born_On_The_Fourth_Of_July__Package_PAID0000000000742255_640x360_new_1477407489010.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 720,
+              "id": 465100,
+              "profile": "hd-landscape",
+              "width": 1280,
+              "link": "https://images.blim.com/mpx/images/Veo/272/147/ASST0000000005276697_Born_On_The_Fourth_Of_July__Package_PAID0000000000742255_1280x720_new_1477407489927.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 1080,
+              "id": 465102,
+              "profile": "main",
+              "width": 1920,
+              "link": "https://images.blim.com/mpx/images/Veo/272/147/ASST0000000005276697_Born_On_The_Fourth_Of_July__Package_PAID0000000000742255_landscape_orig_new_1477407491677.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 576,
+              "id": 465099,
+              "profile": "xga-landscape",
+              "width": 1024,
+              "link": "https://images.blim.com/mpx/images/Veo/272/147/ASST0000000005276697_Born_On_The_Fourth_Of_July__Package_PAID0000000000742255_1024x576_new_1477407489443.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 1080,
+              "id": 465101,
+              "profile": "fhd-landscape",
+              "width": 1920,
+              "link": "https://images.blim.com/mpx/images/Veo/272/147/ASST0000000005276697_Born_On_The_Fourth_Of_July__Package_PAID0000000000742255_1920x1080_new_1477407490341.jpg"
+            }
+          ]
+        },
+        {
+          "entity": "picture",
+          "id": 24808,
+          "pictureType": "portrait",
+          "title": "ASST0000000005014986_Born_On_The_Fourth_Of_July__Package.jpg",
+          "versions": [
+            {
+              "entity": "pictureImage",
+              "height": 1076,
+              "id": 465096,
+              "profile": "xga-portrait",
+              "width": 768,
+              "link": "https://images.blim.com/mpx/images/Veo/272/147/ASST0000000005276696_Born_On_The_Fourth_Of_July__Package_PAID0000000000742255_768x1076_new_1477407488661.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 1400,
+              "id": 465097,
+              "profile": "main",
+              "width": 1000,
+              "link": "https://images.blim.com/mpx/images/Veo/272/147/ASST0000000005276696_Born_On_The_Fourth_Of_July__Package_PAID0000000000742255_portrait_orig_new_1477407490811.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 447,
+              "id": 465094,
+              "profile": "hvga-portrait",
+              "width": 320,
+              "link": "https://images.blim.com/mpx/images/Veo/272/147/ASST0000000005276696_Born_On_The_Fourth_Of_July__Package_PAID0000000000742255_320x447_new_1477407487659.jpg"
+            },
+            {
+              "entity": "pictureImage",
+              "height": 673,
+              "id": 465095,
+              "profile": "vga-portrait",
+              "width": 480,
+              "link": "https://images.blim.com/mpx/images/Veo/272/147/ASST0000000005276696_Born_On_The_Fourth_Of_July__Package_PAID0000000000742255_480x673_new_1477407488274.jpg"
+            }
+          ]
+        }
+      ],
+      "subCategory": null,
+      "synopsisShort": "Inspirada en la autobiografía de Ron Kovic. Segunda parte de la trilogía sobre Vietnam: muestra la historia de un joven que se alista como voluntario para ir a la guerra, convencido de que defender a su país es la mejor manera de demostrarle su amor.",
+      "title": "Born On The Fourth Of July",
+      "titleEditorial": "Nacido el Cuatro de Julio",
+      "titleShort": "Born On The Fourth Of July",
+      "trackingData": {},
+      "publicationEvent": {
+        "billingType": "subscription",
+        "endDate": "2017-09-30T05:00:59Z",
+        "entity": "publicationEvent",
+        "id": 11780,
+        "price": "0.00",
+        "startDate": "2016-10-01T05:00:00Z"
+      }
+    }
+    ]
+    }
+  ```
 
 # Group Recommendation Engine
 Represents actions to recommendation engine
