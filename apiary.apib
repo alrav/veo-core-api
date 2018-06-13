@@ -8843,6 +8843,38 @@ Attempts to retreive assets to watch again.
     }
   ```
 
+# Group ReCaptcha
+Represents actions against reCaptcha service
+
+## ReCaptcha Configuration [/service/recaptcha/{filter}]
+Represents the general reCaptcha configuration, and the posible list of enabled filters
+
++ Parameters
+    + filter (optional, string, `adapter`) ... The name of the filter.
+
++ Model (application/json)
+
+    ```js
+    {
+        "siteKey": "6Ld8DwcUAAAAAOrxiCwI0UCj4SHipIWmdyegc0QW",
+        "defaultLang": "es",
+        "recaptchaURL": "https://www.google.com/recaptcha/api.js?onload=recapchaCallback&render=explicit&hl=es-419",
+        "adapter": [
+            "zuggy",
+            "spreedly",
+            "paypal"
+        ]
+    }
+    ```
+
+### Retrieve reCaptcha Configuration [GET]
+Returns the reCaptcha Configuration and the list of enabled filters.
+
++ Response 200
+
+    [ReCaptcha Configuration][]
+
+
 # Group Recommendation Engine
 Represents actions to recommendation engine
 
